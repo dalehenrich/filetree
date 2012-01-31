@@ -1,0 +1,13 @@
+
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'ezra 10/26/2011 17:17'!
+visitClassDefinition: definition
+	orderedClassNames add: definition className.
+	self
+		writeInDirectoryName: definition className
+		fileName: definition className
+		visit: [ 
+			stWriter writeClassDefinition: definition.
+			definition hasClassInstanceVariables
+				ifTrue: [ stWriter writeMetaclassDefinition: definition ].
+			definition hasComment
+				ifTrue: [ stWriter writeClassComment: definition ] ]! !

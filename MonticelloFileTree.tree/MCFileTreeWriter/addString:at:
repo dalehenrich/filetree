@@ -1,0 +1,8 @@
+
+!MCFileTreeWriter methodsFor: 'writing' stamp: 'ezra 10/25/2011 16:22'!
+addString: string at: path
+	string isEmpty
+		ifFalse: [ 
+			| fullPath |
+			fullPath := self packageFileDirectory fullNameFor: path.
+			FileStream forceNewFileNamed: fullPath do: [ :file | file nextPutAll: string ] ]! !

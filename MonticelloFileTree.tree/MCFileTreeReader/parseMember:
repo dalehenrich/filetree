@@ -1,0 +1,7 @@
+
+!MCFileTreeReader methodsFor: 'utilities' stamp: 'OttoBehrens 10/25/2011 01:21'!
+parseMember: fileName
+	| tokens contents |
+	contents := packageDirectory fileNamed: fileName do: [ :file | file contents ].
+	tokens := (self scanner scanTokens: contents) first.
+	^ self associate: tokens! !

@@ -1,0 +1,4 @@
+
+!MCFileTreeReader methodsFor: 'accessing' stamp: 'OttoBehrens 10/25/2011 01:29'!
+packageDirectory: aByteString
+	packageDirectory := (stream entryAt: aByteString) asFileDirectory! !

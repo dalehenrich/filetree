@@ -1,0 +1,13 @@
+
+!MCFileTreeReader methodsFor: 'utilities' stamp: 'ezra 11/1/2011 17:25'!
+loadDefinitions
+	| entries |
+	definitions := OrderedCollection new.
+	entries := packageDirectory entries.
+	[ 
+	self
+		addDefinitionFromFile: (entries detect: [ :entry | entry name = 'categories' ] ifNone: [  ]);
+		addClassAndMethodDefinitionsFromDirectoryEntries: entries;
+		addDefinitionFromFile: (entries detect: [ :entry | entry name = 'initializers' ] ifNone: [  ]) ]
+		on: Error
+		do: [ :error | error halt ]! !

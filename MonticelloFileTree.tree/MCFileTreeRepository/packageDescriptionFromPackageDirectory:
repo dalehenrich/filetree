@@ -1,0 +1,6 @@
+
+!MCFileTreeRepository methodsFor: 'actions' stamp: 'dkh 1/30/2012 20:56'!
+packageDescriptionFromPackageDirectory: packageDirectory
+	| info |
+	info := self versionInfoForPackageDirectory: packageDirectory.
+	^self class parseName: info name! !

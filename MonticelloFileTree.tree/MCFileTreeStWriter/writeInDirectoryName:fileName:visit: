@@ -1,0 +1,11 @@
+
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'ezra 10/25/2011 17:49'!
+writeInDirectoryName: directoryName fileName: fileName visit: visitBlock
+	(directoryName = '.'
+		ifTrue: [ stream packageFileDirectory ]
+		ifFalse: [ stream subPackageFileDirectoryFor: directoryName ])
+		forceNewFileNamed: fileName
+		do: [ :file | 
+			file lineEndConvention: #lf.
+			stWriter stream: file.
+			visitBlock value ]! !

@@ -1,0 +1,13 @@
+
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 1/30/2012 21:01'!
+visitMethodDefinition: definition
+	self
+		writeInDirectoryName:
+			(definition classIsMeta
+				ifTrue: [ definition className , '_class' ]
+				ifFalse: [ definition className ])
+		fileName:
+			(definition selector == #/
+				ifTrue: [ 'encoded slash' ]
+				ifFalse: [ definition selector ])
+		visit: [ stWriter visitMethodDefinition: definition ]! !

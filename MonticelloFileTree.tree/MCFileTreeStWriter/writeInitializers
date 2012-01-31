@@ -1,0 +1,10 @@
+
+!MCFileTreeStWriter methodsFor: 'initialize-release' stamp: 'ezra 10/26/2011 17:43'!
+writeInitializers
+	self
+		writeInDirectoryName: '.'
+		fileName: 'initializers'
+		visit: [ 
+			stWriter
+				writePresentInitializers;
+				writeAbsentInitializers ]! !

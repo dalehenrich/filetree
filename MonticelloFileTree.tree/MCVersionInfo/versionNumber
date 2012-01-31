@@ -1,0 +1,4 @@
+
+!MCVersionInfo methodsFor: '*monticellofiletree' stamp: 'OttoBehrens 10/25/2011 08:59'!
+versionNumber
+	^ ((self name copyAfterLast: $-) copyAfter: $.) asInteger ifNil: [ 0 ]! !

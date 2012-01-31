@@ -1,0 +1,7 @@
+
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'ezra 10/26/2011 17:37'!
+visitMetaclassDefinition: definition
+	self
+		writeInDirectoryName: definition className , '_class'
+		fileName: definition className
+		visit: [ stWriter writeMetaclassDefinition: definition ]! !
