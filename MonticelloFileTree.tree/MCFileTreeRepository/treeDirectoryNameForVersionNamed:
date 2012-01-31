@@ -1,4 +1,0 @@
-
-!MCFileTreeRepository methodsFor: 'as yet unclassified' stamp: 'dkh 1/30/2012 20:57'!
-treeDirectoryNameForVersionNamed: aString
-	^ (self class parseName: aString) last! !

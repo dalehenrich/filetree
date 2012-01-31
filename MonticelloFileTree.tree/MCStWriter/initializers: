@@ -1,4 +1,0 @@
-
-!MCStWriter methodsFor: '*monticellofiletree' stamp: 'OttoBehrens 10/25/2011 11:05'!
-initializers: aCollection
-	initializers := aCollection! !

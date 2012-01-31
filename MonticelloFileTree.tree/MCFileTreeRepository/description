@@ -1,4 +1,0 @@
-
-!MCFileTreeRepository methodsFor: 'descriptions' stamp: 'dkh 1/30/2012 13:56'!
-description
-    ^ 'filetree://' , super description! !

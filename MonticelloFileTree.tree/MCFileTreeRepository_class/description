@@ -1,4 +1,0 @@
-
-!MCFileTreeRepository class methodsFor: 'instance creation' stamp: 'OttoBehrens 10/24/2011 22:25'!
-description
-	^ 'file tree'! !

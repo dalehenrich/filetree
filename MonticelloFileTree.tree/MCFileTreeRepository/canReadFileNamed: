@@ -1,4 +1,0 @@
-
-!MCFileTreeRepository methodsFor: 'as yet unclassified' stamp: 'ezra 10/28/2011 19:24'!
-canReadFileNamed: aString
-	^aString endsWith: '.tree'! !

@@ -1,7 +1,0 @@
-
-!MCFileTreeReader methodsFor: 'utilities' stamp: 'ezra 11/1/2011 14:41'!
-addClassAndMethodDefinitionsFromDirectoryEntries: entries 
-	entries
-		do: [:entry | entry isDirectory
-				ifTrue: [entry asFileDirectory entries
-						do: [:file | self addDefinitionFromFile: file]]]! !
