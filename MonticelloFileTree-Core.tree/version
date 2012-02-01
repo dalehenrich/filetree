@@ -1,8 +1,8 @@
-(name 'MonticelloFileTree-Core-dkh.14'
-message '1.0 (dkh.6):- merge MonticelloFileTree-dkh.58 and MonticelloFileTree-Core-revelations.13- a little refactoring for Montigitto support'
-id '4af5fe87-b1f9-4041-8e78-7e82ea540ec0'
-date '31 January 2012'
-time '3:24:13 pm'
+(name 'MonticelloFileTree-Core-dkh.15'
+message '- needed because a Git repository that is not a file-based repository is ussing the file inspector ...'
+id '7e47d7fe-dc53-47fd-ac4d-ee07e373fbad'
+date '1 February 2012'
+time '2:52:17 pm'
 author 'dkh'
 ancestors ()
 stepChildren ())
