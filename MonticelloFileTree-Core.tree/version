@@ -1,8 +1,8 @@
-(name 'MonticelloFileTree-Core-dkh.15'
-message '- needed because a Git repository that is not a file-based repository is ussing the file inspector ...'
-id '7e47d7fe-dc53-47fd-ac4d-ee07e373fbad'
+(name 'MonticelloFileTree-Core-dkh.17'
+message '- actually use the .st extension'
+id '852f15de-a50c-41d3-9445-ae6347025631'
 date '1 February 2012'
-time '2:52:17 pm'
+time '8:15:16 pm'
 author 'dkh'
 ancestors ()
 stepChildren ())

@@ -1,7 +1,8 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'OttoBehrens 10/25/2011 12:55'!
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:02'!
 visitOrganizationDefinition: defintion
 	self
 		writeInDirectoryName: '.'
 		fileName: 'categories'
+		extension: '.st'
 		visit: [ defintion categories do: [ :cat | stWriter writeCategory: cat ] ]! !

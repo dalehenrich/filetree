@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 1/30/2012 21:01'!
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:02'!
 visitMethodDefinition: definition
 	self
 		writeInDirectoryName:
@@ -10,4 +10,5 @@ visitMethodDefinition: definition
 			(definition selector == #/
 				ifTrue: [ 'encoded slash' ]
 				ifFalse: [ definition selector ])
+		extension: '.st'
 		visit: [ stWriter visitMethodDefinition: definition ]! !

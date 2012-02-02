@@ -1,10 +1,11 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'ezra 10/26/2011 17:17'!
+!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:01'!
 visitClassDefinition: definition
 	orderedClassNames add: definition className.
 	self
 		writeInDirectoryName: definition className
 		fileName: definition className
+		extension: '.st'
 		visit: [ 
 			stWriter writeClassDefinition: definition.
 			definition hasClassInstanceVariables
