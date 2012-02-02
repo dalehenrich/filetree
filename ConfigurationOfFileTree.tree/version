@@ -1,8 +1,8 @@
-(name 'ConfigurationOfFileTree-dkh.6'
-message '1.0 (dkh.6):- merge MonticelloFileTree-dkh.58 and MonticelloFileTree-Core-revelations.13- a little refactoring for Montigitto support'
-id '6e0f893c-529f-42ed-bbf1-56e66c1de737'
-date '31 January 2012'
-time '3:25:02 pm'
+(name 'ConfigurationOfFileTree-dkh.7'
+message '- convert to .st files'
+id '77c15742-087c-4d2e-ba5c-c0b8c6de869f'
+date '1 February 2012'
+time '8:31:07 pm'
 author 'dkh'
 ancestors ()
 stepChildren ())
