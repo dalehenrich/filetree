@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'accessing' stamp: 'OttoBehrens 10/25/2011 09:31'!
+!MCFileTreeReader methodsFor: 'accessing'!
 basicVersion
 	^ (MCVersion new)
 		setPackage: self package

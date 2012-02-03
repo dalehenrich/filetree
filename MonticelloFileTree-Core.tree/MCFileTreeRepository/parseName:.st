@@ -1,4 +1,4 @@
 
-!MCFileTreeRepository methodsFor: 'private' stamp: 'dkh 1/31/2012 14:17'!
+!MCFileTreeRepository methodsFor: 'private'!
 parseName: aString
     ^ self class parseName: aString! !

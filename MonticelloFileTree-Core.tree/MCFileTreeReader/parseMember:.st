@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'utilities' stamp: 'revelations 11/9/2011 11:26'!
+!MCFileTreeReader methodsFor: 'utilities'!
 parseMember: fileName
 	| tokens contents |
 	contents := packageDirectory fileNamed: fileName do: [ :file | file contents ].

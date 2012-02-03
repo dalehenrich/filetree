@@ -1,5 +1,5 @@
 
-!MCFileTreeWriter methodsFor: 'visiting' stamp: 'dkh 1/30/2012 20:57'!
+!MCFileTreeWriter methodsFor: 'visiting'!
 writeVersion: aVersion
 	directory := (MCFileTreeRepository parseName: aVersion info name) last.
 	self packageFileDirectory exists

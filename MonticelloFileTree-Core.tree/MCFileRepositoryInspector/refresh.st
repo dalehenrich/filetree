@@ -1,5 +1,5 @@
 
-!MCFileRepositoryInspector methodsFor: '*monticellofiletree-core' stamp: 'OttoBehrens 10/24/2011 23:31'!
+!MCFileRepositoryInspector methodsFor: '*monticellofiletree-core'!
 refresh
 	| packageNames |
 	packageNames := Set new.

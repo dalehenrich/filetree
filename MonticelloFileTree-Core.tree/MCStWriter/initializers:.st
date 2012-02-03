@@ -1,4 +1,4 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core' stamp: 'revelations 11/3/2011 14:51'!
+!MCStWriter methodsFor: '*monticellofiletree-core'!
 initializers: aCollection
 	initializers := aCollection! !

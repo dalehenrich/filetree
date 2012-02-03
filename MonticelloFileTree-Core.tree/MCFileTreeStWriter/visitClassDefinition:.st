@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:01'!
+!MCFileTreeStWriter methodsFor: 'visiting'!
 visitClassDefinition: definition
 	orderedClassNames add: definition className.
 	self

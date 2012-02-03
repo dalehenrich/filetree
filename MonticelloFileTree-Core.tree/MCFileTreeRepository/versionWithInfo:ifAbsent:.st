@@ -1,5 +1,5 @@
 
-!MCFileTreeRepository methodsFor: 'interface' stamp: 'OttoBehrens 10/26/2011 20:13'!
+!MCFileTreeRepository methodsFor: 'interface'!
 versionWithInfo: aVersionInfo ifAbsent: errorBlock
 	(self allFileNamesForVersionNamed: aVersionInfo name)
 		ifNotEmpty: [ :aCollection | ^ self versionFromFileNamed: aCollection first ].

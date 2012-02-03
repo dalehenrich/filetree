@@ -1,4 +1,4 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 1/30/2012 16:30'!
+!MCFileTreeStWriter methodsFor: 'visiting'!
 visitClassTraitDefinition: definition
     self flag: #'skippedForNow'! !

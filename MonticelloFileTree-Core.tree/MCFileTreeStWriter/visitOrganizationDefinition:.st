@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:02'!
+!MCFileTreeStWriter methodsFor: 'visiting'!
 visitOrganizationDefinition: defintion
 	self
 		writeInDirectoryName: '.'

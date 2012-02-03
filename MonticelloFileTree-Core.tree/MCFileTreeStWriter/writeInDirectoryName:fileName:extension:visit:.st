@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting' stamp: 'dkh 2/1/2012 20:14'!
+!MCFileTreeStWriter methodsFor: 'visiting'!
 writeInDirectoryName: directoryName fileName: fileName extension: ext visit: visitBlock
 	| directory |
 	directory := directoryName = '.'

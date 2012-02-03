@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'initialize-release' stamp: 'dkh 2/1/2012 19:55'!
+!MCFileTreeStWriter methodsFor: 'initialize-release'!
 writeInitializers
 	self
 		writeInDirectoryName: '.'

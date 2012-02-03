@@ -1,5 +1,5 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core' stamp: 'ezra 10/26/2011 17:35'!
+!MCStWriter methodsFor: '*monticellofiletree-core'!
 writeDefinitions: aCollection
 	"the correct initialization order is unknown if some classes are missing in the image"
 

@@ -1,4 +1,4 @@
 
-!MCFileTreeRepository methodsFor: 'as yet unclassified' stamp: 'ezra 10/28/2011 18:41'!
+!MCFileTreeRepository methodsFor: 'as yet unclassified'!
 allFileNamesForVersionNamed: aString
 	^ {(self treeDirectoryNameForVersionNamed: aString)}! !

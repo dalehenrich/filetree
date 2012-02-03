@@ -1,4 +1,4 @@
 
-!MCFileTreeReader methodsFor: 'accessing' stamp: 'revelations 11/2/2011 13:27'!
+!MCFileTreeReader methodsFor: 'accessing'!
 packageDirectory: aByteString
 	packageDirectory := stream directoryNamed: aByteString! !

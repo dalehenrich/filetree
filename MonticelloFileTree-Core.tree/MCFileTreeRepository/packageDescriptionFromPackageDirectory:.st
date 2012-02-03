@@ -1,5 +1,5 @@
 
-!MCFileTreeRepository methodsFor: 'actions' stamp: 'dkh 1/31/2012 14:14'!
+!MCFileTreeRepository methodsFor: 'actions'!
 packageDescriptionFromPackageDirectory: packageDirectory
     | info |
     info := self versionInfoForPackageDirectory: packageDirectory.

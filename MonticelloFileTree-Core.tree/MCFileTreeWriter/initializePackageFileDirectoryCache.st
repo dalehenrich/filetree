@@ -1,5 +1,5 @@
 
-!MCFileTreeWriter methodsFor: 'visiting' stamp: 'ezra 10/25/2011 16:53'!
+!MCFileTreeWriter methodsFor: 'visiting'!
 initializePackageFileDirectoryCache
 	cachedPackageFileDirectoryEntries := Dictionary new.
 	self packageFileDirectory entries

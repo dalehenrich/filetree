@@ -1,5 +1,5 @@
 
-!MCFileTreeWriter methodsFor: 'visiting' stamp: 'ezra 10/25/2011 17:29'!
+!MCFileTreeWriter methodsFor: 'visiting'!
 subPackageFileDirectoryFor: directoryName
 	^ cachedPackageFileDirectoryEntries
 		at: directoryName

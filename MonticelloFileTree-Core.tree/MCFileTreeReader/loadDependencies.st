@@ -1,4 +1,4 @@
 
-!MCFileTreeReader methodsFor: 'utilities' stamp: 'OttoBehrens 10/25/2011 01:31'!
+!MCFileTreeReader methodsFor: 'utilities'!
 loadDependencies
 	dependencies := Array new! !

@@ -1,4 +1,4 @@
 
-!MCFileTreeRepository methodsFor: 'as yet unclassified' stamp: 'dkh 1/31/2012 14:13'!
+!MCFileTreeRepository methodsFor: 'as yet unclassified'!
 canReadFileNamed: aString
     ^ aString endsWith: self packageExtension! !

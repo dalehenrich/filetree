@@ -1,4 +1,4 @@
 
-!MCFileTreeRepository class methodsFor: 'accessing' stamp: 'dkh 1/31/2012 14:16'!
+!MCFileTreeRepository class methodsFor: 'accessing'!
 packageExtension
     ^ '.tree'! !

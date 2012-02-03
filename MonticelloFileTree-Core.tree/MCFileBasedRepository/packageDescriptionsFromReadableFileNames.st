@@ -1,5 +1,5 @@
 
-!MCFileBasedRepository methodsFor: '*monticellofiletree-core' stamp: 'ezra 10/28/2011 18:25'!
+!MCFileBasedRepository methodsFor: '*monticellofiletree-core'!
 packageDescriptionsFromReadableFileNames
 	^ self readableFileNames
 		collect: [ :each | 

@@ -1,4 +1,4 @@
 
-!MCFileTreeRepository methodsFor: 'descriptions' stamp: 'dkh 1/31/2012 14:19'!
+!MCFileTreeRepository methodsFor: 'descriptions'!
 description
     ^ self class description , super description! !

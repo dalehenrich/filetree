@@ -1,5 +1,5 @@
 
-!MCFileTreeWriter methodsFor: 'serializing' stamp: 'revelations 11/9/2011 14:18'!
+!MCFileTreeWriter methodsFor: 'serializing'!
 writeVersionInfo: aVersionInfo onStream: s
 	s nextPut: $(.
 	#(#name #message #id #date #time #author)

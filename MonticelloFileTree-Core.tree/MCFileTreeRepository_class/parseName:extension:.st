@@ -1,5 +1,5 @@
 
-!MCFileTreeRepository class methodsFor: 'utility' stamp: 'dkh 1/31/2012 14:14'!
+!MCFileTreeRepository class methodsFor: 'utility'!
 parseName: aString extension: extension
     "picked up from GoferVersionReference>>parseName:"
 

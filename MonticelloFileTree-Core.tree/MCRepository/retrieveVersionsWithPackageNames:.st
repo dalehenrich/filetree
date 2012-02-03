@@ -1,5 +1,5 @@
 
-!MCRepository methodsFor: '*monticellofiletree-core' stamp: 'dkh 2/1/2012 13:53'!
+!MCRepository methodsFor: '*monticellofiletree-core'!
 retrieveVersionsWithPackageNames: packageNames
     ^ self readableFileNames
         collect: [ :each | 

@@ -1,4 +1,4 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core' stamp: 'ezra 10/26/2011 17:25'!
+!MCStWriter methodsFor: '*monticellofiletree-core'!
 absentInitializers
 	^ initializers reject: [ :each | Smalltalk hasClassNamed: each key ]! !

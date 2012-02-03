@@ -1,5 +1,5 @@
 
-!MCFileTreeRepository methodsFor: 'actions' stamp: 'OttoBehrens 10/25/2011 09:00'!
+!MCFileTreeRepository methodsFor: 'actions'!
 versionInfoForPackageDirectory: packageDirectory
 	^ (MCFileTreeReader on: packageDirectory containingDirectory fileName: packageDirectory localName)
 		loadVersionInfo;

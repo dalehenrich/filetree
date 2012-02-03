@@ -1,5 +1,5 @@
 
-!MCFileTreeWriter methodsFor: 'writing' stamp: 'galatians 05/13/2005 14:15'!
+!MCFileTreeWriter methodsFor: 'writing'!
 addString: string at: path
 	string isEmpty
 		ifFalse: [ 

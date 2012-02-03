@@ -1,5 +1,5 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core' stamp: 'ezra 10/26/2011 17:21'!
+!MCStWriter methodsFor: '*monticellofiletree-core'!
 writePresentInitializers
 	| orderedClasses presentInitializers |
 	presentInitializers := self presentInitializers.
