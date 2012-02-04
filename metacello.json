@@ -6,14 +6,14 @@
 				"name" : "MonticelloFileTree-Core"}},
 			{"group" : {
 				"name" : "default",
-				"includes" : ["MonticelloFileTree-Core"]}}
-			]},
-		{"gemstone" : [
-			{"package" :{
-				"name": "MonticelloFileTree-Core",
+				"includes" : ["MonticelloFileTree-Core"]}}]},
+		{"gemstone" : 
+			[
+			{"package" : {
+				"name" : "MonticelloFileTree-Core",
 				"includes" : ["MonticelloFileTree-GemStone-Extensions"]}},
-			{"package" :{
-				"name": "MonticelloFileTree-GemStone-Extensions",
+			{"package" : {
+				"name" : "MonticelloFileTree-GemStone-Extensions",
 				"requires" : ["MonticelloFileTree-Core"]}}]}
-		]},
+	]}
 ]
