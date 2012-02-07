@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree methodsFor: 'baselines' stamp: 'dkh 1/31/2012 15:19'!
+!ConfigurationOfFileTree methodsFor: 'baselines'!
 baseline100: spec
     <version: '1.0-baseline'>
     spec

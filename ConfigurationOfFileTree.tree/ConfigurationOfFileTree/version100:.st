@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree methodsFor: 'versions' stamp: 'dkh 1/31/2012 15:24'!
+!ConfigurationOfFileTree methodsFor: 'versions'!
 version100: spec
     <version: '1.0' imports: #('1.0-baseline')>
     spec
@@ -19,10 +19,13 @@ version100: spec
 - woops, real fix for Issue 13...
 1.0 (dkh.6):
 - merge MonticelloFileTree-dkh.58 and MonticelloFileTree-Core-revelations.13
-- a little refactoring for Montigitto support'.
+- a little refactoring for Montigitto support
+1.0 (dkh.8):
+- patch for MCFileTreeReader>>addClassAndMethodDefinitionsFromDirectoryEntries:
+- synch with http://ss3.gemstone.com/ss/FileTree'.
             spec author: 'dkh'.
-            spec timestamp: '1/31/2012 15:23'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.14' ].
+            spec timestamp: '2/6/2012 19:27'.
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.20' ].
     spec
         for: #'gemstone'
         do: [ spec package: 'MonticelloFileTree-GemStone-Extensions' with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]! !

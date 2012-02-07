@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree class methodsFor: 'development support' stamp: 'dkh 1/30/2012 09:45'!
+!ConfigurationOfFileTree class methodsFor: 'development support'!
 validate
 	"Check the configuration for Errors, Critical Warnings, and Warnings (see class comment for MetacelloMCVersionValidator for more information). 
 	Errors identify specification issues that will result in unexpected behaviour when you load the configuration. 

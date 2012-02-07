@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree class methodsFor: 'loading' stamp: 'dkh 1/30/2012 09:45'!
+!ConfigurationOfFileTree class methodsFor: 'loading'!
 loadDevelopment
 	"Load the #development version defined for this platform. The #development version will change over time and is not expected to be stable."
 

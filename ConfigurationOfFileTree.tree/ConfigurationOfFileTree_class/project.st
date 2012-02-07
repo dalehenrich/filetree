@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree class methodsFor: 'accessing' stamp: 'dkh 1/30/2012 09:45'!
+!ConfigurationOfFileTree class methodsFor: 'accessing'!
 project
 
 	^self new project! !

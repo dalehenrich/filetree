@@ -1,5 +1,5 @@
 
-!ConfigurationOfFileTree class methodsFor: 'loading' stamp: 'dkh 1/30/2012 09:45'!
+!ConfigurationOfFileTree class methodsFor: 'loading'!
 loadBleedingEdge
 	"Load the latest versions of the mcz files defined for this project. It is not likely that the #bleedingEdge has been tested."
 
