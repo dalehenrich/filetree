@@ -1,8 +1,8 @@
-(name 'MonticelloFileTree-Core-dkh.19'
-message '- fix filetree Issue #3  and partial fix for filetree Issue #1'
-id 'fc174a88-d5ec-4796-820b-98aba359fbb3'
-date '2 February 2012'
-time '4:53:07 pm'
+(name 'MonticelloFileTree-Core-dkh.20'
+message '- patch for MCFileTreeReader>>addClassAndMethodDefinitionsFromDirectoryEntries:'
+id '1bc18b0d-849c-487a-b441-85852f10cf32'
+date '6 February 2012'
+time '6:31:35 pm'
 author 'dkh'
 ancestors ()
 stepChildren ())

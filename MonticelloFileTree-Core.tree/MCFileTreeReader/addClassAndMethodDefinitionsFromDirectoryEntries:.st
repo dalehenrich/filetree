@@ -12,10 +12,11 @@ addClassAndMethodDefinitionsFromDirectoryEntries: entries
                         ifFalse: [ directory entries ])
                         do: [ :file | 
                             | methodDefinition |
-                            methodDefinition := self definitionFromFile: file inDirectory: directory.
-                            (self separateMethodMetaAndSource and: [ methodDefinition isMethodDefinition ])
-                                ifTrue: [ 
-                                    directory
-                                        fileNamed: methodDefinition selector asString , '.meta'
-                                        do: [ :fileStream | methodDefinition setTimeStamp: (Author fixStamp: fileStream contents) ] ].
-                            definitions add: methodDefinition ] ] ]! !
+                            (methodDefinition := self definitionFromFile: file inDirectory: directory)
+                                ifNotNil: [ 
+                                    (self separateMethodMetaAndSource and: [ methodDefinition isMethodDefinition ])
+                                        ifTrue: [ 
+                                            directory
+                                                fileNamed: methodDefinition selector asString , '.meta'
+                                                do: [ :fileStream | methodDefinition setTimeStamp: (Author fixStamp: fileStream contents) ] ].
+                                    definitions add: methodDefinition ] ] ] ]! !
