@@ -1,6 +1,6 @@
 
 MCDirectoryRepository subclass: #MCFileTreeRepository
-	instanceVariableNames: ''
+	instanceVariableNames: 'readonly'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'MonticelloFileTree-Core'!
