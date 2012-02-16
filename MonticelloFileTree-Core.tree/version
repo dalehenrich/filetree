@@ -1,8 +1,8 @@
-(name 'MonticelloFileTree-Core-dkh.21'
-message '- implementing ''get'' operation for Metacello scripting API- adding support for github downloads (readonly repo) in progress- examples scripts:  Metacello new     project: ''Seaside30'';     get.  Metacello new     project: ''Sample'';     filetree: ''/foos1/users/dhenrich/smalltalk/sample/'';     get.  Metacello new     project: ''Sample'';     filetree: ''/foos1/users/dhenrich/smalltalk/metacello/'';     get.  Metacello new     project: ''Sample'';     github: ''dalehenrich/sample'';     version: ''1.0'';     get.'
-id 'd4a94298-1df1-4c24-8476-40cd4fe21f72'
-date '7 February 2012'
-time '5:14:01 pm'
+(name 'MonticelloFileTree-Core-dkh.22'
+message ''
+id 'ebe25dac-b021-4de8-a1ee-5c0195b75797'
+date '16 February 2012'
+time '2:09:09 pm'
 author 'dkh'
 ancestors ()
 stepChildren ())

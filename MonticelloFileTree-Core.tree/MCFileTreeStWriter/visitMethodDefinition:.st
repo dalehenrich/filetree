@@ -12,9 +12,4 @@ visitMethodDefinition: definition
         writeInDirectoryName: directoryname
         fileName: filename
         extension: '.st'
-        visit: [ stWriter visitMethodDefinition: definition ].
-    self
-        writeInDirectoryName: directoryname
-        fileName: filename
-        extension: '.meta'
-        visit: [ stWriter writeMethodMetadata: definition ]! !
+        visit: [ stWriter visitMethodDefinition: definition ]! !
