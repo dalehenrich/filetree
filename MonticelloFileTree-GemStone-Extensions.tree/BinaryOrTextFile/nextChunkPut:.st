@@ -1,5 +1,5 @@
 
-!BinaryOrTextFile methodsFor: '*monticellofiletree-gemstone-extensions' stamp: 'galatians 05/13/2005 14:15'!
+!BinaryOrTextFile methodsFor: '*monticellofiletree-gemstone-extensions'!
 nextChunkPut: aString
 	"Append the argument, aString, to the receiver, doubling embedded terminators."
  

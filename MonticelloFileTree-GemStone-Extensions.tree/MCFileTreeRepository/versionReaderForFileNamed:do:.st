@@ -1,5 +1,5 @@
 
-!MCFileTreeRepository methodsFor: '*monticellofiletree-gemstone-extensions' stamp: 'revelations 11/2/2011 13:07'!
+!MCFileTreeRepository methodsFor: '*monticellofiletree-gemstone-extensions'!
 versionReaderForFileNamed: aString do: aBlock
 	^ self
 		readStreamForFileNamed: aString

@@ -1,5 +1,5 @@
 
-!FileDirectory methodsFor: '*monticellofiletree-gemstone-extensions' stamp: 'galatians 05/13/2005 14:15'!
+!FileDirectory methodsFor: '*monticellofiletree-gemstone-extensions'!
 forceNewFileNamed: localFileName do: aBlock
 	| file |
 	file := self forceNewFileNamed: localFileName.

@@ -1,5 +1,5 @@
 
-!ChangeList class methodsFor: '*monticellofiletree-gemstone-extensions' stamp: 'revelations 11/04/2011 15:50'!
+!ChangeList class methodsFor: '*monticellofiletree-gemstone-extensions'!
 parseSelector: methodString
 	"
 	ChangeList parseSelector: 'test'.

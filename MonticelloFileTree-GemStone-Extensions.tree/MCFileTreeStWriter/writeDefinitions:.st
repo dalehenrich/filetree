@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: '*monticellofiletree-gemstone-extensions' stamp: 'galatians 05/13/2005 14:15'!
+!MCFileTreeStWriter methodsFor: '*monticellofiletree-gemstone-extensions'!
 writeDefinitions: aCollection
 	"the correct initialization order is unknown if some classes are missing in the image"
 
