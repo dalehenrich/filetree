@@ -6,6 +6,7 @@ baseline100: spec
         for: #'common'
         do: [ 
             spec blessing: #'baseline'.
+		spec repository: 'http://ss3.gemstone.com/ss/FileTree'.
             spec package: 'MonticelloFileTree-Core'.
             spec group: 'default' with: #('MonticelloFileTree-Core') ].
     spec
