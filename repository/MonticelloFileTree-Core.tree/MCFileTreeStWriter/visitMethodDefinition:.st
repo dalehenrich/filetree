@@ -5,11 +5,9 @@ visitMethodDefinition: definition
     directoryname := definition classIsMeta
         ifTrue: [ definition className , '_class' ]
         ifFalse: [ definition className ].
-    filename := definition selector == #'/'
-        ifTrue: [ 'encoded slash' ]
-        ifFalse: [ definition selector ].
+    filename := self fileNameForSelector: definition selector.
     self
         writeInDirectoryName: directoryname
         fileName: filename
         extension: '.st'
-        visit: [ stWriter visitMethodDefinition: definition ]! !
+        visit: [ self writeMethodDefinition: definition ]! !

@@ -1,4 +1,4 @@
 
 !MCFileTreeWriter methodsFor: 'accessing'!
 snapshotWriterClass
-	^ MCFileTreeStWriter! !
+	^ MCFileTreeAbstractStWriter! !

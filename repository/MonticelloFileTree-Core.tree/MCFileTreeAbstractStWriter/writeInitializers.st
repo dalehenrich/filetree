@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'initialize-release'!
+!MCFileTreeAbstractStWriter methodsFor: 'initialize-release'!
 writeInitializers
 	self
 		writeInDirectoryName: '.'

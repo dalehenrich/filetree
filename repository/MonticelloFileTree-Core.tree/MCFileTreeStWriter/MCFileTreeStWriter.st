@@ -1,6 +1,6 @@
 
-MCWriter subclass: #MCFileTreeStWriter
-	instanceVariableNames: 'stWriter initializers orderedClassNames'
+MCFileTreeAbstractStWriter subclass: #MCFileTreeStWriter
+	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'MonticelloFileTree-Core'!

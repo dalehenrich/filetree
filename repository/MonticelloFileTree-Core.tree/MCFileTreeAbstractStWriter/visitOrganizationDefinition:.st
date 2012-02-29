@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'visiting'!
+!MCFileTreeAbstractStWriter methodsFor: 'visiting'!
 visitOrganizationDefinition: defintion
 	self
 		writeInDirectoryName: '.'

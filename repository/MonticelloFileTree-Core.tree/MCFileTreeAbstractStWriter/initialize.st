@@ -1,5 +1,5 @@
 
-!MCFileTreeStWriter methodsFor: 'initialize-release'!
+!MCFileTreeAbstractStWriter methodsFor: 'initialize-release'!
 initialize
     stWriter := MCFileTreePackageStructureStWriter new
         initializers: (initializers := Set new);
