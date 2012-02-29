@@ -1,5 +1,5 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core'!
+!MCFileTreePackageStructureStWriter methodsFor: 'writing'!
 writeDefinitions: aCollection
 	"the correct initialization order is unknown if some classes are missing in the image"
 

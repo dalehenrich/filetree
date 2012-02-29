@@ -1,5 +1,5 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core'!
+!MCFileTreePackageStructureStWriter methodsFor: 'writing'!
 writeProperties
     stream
         nextPutAll: '{ "structureVersion" : "';

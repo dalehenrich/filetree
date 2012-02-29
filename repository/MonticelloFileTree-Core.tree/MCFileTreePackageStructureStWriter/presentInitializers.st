@@ -1,4 +1,4 @@
 
-!MCStWriter methodsFor: '*monticellofiletree-core'!
+!MCFileTreePackageStructureStWriter methodsFor: 'accessing'!
 presentInitializers
 	^ initializers select: [ :each | Smalltalk hasClassNamed: each key ]! !

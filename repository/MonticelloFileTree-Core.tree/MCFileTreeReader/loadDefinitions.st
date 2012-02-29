@@ -4,7 +4,6 @@ loadDefinitions
     | entries |
     definitions := OrderedCollection new.
     entries := packageDirectory entries.
-    [ 
     fileTreeStructureVersion := #'0.0'.
     (entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
         ifNotNil: [ :configEntry | 
@@ -26,6 +25,4 @@ loadDefinitions
             inDirectory: packageDirectory;
         addClassAndMethodDefinitionsFromDirectoryEntries: entries;
         addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'initializers' ] ifNone: [  ])
-            inDirectory: packageDirectory ]
-        on: Error
-        do: [ :error | error halt ]! !
+            inDirectory: packageDirectory! !

@@ -9,7 +9,7 @@ definitionFromFile: directoryEntry inDirectory: aDirectory
             | methodDefinition |
             reader := MCStReader on: fileStream.
             (defs := reader definitions) size <= 1
-                ifFalse: [ 'we are attempting to write exactly 1 definition per file' halt ] ].
+                ifFalse: [ self error: 'we should be writing exactly 1 definition per file' ] ].
     defs size = 0
         ifTrue: [ ^ nil ].
     ^ defs first! !
