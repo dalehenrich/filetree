@@ -5,4 +5,4 @@ writeConfigFile
         writeInDirectoryName: '.'
         fileName: ''
         extension: '.filetree'
-        visit: [ stWriter writeSignature ]! !
+        visit: [ stWriter writeProperties ]! !

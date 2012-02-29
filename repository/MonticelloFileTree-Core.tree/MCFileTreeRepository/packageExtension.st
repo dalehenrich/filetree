@@ -1,6 +1,4 @@
 
 !MCFileTreeRepository methodsFor: 'private'!
 packageExtension
-    self usesPkgExtension
-        ifTrue: [ ^ '.pkg' ].
-    ^ '.tree'! !
+    ^ self repositoryProperties at: 'packageExtension' ifAbsent: [ '.tree' ]! !

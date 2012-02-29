@@ -1,4 +1,5 @@
 
 !MCFileTreeWriter methodsFor: 'writing'!
 packageFileDirectory
-	^ packageFileDirectory := stream directory directoryNamed: directory! !
+    packageFileDirectory ifNil: [ packageFileDirectory := stream directory directoryNamed: directory ].
+    ^ packageFileDirectory! !
