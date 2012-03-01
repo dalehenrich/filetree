@@ -1,1 +1,5 @@
-{ "structureVersion" : "0.2" }
+{
+    "noMethodMetaData" : true,
+    "separateMethodMetaAndSource" : false,
+    "snapshotStructure" : false
+}

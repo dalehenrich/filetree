@@ -1,4 +1,4 @@
 
 !MCFileTreeReader methodsFor: 'testing'!
 separateMethodMetaAndSource
-    ^ fileTreeStructureVersion == #'0.1'! !
+    ^ self packageProperties at: 'separateMethodMetaAndSource' ifAbsent: [ false ]! !

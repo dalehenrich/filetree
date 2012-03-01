@@ -1,6 +1,6 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'initialize-release'!
-writeConfigFile
+writePropertiesFile
     self
         writeInDirectoryName: '.'
         fileName: ''
