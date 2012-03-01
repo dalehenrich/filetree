@@ -28,10 +28,13 @@ version100: spec
 1.0 (dkh.10):
 - version 0.2 of package structure
 - metacello structure changed
-- preserving package ancestry in filetree rep again'.
+- preserving package ancestry in filetree rep again
+1.0 (dkh.12):
+- reader and writer for new pkg structure
+  https://gist.github.com/1892114/eceff40deb06926d13df1db2f1c13749ed96677f'.
             spec author: 'dkh'.
-            spec timestamp: '2/17/2012 17:02'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.25' ].
+            spec timestamp: '3/1/2012 14:30'.
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.34' ].
     spec
         for: #'gemstone'
         do: [ spec package: 'MonticelloFileTree-GemStone-Extensions' with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]! !
