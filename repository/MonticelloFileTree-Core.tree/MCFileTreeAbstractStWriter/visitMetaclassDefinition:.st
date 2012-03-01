@@ -1,4 +1,6 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'visiting'!
 visitMetaclassDefinition: definition
-    self subclassResponsibility! !
+    "handled by class definition"
+
+    ! !

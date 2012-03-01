@@ -1,3 +1,0 @@
-
-MCFileTreeRepository class
-	instanceVariableNames: 'defaultPackageExtension'!

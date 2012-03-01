@@ -1,6 +1,6 @@
 
 MCFileTreeAbstractStWriter subclass: #MCFileTreeStSnapshotWriter
-	instanceVariableNames: 'classDefinitions metaClassDefinitions methodDefinitions'
+	instanceVariableNames: 'classDefinitions methodDefinitions'
 	classVariableNames: ''
 	poolDictionaries: ''
 	category: 'MonticelloFileTree-Core'!

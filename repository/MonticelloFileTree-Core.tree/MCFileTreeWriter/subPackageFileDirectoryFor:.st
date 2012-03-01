@@ -1,9 +1,10 @@
 
 !MCFileTreeWriter methodsFor: 'visiting'!
-subPackageFileDirectoryFor: directoryName
-	^ cachedPackageFileDirectoryEntries
-		at: directoryName
-		ifAbsentPut: [ 
-			(self packageFileDirectory)
-				createDirectory: directoryName;
-				directoryNamed: directoryName ]! !
+subPackageFileDirectoryFor: directoryNameOrPath
+    ^ cachedPackageFileDirectoryEntries
+        at: directoryNameOrPath
+        ifAbsentPut: [ 
+            | dir |
+            dir := self packageFileDirectory directoryNamed: directoryNameOrPath.
+            dir assureExistence.
+            dir ]! !

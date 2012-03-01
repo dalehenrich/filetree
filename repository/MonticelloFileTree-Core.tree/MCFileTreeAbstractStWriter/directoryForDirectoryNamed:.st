@@ -1,6 +1,6 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'private'!
-directoryForDirectoryNamed: directoryName
-    ^ directoryName = '.'
+directoryForDirectoryNamed: directoryNameOrPath
+    ^ directoryNameOrPath = '.'
         ifTrue: [ stream packageFileDirectory ]
-        ifFalse: [ stream subPackageFileDirectoryFor: directoryName ]! !
+        ifFalse: [ stream subPackageFileDirectoryFor: directoryNameOrPath ]! !

@@ -6,5 +6,5 @@ writeRepositoryProperties
         do: [ :file | 
             file lineEndConvention: #'lf'.
             file
-                nextPutAll: '{ "packageExtension" : ".tree" }';
+                nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
                 cr ]! !

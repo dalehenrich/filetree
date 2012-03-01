@@ -1,8 +1,8 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'visiting'!
-writeInDirectoryName: directoryName fileName: fileName extension: ext visit: visitBlock
+writeInDirectoryName: directoryNameOrPath fileName: fileName extension: ext visit: visitBlock
     | directory |
-    directory := self directoryForDirectoryNamed: directoryName.
+    directory := self directoryForDirectoryNamed: directoryNameOrPath.
     directory
         forceNewFileNamed: fileName , ext
         do: [ :file | 
