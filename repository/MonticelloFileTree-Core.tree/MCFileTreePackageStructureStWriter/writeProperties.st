@@ -6,9 +6,7 @@ writeProperties
         cr;
         nextPutAll: '    "noMethodMetaData" : true,';
         cr;
-        nextPutAll: '    "separateMethodMetaAndSource" : false,';
-        cr;
-        nextPutAll: '    "snapshotStructure" : ' , self class useSnapShotWriter asString;
+        nextPutAll: '    "separateMethodMetaAndSource" : false';
         cr;
         nextPut: $};
         cr! !

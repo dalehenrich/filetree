@@ -1,6 +1,8 @@
 
 !MCFileTreeRepository methodsFor: 'actions'!
 versionInfoForPackageDirectory: packageDirectory
-	^ (MCFileTreeReader on: packageDirectory containingDirectory fileName: packageDirectory localName)
-		loadVersionInfo;
-		info! !
+    ^ ((MCReader readerClassForFileNamed: packageDirectory localName)
+        on: packageDirectory containingDirectory
+        fileName: packageDirectory localName)
+        loadVersionInfo;
+        info! !

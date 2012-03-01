@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'accessing'!
+!MCFileTreeAbstractReader methodsFor: 'accessing'!
 basicVersion
 	^ (MCVersion new)
 		setPackage: self package

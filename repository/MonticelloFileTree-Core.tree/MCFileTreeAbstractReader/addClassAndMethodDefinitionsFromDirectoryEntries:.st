@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'utilities'!
+!MCFileTreeAbstractReader methodsFor: 'utilities'!
 addClassAndMethodDefinitionsFromDirectoryEntries: entries
     | timestamp |
     self noMethodMetaData
@@ -9,7 +9,7 @@ addClassAndMethodDefinitionsFromDirectoryEntries: entries
             element isDirectory
                 ifTrue: [ 
                     | directory |
-                    directory := packageDirectory directoryNamed: element name.
+                    directory := element asFileDirectory.
                     ((self separateMethodMetaAndSource or: [ self noMethodMetaData ])
                         ifTrue: [ directory entries select: [ :entry | entry name endsWith: '.st' ] ]
                         ifFalse: [ directory entries ])

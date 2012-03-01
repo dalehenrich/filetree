@@ -1,4 +1,4 @@
 
-!MCFileTreeReader methodsFor: 'testing'!
+!MCFileTreeAbstractReader methodsFor: 'testing'!
 noMethodMetaData
     ^ self packageProperties at: 'noMethodMetaData' ifAbsent: [ false ]! !

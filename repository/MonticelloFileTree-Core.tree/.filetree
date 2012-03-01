@@ -1,5 +1,4 @@
 {
     "noMethodMetaData" : true,
-    "separateMethodMetaAndSource" : false,
-    "snapshotStructure" : false
+    "separateMethodMetaAndSource" : false
 }

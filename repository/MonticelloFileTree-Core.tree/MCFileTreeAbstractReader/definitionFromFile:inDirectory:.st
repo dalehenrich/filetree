@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'utilities'!
+!MCFileTreeAbstractReader methodsFor: 'utilities'!
 definitionFromFile: directoryEntry inDirectory: aDirectory
     | defs reader |
     directoryEntry ifNil: [ ^ nil ].

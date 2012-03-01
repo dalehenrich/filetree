@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'utilities'!
+!MCFileTreeAbstractReader methodsFor: 'utilities'!
 parseMember: fileName
 	| tokens contents |
 	contents := packageDirectory fileNamed: fileName do: [ :file | file contents ].

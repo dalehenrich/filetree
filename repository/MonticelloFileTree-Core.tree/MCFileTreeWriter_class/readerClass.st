@@ -1,4 +1,6 @@
 
 !MCFileTreeWriter class methodsFor: 'accessing'!
 readerClass
-	^ MCFileTreeReader! !
+    "don't expect this message to be sent"
+
+    self shouldNotImplement! !

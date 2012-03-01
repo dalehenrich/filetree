@@ -1,5 +1,5 @@
 
-!MCFileTreeReader methodsFor: 'utilities'!
+!MCFileTreeAbstractReader methodsFor: 'utilities'!
 loadDefinitions
     | entries |
     definitions := OrderedCollection new.
@@ -7,6 +7,6 @@ loadDefinitions
     self
         addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'categories' ] ifNone: [  ])
             inDirectory: packageDirectory;
-        addClassAndMethodDefinitionsFromDirectoryEntries: entries;
+        addClassAndMethodDefinitionsFromDirectory: packageDirectory;
         addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'initializers' ] ifNone: [  ])
             inDirectory: packageDirectory! !

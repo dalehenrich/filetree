@@ -1,5 +1,5 @@
 
-MCMczReader subclass: #MCFileTreeReader
+MCMczReader subclass: #MCFileTreeAbstractReader
 	instanceVariableNames: 'packageDirectory packageProperties'
 	classVariableNames: ''
 	poolDictionaries: ''
