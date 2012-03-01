@@ -2,5 +2,5 @@
 !MCFileTreeStSnapshotWriter methodsFor: 'visiting'!
 visitMethodDefinition: definition
     (self methodDefinitions
-        at: definition actualClass
-        ifAbsent: [ self methodDefinitions at: definition actualClass put: OrderedCollection new ]) add: definition! !
+        at: definition className
+        ifAbsent: [ self methodDefinitions at: definition className put: OrderedCollection new ]) add: definition! !

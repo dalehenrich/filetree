@@ -7,24 +7,25 @@ writeDefinitions: aCollection
     extensionClasses := OrderedCollection new.
     extensionMethodDefinitions := OrderedCollection new.
     self methodDefinitions
-        keysAndValuesDo: [ :class :extensionMethods | 
+        keysAndValuesDo: [ :className :extensionMethods | 
             self classDefinitions
-                at: class theNonMetaClass
+                at: className
                 ifAbsent: [ 
-                    extensionClasses add: class.
+                    extensionClasses add: className.
                     extensionMethodDefinitions addAll: extensionMethods ] ].
-    extensionClasses do: [ :class | self methodDefinitions removeKey: class ].
+    extensionClasses do: [ :className | self methodDefinitions removeKey: className ].
     self classDefinitions
-        keysAndValuesDo: [ :class :definition | 
-            | classPath methodPath |
+        keysAndValuesDo: [ :className :definition | 
+            | classPath instanceMethodPath classMethodPath |
             classPath := basePath , definition className , '.class' , FileDirectory slash.
             self writeClassDefinition: definition to: classPath.
-            methodPath := classPath , 'instance' , FileDirectory slash.
-            (self methodDefinitions at: class ifAbsent: [ #() ])
-                do: [ :methodDefinition | self writeMethodDefinition: methodDefinition to: methodPath ].
-            methodPath := classPath , 'class' , FileDirectory slash.
-            (self methodDefinitions at: class theMetaClass ifAbsent: [ #() ])
-                do: [ :methodDefinition | self writeMethodDefinition: methodDefinition to: methodPath ] ].
+            instanceMethodPath := classPath , 'instance' , FileDirectory slash.
+            classMethodPath := classPath , 'class' , FileDirectory slash.
+            (self methodDefinitions at: className ifAbsent: [ #() ])
+                do: [ :methodDefinition | 
+                    methodDefinition classIsMeta
+                        ifTrue: [ self writeMethodDefinition: methodDefinition to: classMethodPath ]
+                        ifFalse: [ self writeMethodDefinition: methodDefinition to: instanceMethodPath ] ] ].
     basePath := 'snapshot' , FileDirectory slash , 'extensions' , FileDirectory slash.
     extensionMethodDefinitions
         do: [ :methodDefinition | 
