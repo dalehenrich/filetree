@@ -5,5 +5,5 @@ defaultPackageExtension
 
 	default package extension is primary driver fo  format in which package structure is written"
 
-    defaultPackageExtension ifNil: [ defaultPackageExtension := '.tree' ].
+    defaultPackageExtension ifNil: [ defaultPackageExtension := '.pkg' ].
     ^ defaultPackageExtension! !
