@@ -1,6 +1,9 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'private'!
 fileNameForSelector: selector
-    ^ selector == #'/'
+    ^ (selector == #'/'
         ifTrue: [ 'encoded slash' ]
-        ifFalse: [ selector ]! !
+        ifFalse: [ 
+            (selector includes: $/)
+                ifTrue: [ 'encoded' , selector copyReplaceAll: '/' with: ' slash ' ]
+                ifFalse: [ selector ] ]) asString! !
