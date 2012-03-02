@@ -33,10 +33,12 @@ version100: spec
 - reader and writer for new pkg structure
   https://gist.github.com/1892114/eceff40deb06926d13df1db2f1c13749ed96677f
 1.0 (dkh.13):
-- bad idea to use actualClass ... write .pkg structure without relying on classes ...'.
+- bad idea to use actualClass ... write .pkg structure without relying on classes ...
+1.0 (dkh.14):
+-switch default package extension to .pkg'.
             spec author: 'dkh'.
-            spec timestamp: '3/1/2012 15:05'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.35' ].
+            spec timestamp: '3/1/2012 16:37'.
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.36' ].
     spec
         for: #'gemstone'
         do: [ spec package: 'MonticelloFileTree-GemStone-Extensions' with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]! !
