@@ -3,4 +3,6 @@
 directory: aDirectory
     super directory: aDirectory.
     self repositoryProperties isEmpty
-        ifTrue: [ self writeRepositoryProperties ]! !
+        ifTrue: [ 
+            aDirectory exists
+                ifTrue: [ self writeRepositoryProperties ] ]! !
