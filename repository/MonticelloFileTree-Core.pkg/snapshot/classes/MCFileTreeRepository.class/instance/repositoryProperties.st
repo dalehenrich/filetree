@@ -4,6 +4,12 @@ repositoryProperties
     repositoryProperties
         ifNil: [ 
             repositoryProperties := Dictionary new.
+            directory exists
+                ifFalse: [ 
+                    Transcript
+                        cr;
+                        show: 'filetree:// repository ' , directory pathName printString , ' does not exist.'.
+                    ^ repositoryProperties ].
             (directory entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
                 ifNotNil: [ :configEntry | 
                     configEntry
