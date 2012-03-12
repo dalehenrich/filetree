@@ -12,13 +12,13 @@ Bootstrap into Pharo 1.3 image using:
 
 Then use git to clone this repository for FileTree-based experience ... Primary work on FileTree takes place here with periodic checkpoints to the ss3 repository.
 
-# HOW TO INSTALL
+## HOW TO INSTALL
 
 "Note that these instructions apply to Phase1 ... not yet alpha, so take care:)
 
 Assuming Pharo 1.3"
 
-## Bootstrap filetree code
+### Bootstrap filetree code
 ```Smalltalk
 Gofer new
     url: 'http://ss3.gemstone.com/ss/FileTree';
@@ -27,7 +27,7 @@ Gofer new
   ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.
 ```
 
-## Download the filetree repository from GitHub by doing something like the following:
+### Download the filetree repository from GitHub by doing something like the following:
 ```shell
   sudo mkdir /opt/git/
   sudo chmod og+rw /opt/git/
@@ -36,7 +36,7 @@ Gofer new
   unzip /tmp/git.zip -d /opt/git
 ```
 
-## You can also clone the filetree repository if you already have git installed:
+### You can also clone the filetree repository if you already have git installed:
 ```shell
   sudo mkdir /opt/git/
   sudo chmod og+rw /opt/git/
@@ -51,7 +51,7 @@ Gofer new
 as the path for attaching the FileTree repository.
 "
 
-## Attach to filetree repository and load latest packages (use correct path to your filetree download/clone)
+### Attach to filetree repository and load latest packages (use correct path to your filetree download/clone)
 ```Smalltalk
 Gofer new
     repository: (MCFileTreeRepository new directory: 
