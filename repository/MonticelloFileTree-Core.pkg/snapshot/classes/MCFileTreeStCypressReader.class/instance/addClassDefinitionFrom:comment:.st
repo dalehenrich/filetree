@@ -9,10 +9,10 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
                 traitComposition: (classPropertiesDict at: 'traitcomposition' ifAbsent: [ '{}' ])
                 classTraitComposition: (classPropertiesDict at: 'classtraitcomposition' ifAbsent: [ '{}' ])
                 category: (classPropertiesDict at: 'category')
-                instVarNames: ((classPropertiesDict at: 'instvars') findTokens: ' ')
-                classVarNames: ((classPropertiesDict at: 'classvars') findTokens: ' ')
-                poolDictionaryNames: ((classPropertiesDict at: 'pools') findTokens: ' ')
-                classInstVarNames: (classPropertiesDict at: 'classinstvars')
-                type: (classPropertiesDict at: 'type')
+                instVarNames: (classPropertiesDict at: 'instvars' ifAbsent: [ #() ])
+                classVarNames: (classPropertiesDict at: 'classvars' ifAbsent: [ #() ])
+                poolDictionaryNames: (classPropertiesDict at: 'pools' ifAbsent: [ #() ])
+                classInstVarNames: (classPropertiesDict at: 'classinstvars' ifAbsent: [ #() ])
+                type: (classPropertiesDict at: 'type' ifAbsent: [ 'normal' ])
                 comment: classComment
-                commentStamp: (classPropertiesDict at: 'commentStamp'))! !
+                commentStamp: (classPropertiesDict at: 'commentStamp' ifAbsent: [ '' ]))! !

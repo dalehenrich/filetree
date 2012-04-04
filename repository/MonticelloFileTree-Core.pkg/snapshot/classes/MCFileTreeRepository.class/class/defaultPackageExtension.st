@@ -1,9 +1,14 @@
 
 !MCFileTreeRepository class methodsFor: 'accessing'!
 defaultPackageExtension
-    ".tree and .pkg are the only two formats supported at the moment.
+    ".tree, .pkg, .package are the only formats supported at the moment:
+	.tree         - original structure
+	.pkg          - snapshot structure
+	.package - cypress structure"
 
-	default package extension is primary driver fo  format in which package structure is written"
-
-    defaultPackageExtension ifNil: [ defaultPackageExtension := '.pkg' ].
+    defaultPackageExtension
+        ifNil: [ 
+            defaultPackageExtension := MCFileTreePackageStructureStWriter useCypressWriter
+                ifTrue: [ '.package' ]
+                ifFalse: [ '.pkg' ] ].
     ^ defaultPackageExtension! !
