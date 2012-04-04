@@ -14,16 +14,16 @@ addClassAndMethodDefinitionsFromDirectoryEntries: entries
                         ifTrue: [ directory entries select: [ :entry | entry name endsWith: '.st' ] ]
                         ifFalse: [ directory entries ])
                         do: [ :file | 
-                            | methodDefinition |
-                            (methodDefinition := self definitionFromFile: file inDirectory: directory)
+                            | definition |
+                            (definition := self definitionFromFile: file inDirectory: directory)
                                 ifNotNil: [ 
-                                    methodDefinition isMethodDefinition
+                                    definition isMethodDefinition
                                         ifTrue: [ 
                                             self separateMethodMetaAndSource
                                                 ifTrue: [ 
                                                     directory
-                                                        fileNamed: methodDefinition selector asString , '.meta'
-                                                        do: [ :fileStream | methodDefinition setTimeStamp: (Author fixStamp: fileStream contents) ] ].
+                                                        fileNamed: definition selector asString , '.meta'
+                                                        do: [ :fileStream | definition setTimeStamp: (Author fixStamp: fileStream contents) ] ].
                                             self noMethodMetaData
-                                                ifTrue: [ methodDefinition setTimeStamp: timestamp ] ].
-                                    definitions add: methodDefinition ] ] ] ]! !
+                                                ifTrue: [ definition setTimeStamp: timestamp ] ].
+                                    definitions add: definition ] ] ] ]! !

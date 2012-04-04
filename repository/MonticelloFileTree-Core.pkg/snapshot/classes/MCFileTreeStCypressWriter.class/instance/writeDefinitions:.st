@@ -1,9 +1,8 @@
 
-!MCFileTreeStSnapshotWriter methodsFor: 'initialize-release'!
+!MCFileTreeStCypressWriter methodsFor: 'initialize-release'!
 writeDefinitions: aCollection
-    | basePath extensionClasses extensionMethodDefinitions |
+    | classDirExtension extensionClasses extensionMethodDefinitions |
     self writeBasicDefinitions: aCollection.
-    basePath := 'snapshot' , FileDirectory slash , 'classes' , FileDirectory slash.
     extensionClasses := OrderedCollection new.
     extensionMethodDefinitions := OrderedCollection new.
     self methodDefinitions
@@ -14,10 +13,11 @@ writeDefinitions: aCollection
                     extensionClasses add: className.
                     extensionMethodDefinitions addAll: extensionMethods ] ].
     extensionClasses do: [ :className | self methodDefinitions removeKey: className ].
+    classDirExtension := '.class'.
     self classDefinitions
         keysAndValuesDo: [ :className :definition | 
             | classPath instanceMethodPath classMethodPath |
-            classPath := basePath , definition className , '.class' , FileDirectory slash.
+            classPath := definition className , classDirExtension , FileDirectory slash.
             self writeClassDefinition: definition to: classPath.
             instanceMethodPath := classPath , 'instance' , FileDirectory slash.
             classMethodPath := classPath , 'class' , FileDirectory slash.
@@ -26,11 +26,11 @@ writeDefinitions: aCollection
                     methodDefinition classIsMeta
                         ifTrue: [ self writeMethodDefinition: methodDefinition to: classMethodPath ]
                         ifFalse: [ self writeMethodDefinition: methodDefinition to: instanceMethodPath ] ] ].
-    basePath := 'snapshot' , FileDirectory slash , 'extensions' , FileDirectory slash.
+    classDirExtension := '.extension'.
     extensionMethodDefinitions
         do: [ :methodDefinition | 
             | methodPath |
-            methodPath := basePath , methodDefinition className , '.class' , FileDirectory slash
+            methodPath := methodDefinition className , classDirExtension , FileDirectory slash
                 ,
                     (methodDefinition classIsMeta
                         ifTrue: [ 'class' ]

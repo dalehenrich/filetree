@@ -7,5 +7,5 @@ writeInDirectoryName: directoryNameOrPath fileName: fileName extension: ext visi
         forceNewFileNamed: fileName , ext
         do: [ :file | 
             file lineEndConvention: #'lf'.
-            stWriter stream: file.
+            self setFileStream: file.
             visitBlock value ]! !
