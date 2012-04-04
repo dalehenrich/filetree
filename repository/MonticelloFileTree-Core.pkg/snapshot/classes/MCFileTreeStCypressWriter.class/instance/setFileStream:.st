@@ -1,4 +1,5 @@
 
 !MCFileTreeStCypressWriter methodsFor: 'private'!
-setFileStream: file
-    fileStream := file! !
+setFileStream: aStream
+    super setFileStream: aStream.
+    fileStream := aStream! !
