@@ -1,11 +1,11 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'initialize-release'!
 writeInitializers
-	self
-		writeInDirectoryName: '.'
-		fileName: 'initializers'
-		extension: '.st'
-		visit: [ 
-			stWriter
-				writePresentInitializers;
-				writeAbsentInitializers ] ! !
+    self
+        writeInDirectoryName: self monticelloMetaDirName
+        fileName: 'initializers'
+        extension: '.st'
+        visit: [ 
+            stWriter
+                writePresentInitializers;
+                writeAbsentInitializers ]! !

@@ -10,7 +10,10 @@ deleteExistingPackageStructureFor: members
         ifTrue: [ members first , '.tree' ]
         ifFalse: [ 
             (self packageFileDirectory localName endsWith: '.tree')
-                ifTrue: [ members first , '.pkg' ] ].
+                ifTrue: [ members first , '.pkg' ]
+                ifFalse: [ 
+                    (self packageFileDirectory localName endsWith: '.package')
+                        ifTrue: [ members first , '.package' ] ] ].
     alternateDirName
         ifNotNil: [ 
             alternateDir := stream directory directoryNamed: alternateDirName.

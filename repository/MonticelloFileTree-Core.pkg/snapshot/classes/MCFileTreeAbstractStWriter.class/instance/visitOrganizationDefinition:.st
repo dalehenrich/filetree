@@ -1,8 +1,8 @@
 
 !MCFileTreeAbstractStWriter methodsFor: 'visiting'!
 visitOrganizationDefinition: defintion
-	self
-		writeInDirectoryName: '.'
-		fileName: 'categories'
-		extension: '.st'
-		visit: [ defintion categories do: [ :cat | stWriter writeCategory: cat ] ]! !
+    self
+        writeInDirectoryName: self monticelloMetaDirName
+        fileName: 'categories'
+        extension: '.st'
+        visit: [ defintion categories do: [ :cat | stWriter writeCategory: cat ] ]! !
