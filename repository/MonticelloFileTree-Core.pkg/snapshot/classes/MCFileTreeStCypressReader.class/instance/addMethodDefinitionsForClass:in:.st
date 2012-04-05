@@ -4,7 +4,8 @@ addMethodDefinitionsForClass: className in: entries
     entries
         do: [ :entry | 
             | classIsMeta |
-            classIsMeta := false entry name = 'class'
+            classIsMeta := false.
+		entry name = 'class'
                 ifTrue: [ classIsMeta := true ].
             (entry name = 'instance' or: [ entry name = 'class' ])
                 ifTrue: [ 

@@ -29,8 +29,10 @@ writeDefinitions: aCollection
     classDirExtension := '.extension'.
     extensionMethodDefinitions
         do: [ :methodDefinition | 
-            | methodPath |
-            methodPath := methodDefinition className , classDirExtension , FileDirectory slash
+            | classPath methodPath |
+            classPath := methodDefinition className , classDirExtension , FileDirectory slash.
+            self writeExtensionClassDefinition: methodDefinition to: classPath.
+            methodPath := classPath
                 ,
                     (methodDefinition classIsMeta
                         ifTrue: [ 'class' ]
