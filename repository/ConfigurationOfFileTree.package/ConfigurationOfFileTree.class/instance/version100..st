@@ -34,10 +34,21 @@ version100: spec
 1.0 (dkh.13):
 - bad idea to use actualClass ... write .pkg structure without relying on classes ...
 1.0 (dkh.14):
--switch default package extension to .pkg'.
+-switch default package extension to .pkg
+1.0 (dkh.15):
+- switch to Cypress structure and port to Squeak4.3 and Pharo1.3'.
             spec author: 'dkh'.
-            spec timestamp: '3/1/2012 16:37'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.36' ].
+            spec timestamp: '4/5/2012 16:17' ].
+    spec
+        for: #'pharo'
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.58' ] ].
+    spec
+        for: #'squeak'
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43-dkh.58' ] ].
     spec
         for: #'gemstone'
-        do: [ spec package: 'MonticelloFileTree-GemStone-Extensions' with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]
+        do: [ 
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.36'.
+            spec
+                package: 'MonticelloFileTree-GemStone-Extensions'
+                with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]
