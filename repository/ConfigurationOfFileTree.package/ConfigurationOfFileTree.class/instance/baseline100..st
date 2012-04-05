@@ -5,9 +5,15 @@ baseline100: spec
         for: #'common'
         do: [ 
             spec blessing: #'baseline'.
-		spec repository: 'http://ss3.gemstone.com/ss/FileTree'.
+            spec repository: 'http://ss3.gemstone.com/ss/FileTree'.
             spec package: 'MonticelloFileTree-Core'.
             spec group: 'default' with: #('MonticelloFileTree-Core') ].
+    spec
+        for: #'pharo'
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13' ] ].
+    spec
+        for: #'squeak'
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43' ] ].
     spec
         for: #'gemstone'
         do: [ 
