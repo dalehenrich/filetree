@@ -1,3 +1,3 @@
 writing
 writeClassComment: definition
-    fileStream nextPutAll: definition comment
+    fileStream nextPutAll: definition comment withUnixLineEndings

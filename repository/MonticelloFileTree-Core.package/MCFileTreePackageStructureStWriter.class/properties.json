@@ -1,16 +1,16 @@
 {
+	"category" : "MonticelloFileTree-Core",
 	"classinstvars" : [
 		 ],
-	"traitcomposition" : "{}",
-	"type" : "normal",
-	"commentStamp" : "",
-	"pools" : [
-		 ],
-	"name" : "MCFileTreePackageStructureStWriter",
-	"instvars" : [
-		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
-	"category" : "MonticelloFileTree-Core",
-	"super" : "MCStWriter" }
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreePackageStructureStWriter",
+	"pools" : [
+		 ],
+	"super" : "MCStWriter",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

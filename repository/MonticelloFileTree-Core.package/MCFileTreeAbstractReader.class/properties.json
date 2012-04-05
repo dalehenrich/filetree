@@ -1,17 +1,17 @@
 {
+	"category" : "MonticelloFileTree-Core",
 	"classinstvars" : [
 		 ],
-	"traitcomposition" : "{}",
-	"type" : "normal",
-	"commentStamp" : "",
-	"pools" : [
+	"classtraitcomposition" : "{}",
+	"classvars" : [
 		 ],
-	"name" : "MCFileTreeAbstractReader",
+	"commentStamp" : "",
 	"instvars" : [
 		"packageDirectory",
 		"packageProperties" ],
-	"classvars" : [
+	"name" : "MCFileTreeAbstractReader",
+	"pools" : [
 		 ],
-	"classtraitcomposition" : "{}",
-	"category" : "MonticelloFileTree-Core",
-	"super" : "MCMczReader" }
+	"super" : "MCMczReader",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

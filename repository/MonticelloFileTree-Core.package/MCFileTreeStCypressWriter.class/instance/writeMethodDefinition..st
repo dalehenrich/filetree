@@ -3,4 +3,4 @@ writeMethodDefinition: definition
     fileStream
         nextPutAll: definition category;
         lf;
-        nextPutAll: definition source
+        nextPutAll: definition source withUnixLineEndings

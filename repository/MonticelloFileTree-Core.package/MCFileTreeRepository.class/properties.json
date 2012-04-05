@@ -1,17 +1,17 @@
 {
+	"category" : "MonticelloFileTree-Core",
 	"classinstvars" : [
 		"defaultPackageExtension" ],
-	"traitcomposition" : "{}",
-	"type" : "normal",
-	"commentStamp" : "",
-	"pools" : [
+	"classtraitcomposition" : "{}",
+	"classvars" : [
 		 ],
-	"name" : "MCFileTreeRepository",
+	"commentStamp" : "",
 	"instvars" : [
 		"readonly",
 		"repositoryProperties" ],
-	"classvars" : [
+	"name" : "MCFileTreeRepository",
+	"pools" : [
 		 ],
-	"classtraitcomposition" : "{}",
-	"category" : "MonticelloFileTree-Core",
-	"super" : "MCDirectoryRepository" }
+	"super" : "MCDirectoryRepository",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
