@@ -1,3 +1,3 @@
 as yet unclassified
 versionFromFileNamed: aString
-	^ self loadVersionFromFileNamed: aString
+	^ self loadVersionFromFileNamed: (versionNameToFileNameMap at: aString ifAbsent: [aString])
