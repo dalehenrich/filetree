@@ -1,0 +1,17 @@
+{
+	"classinstvars" : [
+		 ],
+	"traitcomposition" : "{}",
+	"type" : "normal",
+	"commentStamp" : "",
+	"pools" : [
+		 ],
+	"name" : "MCFileTreeStSnapshotWriter",
+	"instvars" : [
+		"classDefinitions",
+		"methodDefinitions" ],
+	"classvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"category" : "MonticelloFileTree-Core",
+	"super" : "MCFileTreeAbstractStWriter" }

@@ -1,4 +1,0 @@
-
-!MCFileTreeWriter methodsFor: 'writing'!
-flush
-	! !

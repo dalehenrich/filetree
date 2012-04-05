@@ -1,0 +1,18 @@
+{
+	"classinstvars" : [
+		 ],
+	"traitcomposition" : "{}",
+	"type" : "normal",
+	"commentStamp" : "",
+	"pools" : [
+		 ],
+	"name" : "MCFileTreeWriter",
+	"instvars" : [
+		"directory",
+		"packageFileDirectory",
+		"cachedPackageFileDirectoryEntries" ],
+	"classvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"category" : "MonticelloFileTree-Core",
+	"super" : "MCMczWriter" }
