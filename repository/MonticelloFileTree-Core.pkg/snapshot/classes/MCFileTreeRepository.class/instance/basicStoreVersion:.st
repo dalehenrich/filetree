@@ -3,7 +3,8 @@
 basicStoreVersion: aVersion
     self readonly
         ifTrue: [ ^ self error: 'The filetree repository: ' , self description printString , ' was created read only.' ].
-    (self packageExtension = '.tree' and: [ self class defaultPackageExtension ~= '.tree' ])
+    ((self packageExtension = '.tree' and: [ self class defaultPackageExtension ~= '.tree' ])
+        or: [ self packageExtension = '..pkg' and: [ self class defaultPackageExtension ~= '..pkg' ] ])
         ifTrue: [ 
             repositoryProperties := nil.	"force reset of properties, since we're rewriting the file"
             self writeRepositoryProperties ].
