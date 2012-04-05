@@ -1,0 +1,16 @@
+{
+	"category" : "MonticelloFileTree-Core",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeStSnapshotReader",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeAbstractReader",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

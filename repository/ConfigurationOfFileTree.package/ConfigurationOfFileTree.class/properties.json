@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfFileTree",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfFileTree",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
