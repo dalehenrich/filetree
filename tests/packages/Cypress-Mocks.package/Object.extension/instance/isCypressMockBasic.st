@@ -1,3 +1,0 @@
-*Cypress-Mocks
-isCypressMockBasic
-	^false

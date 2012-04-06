@@ -1,3 +1,0 @@
-accessing
-extra
-	"extra method"
