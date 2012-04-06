@@ -1,7 +1,6 @@
 private
 classComment
-
-	^'## Class Comment
+    ^ '## Class Comment
 
 This mock contains basic class and instance method selectors.
 
@@ -9,11 +8,11 @@ This mock contains basic class and instance method selectors.
 
 ```Smalltalk
 initialize
-        super initialize.
-        self name: ''Unknown''
+	super initialize.
+	self name: ''Unknown''
 ```
 
-And some [UTF8 samples][2]:
+And some [UTF8 samples][2]: 
 
 ```
   Lithuanian: Aš galiu valgyti stiklą ir jis manęs nežeidžia
