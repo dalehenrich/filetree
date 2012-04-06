@@ -1,8 +1,8 @@
 running
 tearDown
-    | aGofer |
+    | anInstaller |
     super tearDown.
-    aGofer := Gofer new.
-    self tearDownPackages: aGofer.
-    aGofer references notEmpty
-        ifTrue: [ aGofer unload ]
+    anInstaller := Installer monticello.
+    self tearDownPackages: anInstaller.
+    anInstaller packages notEmpty
+        ifTrue: [ anInstaller filetreeUnload ]

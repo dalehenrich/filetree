@@ -1,4 +1,4 @@
 running
-tearDownPackages: aGoferInstance
+tearDownPackages: anInstallerInstance
     (self hasPackage: 'Cypress-Mocks')
-        ifTrue: [ aGoferInstance package: 'Cypress-Mocks' ]
+        ifTrue: [ anInstallerInstance package: 'Cypress-Mocks' ]
