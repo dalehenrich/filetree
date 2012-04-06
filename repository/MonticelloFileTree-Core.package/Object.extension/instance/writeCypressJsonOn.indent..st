@@ -1,3 +1,3 @@
 *monticellofiletree-core
 writeCypressJsonOn: aStream indent: startIndent
-    aStream nextPutAll: self printString
+    self writeCypressJsonOn: aStream forHtml: false indent: startIndent
