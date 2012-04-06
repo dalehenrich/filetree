@@ -1,3 +1,3 @@
 *monticellofiletree-core
 cypressEscape
-    ^ self
+    ^ self encodeForHTTP
