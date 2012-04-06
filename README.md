@@ -6,7 +6,6 @@ expected to work in Pharo1.4:
   * [Pharo bootstrap](#pharo)
   * [Squeak bootstrap](#squeak)
 
-### Bootstrap FileTree code
 #### <a name="pharo"></a>Pharo1.3 and Pharo1.4
 
 1. **Bootstrap FileTree into image:**
