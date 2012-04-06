@@ -1,7 +1,7 @@
 tests
-testPropertyDictionaryRead
+testPropertyDictionaryHtmlRead
     | propertyDictionary phoneNumbers |
-    propertyDictionary := MCFileTreeJsonParser parse: self sampleJson.
+    propertyDictionary := MCFileTreeJsonParser parse: self sampleHtmlJson.
     self assert: (propertyDictionary at: 'name') cypressUnescape = 'John Smith'.
     self assert: (propertyDictionary at: 'age') = 25.
     self assert: (propertyDictionary at: 'registered').

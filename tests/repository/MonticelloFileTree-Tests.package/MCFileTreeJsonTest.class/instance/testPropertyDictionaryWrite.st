@@ -1,7 +1,7 @@
 tests
 testPropertyDictionaryWrite
     | propertyDictionary stream |
-    propertyDictionary := MCFileTreeJsonParser parse: self sampleJson.
+    propertyDictionary := self propertyDictionary.
     stream := WriteStream on: String new.
-    propertyDictionary writeCypressJsonOn: stream indent: 0.
+    propertyDictionary writeCypressJsonOn: stream.
     self assert: stream contents = self sampleJson

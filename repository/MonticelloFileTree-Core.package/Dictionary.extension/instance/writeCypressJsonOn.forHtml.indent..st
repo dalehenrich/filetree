@@ -1,5 +1,7 @@
 *monticellofiletree-core
-writeCypressJsonOn: aStream indent: startIndent
+writeCypressJsonOn: aStream forHtml: forHtml indent: startIndent
+    "by default ignore <forHtml> ... <forHtml> is used for Dictionary and Array, i.e., container objects and String which actually encodes itself differently for HTML"
+
     | indent keys |
     indent := startIndent.
     aStream
@@ -12,9 +14,9 @@ writeCypressJsonOn: aStream indent: startIndent
         key := keys at: index.
         value := self at: key.
         aStream tab: indent.
-        key writeCypressJsonOn: aStream indent: indent.
+        key writeCypressJsonOn: aStream forHtml: forHtml indent: indent.
         aStream nextPutAll: ' : '.
-        value writeCypressJsonOn: aStream indent: indent.
+        value writeCypressJsonOn: aStream forHtml: forHtml indent: indent.
         index < self size
             ifTrue: [ 
                 aStream

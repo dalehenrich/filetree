@@ -1,6 +1,8 @@
 running
 tearDown
-    | name |
+    | aGofer |
     super tearDown.
-    name := 'Cypress-Mocks'.
-    (MCSnapshot definitions: self baseDefinitions) updatePackage: (MCPackage new name: name)
+    aGofer := Gofer new.
+    self tearDownPackages: aGofer.
+    aGofer references notEmpty
+        ifTrue: [ aGofer unload ]
