@@ -5,7 +5,7 @@
 	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
-	"commentStamp" : "dkh 4/5/2012 10:10",
+	"commentStamp" : "",
 	"instvars" : [
 		"name" ],
 	"name" : "CypressMockBasic",

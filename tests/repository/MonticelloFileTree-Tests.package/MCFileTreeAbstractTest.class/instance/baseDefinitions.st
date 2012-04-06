@@ -2,7 +2,8 @@ private
 baseDefinitions
     | className |
     className := 'CypressMockBasic'.
-    ^ {(MCClassDefinition
+    ^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
+    (MCClassDefinition
         name: className
         superclassName: 'Object'
         category: 'Cypress-Mocks'
@@ -10,14 +11,15 @@ baseDefinitions
         classVarNames: #()
         poolDictionaryNames: #()
         classInstVarNames: #('current')
-        comment: 'This mock contains basic class and instance method selectors').
+        comment: self classComment).
     (MCMethodDefinition
         className: className
         classIsMeta: false
         selector: 'extra'
         category: 'accessing'
         timeStamp: ''
-        source: 'extra
+        source:
+            'extra
 	"extra method"').
     (MCMethodDefinition
         className: className
@@ -25,7 +27,8 @@ baseDefinitions
         selector: 'initialize'
         category: 'initialization'
         timeStamp: ''
-        source: 'initialize
+        source:
+            'initialize
 	super initialize.
 	self name: ''Unknown''').
     (MCMethodDefinition
@@ -34,7 +37,8 @@ baseDefinitions
         selector: 'name'
         category: 'accessing'
         timeStamp: ''
-        source: 'name
+        source:
+            'name
 	^name').
     (MCMethodDefinition
         className: className
@@ -42,7 +46,8 @@ baseDefinitions
         selector: 'name:'
         category: 'accessing'
         timeStamp: ''
-        source: 'name: aString
+        source:
+            'name: aString
 	name := aString').
     (MCMethodDefinition
         className: className
@@ -50,7 +55,8 @@ baseDefinitions
         selector: 'current'
         category: 'accessing'
         timeStamp: ''
-        source: 'current
+        source:
+            'current
 	^current').
     (MCMethodDefinition
         className: className
@@ -58,7 +64,8 @@ baseDefinitions
         selector: 'current:'
         category: 'accessing'
         timeStamp: ''
-        source: 'current: anObject
+        source:
+            'current: anObject
 	current := anObject').
     (MCMethodDefinition
         className: className
@@ -66,7 +73,8 @@ baseDefinitions
         selector: 'initialize'
         category: 'initialization'
         timeStamp: ''
-        source: 'initialize
+        source:
+            'initialize
 	self current: self new').
     (MCMethodDefinition
         className: 'Object'
@@ -74,5 +82,6 @@ baseDefinitions
         selector: 'isCypressMockBasic'
         category: '*Cypress-Mocks'
         timeStamp: ''
-        source: 'isCypressMockBasic
+        source:
+            'isCypressMockBasic
 	^false')}
