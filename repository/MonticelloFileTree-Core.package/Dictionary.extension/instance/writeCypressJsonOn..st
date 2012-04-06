@@ -1,4 +1,4 @@
 *monticellofiletree-core
 writeCypressJsonOn: aStream
-    self writeCypressJsonOn: aStream indent: 0.
+    self writeCypressJsonOn: aStream forHtml: false indent: 0.
     aStream lf
