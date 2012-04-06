@@ -1,10 +1,9 @@
 private
 targetDefinitions
-    "remove #extra method and modify #name: method"
-
     | className |
     className := 'CypressMockBasic'.
-    ^ {(MCClassDefinition
+    ^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
+    (MCClassDefinition
         name: className
         superclassName: 'Object'
         category: 'Cypress-Mocks'
@@ -12,22 +11,24 @@ targetDefinitions
         classVarNames: #()
         poolDictionaryNames: #()
         classInstVarNames: #('current')
-        comment: 'This mock contains basic class and instance method selectors').
+        comment: self classComment).
     (MCMethodDefinition
         className: className
         classIsMeta: false
         selector: 'added'
         category: 'accessing'
         timeStamp: ''
-        source: 'added
-	"added method"').
+        source:
+            'added
+    "added method"').
     (MCMethodDefinition
         className: className
         classIsMeta: false
         selector: 'initialize'
         category: 'initialization'
         timeStamp: ''
-        source: 'initialize
+        source:
+            'initialize
 	super initialize.
 	self name: ''Unknown''').
     (MCMethodDefinition
@@ -36,7 +37,8 @@ targetDefinitions
         selector: 'name'
         category: 'accessing'
         timeStamp: ''
-        source: 'name
+        source:
+            'name
 	^name').
     (MCMethodDefinition
         className: className
@@ -44,16 +46,19 @@ targetDefinitions
         selector: 'name:'
         category: 'accessing'
         timeStamp: ''
-        source: 'name: aString
-	"changed method"
-	name := aString').
+        source:
+            'name: aString
+    "changed method"
+
+    name := aString').
     (MCMethodDefinition
         className: className
         classIsMeta: true
         selector: 'current'
         category: 'accessing'
         timeStamp: ''
-        source: 'current
+        source:
+            'current
 	^current').
     (MCMethodDefinition
         className: className
@@ -61,7 +66,8 @@ targetDefinitions
         selector: 'current:'
         category: 'accessing'
         timeStamp: ''
-        source: 'current: anObject
+        source:
+            'current: anObject
 	current := anObject').
     (MCMethodDefinition
         className: className
@@ -69,5 +75,6 @@ targetDefinitions
         selector: 'initialize'
         category: 'initialization'
         timeStamp: ''
-        source: 'initialize
+        source:
+            'initialize
 	self current: self new')}

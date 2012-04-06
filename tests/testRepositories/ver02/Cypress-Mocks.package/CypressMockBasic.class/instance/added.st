@@ -1,5 +1,3 @@
 accessing
 added
     "added method"
-
-    
