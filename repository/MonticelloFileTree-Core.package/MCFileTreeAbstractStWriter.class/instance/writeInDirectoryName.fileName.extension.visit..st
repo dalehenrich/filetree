@@ -5,6 +5,5 @@ writeInDirectoryName: directoryNameOrPath fileName: fileName extension: ext visi
     directory
         forceNewFileNamed: fileName , ext
         do: [ :file | 
-            file lineEndConvention: #'lf'.
             self setFileStream: file.
             visitBlock value ]

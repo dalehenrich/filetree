@@ -16,10 +16,10 @@ writeDefinitions: aCollection
     self classDefinitions
         keysAndValuesDo: [ :className :definition | 
             | classPath instanceMethodPath classMethodPath |
-            classPath := definition className , classDirExtension , FileDirectory slash.
+            classPath := definition className , classDirExtension , ServerFileDirectory slash.
             self writeClassDefinition: definition to: classPath.
-            instanceMethodPath := classPath , 'instance' , FileDirectory slash.
-            classMethodPath := classPath , 'class' , FileDirectory slash.
+            instanceMethodPath := classPath , 'instance' , ServerFileDirectory slash.
+            classMethodPath := classPath , 'class' , ServerFileDirectory slash.
             (self methodDefinitions at: className ifAbsent: [ #() ])
                 do: [ :methodDefinition | 
                     methodDefinition classIsMeta
@@ -29,11 +29,11 @@ writeDefinitions: aCollection
     extensionMethodDefinitions
         do: [ :methodDefinition | 
             | classPath methodPath |
-            classPath := methodDefinition className , classDirExtension , FileDirectory slash.
+            classPath := methodDefinition className , classDirExtension , ServerFileDirectory slash.
             self writeExtensionClassDefinition: methodDefinition to: classPath.
             methodPath := classPath
                 ,
                     (methodDefinition classIsMeta
                         ifTrue: [ 'class' ]
-                        ifFalse: [ 'instance' ]) , FileDirectory slash.
+                        ifFalse: [ 'instance' ]) , ServerFileDirectory slash.
             self writeMethodDefinition: methodDefinition to: methodPath ]

@@ -21,8 +21,8 @@ addClassAndMethodDefinitionsFromDirectoryEntries: entries
                                             self separateMethodMetaAndSource
                                                 ifTrue: [ 
                                                     directory
-                                                        fileNamed: definition selector asString , '.meta'
-                                                        do: [ :fileStream | definition setTimeStamp: (Author fixStamp: fileStream contents) ] ].
+                                                        readOnlyFileNamed: definition selector asString , '.meta'
+                                                        do: [ :fileStream | definition setTimeStamp: fileStream contents ] ].
                                             self noMethodMetaData
                                                 ifTrue: [ definition setTimeStamp: timestamp ] ].
                                     definitions add: definition ] ] ] ]

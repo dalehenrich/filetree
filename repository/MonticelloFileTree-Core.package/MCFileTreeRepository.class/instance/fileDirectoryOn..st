@@ -1,3 +1,3 @@
 actions
 fileDirectoryOn: fileName
-	^ FileDirectory on: (directory fullNameFor: fileName)
+	^ ServerFileDirectory on: (directory fullNameFor: fileName)

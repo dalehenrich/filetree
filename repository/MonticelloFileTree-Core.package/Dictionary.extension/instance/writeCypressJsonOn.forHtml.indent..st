@@ -8,7 +8,7 @@ writeCypressJsonOn: aStream forHtml: forHtml indent: startIndent
         nextPutAll: '{';
         lf.
     indent := indent + 1.
-    keys := self keys sort: [ :a :b | a <= b ].
+    keys := self keys asArray sort: [ :a :b | a <= b ].
     1 to: keys size do: [ :index | 
         | key value |
         key := keys at: index.

@@ -1,3 +1,3 @@
 utilities
 methodSelectorFor: source
-    ^ Object parserClass new parseSelector: source
+    ^ ChangeList parseSelector: source
