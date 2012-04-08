@@ -1,3 +1,3 @@
 writing
 writeClassComment: definition
-    fileStream nextPutAll: definition comment withUnixLineEndings
+    fileStream nextPutAll: definition comment encodeAsUTF8 withUnixLineEndings

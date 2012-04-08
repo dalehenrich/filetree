@@ -11,5 +11,5 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
                 poolDictionaryNames: (classPropertiesDict at: 'pools' ifAbsent: [ #() ])
                 classInstVarNames: (classPropertiesDict at: 'classinstvars' ifAbsent: [ #() ])
                 type: (classPropertiesDict at: 'type' ifAbsent: [ 'normal' ]) asSymbol
-                comment: classComment
+                comment: classComment decodeFromUTF8
                 commentStamp: (classPropertiesDict at: 'commentStamp' ifAbsent: [ '' ]))

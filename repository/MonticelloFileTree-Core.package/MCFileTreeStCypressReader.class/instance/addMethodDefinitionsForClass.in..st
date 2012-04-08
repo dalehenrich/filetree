@@ -13,9 +13,9 @@ addMethodDefinitionsForClass: className in: entries
                             methodEntry
                                 readStreamDo: [ :fileStream | 
                                     | category source timestamp |
-                                    category := fileStream nextLine.
+                                    category := fileStream nextLine decodeFromUTF8.
 						category := category copyFrom: 1 to: category size - 1. "remove newline"
-                                    source := fileStream upToEnd.
+                                    source := fileStream upToEnd decodeFromUTF8.
                                     timestamp := self info author , ' ' , self info date mmddyyyy , ' '
                                         , self info time print24.
                                     definitions
