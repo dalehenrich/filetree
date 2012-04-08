@@ -5,4 +5,4 @@ writeRepositoryProperties
         do: [ :file | 
             file
                 nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
-                cr ]
+                lf ]
