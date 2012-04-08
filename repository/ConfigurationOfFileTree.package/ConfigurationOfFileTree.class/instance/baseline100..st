@@ -17,5 +17,18 @@ baseline100: spec
     spec
         for: #'gemstone'
         do: [ 
-            spec package: 'MonticelloFileTree-Core' with: [ spec includes: 'MonticelloFileTree-GemStone-Extensions' ].
-            spec package: 'MonticelloFileTree-GemStone-Extensions' with: [ spec requires: 'MonticelloFileTree-Core' ] ]
+            spec
+                project: 'GsCore'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfGsCore';
+                                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
+                project: 'Monticello'
+                    with: [ 
+                            spec
+                                className: 'ConfigurationOfGsMonticello';
+                                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ].
+            spec package: 'MonticelloFileTree-Core' with: [ 
+			spec 
+				file: 'MonticelloFileTree-Core.gemstone24';
+				requires: #( 'GsCore'  'Monticello' ) ] ]
