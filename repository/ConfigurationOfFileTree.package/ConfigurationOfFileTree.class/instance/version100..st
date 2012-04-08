@@ -36,9 +36,11 @@ version100: spec
 1.0 (dkh.14):
 -switch default package extension to .pkg
 1.0 (dkh.15):
-- switch to Cypress structure and port to Squeak4.3 and Pharo1.3'.
+- switch to Cypress structure and port to Squeak4.3 and Pharo1.3
+1.0 (dkh.16):
+- port to GemStone2.4'.
             spec author: 'dkh'.
-            spec timestamp: '4/5/2012 16:17' ].
+            spec timestamp: '4/8/2012 16:31' ].
     spec
         for: #'pharo'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.58' ] ].
@@ -48,7 +50,7 @@ version100: spec
     spec
         for: #'gemstone'
         do: [ 
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core-dkh.36'.
-            spec
-                package: 'MonticelloFileTree-GemStone-Extensions'
-                with: 'MonticelloFileTree-GemStone-Extensions-revelations.11' ]
+		spec 
+			project: 'GsCore' with: '0.245.1.1';
+			project: 'Monticello' with: '0.243'.
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.76' ]
