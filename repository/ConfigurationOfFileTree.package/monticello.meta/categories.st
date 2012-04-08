@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #ConfigurationOfFileTree!
+SystemOrganization addCategory: 'ConfigurationOfFileTree'!
