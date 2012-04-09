@@ -1,3 +1,0 @@
-*monticellofiletree-gemstone-extensions
-includesUnifiedCharacter
-	^false
