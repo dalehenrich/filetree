@@ -3,9 +3,9 @@
 The current version of **FileTree** has been tested in GemStone2.4.4.1 (GLASS 1.0-beta.8.7.1), Pharo1.3 and Squeak4.3 and is 
 expected to work in Pharo1.4:
 
- * [GemStone](https://github.com/dalehenrich/filetree/tree/master/doc/GemStoneInstall.md)
- * [Pharo](https://github.com/dalehenrich/filetree/tree/master/doc/PharoInstall.md)
- * [Squeak](https://github.com/dalehenrich/filetree/tree/master/doc/SqueakInstall.md)
+ * [GemStone installation](https://github.com/dalehenrich/filetree/tree/master/doc/GemStoneInstall.md)
+ * [Pharo installation](https://github.com/dalehenrich/filetree/tree/master/doc/PharoInstall.md)
+ * [Squeak installation](https://github.com/dalehenrich/filetree/tree/master/doc/SqueakInstall.md)
 
 ## Contributing
 
