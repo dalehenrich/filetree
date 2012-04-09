@@ -38,9 +38,11 @@ version100: spec
 1.0 (dkh.15):
 - switch to Cypress structure and port to Squeak4.3 and Pharo1.3
 1.0 (dkh.16):
-- port to GemStone2.4'.
+- port to GemStone2.4
+1.0 (dkh.17):
+- fix gemstone load issue'.
             spec author: 'dkh'.
-            spec timestamp: '4/8/2012 16:31' ].
+            spec timestamp: '4/8/2012 17:57' ].
     spec
         for: #'pharo'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.58' ] ].
@@ -51,6 +53,6 @@ version100: spec
         for: #'gemstone'
         do: [ 
 		spec 
-			project: 'GsCore' with: '0.245.1.1';
+			project: 'GsCore' with: '0.245.2.1';
 			project: 'Monticello' with: '0.243'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.76' ]
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.83' ]
