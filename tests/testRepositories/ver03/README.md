@@ -1,3 +1,3 @@
-## Repository used by MCFileTreeLoaderTest>>snapshotBaseDefinitions
+## Repository used by MCFileTreeLoaderTest>>testSnapshotBaseLoad
 
 
