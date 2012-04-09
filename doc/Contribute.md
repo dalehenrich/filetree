@@ -39,7 +39,7 @@ Do all of your work on this branch and when it is time to merge your work back i
 
 ### <a name="tests"></a> FileTree tests
 
-nI'm trying a little experiment with the tests in FileTree. In Monticello it is very painful to create good tests that exercise loads with various attributes, because you have to have a large number of separate tests packages and it is a royal pain to keep all of the test packages in synch ... You can build a bunch of resources for dictionary-based repositories (as is done for Gofer and Metacello), but it is still painful to manage the resources.
+I'm trying a little experiment with the tests in FileTree. In Monticello it is very painful to create good tests that exercise loads with various attributes, because you have to have a large number of separate tests packages and it is a royal pain to keep all of the test packages in synch ... You can build a bunch of resources for dictionary-based repositories (as is done for Gofer and Metacello), but it is still painful to manage the resources.
 
 For FileTree, I've decided to create a suite of [test repositories](https://github.com/dalehenrich/filetree/tree/master/tests/testRepositories). Currently there are two repositories 
 [ver01](https://github.com/dalehenrich/filetree/tree/master/tests/testRepositories/ver01) and 
