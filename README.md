@@ -1,71 +1,83 @@
 ## HOW TO INSTALL
 
-The current version of **FileTree** has been tested in Pharo1.3 and Squeak4.3 and is 
+The current version of **FileTree** has been tested in GemStone2.4.4.1 (GLASS 1.0-beta.8.7.1), Pharo1.3 and Squeak4.3 and is 
 expected to work in Pharo1.4:
 
-  * [Pharo bootstrap](#pharo)
-  * [Squeak bootstrap](#squeak)
+1. Clone git repository for:
+ * [GemStone](#gemstone)
+ * [Pharo](#pharo)
+ * [Squeak](#squeak)
 
-#### <a name="pharo"></a>Pharo1.3 and Pharo1.4
+2. Bootstrap FileTree into image for:
+ * [GemStone and Pharo](#bootstrapcommon)
+ * [Squeak](#bootstrapsqueak)
 
-1. **Bootstrap FileTree into image:**
+3. Load latest FileTree from git repository for:
+ * [all platforms](#loadlatest)
 
-    ```Smalltalk
-    Gofer new
-        url: 'http://ss3.gemstone.com/ss/FileTree';
-        package: 'ConfigurationOfFileTree';
-        load.
-    ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.
-    ```
+#### <a name="gemstone"></a>Clone FileTree git repository for GemStone
 
-2. **Clone FileTree git repository:**
+```shell
+    sudo mkdir /opt/git/
+    sudo chmod og+rw /opt/git/
+    cd /opt/git/
+    git clone -b gemstone2.4 https://github.com/dalehenrich/filetree.git
+```
 
-    ```shell
+to [**Bootstrap image**](#bootstrapcommon)
+
+#### <a name="pharo"></a>Clone FileTree git repository for Pharo
+
+```shell
     sudo mkdir /opt/git/
     sudo chmod og+rw /opt/git/
     cd /opt/git/
     git clone -b pharo1.3 https://github.com/dalehenrich/filetree.git
-    ```
+```
 
-3. **Load latest version from git repository:**
+to [**Bootstrap image**](#bootstrapcommon)
 
-    ```Smalltalk
-    Gofer new
-        repository: (MCFileTreeRepository new directory: 
-                    (FileDirectory on: '/opt/git/filetree/repository/'));
-        package: 'MonticelloFileTree-Core';
-        load.
-    ```
+#### <a name="squeak"></a>Clone FileTree git repository for Squeak
 
-
-#### <a name="squeak"></a>Squeak 4.3
-
-1. **Bootstrap FileTree into image:**
-
-    ```Smalltalk
-    Installer ss3
-        project: 'FileTree';
-        install: 'ConfigurationOfFileTree'. 
-    ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.
-    ```
-
-2. **Clone FileTree git repository:**
-
-    ```shell
+```shell
     sudo mkdir /opt/git/
     sudo chmod og+rw /opt/git/
     cd /opt/git/
     git clone -b squeak4.3 https://github.com/dalehenrich/filetree.git
-    ```
+```
 
-3. **Load latest version from git repository:**
+to [**Bootstrap image**](#bootstrapsqueak)
 
-    ```Smalltalk
+#### <a name="bootstrapcommon"></a>Bootstrap FileTree into GemStone or Pharo Image
+
+```Smalltalk
+    Gofer new
+      url: 'http://ss3.gemstone.com/ss/FileTree';
+      package: 'ConfigurationOfFileTree';
+      load.
+    ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.  
+```
+
+to [**Load from Git repository**](#loadlatest)
+
+#### <a name="bootstrapsqueak"></a>Bootstrap FileTree into Squeak Image
+
+```Smalltalk
+    Installer ss3
+        project: 'FileTree';
+        install: 'ConfigurationOfFileTree'. 
+    ((Smalltalk at: #ConfigurationOfFileTree) project version: '1.0') load.
+```
+
+to [**Load from Git repository**](#loadlatest)
+
+####  <a name="loadlatest"></a>Load FileTree from Git repository
+
+```Smalltalk
     Gofer new
         repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/filetree/repository/'));
         package: 'MonticelloFileTree-Core';
         load.
-    ```
-
+```
 
