@@ -11,7 +11,9 @@ expected to work in Pharo1.4:
 
 Here are some guidelines on contributing to the project:
 
- * fork me
- * use dialect-specific branching
- * use topic branches for easy integration
- * unit tests are in separate repository
+ * [use personal fork](doc/Contribute.md#forkme)
+ * [use dialect-specific branching](doc/Contribute.md#branching)
+ * [use topic branches for easy
+   integration](doc/Contribute.md#topicbranches)
+ * [unit tests are in separate repository](doc/Contribute.md#tests)
+
