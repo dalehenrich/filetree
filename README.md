@@ -5,9 +5,9 @@ expected to work in Pharo1.4:
 
 1. Clone git repository:
 
-    * [GemStone](#gemstone)
-    * [Pharo](#pharo)
-    * [Squeak](#squeak)
+ * [GemStone](#gemstone)
+ * [Pharo](#pharo)
+ * [Squeak](#squeak)
 
 2. Bootstrap FileTree into image
 
