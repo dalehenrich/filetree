@@ -1,3 +1,6 @@
+*Monticello repository for directory-based Monticello packages enabling the use of git, svn, etc. for 
+managing Smalltalk source code.*
+
 ## Installing
 
 The current version of **FileTree** has been tested in GemStone2.4.4.1 (GLASS 1.0-beta.8.7.1), Pharo1.3 and Squeak4.3 and is 
