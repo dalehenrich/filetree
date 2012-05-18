@@ -2,7 +2,7 @@ as yet unclassified
 goferVersionFrom: aVersionReference
     "until we no longer find .tree directories in the wild"
 
-    ((self readableFileNames collect: [ :fileName | self fileDirectoryOn: fileName ])
+    ((self allPackageNames collect: [ :fileName | self fileDirectoryOn: fileName, self packageExtension ])
         select: [ :packageDirectory | packageDirectory exists ])
         collect: [ :packageDirectory | 
             (self versionInfoForPackageDirectory: packageDirectory) name = aVersionReference name
