@@ -8,7 +8,7 @@
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MCFileTreeLoaderTest",
+	"name" : "MCFileTreeIssue26Test",
 	"pools" : [
 		 ],
 	"super" : "MCFileTreeGenericLoaderTest",
