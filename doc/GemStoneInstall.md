@@ -24,7 +24,7 @@
 ```Smalltalk
     Gofer new
         repository: (MCFileTreeRepository new directory: 
-                    (FileDirectory on: '/opt/git/filetree/repository/'));
+                    (ServerFileDirectory on: '/opt/git/filetree/repository/'));
         package: 'MonticelloFileTree-Core';
         load.
 ```
