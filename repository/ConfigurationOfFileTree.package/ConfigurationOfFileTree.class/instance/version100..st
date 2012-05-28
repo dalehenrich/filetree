@@ -40,15 +40,18 @@ version100: spec
 1.0 (dkh.16):
 - port to GemStone2.4
 1.0 (dkh.17):
-- fix gemstone load issue'.
+- fix gemstone load issue
+1.0 (dkh.18):
+- fix for Issue #24
+  https://github.com/dalehenrich/filetree/issues/24'.
             spec author: 'dkh'.
-            spec timestamp: '4/8/2012 17:57' ].
+            spec timestamp: '5/17/2012 21:00' ].
     spec
         for: #'pharo'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.58' ] ].
     spec
         for: #'squeak'
-        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43-dkh.58' ] ].
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43-dkh.59' ] ].
     spec
         for: #'gemstone'
         do: [ 

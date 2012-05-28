@@ -1,14 +1,16 @@
 {
-	"category" : "MonticelloFileTree-Tests",
+	"category" : "AAA",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MCFileTreeLoaderTest",
+	"name" : "AAA",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeGenericLoaderTest",
+	"super" : "Object",
+	"traitcomposition" : "{}",
 	"type" : "normal" }

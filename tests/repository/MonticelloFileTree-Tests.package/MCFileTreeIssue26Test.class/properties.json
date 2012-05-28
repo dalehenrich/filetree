@@ -2,13 +2,15 @@
 	"category" : "MonticelloFileTree-Tests",
 	"classinstvars" : [
 		 ],
+	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "MCFileTreeLoaderTest",
+	"name" : "MCFileTreeIssue26Test",
 	"pools" : [
 		 ],
 	"super" : "MCFileTreeGenericLoaderTest",
+	"traitcomposition" : "{}",
 	"type" : "normal" }
