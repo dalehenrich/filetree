@@ -45,9 +45,11 @@ version100: spec
 - fix for Issue #24
   https://github.com/dalehenrich/filetree/issues/24
 1.0 (dkh.19):
-- port Issue #24 fix to GemStone'.
+- port Issue #24 fix to GemStone
+1.0 (dkh.21):
+- partial fix for Issue #29'.
             spec author: 'dkh'.
-            spec timestamp: '5/28/2012 12:15' ].
+            spec timestamp: '5/30/2012 17:10' ].
     spec
         for: #'pharo'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.58' ] ].
@@ -60,4 +62,4 @@ version100: spec
 		spec 
 			project: 'GsCore' with: '0.246';
 			project: 'Monticello' with: '0.243'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.87' ]
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.88' ]
