@@ -1,6 +1,6 @@
 tests
 testWriteNRead
-    | packageName |
+    | packageName versionInfo version |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
     packageName := 'AAA'.
     Gofer new
@@ -8,11 +8,10 @@ testWriteNRead
         repository: (self getTestRepository: 'dependency01');
         package: packageName;
         load.
-    Gofer new
-        disablePackageCache;
-        repository: (self getTestRepository: 'empty');
-        package: packageName;
-        commit: 'testing'.
+    #('AAA' 'BBB') do: [ :pn | 
+ 		versionInfo := (MCWorkingCopy allManagers detect: [:wc | wc packageName = pn]) ancestors first.
+		version := (self getTestRepository: 'dependency01') versionWithInfo: versionInfo.
+		(self getTestRepository: 'empty') storeVersion: version ].
     Gofer new
         package: 'AAA';
         package: 'BBB';

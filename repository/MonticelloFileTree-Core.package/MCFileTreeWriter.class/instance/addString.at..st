@@ -5,7 +5,7 @@ addString: string at: fileName
         ifTrue: [ 
             self packageFileDirectory assureExistenceOfPath: MCFileTreeStCypressWriter monticelloMetaDirName.
             path := MCFileTreeStCypressWriter monticelloMetaDirName , '/' , fileName.
-            (self packageFileDirectory directoryNamed: path) assureExistence.
+            (self packageFileDirectory directoryNamed: path) containingDirectory assureExistence.
             path ]
         ifFalse: [ fileName ].
     string isEmpty
