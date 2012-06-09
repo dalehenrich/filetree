@@ -1,0 +1,1 @@
+Testing the read/write of special selectors (MCFileTreeStCypressWriter class>>initializeSpecials)

@@ -4,6 +4,7 @@ initializeSpecials
     map := Dictionary new.
     map
         at: $+ put: 'plus';
+        at: $, put: 'comma';
         at: $- put: 'minus';
         at: $= put: 'equals';
         at: $< put: 'less';
