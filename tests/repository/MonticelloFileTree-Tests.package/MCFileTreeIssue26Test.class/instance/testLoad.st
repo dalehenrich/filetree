@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testLoad
     | packageName |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].

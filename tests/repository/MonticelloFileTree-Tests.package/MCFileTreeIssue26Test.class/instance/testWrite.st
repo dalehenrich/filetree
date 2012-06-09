@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testWrite
     | packageName |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].

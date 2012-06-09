@@ -1,5 +1,5 @@
 tests
-testWriteNRead
+testWriteNReadMcz
     | packageName |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
     packageName := 'AAA'.
@@ -10,7 +10,7 @@ testWriteNRead
         load.
     Gofer new
         disablePackageCache;
-        repository: (self getTestRepository: 'empty');
+        repository: (self getMczTestRepository: 'mcz');
         package: packageName;
         commit: 'testing'.
     Gofer new
@@ -22,7 +22,7 @@ testWriteNRead
         shouldnt: [ 
             Gofer new
                 disablePackageCache;
-                repository: (self getTestRepository: 'empty');
+                repository: (self getMczTestRepository: 'mcz');
                 package: packageName;
                 load ]
         raise: Error.
