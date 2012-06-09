@@ -1,6 +1,6 @@
 tests
-testWriteNRead
-    | packageName versionInfo version |
+testWriteNReadMcz
+    | packageName |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
     packageName := 'AAA'.
     Gofer new
@@ -8,10 +8,11 @@ testWriteNRead
         repository: (self getTestRepository: 'dependency01');
         package: packageName;
         load.
-    #('AAA' 'BBB') do: [ :pn | 
- 		versionInfo := (MCWorkingCopy allManagers detect: [:wc | wc packageName = pn]) ancestors first.
-		version := (self getTestRepository: 'dependency01') versionWithInfo: versionInfo.
-		(self getTestRepository: 'empty') storeVersion: version ].
+    Gofer new
+        disablePackageCache;
+        repository: (self getMczTestRepository: 'mcz');
+        package: packageName;
+        commit: 'testing'.
     Gofer new
         package: 'AAA';
         package: 'BBB';
@@ -21,7 +22,7 @@ testWriteNRead
         shouldnt: [ 
             Gofer new
                 disablePackageCache;
-                repository: (self getTestRepository: 'empty');
+                repository: (self getMczTestRepository: 'mcz');
                 package: packageName;
                 load ]
         raise: Error.

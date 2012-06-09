@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testWrite
     | packageName version versionInfo |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
