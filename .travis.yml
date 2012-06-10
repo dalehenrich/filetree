@@ -9,9 +9,9 @@ install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
    - wget -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
-   - unzip builderCI.zip
+   - unzip -q builderCI.zip
    - cd dalehenrich-builderCI*
-    - source build_env_vars
+   - source build_env_vars
    - ./build_clone.sh -g "-b pharo1.3 git://github.com/dalehenrich/filetree.git"
    - ./build_clone.sh -g "git://github.com/dalehenrich/metacello-work.git"
    - ./build_image.sh
