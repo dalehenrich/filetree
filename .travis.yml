@@ -8,7 +8,7 @@ env:
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
-   - git clone git://github.com/dalehenrich/buildCI.git
+   - git clone git://github.com/dalehenrich/builderCI.git
    - cd buildCI
     - source build_env_vars
    - ./build_clone.sh -g "-b pharo1.3 git://github.com/dalehenrich/filetree.git"
