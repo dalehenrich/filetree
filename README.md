@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=pharo1.3)](http://travis-ci.org/dalehenrich/filetree) 
+
 *Monticello repository for directory-based Monticello packages enabling the use of git, svn, etc. for 
 managing Smalltalk source code.*
 
