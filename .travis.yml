@@ -17,3 +17,4 @@ script:
    - if ( test -e PharoDebug.log ); then die; fi
    - if ( test -e TravisCIResults.txt ); then cat TravisCIResults.txt; fi
    - echo "DONE...."
+
