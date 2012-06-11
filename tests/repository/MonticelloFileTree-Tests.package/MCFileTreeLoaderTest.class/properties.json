@@ -11,6 +11,6 @@
 	"name" : "MCFileTreeLoaderTest",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeAbstractTest",
+	"super" : "MCFileTreeGenericLoaderTest",
 	"traitcomposition" : "{}",
 	"type" : "normal" }
