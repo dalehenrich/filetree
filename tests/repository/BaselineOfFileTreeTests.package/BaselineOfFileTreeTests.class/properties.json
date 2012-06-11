@@ -1,0 +1,16 @@
+{
+	"category" : "BaselineOfFileTreeTests",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfFileTreeTests",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"traitcomposition" : "{}",
+	"type" : "normal" }
