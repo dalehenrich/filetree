@@ -5,7 +5,7 @@
 *Monticello repository for directory-based Monticello packages enabling the use of git, svn, etc. for 
 managing Smalltalk source code.*
 
-## IMPOTANT NOTE:
+## IMPORTANT NOTE:
 
 **If you already have FileTree installed in your image before 6/12/2012 (SHA: ece58e82dc803001578f7d40c2c6a61fbb0066c2) 
 you will need to revert the Monticello package (restoring the MCMethodDefinition>>= 
@@ -28,3 +28,4 @@ Here are some guidelines on contributing to the project:
  * [use dialect-specific branching](https://github.com/dalehenrich/filetree/tree/master/doc/Contribute.md#branching)
  * [use topic branches](https://github.com/dalehenrich/filetree/tree/master/doc/Contribute.md#topicbranches)
  * [unit tests in separate repository](https://github.com/dalehenrich/filetree/tree/master/doc/Contribute.md#tests)
+
