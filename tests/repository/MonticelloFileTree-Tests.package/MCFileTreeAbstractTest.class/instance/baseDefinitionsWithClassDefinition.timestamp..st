@@ -1,19 +1,18 @@
 private
-targetDefinitionsWithClassDefinition: classDefinition
-    | className timestamp |
+baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
+    | className |
     className := classDefinition className.
-    timestamp := 'dkh 4/6/2012 14:36:19'.
     ^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
     classDefinition.
     (MCMethodDefinition
         className: className
         classIsMeta: false
-        selector: 'added'
+        selector: 'extra'
         category: 'accessing'
         timeStamp: timestamp
         source:
-            'added
-    "added method"').
+            'extra
+	"extra method"').
     (MCMethodDefinition
         className: className
         classIsMeta: false
@@ -41,9 +40,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         timeStamp: timestamp
         source:
             'name: aString
-    "changed method"
-
-    name := aString').
+	name := aString').
     (MCMethodDefinition
         className: className
         classIsMeta: true
@@ -70,4 +67,13 @@ targetDefinitionsWithClassDefinition: classDefinition
         timeStamp: timestamp
         source:
             'initialize
-	self current: self new')}
+	self current: self new').
+    (MCMethodDefinition
+        className: 'Object'
+        classIsMeta: false
+        selector: 'isCypressMockBasic'
+        category: '*Cypress-Mocks'
+        timeStamp: timestamp
+        source:
+            'isCypressMockBasic
+	^false')}
