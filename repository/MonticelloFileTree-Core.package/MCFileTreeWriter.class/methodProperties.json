@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"readerClass" : "dkh 3/1/2012 13:09" },
+	"instance" : {
+		"addString:at:" : "dkh 5/23/2012 21:18:06",
+		"deleteExistingPackageStructureFor:" : "dkh 4/4/2012 21:57:51",
+		"flush" : "dkh 2/16/2012 14:49:00",
+		"initializePackageFileDirectoryCache" : "dkh 2/16/2012 14:49:00",
+		"packageFileDirectory" : "dkh 2/29/2012 12:01",
+		"snapshotWriterClass" : "dkh 2/29/2012 13:59",
+		"subPackageFileDirectoryFor:" : "dkh 2/29/2012 15:48",
+		"writeSnapshot:" : "dkh 2/16/2012 14:49:00",
+		"writeVersion:" : "dkh 4/4/2012 14:34" } }

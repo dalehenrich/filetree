@@ -1,10 +1,10 @@
 utilities
-addMethodDefinitionsForClass: className in: entries
+addMethodDefinitionsForClass: className methodProperties: methodProperties in: entries
     entries
         do: [ :entry | 
             | classIsMeta |
             classIsMeta := false.
-		entry name = 'class'
+            entry name = 'class'
                 ifTrue: [ classIsMeta := true ].
             (entry name = 'instance' or: [ entry name = 'class' ])
                 ifTrue: [ 
@@ -12,17 +12,24 @@ addMethodDefinitionsForClass: className in: entries
                         do: [ :methodEntry | 
                             methodEntry
                                 readStreamDo: [ :fileStream | 
-                                    | category source timestamp |
+                                    | category source timestamp selector |
                                     category := fileStream nextLine.
                                     source := fileStream upToEnd.
-                                    timestamp := self info author , ' ' , self info date mmddyyyy , ' '
-                                        , self info time print24.
+                                    selector := self methodSelectorFor: source.
+                                    timestamp := methodProperties
+                                        at:
+                                            (classIsMeta
+                                                ifTrue: [ 'class' ]
+                                                ifFalse: [ 'instance' ])
+                                        ifPresent: [ :map | map at: selector asString ifAbsent: [  ] ].	"Issue 33: https://github.com/dalehenrich/filetree/issues/33"
+                                    timestamp
+                                        ifNil: [ timestamp := self info author , ' ' , self info date mmddyyyy , ' ' , self info time print24 ].
                                     definitions
                                         add:
                                             (MCMethodDefinition
                                                 className: className
                                                 classIsMeta: classIsMeta
-                                                selector: (self methodSelectorFor: source)
+                                                selector: selector
                                                 category: category
                                                 timeStamp: timestamp
                                                 source: source) ] ] ] ]
