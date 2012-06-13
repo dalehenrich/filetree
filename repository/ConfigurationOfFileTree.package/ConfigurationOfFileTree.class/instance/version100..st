@@ -5,9 +5,9 @@ version100: spec
         for: #'common'
         do: [ 
             spec blessing: #'development'.
-            spec description: 'FileTree 1.0 (dkh.22):'.
+            spec description: 'FileTree 1.0 (dkh.24):'.
             spec author: 'dkh'.
-            spec timestamp: '6/12/2012 21:04' ].
+            spec timestamp: '6/13/2012 00:38' ].
     spec
         for: #'pharo'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.67' ] ].
@@ -17,8 +17,7 @@ version100: spec
     spec
         for: #'gemstone'
         do: [ 
-            spec description: 'not at same level of functionality as Pharo and Squeak'.
             spec
                 project: 'GsCore' with: '0.246';
                 project: 'Monticello' with: '0.243'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.88' ]
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.89' ]
