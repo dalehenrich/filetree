@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"classDefinitions" : "dkh 2/29/2012 14:36",
+		"methodDefinitions" : "dkh 2/29/2012 14:37",
+		"visitClassDefinition:" : "dkh 3/1/2012 14:52",
+		"visitMethodDefinition:" : "dkh 3/1/2012 14:53",
+		"writeClassDefinition:to:" : "dkh 2/29/2012 16:51",
+		"writeDefinitions:" : "dkh 4/4/2012 11:32",
+		"writeMethodDefinition:to:" : "dkh 2/29/2012 16:48" } }
