@@ -7,4 +7,4 @@ testTreeBaseLoad
         repository: (self getTestRepository: 'ver04');
         package: packageName;
         load.
-    self validateAgainst: self snapshotBaseDefinitions for: packageName
+    self validateAgainst: self snapshotTreeBaseDefinitions for: packageName
