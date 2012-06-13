@@ -21,6 +21,7 @@
 		"packageExtension" : "dkh 2/29/2012 10:11",
 		"parseName:extension:" : "dkh 2/29/2012 11:39",
 		"readStreamForFileNamed:do:" : "dkh 2/16/2012 14:49:00",
+		"readableFileNames" : "dkh 6/12/2012 17:33:23",
 		"readonly" : "dkh 2/16/2012 14:49:00",
 		"readonly:" : "dkh 2/16/2012 14:49:00",
 		"repositoryProperties" : "dkh 3/7/2012 17:09:47",
@@ -28,6 +29,7 @@
 		"versionInfoForPackageDirectory:" : "dkh 3/1/2012 13:06",
 		"versionInfoFromFileNamed:" : "dkh 2/16/2012 14:49:00",
 		"versionNameFromFileName:" : "dkh 2/16/2012 14:49:00",
+		"versionNamed:" : "dkh 6/12/2012 17:33:23",
 		"versionWithInfo:ifAbsent:" : "dkh 2/16/2012 14:49:00",
 		"writeRepositoryProperties" : "dkh 2/29/2012 15:26",
 		"writeStreamForFileNamed:replace:do:" : "dkh 2/16/2012 14:49:00" } }
