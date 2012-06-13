@@ -14,7 +14,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties in: e
                                 readStreamDo: [ :fileStream | 
                                     | category source timestamp selector |
                                     category := fileStream nextLine decodeFromUTF8.
-				    category := category copyFrom: 1 to: category size - 1. "remove newline"
+				            category := category copyFrom: 1 to: category size - 1. "remove newline"
                                     source := fileStream upToEnd decodeFromUTF8.
                                     selector := self methodSelectorFor: source.
                                     timestamp := methodProperties
