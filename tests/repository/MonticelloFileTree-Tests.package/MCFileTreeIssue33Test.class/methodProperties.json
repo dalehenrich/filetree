@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"tearDownPackagesList" : "dkh 6/12/2012 16:21",
-		"testLoad" : "dkh 6/12/2012 17:25",
-		"testWrite" : "dkh 6/12/2012 17:27",
-		"testWriteNRead" : "dkh 6/12/2012 17:29",
-		"validateTimestamp:" : "dkh 6/12/2012 17:26" } }

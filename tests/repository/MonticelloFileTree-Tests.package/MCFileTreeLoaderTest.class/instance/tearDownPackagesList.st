@@ -1,3 +1,0 @@
-running
-tearDownPackagesList
-    ^#('Cypress-Mocks')
