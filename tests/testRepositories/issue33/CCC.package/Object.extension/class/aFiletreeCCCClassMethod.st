@@ -1,0 +1,3 @@
+*ccc
+aFiletreeCCCClassMethod
+    ^ self

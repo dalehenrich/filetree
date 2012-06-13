@@ -1,5 +1,15 @@
+**pharo1.3 branch** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=pharo1.3)](http://travis-ci.org/dalehenrich/filetree) 
+
+**squeak4.3 branch** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
+
 *Monticello repository for directory-based Monticello packages enabling the use of git, svn, etc. for 
 managing Smalltalk source code.*
+
+## IMPORTANT NOTE:
+
+**If you already have FileTree installed in your image before 6/12/2012 (SHA: ece58e82dc803001578f7d40c2c6a61fbb0066c2) 
+you will need to revert the Monticello package (restoring the MCMethodDefinition>>= 
+method) BEFORE or AFTER upgrading.**
 
 ## Installing
 

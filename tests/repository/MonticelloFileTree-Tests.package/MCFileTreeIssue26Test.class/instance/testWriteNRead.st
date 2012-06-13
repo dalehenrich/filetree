@@ -1,4 +1,4 @@
-as yet unclassified
+tests
 testWriteNRead
     | packageName versionInfo version |
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
@@ -17,9 +17,12 @@ testWriteNRead
         package: 'BBB';
         unload.
     #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
-    Gofer new
-        disablePackageCache;
-        repository: (self getTestRepository: 'empty');
-        package: packageName;
-        load.
+    self
+        shouldnt: [ 
+            Gofer new
+                disablePackageCache;
+                repository: (self getTestRepository: 'empty');
+                package: packageName;
+                load ]
+        raise: Error.
     #('AAA' 'BBB') do: [ :pn | self assert: (self hasPackage: pn) ]

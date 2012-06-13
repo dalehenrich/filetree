@@ -1,7 +1,8 @@
 private
 targetDefinitionsWithClassDefinition: classDefinition
-    | className |
+    | className timestamp |
     className := classDefinition className.
+    timestamp := 'dkh 4/6/2012 14:36:19'.
     ^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
     classDefinition.
     (MCMethodDefinition
@@ -9,7 +10,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: false
         selector: 'added'
         category: 'accessing'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'added
     "added method"').
@@ -18,7 +19,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: false
         selector: 'initialize'
         category: 'initialization'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'initialize
 	super initialize.
@@ -28,7 +29,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: false
         selector: 'name'
         category: 'accessing'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'name
 	^name').
@@ -37,7 +38,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: false
         selector: 'name:'
         category: 'accessing'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'name: aString
     "changed method"
@@ -48,7 +49,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: true
         selector: 'current'
         category: 'accessing'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'current
 	^current').
@@ -57,7 +58,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: true
         selector: 'current:'
         category: 'accessing'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'current: anObject
 	current := anObject').
@@ -66,7 +67,7 @@ targetDefinitionsWithClassDefinition: classDefinition
         classIsMeta: true
         selector: 'initialize'
         category: 'initialization'
-        timeStamp: ''
+        timeStamp: timestamp
         source:
             'initialize
 	self current: self new')}
