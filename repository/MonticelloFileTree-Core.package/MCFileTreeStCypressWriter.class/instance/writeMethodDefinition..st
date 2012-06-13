@@ -3,4 +3,4 @@ writeMethodDefinition: definition
     fileStream
         nextPutAll: definition category encodeAsUTF8;
         lf;
-        nextPutAll: definition source encodeAsUTF8 withUnixLineEndings
+        nextPutAll: definition source withUnixLineEndings encodeAsUTF8
