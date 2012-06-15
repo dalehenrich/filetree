@@ -16,7 +16,7 @@ Metacello new
 
 "Run the tests"
 TravisCIHarness
-  value: #( 'FileTreeTests' )
+  value: #( 'BaselineOfFileTreeTests' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
 
