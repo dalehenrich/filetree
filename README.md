@@ -7,11 +7,14 @@ managing Smalltalk source code.*
 
 ## IMPORTANT NOTE:
 
-**If you already have FileTree installed in your image before 6/12/2012 (SHA: ece58e82dc803001578f7d40c2c6a61fbb0066c2) 
+If you already have FileTree installed in your image before 6/12/2012 
+(SHA ece58e82dc803001578f7d40c2c6a61fbb0066c2)
 you will need to:
-1. move MCMethodDefinition>= to a different category (`comparing`)
+
+1. move **MCMethodDefinition>=** to a different category (`comparing`)
 2. upgrade to the new version FileTree
-3. manually edit (or use method version browser) to eliminate the `true ifTrue:[true]` code in MCMethodDefinition>=.**
+3. manually edit (or use method version browser) to eliminate the `true ifTrue:[true]` code 
+in **MCMethodDefinition>=**.
 
 ## Installing
 
