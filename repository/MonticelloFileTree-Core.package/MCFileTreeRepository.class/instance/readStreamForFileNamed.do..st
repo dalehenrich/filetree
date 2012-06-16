@@ -1,3 +1,3 @@
 i/o
 readStreamForFileNamed: aString do: aBlock
-	^ aBlock value: directory
+    ^ aBlock value: self directory

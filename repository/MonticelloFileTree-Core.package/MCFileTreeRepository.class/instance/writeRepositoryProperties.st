@@ -1,6 +1,6 @@
 as yet unclassified
 writeRepositoryProperties
-    directory
+    self directory
         forceNewFileNamed: '.filetree'
         do: [ :file | 
             file lineEndConvention: #'lf'.
