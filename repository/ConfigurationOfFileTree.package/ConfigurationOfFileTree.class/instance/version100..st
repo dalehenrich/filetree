@@ -7,10 +7,10 @@ version100: spec
             spec blessing: #'development'.
             spec description: 'FileTree 1.0 (dkh.24):'.
             spec author: 'dkh'.
-            spec timestamp: '6/13/2012 00:38' ].
+            spec timestamp: '6/16/2012 21:03' ].
     spec
         for: #'pharo'
-        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.67' ] ].
+        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.70' ] ].
     spec
         for: #'squeak'
         do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43-dkh.68' ] ].
