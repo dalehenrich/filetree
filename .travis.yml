@@ -18,7 +18,7 @@ install:
 
 script:
 
-   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests" -o travisCI
+   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
    - if ( test -e PharoDebug.log ); then die; fi
