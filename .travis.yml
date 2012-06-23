@@ -4,6 +4,7 @@ language: erlang
 #   all listed environments
 env:
    - ST=PharoCore-1.3
+#   - ST=Squeak4.3
 
 install:
    - export PROJECT_HOME="$(pwd)"
@@ -12,16 +13,18 @@ install:
    - unzip -q builderCI.zip
    - cd dalehenrich-builderCI*
    - source build_env_vars
-   - ./build_clone.sh -g "-b pharo1.3 git://github.com/dalehenrich/filetree.git"
-   - ./build_clone.sh -g "git://github.com/dalehenrich/metacello-work.git"
+   - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
 script:
 
-   - ./build.sh -i $ST -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
+   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
    - if ( test -e PharoDebug.log ); then die; fi
+   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
+   - if ( test -e SqueakDebug.log ); then die; fi
    - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
    - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
    - if ( test -e TravisCIFailure.txt ); then die; fi
+
