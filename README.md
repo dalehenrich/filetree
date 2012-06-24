@@ -2,14 +2,21 @@
 
 **squeak4.3 branch** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
 
+**configuration branch** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=configuration)](http://travis-ci.org/dalehenrich/filetree) 
+
 *Monticello repository for directory-based Monticello packages enabling the use of git, svn, etc. for 
 managing Smalltalk source code.*
 
 ## IMPORTANT NOTE:
 
-**If you already have FileTree installed in your image before 6/12/2012 (SHA: ece58e82dc803001578f7d40c2c6a61fbb0066c2) 
-you will need to revert the Monticello package (restoring the MCMethodDefinition>>= 
-method) BEFORE or AFTER upgrading.**
+If you already have FileTree installed in your image before 6/12/2012 
+(SHA ece58e82dc803001578f7d40c2c6a61fbb0066c2)
+you will need to:
+
+1. move **MCMethodDefinition>=** to a different category (`comparing`)
+2. upgrade to the new version FileTree
+3. manually edit (or use method version browser) to eliminate the `true ifTrue:[true]` code 
+in **MCMethodDefinition>=**.
 
 ## Installing
 
