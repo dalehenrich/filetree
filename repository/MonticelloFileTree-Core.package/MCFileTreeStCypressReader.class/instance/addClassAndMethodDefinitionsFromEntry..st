@@ -13,7 +13,7 @@ addClassAndMethodDefinitionsFromEntry: classEntry
                 readStreamDo: [ :fileStream | 
                     "Issue 33: https://github.com/dalehenrich/filetree/issues/33"
                     methodPropertiesDict := MCFileTreeJsonParser parseStream: fileStream ] ].
-    self addClassDefinitionFrom: classPropertiesDict comment: classComment.
+    self addClassDefinitionFrom: classPropertiesDict comment: classComment withSqueakLineEndings.
     self
         addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
         methodProperties: methodPropertiesDict
