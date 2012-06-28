@@ -2,7 +2,6 @@
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "load the FileTree tests"
-MetacelloProjectRegistration resetRegistry.
 Metacello new
   baseline: 'FileTreeTests';
   repository: 'filetree://', gitPath, '/filetree/tests/repository';
