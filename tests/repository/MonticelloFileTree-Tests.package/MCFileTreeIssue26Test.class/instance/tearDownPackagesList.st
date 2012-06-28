@@ -1,3 +1,3 @@
 running
 tearDownPackagesList
-    ^#( 'BBB' 'AAA')
+    ^ #('AAA' 'BBB')
