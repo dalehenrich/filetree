@@ -1,17 +1,20 @@
 testing
 testCypressCuisLoad
-    | gofer |
+    | gofer repo |
     [ 
     | packageName |
     packageName := 'Cypress-Mocks'.
     (gofer := Gofer new)
         disablePackageCache;
-        repository: (self getTestRepository: 'cuisCypress');
+        repository: (repo := self getTestRepository: 'cuisCypress');
         package: packageName;
         load.
     self validateAgainst: self snapshotCypressCuisDefinitions for: packageName ]
         on: Error
         do: [ :ex | 
+            Transcript
+                cr;
+                show: 'Repo: ' , repo description.
             Transcript
                 cr;
                 show: '**************REFS'.
