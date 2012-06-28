@@ -16,7 +16,7 @@ testCypressCuisLoad
                 show: '***************************************************';
                 cr;
                 show: ex description.
-            (thisContext stackOfSize: 100)
+            (ex signalerContext stackOfSize: 100)
                 do: [ :item | 
                     Transcript
                         cr;
