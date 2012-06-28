@@ -2,7 +2,9 @@ testing
 testTargetLoad
     | packageName |
     packageName := 'Cypress-Mocks'.
-    Installer monticello
-        mc: (self getTestRepository: 'ver02');
-        install: packageName.
+    Gofer new
+        disablePackageCache;
+        repository: (self getTestRepository: 'ver02');
+        package: packageName;
+        load.
     self validateAgainst: self targetDefinitions for: packageName
