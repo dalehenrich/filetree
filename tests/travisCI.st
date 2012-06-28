@@ -1,12 +1,6 @@
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"Bootstrap FileTree code"
-Metacello new
-  baseline: 'FileTree';
-  repository: 'filetree://', gitPath, '/filetree/repository';
-  load.
-
 "load the FileTree tests"
 Metacello new
   baseline: 'FileTreeTests';
