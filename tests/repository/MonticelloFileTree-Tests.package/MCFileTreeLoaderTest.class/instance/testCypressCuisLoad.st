@@ -13,8 +13,10 @@ testCypressCuisLoad
         do: [ :ex | 
             Transcript
                 cr;
+                show: '***************************************************';
+                cr;
                 show: ex description.
-            (self stackOfSize: 100)
+            (thisContext stackOfSize: 100)
                 do: [ :item | 
                     Transcript
                         cr;
@@ -28,4 +30,8 @@ testCypressCuisLoad
                                 nextPut: $:;
                                 space;
                                 tab;
-                                nextPutAll: (item tempAt: index) printString ] ] ]
+                                nextPutAll: (item tempAt: index) printString ].
+                    Transcript
+                        cr;
+                        show: '***************************************************'.
+                    ex pass ] ]
