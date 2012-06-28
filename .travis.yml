@@ -20,8 +20,10 @@ script:
 
    - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
+   - if ( test -e PharoDebug.log ); then cat TravisTranscript.txt; fi
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
    - if ( test -e PharoDebug.log ); then die; fi
+   - if ( test -e SqueakDebug.log ); then cat TravisTranscript.txt; fi
    - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
    - if ( test -e SqueakDebug.log ); then die; fi
    - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
