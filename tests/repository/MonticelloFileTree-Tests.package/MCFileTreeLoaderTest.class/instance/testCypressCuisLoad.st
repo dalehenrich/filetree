@@ -33,5 +33,5 @@ testCypressCuisLoad
                                 nextPutAll: (item tempAt: index) printString ].
                     Transcript
                         cr;
-                        show: '***************************************************'.
-                    ex pass ] ]
+                        show: '***************************************************' ].
+            ex pass ]
