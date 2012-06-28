@@ -18,6 +18,7 @@ install:
 
 script:
 
+   - ls "$GIT_PATH/filetree/tests/testRepositories/cuisCypress"
    - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
