@@ -1,6 +1,6 @@
 accessing
 loadVersionInfo
-    (packageDirectory directoryNamed: MCFileTreeStCypressWriter monticelloMetaDirName) exists
+    self hasMonticelloMetadata
         ifTrue: [ ^ info := self extractInfoFrom: (self parseMember: 'version') ].
     info := MCVersionInfo
         name: self packageNameFromPackageDirectory , '-cypress.1'

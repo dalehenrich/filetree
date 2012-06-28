@@ -1,6 +1,6 @@
 accessing
 basicVersion
-    (packageDirectory directoryNamed: MCFileTreeStCypressWriter monticelloMetaDirName) exists
+    self hasMonticelloMetadata
         ifTrue: [ ^ super basicVersion ].
     ^ MCVersion new
         setPackage: self package
