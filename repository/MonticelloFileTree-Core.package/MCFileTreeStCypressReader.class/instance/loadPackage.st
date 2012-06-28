@@ -1,5 +1,5 @@
 accessing
 loadPackage
-    (packageDirectory directoryNamed: MCFileTreeStCypressWriter monticelloMetaDirName) exists
+    self hasMonticelloMetadata
         ifTrue: [ ^ super loadPackage ].
     package := MCPackage named: self packageNameFromPackageDirectory

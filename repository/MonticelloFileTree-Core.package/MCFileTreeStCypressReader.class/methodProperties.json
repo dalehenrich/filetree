@@ -8,9 +8,9 @@
 		"addClassDefinitionFrom:comment:" : "dkh 6/27/2012 14:18",
 		"addExtensionClassAndMethodDefinitionsFromEntry:" : "dkh 6/12/2012 17:33:23",
 		"addMethodDefinitionsForClass:methodProperties:in:" : "dkh 6/12/2012 17:33:23",
-		"basicVersion" : "dkh 6/27/2012 13:59",
+		"basicVersion" : "dkh 6/27/2012 20:19",
 		"loadDefinitions" : "dkh 6/27/2012 14:59",
-		"loadPackage" : "dkh 6/27/2012 13:57",
-		"loadVersionInfo" : "dkh 6/27/2012 14:48",
+		"loadPackage" : "dkh 6/27/2012 20:21",
+		"loadVersionInfo" : "dkh 6/27/2012 20:21",
 		"methodSelectorFor:" : "dkh 4/4/2012 11:29",
 		"packageNameFromPackageDirectory" : "dkh 6/27/2012 13:49" } }
