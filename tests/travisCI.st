@@ -11,7 +11,7 @@ testRepoPath := gitPath, '/filetree/tests/testRepositories/cuisCypress'.
 packageName := 'Cypress-Mocks'.
 Gofer new
     disablePackageCache;
-    repository: (MCFileTreeRepository new directory: 
+    repository: ((Smalltalk at: #MCFileTreeRepository) new directory: 
                    (FileDirectory on: testRepoPath));
     package: packageName;
      load.
