@@ -28,6 +28,7 @@ script:
    - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
    - if ( test -e SqueakDebug.log ); then die; fi
    - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
+   - if ( test -e TravisCIFailure.txt ); then cat TravisTranscript.txt; fi
    - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
    - if ( test -e TravisCIFailure.txt ); then die; fi
 
