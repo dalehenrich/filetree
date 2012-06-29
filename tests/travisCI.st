@@ -1,22 +1,20 @@
-"Load and run tests to be performed by TravisCI"
 | gitPath |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"prime the pump with FileTree install using Metacello scripting API"
+Transcript cr; show: 'travis---->before FileTree tests load'.
+Transcript cr; show: 'travis---->repository path: ', ('filetree://', gitPath, '/filetree/tests/repository') printString.
+
+"load the FileTree tests"
 Metacello new
-	baseline: 'FileTree';
-  repository: 'filetree://', gitPath, '/filetree/repository';
+  baseline: 'FileTreeTests';
+  repository: 'filetree://', gitPath, '/filetree/tests/repository';
   load.
 
-"load the file tree tests"
-Metacello new
-	baseline: 'FileTreeTests';
-  repository: 'filetree://', gitPath, '/filetree/tests/repository';
-	load.
+Transcript cr; show: 'travis---->before test run'.
 
 "Run the tests"
 TravisCIHarness
-  value: #( 'FileTreeTests' )
+  value: #( 'BaselineOfFileTreeTests' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
 
