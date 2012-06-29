@@ -5,8 +5,6 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
             (MCClassDefinition
                 name: (classPropertiesDict at: 'name')
                 superclassName: (classPropertiesDict at: 'super')
-                traitComposition: (classPropertiesDict at: 'traitcomposition' ifAbsent: [ '{}' ])
-                classTraitComposition: (classPropertiesDict at: 'classtraitcomposition' ifAbsent: [ '{}' ])
                 category: (classPropertiesDict at: 'category' ifAbsent: [ self packageNameFromPackageDirectory ])
                 instVarNames: (classPropertiesDict at: 'instvars' ifAbsent: [ #() ])
                 classVarNames: (classPropertiesDict at: 'classvars' ifAbsent: [ #() ])
