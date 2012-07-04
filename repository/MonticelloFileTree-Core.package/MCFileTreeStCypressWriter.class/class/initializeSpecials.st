@@ -4,7 +4,6 @@ initializeSpecials
     map := Dictionary new.
     map
         at: $+ put: 'plus';
-        at: $, put: 'comma';
         at: $- put: 'minus';
         at: $= put: 'equals';
         at: $< put: 'less';
@@ -17,6 +16,7 @@ initializeSpecials
         at: $\ put: 'backslash';
         at: $~ put: 'tilde';
         at: $? put: 'wat';
+        at: $, put: 'comma';
         at: $@ put: 'at'.
     map keys do: [ :key | map at: (map at: key) put: key ].
     ^ map
