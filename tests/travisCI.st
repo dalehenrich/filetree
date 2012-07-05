@@ -2,7 +2,7 @@
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
 "load the FileTree tests"
-Configuration ensureMetacello.
+ConfigurationOf ensureMetacello.
 
 (Smalltalk at: #MetacelloProjectRegistration) resetRegistry.
 
