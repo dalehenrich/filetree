@@ -3,11 +3,11 @@ validateTimestamp: timestamp
     | x y |
     self
         assert:
-            (y := (x := SourcedMethodReference class: (Smalltalk at: #'CCC') selector: #'printString') timeStampString) = timestamp.
+            (y := (x := RGMethodDefinition realClass: (Smalltalk at: #'CCC') selector: #'printString') stamp) = timestamp.
     self
         assert:
-            (x := SourcedMethodReference class: (Smalltalk at: #'CCC') class selector: #'token:') timeStampString = timestamp.
-    self assert: (x := SourcedMethodReference class: Object selector: #'aFiletreeCCCMethod') timeStampString = timestamp.
+            (x := RGMethodDefinition realClass: (Smalltalk at: #'CCC') class selector: #'token:') stamp = timestamp.
+    self assert: (x := RGMethodDefinition realClass: Object selector: #'aFiletreeCCCMethod') stamp = timestamp.
     self
         assert:
-            (x := SourcedMethodReference class: Object class selector: #'aFiletreeCCCClassMethod') timeStampString = timestamp
+            (x := RGMethodDefinition realClass: Object class selector: #'aFiletreeCCCClassMethod') stamp = timestamp
