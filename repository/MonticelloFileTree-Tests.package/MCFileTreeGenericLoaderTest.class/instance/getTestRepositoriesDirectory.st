@@ -10,4 +10,4 @@ getTestRepositoriesDirectory
     wc ifNil: [ ^ self assert: false ].
     fileTreeRepo := (wc repositoryGroup repositories reject: [ :repo | MCCacheRepository default = repo ])
         detect: [ :repo | repo isKindOf: MCFileTreeRepository ].
-    ^ fileTreeRepo directory containingDirectory directoryNamed: 'testRepositories'
+    ^ fileTreeRepo directory containingDirectory directoryNamed: 'tests/testRepositories'
