@@ -1,10 +1,9 @@
 language: erlang
 
-# build matrix: "PharoCore-1.3" or "Squeak4.3" ... parallel tests for
-#   all listed environments
 env:
-#   - ST=PharoCore-1.3
-   - ST=Squeak4.3
+#   - ST=Pharo-1.4    # Issue #41
+   - ST=PharoCore-1.3
+#   - ST=Squeak4.3
 
 install:
    - export PROJECT_HOME="$(pwd)"
