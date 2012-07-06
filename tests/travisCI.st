@@ -9,6 +9,7 @@ Metacello new
   repository: 'filetree://', gitPath, '/filetree/repository';
   get.
 
+(Smalltalk at: #MetacelloProjectRegistration) resetRegistry.
 Metacello new
   baseline: 'FileTree';
   repository: 'filetree://', gitPath, '/filetree/repository';
