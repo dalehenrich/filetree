@@ -2,6 +2,9 @@ language: erlang
 
 env:
    - ST=Pharo-2.0
+#   - ST=Pharo-1.4
+#   - ST=PharoCore-1.3
+#   - ST=Squeak4.3
 
 install:
    - export PROJECT_HOME="$(pwd)"

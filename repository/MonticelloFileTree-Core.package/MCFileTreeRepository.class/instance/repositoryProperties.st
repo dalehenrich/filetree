@@ -19,5 +19,5 @@ repositoryProperties
                                     Transcript
                                         cr;
                                         show:
-                                                'Error reading repository properties (.filetree): ' , self directory pathName , ' :: ' , ex description ] ] ] ].
+                                                'Error reading repository properties (.filetree): ' , self directory fullName  , ' :: ' , ex description ] ] ] ].
     ^ repositoryProperties
