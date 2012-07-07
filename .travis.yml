@@ -4,6 +4,7 @@ language: erlang
 #   all listed environments
 env:
    - ST=PharoCore-1.3
+   - ST=Pharo-2.0
    - ST=Squeak4.3
 
 install:
