@@ -2,7 +2,6 @@
 	"category" : "MonticelloFileTree-Core",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -13,5 +12,4 @@
 	"pools" : [
 		 ],
 	"super" : "MCFileTreeAbstractStWriter",
-	"traitcomposition" : "{}",
 	"type" : "normal" }
