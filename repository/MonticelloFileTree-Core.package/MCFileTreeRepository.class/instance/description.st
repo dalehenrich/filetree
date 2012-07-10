@@ -1,3 +1,3 @@
 descriptions
 description
-    ^ self class description , super description
+    ^ self class description ,  self directory pathName
