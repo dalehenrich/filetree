@@ -1,7 +1,9 @@
 private
 sampleJson
     ^ '{
+	"Business" : "none or yours",
 	"age" : 25,
+	"boundary" : "sky",
 	"name" : "John Smith",
 	"phoneNumber" : [
 		{
