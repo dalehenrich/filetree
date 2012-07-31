@@ -23,4 +23,4 @@ version100: spec
             spec
                 project: 'GsCore' with: '0.246';
                 project: 'Monticello' with: '0.243'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.89' ]
+            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.91' ]
