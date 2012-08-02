@@ -8,10 +8,10 @@ writePropertiesFile
     self
         writeInDirectoryName: '.'
         fileName: ''
-        extension: '.filetree'
+        extension: 'filetree'
         visit: [ properties writeCypressJsonOn: fileStream ].
     self
         writeInDirectoryName: '.'
         fileName: 'properties'
-        extension: '.json'
+        extension: 'json'
         visit: [ Dictionary new writeCypressJsonOn: fileStream ]

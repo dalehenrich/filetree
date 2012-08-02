@@ -1,7 +1,7 @@
 utilities
 loadDependencies
     | dependencyDir |
-    dependencyDir := (packageDirectory directoryNamed: self monticelloMetaDirName) directoryNamed: 'dependencies'.
+    dependencyDir := self packageDirectory / self monticelloMetaDirName / 'dependencies'.
     dependencyDir exists
         ifFalse: [ ^ dependencies := #() ].
     dependencies := OrderedCollection new.
@@ -10,7 +10,7 @@ loadDependencies
             dependencies
                 add:
                     (MCVersionDependency
-                        package: (MCPackage named: entry name)
+                        package: (MCPackage named: entry basename)
                         info:
-                            (self extractInfoFrom: (self parseMember: 'dependencies' , FileDirectory slash , entry name))) ].
+                            (self extractInfoFrom: (self parseMember: 'dependencies' , Path delimiter , entry basename))) ].
     dependencies := dependencies asArray

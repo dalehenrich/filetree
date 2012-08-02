@@ -4,5 +4,5 @@ visitClassDefinition: definition
     self
         writeInDirectoryName: definition className
         fileName: definition className
-        extension: '.st'
+        extension: 'st'
         visit: [ self writeClassDefinition: definition ]

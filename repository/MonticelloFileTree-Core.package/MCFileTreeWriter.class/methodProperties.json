@@ -2,12 +2,12 @@
 	"class" : {
 		"readerClass" : "dkh 3/1/2012 13:09" },
 	"instance" : {
-		"addString:at:" : "dkh 7/8/2012 07:52",
-		"deleteExistingPackageStructureFor:" : "dkh 4/4/2012 21:57:51",
+		"addString:at:" : "CAmilloBruni 8/2/2012 18:48",
+		"deleteExistingPackageStructureFor:" : "CAmilloBruni 8/2/2012 18:48",
 		"flush" : "dkh 2/16/2012 14:49:00",
-		"initializePackageFileDirectoryCache" : "dkh 2/16/2012 14:49:00",
-		"packageFileDirectory" : "dkh 2/29/2012 12:01",
+		"initializePackageFileDirectoryCache" : "CAmilloBruni 8/2/2012 18:36",
+		"packageFileDirectory" : "CAmilloBruni 8/2/2012 18:45",
 		"snapshotWriterClass" : "dkh 2/29/2012 13:59",
-		"subPackageFileDirectoryFor:" : "dkh 2/29/2012 15:48",
+		"subPackageFileDirectoryFor:" : "CAmilloBruni 8/2/2012 18:23",
 		"writeSnapshot:" : "dkh 2/16/2012 14:49:00",
-		"writeVersion:" : "dkh 4/4/2012 14:34" } }
+		"writeVersion:" : "CAmilloBruni 8/2/2012 18:27" } }

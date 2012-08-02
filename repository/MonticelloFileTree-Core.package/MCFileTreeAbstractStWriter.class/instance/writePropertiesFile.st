@@ -3,5 +3,5 @@ writePropertiesFile
     self
         writeInDirectoryName: '.'
         fileName: ''
-        extension: '.filetree'
+        extension: 'filetree'
         visit: [ stWriter writeProperties ]

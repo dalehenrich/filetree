@@ -6,7 +6,6 @@
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
-		"packageDirectory",
 		"packageProperties" ],
 	"name" : "MCFileTreeAbstractReader",
 	"pools" : [

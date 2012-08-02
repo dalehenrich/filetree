@@ -1,11 +1,11 @@
 actions
 packageDescriptionFromPackageDirectory: packageDirectory
     | filename info extension |
-    filename := packageDirectory localName.
-    extension := filename copyFrom: (filename lastIndexOf: $.) to: filename size.
-    ^ ((self packageExtension ~= '.package'
-        and: [ (packageDirectory fileExists: 'version') and: [ packageDirectory fileExists: 'package' ] ])
-        or: [ (packageDirectory directoryNamed: MCFileTreeStCypressWriter monticelloMetaDirName) exists ])
+    filename := packageDirectory basename.
+    extension := packageDirectory extension.
+    ^ ((self packageExtension ~= 'package'
+        and: [ (packageDirectory / 'version') exists and: [ (packageDirectory/ 'package') exists ] ])
+        or: [ (packageDirectory / MCFileTreeStCypressWriter monticelloMetaDirName) exists ])
         ifTrue: [ 
             info := self versionInfoForPackageDirectory: packageDirectory.
             self parseName: info name extension: extension ]

@@ -6,5 +6,5 @@ goferVersionFrom: aVersionReference
         select: [ :packageDirectory | packageDirectory exists ])
         collect: [ :packageDirectory | 
             (self versionInfoForPackageDirectory: packageDirectory) name = aVersionReference name
-                ifTrue: [ ^ self loadVersionFromFileNamed: packageDirectory localName ] ].
+                ifTrue: [ ^ self loadVersionFromFileNamed: packageDirectory basename ] ].
     ^ nil

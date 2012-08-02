@@ -1,10 +1,10 @@
 visiting
-writeInDirectoryName: directoryNameOrPath fileName: fileName extension: ext visit: visitBlock
-    | directory |
-    directory := self directoryForDirectoryNamed: directoryNameOrPath.
-    directory
-        forceNewFileNamed: fileName , ext
-        do: [ :file | 
-            file lineEndConvention: #'lf'.
-            self setFileStream: file.
-            visitBlock value ]
+writeInDirectoryName: directoryNameOrPath fileName: fileName extension: extension visit: visitBlock
+	| file |	
+	file := self directoryForDirectoryNamed: directoryNameOrPath.
+	fileName isEmptyOrNil ifFalse: [ file := file / fileName ].
+	file := file , extension.
+	file writeStreamDo: [ :aStream | 
+			aStream lineEndConvention: #'lf'.
+			self setFileStream: aStream.
+			visitBlock value ]
