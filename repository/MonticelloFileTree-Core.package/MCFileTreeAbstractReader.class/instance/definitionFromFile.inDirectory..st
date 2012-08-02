@@ -2,9 +2,8 @@ utilities
 definitionFromFile: directoryEntry inDirectory: aDirectory
     | defs reader |
     directoryEntry ifNil: [ ^ nil ].
-    aDirectory
-        fileNamed: directoryEntry basename
-        do: [ :fileStream | 
+    (aDirectory / directoryEntry basename)
+        readStreamDo: [ :fileStream | 
             | methodDefinition |
             reader := MCStReader on: fileStream.
             (defs := reader definitions) size <= 1
