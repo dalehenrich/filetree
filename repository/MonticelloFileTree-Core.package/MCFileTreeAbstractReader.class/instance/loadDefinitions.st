@@ -2,10 +2,10 @@ utilities
 loadDefinitions
     | entries |
     definitions := OrderedCollection new.
-    entries := packageDirectory entries.
+    entries := self packageDirectory entries.
     self
-        addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'categories' ] ifNone: [  ])
-            inDirectory: packageDirectory;
-        addClassAndMethodDefinitionsFromDirectory: packageDirectory;
-        addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'initializers' ] ifNone: [  ])
-            inDirectory: packageDirectory
+        addDefinitionFromFile: (entries detect: [ :entry | entry basename beginsWith: 'categories' ] ifNone: [  ])
+            inDirectory: self packageDirectory;
+        addClassAndMethodDefinitionsFromDirectory: self packageDirectory;
+        addDefinitionFromFile: (entries detect: [ :entry | entry basename beginsWith: 'initializers' ] ifNone: [  ])
+            inDirectory: self packageDirectory

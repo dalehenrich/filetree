@@ -2,11 +2,13 @@ writing
 addString: string at: fileName
     | path |
     path := MCFileTreePackageStructureStWriter useCypressWriter
-        ifTrue: [ 
-            self packageFileDirectory assureExistenceOfPath: MCFileTreeStCypressWriter monticelloMetaDirName.
-            path := MCFileTreeStCypressWriter monticelloMetaDirName , FileDirectory slash , fileName.
-            (self packageFileDirectory directoryNamed: path) containingDirectory assureExistence.
-            path ]
+        ifTrue: [ |dir|
+            dir := (self packageFileDirectory /  MCFileTreeStCypressWriter monticelloMetaDirName) ensureDirectory.
+		dir := dir resolve: fileName.
+		dir parent ensureDirectory.
+            dir fullName ]
         ifFalse: [ fileName ].
-    string isEmpty
-        ifFalse: [ self packageFileDirectory forceNewFileNamed: path do: [ :file | file nextPutAll: string ] ]
+
+    string isEmpty 
+		ifFalse: [ 
+			(self packageFileDirectory resolve: path) writeStreamDo: [ :aStream | aStream nextPutAll: string ]]

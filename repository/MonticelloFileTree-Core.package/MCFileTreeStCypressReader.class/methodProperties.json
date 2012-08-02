@@ -3,14 +3,16 @@
 		"extension" : "dkh 4/4/2012 14:19",
 		"monticelloMetaDirName" : "dkh 4/4/2012 17:44" },
 	"instance" : {
-		"addClassAndMethodDefinitionsFromDirectory:" : "dkh 4/4/2012 10:27",
-		"addClassAndMethodDefinitionsFromEntry:" : "dkh 6/27/2012 14:30",
+		"addClassAndMethodDefinitionsFromDirectory:" : "CAmilloBruni 8/2/2012 18:36",
+		"addClassAndMethodDefinitionsFromEntry:" : "CamilloBruni 8/2/2012 16:01",
 		"addClassDefinitionFrom:comment:" : "dkh 6/27/2012 14:18",
-		"addExtensionClassAndMethodDefinitionsFromEntry:" : "dkh 6/12/2012 17:33:23",
-		"addMethodDefinitionsForClass:methodProperties:in:" : "dkh 6/12/2012 17:33:23",
+		"addExtensionClassAndMethodDefinitionsFromEntry:" : "CamilloBruni 8/2/2012 16:28",
+		"addMethodDefinitionForClass:methodProperties:entry:" : "CAmilloBruni 8/2/2012 18:38",
+		"addMethodDefinitionsForClass:methodProperties:in:" : "CAmilloBruni 8/2/2012 18:38",
 		"basicVersion" : "dkh 6/27/2012 20:19",
-		"loadDefinitions" : "dkh 6/27/2012 14:59",
+		"loadDefinitions" : "CAmilloBruni 8/2/2012 18:37",
+		"loadMethodDefinitionForClass:classIsMeta:methodProperties:entry:fileStream:" : "CamilloBruni 8/2/2012 16:26",
 		"loadPackage" : "dkh 6/27/2012 20:21",
 		"loadVersionInfo" : "dkh 6/27/2012 20:21",
 		"methodSelectorFor:" : "dkh 4/4/2012 11:29",
-		"packageNameFromPackageDirectory" : "dkh 6/27/2012 13:49" } }
+		"packageNameFromPackageDirectory" : "CamilloBruni 8/2/2012 15:46" } }

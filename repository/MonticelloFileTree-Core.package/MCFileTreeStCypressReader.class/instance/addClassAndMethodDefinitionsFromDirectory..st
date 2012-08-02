@@ -2,7 +2,7 @@ utilities
 addClassAndMethodDefinitionsFromDirectory: aDirectory
     aDirectory entries
         do: [ :entry | 
-            (entry name endsWith: '.class')
+            (entry basename endsWith: '.class')
                 ifTrue: [ self addClassAndMethodDefinitionsFromEntry: entry ].
-            (entry name endsWith: '.extension')
+            (entry basename endsWith: '.extension')
                 ifTrue: [ self addExtensionClassAndMethodDefinitionsFromEntry: entry ] ]

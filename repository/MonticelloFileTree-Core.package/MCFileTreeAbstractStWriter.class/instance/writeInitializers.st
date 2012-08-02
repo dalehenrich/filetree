@@ -3,7 +3,7 @@ writeInitializers
     self
         writeInDirectoryName: self monticelloMetaDirName
         fileName: 'initializers'
-        extension: '.st'
+        extension: 'st'
         visit: [ 
             stWriter
                 writePresentInitializers;

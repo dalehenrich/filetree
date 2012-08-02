@@ -3,7 +3,7 @@ definitionFromFile: directoryEntry inDirectory: aDirectory
     | defs reader |
     directoryEntry ifNil: [ ^ nil ].
     aDirectory
-        fileNamed: directoryEntry name
+        fileNamed: directoryEntry basename
         do: [ :fileStream | 
             | methodDefinition |
             reader := MCStReader on: fileStream.

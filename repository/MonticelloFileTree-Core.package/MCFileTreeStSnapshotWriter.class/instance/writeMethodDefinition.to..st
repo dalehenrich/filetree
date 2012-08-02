@@ -5,5 +5,5 @@ writeMethodDefinition: methodDefinition to: methodPath
     self
         writeInDirectoryName: methodPath
         fileName: filename
-        extension: '.st'
+        extension: 'st'
         visit: [ self writeMethodDefinition: methodDefinition ]

@@ -1,5 +1,3 @@
 reading
-on: s fileName: f
-	^ (self on: s)
-		packageDirectory: f;
-		yourself
+on: aFileRefernence fileName: fileName
+	^ super on: aFileRefernence / fileName 

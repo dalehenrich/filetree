@@ -9,9 +9,9 @@ repositoryProperties
                         cr;
                         show: 'filetree:// repository ' , self directory pathName printString , ' does not exist.'.
                     ^ repositoryProperties ].
-            (self directory entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
+            (self directory entries detect: [ :entry | entry basename = '.filetree' ] ifNone: [  ])
                 ifNotNil: [ :configEntry | 
-                    configEntry
+                    configEntry asFileReference 
                         readStreamDo: [ :fileStream | 
                             [ repositoryProperties := MCFileTreeJsonParser parseStream: fileStream ]
                                 on: Error

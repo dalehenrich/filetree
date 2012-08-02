@@ -8,5 +8,5 @@ visitMethodDefinition: definition
     self
         writeInDirectoryName: directoryname
         fileName: filename
-        extension: '.st'
+        extension: 'st'
         visit: [ self writeMethodDefinition: definition ]

@@ -1,17 +1,17 @@
 utilities
 loadDefinitions
-    | entries directory |
-    definitions := OrderedCollection new.
-    directory := packageDirectory directoryNamed: self monticelloMetaDirName.
-    directory exists
-        ifTrue: [ 
-            entries := directory entries.
-            self
-                addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'categories' ] ifNone: [  ])
-                inDirectory: directory ].
-    self addClassAndMethodDefinitionsFromDirectory: packageDirectory.
-    directory exists
-        ifTrue: [ 
-            self
-                addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'initializers' ] ifNone: [  ])
-                inDirectory: directory ]
+	| entries directory |
+	definitions := OrderedCollection new.
+	directory := self packageDirectory / self monticelloMetaDirName.
+
+	directory exists
+		ifFalse: [ ^ self addClassAndMethodDefinitionsFromDirectory: self packageDirectory].
+		
+	entries := directory entries.
+	self
+		addDefinitionFromFile: (entries detect: [ :entry | entry basename beginsWith: 'categories' ] ifNone: [  ])
+		inDirectory: directory.
+	self addClassAndMethodDefinitionsFromDirectory: self packageDirectory.
+	self
+		addDefinitionFromFile: (entries detect: [ :entry | entry basename beginsWith: 'initializers' ] ifNone: [  ])
+		inDirectory: directory

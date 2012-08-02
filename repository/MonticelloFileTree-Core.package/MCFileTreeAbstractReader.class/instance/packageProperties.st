@@ -3,9 +3,9 @@ packageProperties
     packageProperties
         ifNil: [ 
             packageProperties := Dictionary new.
-            (packageDirectory entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
+            (self packageDirectory entries detect: [ :entry | entry basename = '.filetree' ] ifNone: [  ])
                 ifNotNil: [ :configEntry | 
-                    configEntry
+                    configEntry asFileReference
                         readStreamDo: [ :fileStream | 
                             | jsonObject structureVersion |
                             [ 
@@ -29,5 +29,5 @@ packageProperties
                                     Transcript
                                         cr;
                                         show:
-                                                'Error reading package properties (.filetree): ' , packageDirectory fullName , ' :: ' , ex description ] ] ] ].
+                                                'Error reading package properties (.filetree): ' , self packageDirectory fullName , ' :: ' , ex description ] ] ] ].
     ^ packageProperties

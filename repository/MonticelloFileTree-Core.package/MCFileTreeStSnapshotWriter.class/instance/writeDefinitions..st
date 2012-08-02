@@ -12,6 +12,7 @@ writeDefinitions: aCollection
                 ifAbsent: [ 
                     extensionClasses add: className.
                     extensionMethodDefinitions addAll: extensionMethods ] ].
+
     extensionClasses do: [ :className | self methodDefinitions removeKey: className ].
     self classDefinitions
         keysAndValuesDo: [ :className :definition | 
@@ -25,6 +26,7 @@ writeDefinitions: aCollection
                     methodDefinition classIsMeta
                         ifTrue: [ self writeMethodDefinition: methodDefinition to: classMethodPath ]
                         ifFalse: [ self writeMethodDefinition: methodDefinition to: instanceMethodPath ] ] ].
+
     basePath := 'snapshot' , FileDirectory slash , 'extensions' , FileDirectory slash.
     extensionMethodDefinitions
         do: [ :methodDefinition | 
