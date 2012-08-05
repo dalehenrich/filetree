@@ -2,6 +2,8 @@ tests
 propertyDictionary
     ^ Dictionary new
         at: 'name' put: 'John Smith';
+        at: 'boundary' put: 'sky';
+        at: 'Business' put: 'none or yours';
         at: 'age' put: 25;
         at: 'registered' put: true;
         at: 'phoneNumber'
