@@ -2,19 +2,20 @@ visiting
 deleteExistingPackageStructureFor: members
     "destroy .tree and .pkg directory structure .. otherwise it won't be pretty"
 
-    | alternateDirName alternateDir |
-    self packageFileDirectory exists
-        ifTrue: [ self packageFileDirectory recursiveDelete ].
-    alternateDirName := (self packageFileDirectory localName endsWith: '.pkg')
+    | alternateDirName alternateDir packageDirectoryName |
+    (self fileUtils directoryExists: self packageFileDirectory)
+        ifTrue: [ self fileUtils deleteAll: self packageFileDirectory ].
+    packageDirectoryName := self fileUtils directoryName: self packageFileDirectory.
+    alternateDirName := (packageDirectoryName endsWith: '.pkg')
         ifTrue: [ members first , '.tree' ]
         ifFalse: [ 
-            (self packageFileDirectory localName endsWith: '.tree')
+            (packageDirectoryName endsWith: '.tree')
                 ifTrue: [ members first , '.pkg' ]
                 ifFalse: [ 
-                    (self packageFileDirectory localName endsWith: '.package')
+                    (packageDirectoryName endsWith: '.package')
                         ifTrue: [ members first , '.pkg' ] ] ].
     alternateDirName
         ifNotNil: [ 
-            alternateDir := stream directory directoryNamed: alternateDirName.
-            alternateDir exists
-                ifTrue: [ alternateDir recursiveDelete ] ]
+            alternateDir := self fileUtils directoryFromPath: alternateDirName relativeTo: stream directory.
+            (self fileUtils directoryExists: alternateDir)
+                ifTrue: [ self fileUtils deleteAll: alternateDir ] ]
