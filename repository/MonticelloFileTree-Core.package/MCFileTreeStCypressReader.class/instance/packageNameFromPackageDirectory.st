@@ -1,5 +1,5 @@
 accessing
 packageNameFromPackageDirectory
     | filename |
-    filename := packageDirectory localName.
+    filename := self fileUtils directoryName: packageDirectory.
     ^ filename copyFrom: 1 to: (filename lastIndexOf: $.) - 1

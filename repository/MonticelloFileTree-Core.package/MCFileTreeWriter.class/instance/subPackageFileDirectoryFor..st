@@ -4,6 +4,6 @@ subPackageFileDirectoryFor: directoryNameOrPath
         at: directoryNameOrPath
         ifAbsentPut: [ 
             | dir |
-            dir := self packageFileDirectory directoryNamed: directoryNameOrPath.
-            dir assureExistence.
+            dir := self fileUtils directoryFromPath: directoryNameOrPath relativeTo: self packageFileDirectory.
+            self fileUtils ensureDirectoryExists: dir.
             dir ]

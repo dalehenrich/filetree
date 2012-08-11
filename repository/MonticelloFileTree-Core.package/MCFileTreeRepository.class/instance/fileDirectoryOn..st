@@ -1,3 +1,3 @@
 actions
-fileDirectoryOn: fileName
-    ^ FileDirectory on: (self directory fullNameFor: fileName)
+fileDirectoryOn: directoryPath
+    ^ self fileUtils directoryFromPath: directoryPath relativeTo: self directory

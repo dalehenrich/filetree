@@ -2,7 +2,8 @@ initialize-release
 writeDefinitions: aCollection
     | basePath extensionClasses extensionMethodDefinitions |
     self writeBasicDefinitions: aCollection.
-    basePath := 'snapshot' , FileDirectory slash , 'classes' , FileDirectory slash.
+    basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'classes'
+        , self fileUtils pathNameDelimiter asString.
     extensionClasses := OrderedCollection new.
     extensionMethodDefinitions := OrderedCollection new.
     self methodDefinitions
@@ -16,22 +17,23 @@ writeDefinitions: aCollection
     self classDefinitions
         keysAndValuesDo: [ :className :definition | 
             | classPath instanceMethodPath classMethodPath |
-            classPath := basePath , definition className , '.class' , FileDirectory slash.
+            classPath := basePath , definition className , '.class' , self fileUtils pathNameDelimiter asString.
             self writeClassDefinition: definition to: classPath.
-            instanceMethodPath := classPath , 'instance' , FileDirectory slash.
-            classMethodPath := classPath , 'class' , FileDirectory slash.
+            instanceMethodPath := classPath , 'instance' , self fileUtils pathNameDelimiter asString.
+            classMethodPath := classPath , 'class' , self fileUtils pathNameDelimiter asString.
             (self methodDefinitions at: className ifAbsent: [ #() ])
                 do: [ :methodDefinition | 
                     methodDefinition classIsMeta
                         ifTrue: [ self writeMethodDefinition: methodDefinition to: classMethodPath ]
                         ifFalse: [ self writeMethodDefinition: methodDefinition to: instanceMethodPath ] ] ].
-    basePath := 'snapshot' , FileDirectory slash , 'extensions' , FileDirectory slash.
+    basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'extensions'
+        , self fileUtils pathNameDelimiter asString.
     extensionMethodDefinitions
         do: [ :methodDefinition | 
             | methodPath |
-            methodPath := basePath , methodDefinition className , '.class' , FileDirectory slash
+            methodPath := basePath , methodDefinition className , '.class' , self fileUtils pathNameDelimiter asString
                 ,
                     (methodDefinition classIsMeta
                         ifTrue: [ 'class' ]
-                        ifFalse: [ 'instance' ]) , FileDirectory slash.
+                        ifFalse: [ 'instance' ]) , self fileUtils pathNameDelimiter asString.
             self writeMethodDefinition: methodDefinition to: methodPath ]
