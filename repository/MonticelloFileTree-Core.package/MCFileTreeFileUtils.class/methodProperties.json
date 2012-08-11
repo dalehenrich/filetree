@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"buildPathFrom:" : "dkh 8/9/2012 09:15",
+		"current" : "dkh 8/8/2012 22:36",
+		"default" : "dkh 8/10/2012 09:59",
+		"deleteAll:" : "dkh 8/10/2012 09:59",
+		"directoryExists:" : "dkh 8/10/2012 09:59",
+		"directoryFromPath:" : "dkh 8/10/2012 09:59",
+		"directoryFromPath:relativeTo:" : "dkh 8/10/2012 09:59",
+		"directoryName:" : "dkh 8/10/2012 09:59",
+		"directoryPathString:" : "dkh 8/10/2012 09:59",
+		"ensureDirectoryExists:" : "dkh 8/10/2012 09:59",
+		"ensureFilePathExists:relativeTo:" : "dkh 8/10/2012 09:59",
+		"filePathExists:relativeTo:" : "dkh 8/10/2012 10:00",
+		"install" : "dkh 8/8/2012 22:37",
+		"parentDirectoryOf:" : "dkh 8/10/2012 10:00",
+		"pathNameDelimiter" : "dkh 8/10/2012 10:00",
+		"readStreamFor:in:do:" : "dkh 8/10/2012 10:00",
+		"resolvePath:in:" : "dkh 8/10/2012 10:00",
+		"writeStreamFor:in:do:" : "dkh 8/10/2012 10:00" },
+	"instance" : {
+		 } }
