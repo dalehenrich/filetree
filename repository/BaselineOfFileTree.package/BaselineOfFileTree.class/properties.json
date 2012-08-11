@@ -2,7 +2,6 @@
 	"category" : "BaselineOfFileTree",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "BaselineOf",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

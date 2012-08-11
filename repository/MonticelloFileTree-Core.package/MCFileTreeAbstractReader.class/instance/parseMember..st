@@ -1,7 +1,6 @@
 utilities
 parseMember: fileName
-    | directory tokens contents |
-    directory := packageDirectory directoryNamed: self monticelloMetaDirName.
-    contents := directory fileNamed: fileName do: [ :file | file contents ].
-    tokens := (self scanner scanTokens: contents) first.
+    | directory tokens |
+    directory := self fileUtils directoryFromPath: self monticelloMetaDirName relativeTo: packageDirectory.
+    self fileUtils readStreamFor: fileName in: directory do: [ :fileStream | tokens := self scanner scan: fileStream ].
     ^ self associate: tokens
