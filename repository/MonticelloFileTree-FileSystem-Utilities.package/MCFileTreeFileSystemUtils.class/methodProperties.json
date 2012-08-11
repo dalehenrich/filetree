@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"default" : "dkh 8/8/2012 22:09",
+		"deleteAll:" : "dkh 8/8/2012 22:12",
+		"directoryExists:" : "dkh 8/8/2012 21:48",
+		"directoryFromEntry:" : "dkh 8/10/2012 13:47",
+		"directoryFromPath:" : "dkh 8/10/2012 09:29",
+		"directoryFromPath:relativeTo:" : "dkh 8/10/2012 05:14",
+		"directoryName:" : "dkh 8/10/2012 06:47",
+		"directoryPathString:" : "dkh 8/10/2012 07:50",
+		"ensureDirectoryExists:" : "dkh 8/10/2012 05:22",
+		"ensureFilePathExists:relativeTo:" : "dkh 8/10/2012 05:25",
+		"filePathExists:relativeTo:" : "dkh 8/9/2012 15:43",
+		"initialize" : "dkh 8/9/2012 08:29",
+		"parentDirectoryOf:" : "dkh 8/9/2012 09:33",
+		"pathNameDelimiter" : "dkh 8/8/2012 19:19",
+		"readStreamFor:in:do:" : "dkh 8/10/2012 06:31",
+		"resolvePath:in:" : "dkh 8/9/2012 15:38",
+		"writeStreamFor:in:do:" : "dkh 8/9/2012 09:46" },
+	"instance" : {
+		 } }
