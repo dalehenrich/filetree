@@ -27,6 +27,7 @@
         repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/filetree/repository/'));
         package: 'MonticelloFileTree-Core';
+        package: 'MonticelloFileTree-FileDirectory-Utilities';
         load.
 ```
 
