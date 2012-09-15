@@ -2,7 +2,7 @@ utility
 getTestRepositoriesDirectory
     "filetree test repository is located in the .../filetree/tests directory ... get a handle on it"
 
-    | wc fileTreeRepo |
+    | wc fileTreeRepo repoDir fileTreeRepoPath fileTreeRepoDir |
     MCWorkingCopy registry
         do: [ :mgr | 
             (mgr packageInfo includesClass: self class)
@@ -10,4 +10,7 @@ getTestRepositoriesDirectory
     wc ifNil: [ ^ self assert: false ].
     fileTreeRepo := (wc repositoryGroup repositories reject: [ :repo | MCCacheRepository default = repo ])
         detect: [ :repo | repo isKindOf: MCFileTreeRepository ].
-    ^ fileTreeRepo directory containingDirectory directoryNamed: 'tests/testRepositories'
+    fileTreeRepoPath := fileTreeRepo directory fileTreeUtilityClass directoryPathString: fileTreeRepo directory.	"use fileTreeUtilityClass and path so we can test FileDirectory and FileSystem in same image"
+    fileTreeRepoDir := utilityClass directoryFromPath: fileTreeRepoPath.
+    repoDir := utilityClass parentDirectoryOf: fileTreeRepoDir.
+    ^ utilityClass directoryFromPath: 'tests/testRepositories' relativeTo: repoDir

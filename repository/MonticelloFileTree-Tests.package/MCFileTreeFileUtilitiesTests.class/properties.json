@@ -1,0 +1,16 @@
+{
+	"category" : "MonticelloFileTree-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"toDeleteAll",
+		"defaultDirectory",
+		"utilityClass" ],
+	"name" : "MCFileTreeFileUtilitiesTests",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

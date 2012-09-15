@@ -16,10 +16,10 @@ writeDefinitions: aCollection
     self classDefinitions
         keysAndValuesDo: [ :className :definition | 
             | classPath instanceMethodPath classMethodPath |
-            classPath := definition className , classDirExtension , FileDirectory slash.
+            classPath := definition className , classDirExtension , self fileUtils pathNameDelimiter asString.
             self writeClassDefinition: definition to: classPath.
-            instanceMethodPath := classPath , 'instance' , FileDirectory slash.
-            classMethodPath := classPath , 'class' , FileDirectory slash.
+            instanceMethodPath := classPath , 'instance' , self fileUtils pathNameDelimiter asString.
+            classMethodPath := classPath , 'class' , self fileUtils pathNameDelimiter asString.
             (self methodDefinitions at: className ifAbsent: [ #() ])
                 do: [ :methodDefinition | 
                     methodDefinition classIsMeta
@@ -34,18 +34,18 @@ writeDefinitions: aCollection
                 at: methodDefinition className
                 ifAbsent: [ extensionMethodMap at: methodDefinition className put: OrderedCollection new ])
                 add: methodDefinition.
-            classPath := methodDefinition className , classDirExtension , FileDirectory slash.
+            classPath := methodDefinition className , classDirExtension , self fileUtils pathNameDelimiter asString.
             self writeExtensionClassDefinition: methodDefinition to: classPath.
             methodPath := classPath
                 ,
                     (methodDefinition classIsMeta
                         ifTrue: [ 'class' ]
-                        ifFalse: [ 'instance' ]) , FileDirectory slash.
+                        ifFalse: [ 'instance' ]) , self fileUtils pathNameDelimiter asString.
             self writeMethodDefinition: methodDefinition to: methodPath ].
     extensionMethodMap
         keysAndValuesDo: [ :className :classMethodDefinitions | 
             | classPath |
-            classPath := className , classDirExtension , FileDirectory slash.
+            classPath := className , classDirExtension , self fileUtils pathNameDelimiter asString.
             self
                 writeInDirectoryName: classPath
                 fileName: 'methodProperties'
