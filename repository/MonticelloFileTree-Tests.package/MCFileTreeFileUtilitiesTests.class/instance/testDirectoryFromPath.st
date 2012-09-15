@@ -1,5 +1,5 @@
 tests
-testDirectoryFromPath_
+testDirectoryFromPath
     | file parent delimiter root directory pathString directoryFromPath |
     delimiter := utilityClass pathNameDelimiter asString.
     root := 'plink'.
