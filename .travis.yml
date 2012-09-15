@@ -6,6 +6,11 @@ env:
    - ST=Squeak-4.3
    - ST=Squeak-4.4
 
+# blacklist
+branches:
+  except:
+    - master
+
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
