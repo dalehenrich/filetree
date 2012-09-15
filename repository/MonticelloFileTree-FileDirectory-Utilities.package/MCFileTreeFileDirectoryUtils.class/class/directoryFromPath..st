@@ -1,3 +1,3 @@
 utilities
 directoryFromPath: directoryPath
-    ^ FileDirectory on: directoryPath
+    ^ ServerFileDirectory on: directoryPath

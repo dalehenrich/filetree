@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'MonticelloFileTree-FileDirectory-Utilities'!
+SystemOrganization addCategory: 'MonticelloFileTree-FileDirectory-Utilities'!
