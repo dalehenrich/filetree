@@ -9,6 +9,8 @@ env:
 branches:
   except:
     - master
+    - gemstone2.4
+    - gs_dev
 
 install:
    - export PROJECT_HOME="$(pwd)"
