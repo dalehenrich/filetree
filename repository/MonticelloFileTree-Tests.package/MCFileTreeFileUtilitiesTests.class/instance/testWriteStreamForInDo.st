@@ -1,5 +1,5 @@
 tests
-testWriteStreamFor_in_do_
+testWriteStreamForInDo
     | relativePathString directory parent file |
     self
         setUp: [ 
