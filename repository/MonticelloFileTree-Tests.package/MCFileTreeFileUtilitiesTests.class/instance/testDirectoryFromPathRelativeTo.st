@@ -1,5 +1,5 @@
 tests
-testDirectoryFromPath_relativeTo_
+testDirectoryFromPathRelativeTo
     | file parent delimiter root directory |
     delimiter := utilityClass pathNameDelimiter asString.
     root := 'plink'.
