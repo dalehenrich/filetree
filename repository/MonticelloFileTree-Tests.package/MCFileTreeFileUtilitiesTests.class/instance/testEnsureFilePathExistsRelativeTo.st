@@ -1,5 +1,5 @@
 tests
-testEnsureFilePathExists_relativeTo_
+testEnsureFilePathExistsRelativeTo
     | file parent delimiter root |
     delimiter := utilityClass pathNameDelimiter asString.
     root := 'plink'.

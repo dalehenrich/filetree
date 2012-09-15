@@ -1,5 +1,5 @@
 tests
-testReadStreamFor_in_do_
+testReadStreamForInDo
     | relativePathString directory parent file contents x |
     self
         setUp: [ 

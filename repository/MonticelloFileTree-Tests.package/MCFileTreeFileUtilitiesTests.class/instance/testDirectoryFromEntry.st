@@ -1,5 +1,5 @@
 tests
-testDirectoryFromEntry_
+testDirectoryFromEntry
     | directory relativePathString plink |
     relativePathString := 'plink'.
     self
