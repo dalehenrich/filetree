@@ -5,6 +5,11 @@ env:
 #   - ST=PharoCore-1.3
 #   - ST=Squeak4.3
 
+# blacklist
+branches:
+  except:
+    - master
+
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
