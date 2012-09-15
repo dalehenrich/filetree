@@ -8,7 +8,7 @@ addClassAndMethodDefinitionsFromDirectoryEntries: entries
             element isDirectory
                 ifTrue: [ 
                     | directory |
-                    directory := element asFileDirectory.
+                    directory := self fileUtils directoryFromEntry: element.
                     ((self separateMethodMetaAndSource or: [ self noMethodMetaData ])
                         ifTrue: [ directory entries select: [ :entry | entry name endsWith: '.st' ] ]
                         ifFalse: [ directory entries ])

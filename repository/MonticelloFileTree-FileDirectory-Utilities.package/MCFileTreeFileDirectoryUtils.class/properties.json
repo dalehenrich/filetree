@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-FileDirectory-Utilities",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeFileDirectoryUtils",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeFileUtils",
+	"type" : "normal" }

@@ -1,4 +1,8 @@
 testing
 hasMonticelloMetadata
-    ^ (packageDirectory directoryNamed: MCFileTreeStCypressWriter monticelloMetaDirName) exists
-        or: [ (packageDirectory fileExists: 'version') and: [ packageDirectory fileExists: 'package' ] ]
+    ^ (self fileUtils
+        directoryExists:
+            (self fileUtils directoryFromPath: MCFileTreeStCypressWriter monticelloMetaDirName relativeTo: packageDirectory))
+        or: [ 
+            (self fileUtils filePathExists: 'version' relativeTo: packageDirectory)
+                and: [ self fileUtils filePathExists: 'package' relativeTo: packageDirectory ] ]

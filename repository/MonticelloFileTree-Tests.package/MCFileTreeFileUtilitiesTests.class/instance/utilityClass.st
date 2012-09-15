@@ -1,0 +1,3 @@
+accessing
+utilityClass
+    ^ self subclassResponsibility
