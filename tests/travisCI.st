@@ -1,10 +1,24 @@
-| gitPath |
+| gitPath repository |
 gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
 
-"just load the FileTree configuration ... no tests at the moment"
-Metacello new
-	configuration: 'FileTree';
-  version: #development;
-  repository: 'filetree://', gitPath, '/filetree/repository';
-	load.
+Gofer new
+  url: 'http://ss3.gemstone.com/ss/FileTree';
+  package: 'ConfigurationOfFileTree';
+  load.
+((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
+  load: 'default'.
 
+repository := (Smalltalk at: #'MCFileTreeRepository') new
+  directory: (FileDirectory on: gitPath , '/metacello-work/repository');
+  yourself.
+
+"Test by loading configuration from FileTree repo and then loading config"
+Gofer new
+  repository: repository;
+  package: 'ConfigurationOfFileTree';
+  load.
+
+((Smalltalk at: #'ConfigurationOfFileTree') project version: #stable)
+  load.
+
+Transcript cr; show: 'SUCCESSFUL LOAD'.

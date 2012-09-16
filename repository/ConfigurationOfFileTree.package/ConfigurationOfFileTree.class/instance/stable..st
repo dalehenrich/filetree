@@ -1,4 +1,4 @@
 symbolic versions
-development: spec
-    <symbolicVersion: #'development'>
+stable: spec
+    <symbolicVersion: #'stable'>
     spec for: #'common' version: '1.0'
