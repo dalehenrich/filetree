@@ -1,5 +1,6 @@
 utility
 getMczTestRepository: repositoryName
-    | repo |
-    repo := MCDirectoryRepository new directory: (self getTestRepositoriesDirectory directoryNamed: repositoryName).
+    | dir repo |
+    dir := utilityClass directoryFromPath: repositoryName relativeTo: self getTestRepositoriesDirectory.
+    repo := MCDirectoryRepository new directory: dir.
     ^ MCRepositoryGroup default repositories detect: [ :each | each = repo ] ifNone: [ repo ]

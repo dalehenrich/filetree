@@ -1,7 +1,7 @@
 utilities
 addClassAndMethodDefinitionsFromEntry: classEntry
     | classDirectory classPropertiesDict classComment entries methodPropertiesDict |
-    classDirectory := classEntry asFileDirectory.
+    classDirectory := self fileUtils directoryFromEntry: classEntry.
     ((entries := classDirectory entries) detect: [ :entry | entry name = 'properties.json' ] ifNone: [  ])
         ifNotNil: [ :propertyEntry | propertyEntry readStreamDo: [ :fileStream | classPropertiesDict := MCFileTreeJsonParser parseStream: fileStream ] ].
     (entries detect: [ :entry | entry name = 'README.md' ] ifNone: [  ])

@@ -25,6 +25,6 @@ Edit path to match `clone directory`:
 Installer monticello
         mc: (MCFileTreeRepository directory:
                 (FileDirectory uri: '/opt/git/filetree/repository/'));
-        install: 'MonticelloFileTree-Core'
+        install: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileDirectory-Utilities')
 ```
 
