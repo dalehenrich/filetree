@@ -20,7 +20,7 @@ install:
 script:
 
 # Load #release version from configuration
-   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisTest.st" -o travisCI
+   - ./build.sh -i $ST -X -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
    - cd "${BUILD_PATH}/travisCI/"
    - ls -altr *
    - $BUILDER_CI_HOME/buildImageErrorCheck.sh
