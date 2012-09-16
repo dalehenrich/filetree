@@ -7,8 +7,10 @@
     sudo chmod og+rw /opt/git/
     cd /opt/git/
     # choose your branch here (pharo1.3, pharo1.4, pharo2.0)
-    git clone -b pharo1.4 https://github.com/dalehenrich/filetree.git
+    git clone -b PHARO_BRANCH https://github.com/dalehenrich/filetree.git
 ```
+
+Where **PHARO_BRANCH**: pharo1.1 (for pharo1.1 or pharo1.2), pharo1.3. pharo1.4, or pharo2.0.
 
 #### <a name="bootstrap"></a>Bootstrap FileTree into image
 
