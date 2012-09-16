@@ -9,6 +9,20 @@ version100: spec
             spec author: 'dkh'.
             spec timestamp: '9/15/2012 14:10' ].
     spec
+        for: #'pharo1.1.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo11-dkh.92';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14'  ].
+    spec
+        for: #'pharo1.2.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo11-dkh.92';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14'  ].
+    spec
         for: #'pharo1.3.x'
         do: [ 
             spec

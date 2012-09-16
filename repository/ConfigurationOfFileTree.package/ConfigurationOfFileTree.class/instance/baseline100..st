@@ -9,6 +9,28 @@ baseline100: spec
             spec package: 'MonticelloFileTree-Core'.
             spec group: 'default' with: #('MonticelloFileTree-Core') ].
     spec
+        for: #'pharo1.1.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo11' ];
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: [ 
+                            spec
+                                file: 'MonticelloFileTree-FileDirectory-Utilities.pharo11';
+                                requires: 'MonticelloFileTree-Core' ].
+            spec group: 'default' with: #('MonticelloFileTree-FileDirectory-Utilities') ].
+    spec
+        for: #'pharo1.2.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo11' ];
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: [ 
+                            spec
+                                file: 'MonticelloFileTree-FileDirectory-Utilities.pharo11';
+                                requires: 'MonticelloFileTree-Core' ].
+            spec group: 'default' with: #('MonticelloFileTree-FileDirectory-Utilities') ].
+    spec
         for: #'pharo1.3.x'
         do: [ 
             spec
