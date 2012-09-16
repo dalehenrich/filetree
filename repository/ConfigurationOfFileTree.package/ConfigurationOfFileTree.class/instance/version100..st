@@ -4,23 +4,59 @@ version100: spec
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'development'.
+            spec blessing: #'release'.
             spec description: 'FileTree 1.0'.
             spec author: 'dkh'.
-            spec timestamp: '7/6/2012 17:07' ].
+            spec timestamp: '9/15/2012 14:10' ].
     spec
-        for: #'pharo'
-        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo13-dkh.70' ] ].
+        for: #'pharo1.1.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo11-dkh.92';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14'  ].
+    spec
+        for: #'pharo1.2.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo11-dkh.92';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14'  ].
+    spec
+        for: #'pharo1.3.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo13-dkh.90';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo13-dkh.12' ].
+    spec
+        for: #'pharo1.4.x'
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo14-dkh.90';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.pharo14-dkh.12' ].
     spec
         for: #'pharo2.x'
-        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.pharo20-dkh.78' ] ].
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.pharo20-dkh.91';
+                package: 'MonticelloFileTree-FileSystem-Utilities'
+                    with: 'MonticelloFileTree-FileSystem-Utilities.pharo20-dkh.17' ].
     spec
         for: #'squeak'
-        do: [ spec package: 'MonticelloFileTree-Core' with: [ spec file: 'MonticelloFileTree-Core.squeak43-dkh.70' ] ].
+        do: [ 
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.squeak43-dkh.90';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.squeak43-dkh.12' ].
     spec
         for: #'gemstone'
         do: [ 
             spec
                 project: 'GsCore' with: '0.246';
                 project: 'Monticello' with: '0.243'.
-            spec package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.91' ]
+            spec
+                package: 'MonticelloFileTree-Core' with: 'MonticelloFileTree-Core.gemstone24-dkh.92';
+                package: 'MonticelloFileTree-FileDirectory-Utilities'
+                    with: 'MonticelloFileTree-FileDirectory-Utilities.gemstone24-dkh.14' ]
