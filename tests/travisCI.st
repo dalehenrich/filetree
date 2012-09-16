@@ -9,7 +9,7 @@ Gofer new
   load: 'default'.
 
 repository := (Smalltalk at: #'MCFileTreeRepository') new
-  directory: (FileDirectory on: gitPath , '/metacello-work/repository');
+  directory: (FileDirectory on: gitPath , '/filetree/repository');
   yourself.
 
 "Test by loading configuration from FileTree repo and then loading config"
