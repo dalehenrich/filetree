@@ -2,7 +2,7 @@ writing
 writePresentInitializers
 	| orderedClasses presentInitializers |
 	presentInitializers := self presentInitializers.
-	orderedClasses := (Class
+	orderedClasses := (ChangeSet
 		superclassOrder: (presentInitializers collect: [ :each | Smalltalk classOrTraitNamed: each key ]))
 		collect: [ :each | each name ].
 	orderedClasses
