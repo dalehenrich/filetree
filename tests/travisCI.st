@@ -5,8 +5,8 @@ Gofer new
   url: 'http://ss3.gemstone.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
   load.
-((Smalltalk at: #'ConfigurationOfFileTree') project version: '1.0')
-  load: 'default'.
+((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
+  load.
 
 repository := (Smalltalk at: #'MCFileTreeRepository') new
   directory: (FileDirectory on: gitPath , '/filetree/repository');
