@@ -1,7 +1,7 @@
 language: erlang
 
 env:
-   - ST=PharoCore-1.1.2
+   - ST=PharoCore-1.1
 
 # blacklist
 branches:
