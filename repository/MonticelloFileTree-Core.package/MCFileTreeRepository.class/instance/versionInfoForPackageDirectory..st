@@ -1,7 +1,7 @@
 actions
 versionInfoForPackageDirectory: packageDirectory
-    ^ ((MCReader readerClassForFileNamed: packageDirectory localName)
-        on: packageDirectory containingDirectory
-        fileName: packageDirectory localName)
+    ^ ((MCReader readerClassForFileNamed: (self fileUtils directoryName: packageDirectory))
+        on: (self fileUtils parentDirectoryOf: packageDirectory)
+        fileName: (self fileUtils directoryName: packageDirectory))
         loadVersionInfo;
         info

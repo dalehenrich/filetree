@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-FileSystem-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeFileSystemUtilitiesTests",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeFileUtilitiesTests",
+	"type" : "normal" }

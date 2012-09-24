@@ -8,7 +8,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties in: e
                 ifTrue: [ classIsMeta := true ].
             (entry name = 'instance' or: [ entry name = 'class' ])
                 ifTrue: [ 
-                    (entry asFileDirectory entries select: [ :each | each name endsWith: '.st' ])
+                    ((self fileUtils directoryFromEntry: entry) entries select: [ :each | each name endsWith: '.st' ])
                         do: [ :methodEntry | 
                             methodEntry
                                 readStreamDo: [ :fileStream | 

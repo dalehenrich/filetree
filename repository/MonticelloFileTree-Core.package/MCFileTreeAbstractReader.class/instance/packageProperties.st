@@ -29,5 +29,5 @@ packageProperties
                                     Transcript
                                         cr;
                                         show:
-                                                'Error reading package properties (.filetree): ' , packageDirectory fullName , ' :: ' , ex description ] ] ] ].
+                                                'Error reading package properties (.filetree): ' , packageDirectory pathName , ' :: ' , ex description ] ] ] ].
     ^ packageProperties
