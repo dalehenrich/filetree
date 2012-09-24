@@ -5,7 +5,7 @@ getTestRepositoriesDirectory
     | wc fileTreeRepo repoDir fileTreeRepoPath fileTreeRepoDir |
     MCWorkingCopy registry
         do: [ :mgr | 
-            (mgr packageInfo includesClass: self class)
+            (mgr packageSet includesClass: self class)
                 ifTrue: [ wc := mgr ] ].
     wc ifNil: [ ^ self assert: false ].
     fileTreeRepo := (wc repositoryGroup repositories reject: [ :repo | MCCacheRepository default = repo ])
