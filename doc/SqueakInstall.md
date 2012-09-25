@@ -6,8 +6,10 @@
     sudo mkdir /opt/git/
     sudo chmod og+rw /opt/git/
     cd /opt/git/
-    git clone -b squeak4.3 https://github.com/dalehenrich/filetree.git
+    git clone -b SQUEAK_BRANCH https://github.com/dalehenrich/filetree.git
 ```
+
+Where **SQUEAK_BRANCH**: squeak4.3 (for Squeak4.3 and Squeak4.4).
 
 #### <a name="bootstrap"></a>Bootstrap FileTree into Image
 
@@ -25,6 +27,6 @@ Edit path to match `clone directory`:
 Installer monticello
         mc: (MCFileTreeRepository directory:
                 (FileDirectory uri: '/opt/git/filetree/repository/'));
-        install: 'MonticelloFileTree-Core'
+        install: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileDirectory-Utilities')
 ```
 
