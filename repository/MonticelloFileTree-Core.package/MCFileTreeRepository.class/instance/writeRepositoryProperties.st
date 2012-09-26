@@ -3,7 +3,6 @@ writeRepositoryProperties
     self directory
         forceNewFileNamed: '.filetree'
         do: [ :file | 
-            file lineEndConvention: #'lf'.
-            file
+           file
                 nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
                 lf ]
