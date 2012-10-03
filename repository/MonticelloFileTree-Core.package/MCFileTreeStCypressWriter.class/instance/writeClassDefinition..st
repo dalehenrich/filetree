@@ -9,6 +9,8 @@ writeClassDefinition: definition
     properties at: 'classvars' put: definition classVarNames asArray.
     properties at: 'pools' put: definition poolDictionaries asArray.
     properties at: 'classinstvars' put: definition classInstVarNames asArray.
-    properties at: 'type' put: definition type asString.
+    definition type isArray 
+        ifTrue: [ properties at: 'type' put: definition type ]
+        ifFalse:  [ properties at: 'type' put: definition type asString ].
     properties at: 'commentStamp' put: definition commentStamp.
     properties writeCypressJsonOn: fileStream

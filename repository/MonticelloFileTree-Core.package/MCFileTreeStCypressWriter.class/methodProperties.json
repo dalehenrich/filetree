@@ -1,13 +1,13 @@
 {
 	"class" : {
-		"initializeSpecials" : "bf 7/4/2012 16:24",
+		"initializeSpecials" : "PeterMcLain 10/02/2012 14:47",
 		"monticelloMetaDirName" : "dkh 4/4/2012 15:05",
 		"specials" : "dkh 4/4/2012 11:27" },
 	"instance" : {
-		"fileNameForSelector:" : "dkh 4/4/2012 11:25",
+		"fileNameForSelector:" : "PeterMcLain 10/02/2012 15:01",
 		"setFileStream:" : "dkh 4/4/2012 14:01",
 		"writeClassComment:" : "dkh 4/5/2012 10:01",
-		"writeClassDefinition:" : "dkh 4/5/2012 11:09",
+		"writeClassDefinition:" : "dkh 10/03/2012 14:31",
 		"writeClassDefinition:to:" : "dkh 6/12/2012 17:33:23",
 		"writeDefinitions:" : "dkh 8/10/2012 07:28",
 		"writeExtensionClassDefinition:" : "dkh 4/4/2012 17:52",

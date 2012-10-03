@@ -8,12 +8,15 @@ fileNameForSelector: selector
                         ifTrue: [ $. ]
                         ifFalse: [ each ] ] ]
         ifFalse: [ 
-            selector first isLetter
-                ifTrue: [ selector ]
-                ifFalse: [ 
+            (self class specials includes: selector first)
+                ifFalse: [ selector ]
+                ifTrue: [ 
                     | output specials |
                     specials := self class specials.
                     output := String new writeStream.
                     output nextPut: $^.
-                    selector do: [ :each | output nextPutAll: (specials at: each) ] separatedBy: [ output nextPut: $. ].
+                    selector do: [ :each | 
+				output nextPutAll: ((specials includes: each)
+					ifTrue: [ specials at: each]
+					ifFalse: [ each]) ] separatedBy: [ output nextPut: $. ].
                     output contents ] ]

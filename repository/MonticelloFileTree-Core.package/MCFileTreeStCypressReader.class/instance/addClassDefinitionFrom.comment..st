@@ -1,5 +1,10 @@
 utilities
 addClassDefinitionFrom: classPropertiesDict comment: classComment
+    | typeSymbolOrArray |
+    typeSymbolOrArray := classPropertiesDict at: 'type' ifAbsent: [ 'normal' ].
+    typeSymbolOrArray isArray 
+        ifTrue: [ typeSymbolOrArray := typeSymbolOrArray collect: [:each | each isArray ifTrue: [ each collect: [:ea | ea asSymbol ]] ifFalse: [ each asSymbol ] ] ]
+        ifFalse: [ typeSymbolOrArray := typeSymbolOrArray asSymbol ].
     definitions
         add:
             (MCClassDefinition
@@ -10,6 +15,6 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
                 classVarNames: (classPropertiesDict at: 'classvars' ifAbsent: [ #() ])
                 poolDictionaryNames: (classPropertiesDict at: 'pools' ifAbsent: [ #() ])
                 classInstVarNames: (classPropertiesDict at: 'classinstvars' ifAbsent: [ #() ])
-                type: (classPropertiesDict at: 'type' ifAbsent: [ 'normal' ]) asSymbol
+                type: typeSymbolOrArray
                 comment: classComment decodeFromUTF8
                 commentStamp: (classPropertiesDict at: 'commentStamp' ifAbsent: [ '' ]))
