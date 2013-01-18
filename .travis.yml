@@ -11,6 +11,7 @@ branches:
     - master
 
 install:
+   - sudo apt-get install -qq ia32-libs-multiarch
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
    - wget -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
