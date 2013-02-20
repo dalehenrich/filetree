@@ -1,4 +1,4 @@
 as yet unclassified
-<=!! anObject
+_123
 
 ^true
