@@ -3,13 +3,14 @@ repositoryProperties
     repositoryProperties
         ifNil: [ 
             repositoryProperties := Dictionary new.
-            directory exists
+            (self fileUtils directoryExists: directory)
                 ifFalse: [ 
                     Transcript
                         cr;
-                        show: 'filetree:// repository ' , directory pathName printString , ' does not exist.'.
+                        show:
+                                'filetree:// repository ' , (self fileUtils directoryPathString: self directory) printString , ' does not exist.'.
                     ^ repositoryProperties ].
-            (directory entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
+            (self directory entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
                 ifNotNil: [ :configEntry | 
                     configEntry
                         readStreamDo: [ :fileStream | 
@@ -19,5 +20,6 @@ repositoryProperties
                                     Transcript
                                         cr;
                                         show:
-                                                'Error reading repository properties (.filetree): ' , directory pathName , ' :: ' , ex description ] ] ] ].
+                                                'Error reading repository properties (.filetree): ' , (self fileUtils directoryPathString: self directory) , ' :: '
+                                                        , ex description ] ] ] ].
     ^ repositoryProperties

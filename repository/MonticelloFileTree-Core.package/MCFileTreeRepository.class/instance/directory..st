@@ -3,5 +3,5 @@ directory: aDirectory
     super directory: aDirectory.
     self repositoryProperties isEmpty
         ifTrue: [ 
-            aDirectory exists
+            (self fileUtils directoryExists: aDirectory)
                 ifTrue: [ self writeRepositoryProperties ] ]

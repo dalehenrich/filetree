@@ -6,8 +6,11 @@
     sudo mkdir /opt/git/
     sudo chmod og+rw /opt/git/
     cd /opt/git/
-    git clone -b pharo1.3 https://github.com/dalehenrich/filetree.git
+    # choose your branch here (pharo1.3, pharo1.4, pharo2.0)
+    git clone -b PHARO_BRANCH https://github.com/dalehenrich/filetree.git
 ```
+
+Where **PHARO_BRANCH**: pharo1.1 (for pharo1.1 or pharo1.2), pharo1.3. pharo1.4, or pharo2.0.
 
 #### <a name="bootstrap"></a>Bootstrap FileTree into image
 
@@ -26,6 +29,7 @@
         repository: (MCFileTreeRepository new directory: 
                     (FileDirectory on: '/opt/git/filetree/repository/'));
         package: 'MonticelloFileTree-Core';
+        package: 'MonticelloFileTree-FileDirectory-Utilities';
         load.
 ```
 

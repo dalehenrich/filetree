@@ -1,12 +1,17 @@
 writing
-addString: string at: fileName
-    | path |
+addString: string at: fileNameOrPath
+    "fileNameOrPath may have one or two elements"
+
+    | utils fullPath path |
+    utils := MCFileTreeFileUtils current.
     path := MCFileTreePackageStructureStWriter useCypressWriter
         ifTrue: [ 
-            self packageFileDirectory assureExistenceOfPath: MCFileTreeStCypressWriter monticelloMetaDirName.
-            path := MCFileTreeStCypressWriter monticelloMetaDirName , '/' , fileName.
-            (self packageFileDirectory directoryNamed: path) assureExistence.
-            path ]
-        ifFalse: [ fileName ].
+            fullPath := utils
+                buildPathFrom:
+                    {(MCFileTreeStCypressWriter monticelloMetaDirName).
+                    fileNameOrPath}.
+            utils ensureFilePathExists: fullPath relativeTo: self packageFileDirectory.
+            fullPath ]
+        ifFalse: [ fileNameOrPath ].
     string isEmpty
-        ifFalse: [ self packageFileDirectory forceNewFileNamed: path do: [ :file | file nextPutAll: string ] ]
+        ifFalse: [ utils writeStreamFor: path in: self packageFileDirectory do: [ :file | file nextPutAll: string ] ]

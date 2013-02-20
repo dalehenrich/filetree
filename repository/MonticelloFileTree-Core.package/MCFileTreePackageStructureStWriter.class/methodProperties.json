@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"useCypressWriter" : "dkh 4/5/2012 10:37",
+		"useSnapShotWriter" : "dkh 3/1/2012 10:30" },
+	"instance" : {
+		"absentInitializers" : "dkh 2/29/2012 13:46",
+		"acceptVisitor:forDefinitions:" : "dkh 2/29/2012 13:46",
+		"initializers:" : "dkh 2/29/2012 13:45",
+		"presentInitializers" : "dkh 2/29/2012 13:46",
+		"writeAbsentInitializers" : "dkh 2/29/2012 13:45",
+		"writeClassDefinition:" : "dkh 2/29/2012 14:48",
+		"writeDefinitions:" : "dkh 2/29/2012 13:42",
+		"writeMethodPreamble:" : "dkh 2/16/2012 14:49:00",
+		"writePresentInitializers" : "dkh 2/29/2012 13:45",
+		"writeProperties" : "dkh 3/1/2012 14:21" } }
