@@ -39,3 +39,4 @@ Here are some guidelines on contributing to the project:
 **squeak4.3 & squeak4.4** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
 
 **configuration** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=configuration)](http://travis-ci.org/dalehenrich/filetree) 
+ 
