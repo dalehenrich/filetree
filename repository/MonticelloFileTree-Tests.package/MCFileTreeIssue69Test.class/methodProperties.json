@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 2/20/2013 17:17",
 		"tearDownPackagesList" : "dkh 02/19/2013 21:05",
 		"testLoad" : "dkh 02/19/2013 21:05",
 		"testWriteNRead" : "dkh 02/19/2013 21:05",
