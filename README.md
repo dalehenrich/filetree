@@ -4,7 +4,8 @@ managing Smalltalk source code.*
 
 ## Installing
 
-The current version of **FileTree** has been tested in GemStone2.4.4.1 (GLASS 1.0-beta.8.7.1), 
+The current version of **FileTree** has been tested in GemStone2.x (GLASS 1.0-beta.8.7.1), 
+GemStone3.x (GLASS 1.0-beta.9) 
 Pharo1.1, Pharo1.2, Pharo1.3, PHaro1.4, Pharo2.0, Squeak4.3, Squeak4.4:
 
 ```Smalltalk
