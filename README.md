@@ -4,16 +4,28 @@ managing Smalltalk source code.*
 
 ## Installing
 
-The current version of **FileTree** has been tested in GemStone2.x (GLASS 1.0-beta.8.7.1), 
-GemStone3.x (GLASS 1.0-beta.9) 
-Pharo1.1, Pharo1.2, Pharo1.3, PHaro1.4, Pharo2.0, Squeak4.3, Squeak4.4:
+The current version of **FileTree** has been tested in 
+GemStone2.x, GemStone3.x, 
+Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, 
+Squeak4.3, and Squeak4.4.
+
+To install in GemStone or Pharo:
 
 ```Smalltalk
 Gofer new
       url: 'http://ss3.gemstone.com/ss/FileTree';
       package: 'ConfigurationOfFileTree';
       load.
-    ((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
+((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
+```
+
+To install in Squeak:
+
+```Smalltalk
+Installer ss3
+    project: 'FileTree';
+    install: 'ConfigurationOfFileTree'.
+((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
 ```
 
 ## Contributing
