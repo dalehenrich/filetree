@@ -26,8 +26,6 @@ Here are some guidelines on contributing to the project:
 
 ## Travis CI Status
 
-**gemstone2.4**
-
 **GemStone/S** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=gemstone2.4)](http://travis-ci.org/dalehenrich/filetree) 
 
 **pharo1.1 & pharo1.2** : [![Build Status](https://secure.travis-ci.org/dalehenrich/filetree.png?branch=pharo1.1)](http://travis-ci.org/dalehenrich/filetree) 
