@@ -1,6 +1,11 @@
 language: erlang
 
 env:
+   - ST=GemStone-2.4.4.1
+   - ST=GemStone-2.4.4.7
+   - ST=GemStone-2.4.5
+   - ST=GemStone-2.4.5.1
+   - ST=GemStone-3.0.1
    - ST=GemStone-3.1.0.2
 
 # blacklist
