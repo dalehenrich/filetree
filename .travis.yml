@@ -5,6 +5,7 @@ env:
 #   - ST=PharoCore-1.3
    - ST=Squeak-4.3
    - ST=Squeak-4.4
+   - ST=Squeak-4.5
 
 # blacklist
 branches:
