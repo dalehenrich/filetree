@@ -21,4 +21,3 @@ install:
    - ./build_image.sh
 
 script: $BUILDER_CI_HOME/testTravisCI.sh
-
