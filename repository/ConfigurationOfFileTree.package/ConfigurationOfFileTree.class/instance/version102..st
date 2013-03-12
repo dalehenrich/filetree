@@ -1,19 +1,11 @@
 versions
-version101: spec
-    <version: '1.0.1' imports: #('1.0-baseline')>
+version102: spec
+    <version: '1.0.2' imports: #('1.0-baseline')>
     spec
         for: #'common'
         do: [ 
-            spec blessing: #'release'.
-            spec description: 'port to GemStone 3.1.x
-- write out gemstone class options in class definitions correctly
-- fix problems in filename generation in presence of specials
-1.0.1 (dkh.35):
-- port to GemStone 3.2
-1.0.1 (dkh.36):
-- fix Issue #69:
-  https://github.com/dalehenrich/filetree/issues/69
-- commit: d861c5d76ecc762d6cb4f11f6ec6c1ba45d6bdc0'.
+            spec blessing: #'development'.
+            spec description: ''.
             spec author: 'dkh'.
             spec timestamp: '3/12/2013 16:30' ].
     spec
