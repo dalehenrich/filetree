@@ -1,5 +1,7 @@
 writing
 writeCategory: categoryName
-	stream
-		nextChunkPut: 'SystemOrganization addCategory: ', categoryName printString;
-		lf
+  stream
+    nextChunkPut:
+        'SystemOrganization addCategory: #''' , categoryName encodeAsUTF8 asString
+            , '''';
+    lf
