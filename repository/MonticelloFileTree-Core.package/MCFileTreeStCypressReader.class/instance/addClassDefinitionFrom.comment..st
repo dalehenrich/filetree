@@ -25,5 +25,5 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
         classInstVarNames:
           (classPropertiesDict at: 'classinstvars' ifAbsent: [ #() ])
         type: typeSymbolOrArray
-        comment: classComment decodeFromUTF8
+        comment: classComment
         commentStamp: (classPropertiesDict at: 'commentStamp' ifAbsent: [ '' ]))
