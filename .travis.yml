@@ -1,9 +1,16 @@
 language: erlang
 
 env:
-#   - ST=Pharo-1.4    # Issue #41
+   - ST=Pharo-1.4
+   - ST=Pharo-2.0
    - ST=PharoCore-1.3
-#   - ST=Squeak4.3
+   - ST=Squeak4.3
+   - ST=GemStone-2.4.4.1
+   - ST=GemStone-2.4.4.7
+   - ST=GemStone-2.4.5
+   - ST=GemStone-2.4.5.1
+   - ST=GemStone-3.0.1
+   - ST=GemStone-3.1.0.2
 
 # blacklist
 branches:
@@ -13,25 +20,12 @@ branches:
 install:
    - export PROJECT_HOME="$(pwd)"
    - cd $HOME
-   - wget -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
+   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
    - unzip -q builderCI.zip
    - cd dalehenrich-builderCI*
    - source build_env_vars
    - ln -s $PROJECT_HOME $GIT_PATH
    - ./build_image.sh
 
-script:
-
-   - ./build.sh -i $ST -s latAmMirror.st -m -f "$PROJECT_HOME/tests/travisCI.st" -o travisCI
-   - cd "${BUILD_PATH}/travisCI/"
-   - if ( test -e PharoDebug.log ); then cat TravisTranscript.txt; fi
-   - if ( test -e PharoDebug.log ); then cat PharoDebug.log; fi
-   - if ( test -e PharoDebug.log ); then die; fi
-   - if ( test -e SqueakDebug.log ); then cat TravisTranscript.txt; fi
-   - if ( test -e SqueakDebug.log ); then cat SqueakDebug.log; fi
-   - if ( test -e SqueakDebug.log ); then die; fi
-   - if ( test -e TravisCISuccess.txt ); then cat TravisCISuccess.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then cat TravisTranscript.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then cat TravisCIFailure.txt; fi
-   - if ( test -e TravisCIFailure.txt ); then die; fi
+script: $BUILDER_CI_HOME/testTravisCI.sh
 
