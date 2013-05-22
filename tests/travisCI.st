@@ -1,5 +1,5 @@
 | gitPath |
-gitPath := (FileSystem workingDirectory / gitCache) pathString
+gitPath := (FileSystem workingDirectory / 'git_cache') pathString
 
 "load the FileTree tests ... make sure we're using the baseline
 associated with git checkout under test ... Metacello may not be
