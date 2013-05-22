@@ -1,5 +1,5 @@
 | gitPath |
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+gitPath := (FileSystem workingDirectory / gitCache) pathString
 
 "load the FileTree tests ... make sure we're using the baseline
 associated with git checkout under test ... Metacello may not be
@@ -9,10 +9,14 @@ Metacello new
   repository: 'filetree://', gitPath, '/filetree/repository';
   get.
 
-(Smalltalk at: #MetacelloProjectRegistration) resetRegistry.
 Metacello new
   baseline: 'FileTree';
   repository: 'filetree://', gitPath, '/filetree/repository';
+  onConflict: [:ex | 
+    "allow new version of FileTree to be loaded"
+    ex existingProjectRegistration baseName = 'FileTree'
+      ifTrue: [ ex allow ].
+    ex disallow ];
   load: 'TravisCI'.
 
 "Run the tests"
