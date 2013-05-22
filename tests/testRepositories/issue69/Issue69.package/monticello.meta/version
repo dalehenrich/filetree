@@ -1,0 +1,1 @@
+(name 'Issue69-dkh.2' message 'use selectors that are compatible with GemStone2.x' id 'f7a34918-89d9-4e20-845f-affb2294d382' date '02/20/2013' time '15:19:59' author 'dkh' ancestors ((name 'Issue69-dkh.1' message 'bump' id '706db681-71ce-4855-9316-62d6bec32473' date '02/19/2013' time '21:03:09' author 'dkh' ancestors () stepChildren ())) stepChildren ())
