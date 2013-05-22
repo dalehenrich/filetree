@@ -1,1 +1,1 @@
-TDTopezLeafNode {	#name : 'x',	#contents : '../load Metacello filetree:///opt/git/metacello-work/repository'}
+TDTopezLeafNode {	#name : 'x',	#contents : 'ts debug MCFileTreeIssue72Test>>testWriteNRead'}

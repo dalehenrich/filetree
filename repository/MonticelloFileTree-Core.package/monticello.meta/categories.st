@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'MonticelloFileTree-Core'!
+SystemOrganization addCategory: #'MonticelloFileTree-Core'!

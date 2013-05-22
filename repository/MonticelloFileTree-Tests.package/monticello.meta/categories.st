@@ -1,1 +1,1 @@
-SystemOrganization addCategory: 'MonticelloFileTree-Tests'!
+SystemOrganization addCategory: #'MonticelloFileTree-Tests'!
