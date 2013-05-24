@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"categoryString" : "dkh 5/22/2013 10:47",
+		"tearDownPackagesList" : "dkh 03/22/2013 19:18",
+		"testLoad" : "dkh 03/22/2013 20:08",
+		"testWriteNRead" : "dkh 03/22/2013 20:07",
+		"validatePackageMetadata" : "dkh 5/22/2013 10:46",
+		"versionInfoMessageString" : "dkh 5/22/2013 10:47" } }
