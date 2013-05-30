@@ -10,4 +10,5 @@ basicStoreVersion: aVersion
 			'cd ' , directory pathString , '; git add ' , packageDirectoryString , '; git commit -m "' , aVersion info message
 				, '" -- ' , packageDirectoryString.
 	c output.
-	self assert: c succeeded
+	c succeeded
+		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ]
