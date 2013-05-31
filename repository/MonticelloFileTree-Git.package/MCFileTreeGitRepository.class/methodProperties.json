@@ -1,6 +1,10 @@
 {
 	"class" : {
-		"description" : "ThierryGoubier 5/29/2013 16:19" },
+		"description" : "ThierryGoubier 5/29/2013 16:19",
+		"parseName:extension:" : "ThierryGoubier 5/31/2013 23:21" },
 	"instance" : {
+		"allFileNames" : "ThierryGoubier 5/31/2013 22:59",
 		"basicStoreVersion:" : "ThierryGoubier 5/29/2013 17:04",
+		"fileDirectoryOn:" : "ThierryGoubier 5/31/2013 23:00",
+		"versionFromFileNamed:" : "ThierryGoubier 5/31/2013 23:43",
 		"writeRepositoryProperties" : "ThierryGoubier 5/29/2013 17:04" } }

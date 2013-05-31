@@ -1,0 +1,15 @@
+{
+	"category" : "MonticelloFileTree-Git",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		"packageDirectory",
+		"info" ],
+	"name" : "GitFileTreePackage",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
