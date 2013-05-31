@@ -4,7 +4,7 @@ basicStoreVersion: aVersion
 
 	| c packageDirectoryString |
 	super basicStoreVersion: aVersion.
-	packageDirectoryString := (self class parseName: aVersion info name) last.
+	packageDirectoryString := (self class parseName: aVersion info name) first, self packageExtension.
 	c := PipeableOSProcess
 		command:
 			'cd ' , directory pathString , '; git add ' , packageDirectoryString , '; git commit -m "' , aVersion info message
