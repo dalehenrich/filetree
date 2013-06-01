@@ -8,7 +8,7 @@
 	"instvars" : [
 		"packageDirectory",
 		"info" ],
-	"name" : "GitFileTreePackage",
+	"name" : "GitFileTreePackageEntry",
 	"pools" : [
 		 ],
 	"super" : "Object",

@@ -1,6 +1,8 @@
 as yet unclassified
 basicStoreVersion: aVersion
-	"Simply do a filetree store, but, update then the git."
+	"Do a filetree store followed by the right git commands."
+	
+	"cd in the repository; do git add the package to register the new files, then git commit the package with the package message."
 
 	| c packageDirectoryString |
 	super basicStoreVersion: aVersion.

@@ -1,3 +1,5 @@
 as yet unclassified
-fileDirectoryOn: directoryPath
-	^ self fileUtils directoryFromPath: directoryPath packageDirectory relativeTo: self directory
+fileDirectoryOn: aGitFileTreePackageEntry
+	"We are dealing with GitFileTreePackageEntry objects, not FileReferences."
+
+	^ self fileUtils directoryFromPath: aGitFileTreePackageEntry packageDirectory relativeTo: self directory

@@ -2,6 +2,8 @@
 	"class" : {
 		"on:info:" : "ThierryGoubier 5/31/2013 22:37" },
 	"instance" : {
+		"copyUpTo:" : "ThierryGoubier 6/1/2013 20:25",
+		"copyUpToLast:" : "ThierryGoubier 6/1/2013 20:25",
 		"endsWith:" : "ThierryGoubier 5/31/2013 22:58",
 		"info" : "ThierryGoubier 5/31/2013 22:34",
 		"info:" : "ThierryGoubier 5/31/2013 22:35",

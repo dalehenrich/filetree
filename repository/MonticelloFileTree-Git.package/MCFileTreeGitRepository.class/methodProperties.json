@@ -1,10 +1,14 @@
 {
 	"class" : {
 		"description" : "ThierryGoubier 5/29/2013 16:19",
+		"parseEntry:extension:" : "ThierryGoubier 6/1/2013 11:42",
 		"parseName:extension:" : "ThierryGoubier 5/31/2013 23:21" },
 	"instance" : {
-		"allFileNames" : "ThierryGoubier 5/31/2013 22:59",
-		"basicStoreVersion:" : "ThierryGoubier 5/31/2013 23:46",
-		"fileDirectoryOn:" : "ThierryGoubier 5/31/2013 23:00",
-		"versionFromFileNamed:" : "ThierryGoubier 5/31/2013 23:43",
+		"allFileNames" : "ThierryGoubier 6/1/2013 11:17",
+		"basicStoreVersion:" : "ThierryGoubier 6/1/2013 11:19",
+		"fileDirectoryOn:" : "ThierryGoubier 6/1/2013 11:20",
+		"morphicOpen:" : "ThierryGoubier 6/1/2013 21:14",
+		"packageDescriptionFromPackageEntry:" : "ThierryGoubier 6/1/2013 11:44",
+		"packageDescriptionsFromReadableFileNames" : "ThierryGoubier 6/1/2013 11:43",
+		"versionFromFileNamed:" : "ThierryGoubier 6/1/2013 11:25",
 		"writeRepositoryProperties" : "ThierryGoubier 5/29/2013 17:04" } }
