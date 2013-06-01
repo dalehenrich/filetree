@@ -7,6 +7,4 @@ versionFromFileNamed: aGitFileTreePackageEntry
 	"Add a bit of debugging. Here aString should be a GitFileTreePackageEntry in fact (but probably it isn't)."
 
 	self assert: aGitFileTreePackageEntry class == GitFileTreePackageEntry.
-	(aGitFileTreePackageEntry endsWith: self packageExtension)
-		ifTrue: [ ^ super loadVersionFromFileNamed: aGitFileTreePackageEntry ]
-		ifFalse: [ ^ super loadVersionFromFileNamed: (self class parseName: aGitFileTreePackageEntry) first , self packageExtension ]
+	^ super loadVersionFromFileNamed: (self class parseName: aGitFileTreePackageEntry info name) first , self packageExtension
