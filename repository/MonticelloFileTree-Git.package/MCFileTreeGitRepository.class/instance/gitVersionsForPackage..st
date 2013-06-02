@@ -4,7 +4,7 @@ gitVersionsForPackage: aDirectoryEntry
 
 	| c commitIDs |
 	c := PipeableOSProcess
-		command: 'cd ' , directory pathString , '; git log --follow --pretty="%H" --no-notes  ' , aDirectoryEntry name.
+		command: 'cd ' , directory pathString , '; git log --pretty="%H" ' , aDirectoryEntry name.
 	commitIDs := c output substrings.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
