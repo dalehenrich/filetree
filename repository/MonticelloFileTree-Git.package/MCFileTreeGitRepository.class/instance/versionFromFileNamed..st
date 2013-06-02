@@ -12,5 +12,4 @@ versionFromFileNamed: aGitFileTreePackageEntry
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
 	mcR commitID: (self gitVersionsForPackage: packageName) first.
 	info := super loadVersionFromFileNamed: packageName.
-	self assert: info info = mcR info.
 	^ info
