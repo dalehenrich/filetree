@@ -6,5 +6,11 @@ versionFromFileNamed: aGitFileTreePackageEntry
 
 	"Add a bit of debugging. Here aString should be a GitFileTreePackageEntry in fact (but probably it isn't)."
 
+	| mcR packageName info |
 	self assert: aGitFileTreePackageEntry class == GitFileTreePackageEntry.
-	^ super loadVersionFromFileNamed: (self class parseName: aGitFileTreePackageEntry info name) first , self packageExtension
+	packageName := (self class parseName: aGitFileTreePackageEntry info name) first , self packageExtension.
+	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
+	mcR commitID: (self gitVersionsForPackage: packageName) first.
+	info := super loadVersionFromFileNamed: packageName.
+	self assert: info info = mcR info.
+	^ info
