@@ -4,7 +4,9 @@ gitVersionsForPackage: aDirectoryEntry
 
 	| c commitIDs |
 	c := PipeableOSProcess
-		command: 'cd ' , directory pathString , '; git log --pretty="%H" ' , aDirectoryEntry name.
+		command:
+			'cd ' , directory pathString , '/' , aDirectoryEntry name , '/' , self class monticelloMetaDirName
+				, '; git log --pretty="%H" version'.
 	commitIDs := c output substrings.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
