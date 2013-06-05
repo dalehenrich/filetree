@@ -1,9 +1,6 @@
 utilities
 addClassAndMethodDefinitions
-	(self zip members
-		select: [ :m | m fileName matchesRegex: packageDirectory , self slash , '[^' , self slash , ']+' , self slash ])
-		do: [ :entry | 
-			(entry fileName endsWith: '.class' , self slash)
-				ifTrue: [ self addClassAndMethodDefinitionsFromEntry: entry ].
-			(entry name endsWith: '.extension' , self slash)
-				ifTrue: [ self addExtensionClassAndMethodDefinitionsFromEntry: entry ] ]
+	(self zip members select: [ :m | m isDirectory and: [ m splitFileName last endsWith: '.class' ] ])
+		do: [ :entry | self addClassAndMethodDefinitionsFromEntry: entry ].
+	(self zip members select: [ :m | m isDirectory and: [ m splitFileName last endsWith: '.extension' ] ])
+		do: [ :entry | self addExtensionClassAndMethodDefinitionsFromEntry: entry ]
