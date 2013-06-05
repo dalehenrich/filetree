@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 allFileNames
 	"When reading the file names, generate GitFileTreePackageEntry objects with the path and the info."
 

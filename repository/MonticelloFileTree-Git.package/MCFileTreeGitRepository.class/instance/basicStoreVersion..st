@@ -1,4 +1,4 @@
-as yet unclassified
+i/o
 basicStoreVersion: aVersion
 	"Do a filetree store followed by the right git commands."
 	

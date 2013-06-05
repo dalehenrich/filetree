@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 versionFromFileNamed: aGitFileTreePackageEntry
 	"In the GUI, we should have version names (contributeur, version number, branch) for aString instead of the filetree package directory itself. Handle both cases for the moment."
 

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 versionHighlight: aPackageEntry
 	"Changed to take in account the fact the version name is in the package entry."
 	

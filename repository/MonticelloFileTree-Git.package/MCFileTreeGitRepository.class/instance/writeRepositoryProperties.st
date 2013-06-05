@@ -1,4 +1,4 @@
-as yet unclassified
+i/o
 writeRepositoryProperties
 	| c |
 	super writeRepositoryProperties.
