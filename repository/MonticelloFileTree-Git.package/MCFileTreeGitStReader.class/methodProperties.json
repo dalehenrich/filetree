@@ -2,6 +2,22 @@
 	"class" : {
 		 },
 	"instance" : {
+		"addClassAndMethodDefinitions" : "ThierryGoubier 6/5/2013 11:16",
+		"addClassAndMethodDefinitionsFromDirectory:" : "ThierryGoubier 6/4/2013 16:46",
+		"addClassAndMethodDefinitionsFromEntry:" : "ThierryGoubier 6/5/2013 11:22",
+		"addDefinitionFromEntry:" : "ThierryGoubier 6/4/2013 16:37",
+		"addDefinitionFromFile:inDirectory:" : "ThierryGoubier 6/4/2013 16:38",
+		"addExtensionClassAndMethodDefinitionsFromEntry:" : "ThierryGoubier 6/5/2013 11:32",
+		"addMethodDefinitionsForClass:methodProperties:in:" : "ThierryGoubier 6/5/2013 10:19",
+		"addMethodDefinitionsForClass:methodProperties:in:root:" : "ThierryGoubier 6/5/2013 11:23",
 		"commitID" : "ThierryGoubier 6/2/2013 18:31",
 		"commitID:" : "ThierryGoubier 6/2/2013 18:31",
-		"parseMember:" : "ThierryGoubier 6/2/2013 19:24" } }
+		"definitionFromEntry:" : "ThierryGoubier 6/5/2013 11:33",
+		"definitionFromFile:inDirectory:" : "ThierryGoubier 6/4/2013 16:39",
+		"hasMonticelloMetadata" : "ThierryGoubier 6/4/2013 15:30",
+		"loadDefinitions" : "ThierryGoubier 6/5/2013 09:55",
+		"loadDependencies" : "ThierryGoubier 6/5/2013 11:02",
+		"packageDirectory:" : "ThierryGoubier 6/4/2013 15:20",
+		"parseMember:" : "ThierryGoubier 6/5/2013 10:33",
+		"slash" : "ThierryGoubier 6/5/2013 09:55",
+		"zip" : "ThierryGoubier 6/4/2013 15:51" } }
