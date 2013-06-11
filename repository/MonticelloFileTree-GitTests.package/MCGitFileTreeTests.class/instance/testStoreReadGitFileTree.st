@@ -30,4 +30,5 @@ testStoreReadGitFileTree
 				snapshot: pV snapshot
 				dependencies: #()).
 	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists.
-	self assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot = pV snapshot
+	self
+		assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions asSet = pV snapshot definitions asSet
