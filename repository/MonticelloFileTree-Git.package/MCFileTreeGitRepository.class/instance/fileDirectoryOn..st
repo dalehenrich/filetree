@@ -1,4 +1,4 @@
-as yet unclassified
+private
 fileDirectoryOn: aGitFileTreePackageEntry
 	"We are dealing with GitFileTreePackageEntry objects, not FileReferences."
 

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 packageDescriptionFromPackageEntry: packageEntry
 	| filename extension packageDirectory |
 	packageDirectory := self fileDirectoryOn: packageEntry.

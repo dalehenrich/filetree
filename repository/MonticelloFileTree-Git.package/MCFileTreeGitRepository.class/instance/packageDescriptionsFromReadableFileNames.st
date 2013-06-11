@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 packageDescriptionsFromReadableFileNames
 	^ (self readableFileNames
 		select: [ :packageEntry | self fileUtils directoryExists: (self fileDirectoryOn: packageEntry) ])
