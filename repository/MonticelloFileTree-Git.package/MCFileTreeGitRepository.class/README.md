@@ -5,6 +5,8 @@ Commands done so far:
 git add name.package; git commit ...
 git add .filetree
 	when creating the repository
+git archive
+	on a specific commit, retrieve the package (or part of it)
 
 Git commands of interest:
 

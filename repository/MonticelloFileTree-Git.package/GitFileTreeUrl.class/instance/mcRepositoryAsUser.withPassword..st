@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 mcRepositoryAsUser: usernameString withPassword: passwordString
 	"Where we create the repository."
 

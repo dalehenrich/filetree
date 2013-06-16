@@ -1,9 +1,14 @@
-as yet unclassified
+i/o
 writeRepositoryProperties
-	| c |
+	| c s |
 	super writeRepositoryProperties.
 	c := PipeableOSProcess
-		command: 'cd ' , directory pathString , '; git add .filetree; git commit -m "gitfiletree repository properties" -- .filetree'.
-	c output.
+		command:
+			'cd ' , directory pathString , '; git add .filetree; git commit -m "gitfiletree repository properties" -- .filetree'.
+	s := c output.
 	c succeeded
-		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ]
+		ifTrue: [ 
+			| serr |
+			serr := c errorPipelineContents.
+			serr notEmpty
+				ifTrue: [ c self error: 'Git error: ' , serr , ': ' , s ] ]

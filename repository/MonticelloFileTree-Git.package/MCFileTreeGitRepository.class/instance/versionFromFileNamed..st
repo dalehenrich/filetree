@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 versionFromFileNamed: aGitFileTreePackageEntry
 	"In the GUI, we should have version names (contributeur, version number, branch) for aString instead of the filetree package directory itself. Handle both cases for the moment."
 
@@ -6,10 +6,9 @@ versionFromFileNamed: aGitFileTreePackageEntry
 
 	"Add a bit of debugging. Here aString should be a GitFileTreePackageEntry in fact (but probably it isn't)."
 
-	| mcR packageName info |
+	| mcR packageName |
 	self assert: aGitFileTreePackageEntry class == GitFileTreePackageEntry.
 	packageName := (self class parseName: aGitFileTreePackageEntry info name) first , self packageExtension.
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
-	mcR commitID: (self gitVersionsForPackage: packageName) first.
-	info := super loadVersionFromFileNamed: packageName.
-	^ info
+	mcR commitID: aGitFileTreePackageEntry commitID.
+	^ mcR version

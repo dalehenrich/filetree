@@ -4,13 +4,19 @@ parseMember: fileName
 
 	"Load directly the file."
 
-	| directory c fileContents tokens |
-	directory := self fileUtils directoryFromPath: self monticelloMetaDirName relativeTo: packageDirectory.
+	"Tried to use TarArchive but it's not implemented. Would using zip archive be better? Zip archives are of the same cost on the system; git log and git archive seems to be the expensive operations."
+
+	| monticelloMetaDirectory c tokens tempZip |
+	monticelloMetaDirectory := self fileUtils
+		directoryFromPath: self monticelloMetaDirName
+		relativeTo: (self fileUtils directoryFromPath: packageDirectory relativeTo: stream).
 	c := PipeableOSProcess
-		command:
-			'cd ' , packageDirectory pathString , '; git archive ' , commitID , ' ' , self monticelloMetaDirName , '/' , fileName , '| tar x -O '.
-	fileContents := c output.
+		command: 'cd ' , monticelloMetaDirectory pathString , '; git archive --format=zip ' , commitID , ' ' , fileName.
+	tempZip := ZipArchive new.
+	tempZip readFrom: (ReadStream on: c output asByteArray).
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
-	tokens := self scanner scan: (ReadStream on: fileContents).
+	tokens := [ self scanner scan: (ReadStream on: (tempZip contentsOf: fileName)) ]
+		on: Error
+		do: [ #() ].
 	^ self associate: tokens
