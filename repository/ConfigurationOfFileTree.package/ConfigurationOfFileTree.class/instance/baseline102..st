@@ -83,6 +83,24 @@ baseline102: spec
         yourself.
       spec group: 'default' with: #('MonticelloFileTree-FileSystem-Utilities') ].
   spec
+    for: #'pharo3.x'
+    do: [ 
+      spec
+        package: 'MonticelloFileTree-Core'
+          with: [ spec file: 'MonticelloFileTree-Core.pharo30' ];
+        package: 'MonticelloFileTree-FileSystem-Utilities'
+          with: [ 
+              spec
+                file: 'MonticelloFileTree-FileSystem-Utilities.pharo30';
+                requires: 'MonticelloFileTree-Core' ];
+        package: 'MonticelloFileTree-Git'
+          with: [ 
+              spec
+                file: 'MonticelloFileTree-Git.pharo20';
+                requires: #('MonticelloFileTree-Core') ];
+        yourself.
+      spec group: 'default' with: #('MonticelloFileTree-FileSystem-Utilities') ].
+  spec
     for: #'squeak'
     do: [ 
       spec
