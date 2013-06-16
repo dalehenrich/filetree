@@ -10,8 +10,13 @@ baseline: spec
                 package: 'MonticelloFileTree-FileSystem-Utilities'
                     with: [ spec requires: #('MonticelloFileTree-Core') ];
                 package: 'MonticelloFileTree-FileSystem-Tests'
-                    with: [ spec requires: #('MonticelloFileTree-Tests') ].
+                    with: [ spec requires: #('MonticelloFileTree-Tests') ];
+                package: 'MonticelloFileTree-Git'
+                    with: [ spec requires: #('MonticelloFileTree-Core') ];
+                yourself.
             spec
                 group: 'default' with: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileSystem-Utilities');
+                group: 'Git' with: #('MonticelloFileTree-Git');
                 group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-FileSystem-Tests');
-                group: 'TravisCI' with: #('Tests') ]
+                group: 'TravisCI' with: #('Git' 'Tests');
+                yourself ]
