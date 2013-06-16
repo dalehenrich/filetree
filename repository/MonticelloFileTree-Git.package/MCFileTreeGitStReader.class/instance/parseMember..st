@@ -5,6 +5,8 @@ parseMember: fileName
 	"Load directly the file."
 
 	"Tried to use TarArchive but it's not implemented. Would using zip archive be better? Zip archives are of the same cost on the system; git log and git archive seems to be the expensive operations."
+	
+	"Todo: ensure we have the right encoding."
 
 	| monticelloMetaDirectory c tokens tempZip |
 	monticelloMetaDirectory := self fileUtils
