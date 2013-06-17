@@ -11,7 +11,7 @@ Gofer new
 repoDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #FileSystem) workingDirectory / gitCache / 'filetree' / 'repository') ]
   ifNotNil: [:fileDirectoryClass | 
-    (fileDirectoryClass default directoryNamed , gitCache, '/filetree/repository') ].
+    (fileDirectoryClass default directoryNamed: gitCache, '/filetree/repository') ].
 
 repository := (Smalltalk at: #'MCFileTreeRepository') new
       directory: repoDir;
@@ -26,4 +26,4 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #stable)
   load.
 
-Transcript cr; show: '-------------->SUCCESSFUL LOAD'.
+Transcript cr; show: '-------------->SUCCESSFUL LOAD'; cr.
