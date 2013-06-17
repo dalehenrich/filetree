@@ -2,6 +2,23 @@ versions
 version102: spec
   <version: '1.0.2' imports: #('1.0.2-baseline')>
   spec
+    for: #'common'
+    do: [ 
+      spec blessing: #'development'.
+      spec description: '- non UTF-8 data in monticello.meta/version file
+  https://github.com/dalehenrich/filetree/issues/72
+- Missing FileTreeUrl in Pharo
+  https://github.com/dalehenrich/filetree/issues/74
+- Gemstone 24 dev - Issue #72 fixes
+  https://github.com/dalehenrich/filetree/issues/75
+- In Pharo-2.0, MCVersionInfoWriter>>writeVersionInfo: pre-emptorily converts version message to latin-1
+  https://github.com/dalehenrich/filetree/issues/76
+- Add Pharo2.0 support
+  https://github.com/dalehenrich/filetree/issues/81
+- commit: 0d1f1dfc82919978db39e3021078b4b5acf551da'.
+      spec author: 'dkh'.
+      spec timestamp: '6/16/2013 19:24' ].
+  spec
     for: #'pharo1.1.x'
     do: [ 
       spec
@@ -38,19 +55,19 @@ version102: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo20-dkh.91';
+          with: 'MonticelloFileTree-Core.pharo20-dkh.109';
         package: 'MonticelloFileTree-FileSystem-Utilities'
           with: 'MonticelloFileTree-FileSystem-Utilities.pharo20-dkh.17';
         package: 'MonticelloFileTree-Git'
-          with: 'MonticelloFileTree-Git.pharo20-ThierryGoubier.12' ].
+          with: 'MonticelloFileTree-Git.pharo20-dkh.24' ].
   spec
     for: #'pharo3.x'
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo30-dkh.91';
+          with: 'MonticelloFileTree-Core.pharo30-dkh.103';
         package: 'MonticelloFileTree-FileSystem-Utilities'
-          with: 'MonticelloFileTree-FileSystem-Utilities.pharo30-dkh.17' ].
+          with: 'MonticelloFileTree-FileSystem-Utilities.pharo30-dkh.24' ].
   spec
     for: #'squeak'
     do: [ 
@@ -67,6 +84,6 @@ version102: spec
         project: 'Monticello' with: '0.243'.
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.gemstone24-dkh.99';
+          with: 'MonticelloFileTree-Core.gemstone24-dkh.108';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.gemstone24-dkh.14' ]
