@@ -5,13 +5,17 @@
 		"parseEntry:extension:" : "ThierryGoubier 6/1/2013 11:42",
 		"parseName:extension:" : "ThierryGoubier 5/31/2013 23:21" },
 	"instance" : {
-		"allFileNames" : "ThierryGoubier 6/4/2013 15:57",
+		"allFileNames" : "ThierryGoubier 6/16/2013 23:17",
 		"basicStoreVersion:" : "ThierryGoubier 6/11/2013 14:25",
 		"fileDirectoryOn:" : "ThierryGoubier 6/1/2013 11:20",
 		"gitVersionsForPackage:" : "ThierryGoubier 6/5/2013 16:36",
+		"goferVersionFrom:" : "ThierryGoubier 6/16/2013 23:00",
+		"initialize" : "ThierryGoubier 6/17/2013 07:02",
+		"loadAllFileNames" : "ThierryGoubier 6/16/2013 23:16",
 		"morphicOpen:" : "ThierryGoubier 6/1/2013 21:14",
 		"packageDescriptionFromPackageEntry:" : "ThierryGoubier 6/1/2013 11:44",
 		"packageDescriptionsFromReadableFileNames" : "ThierryGoubier 6/1/2013 11:43",
 		"readableFileNames" : "ThierryGoubier 6/2/2013 21:41",
 		"versionFromFileNamed:" : "ThierryGoubier 6/5/2013 11:37",
+		"versionNameFromFileName:" : "ThierryGoubier 6/16/2013 22:58",
 		"writeRepositoryProperties" : "ThierryGoubier 6/11/2013 14:23" } }
