@@ -21,4 +21,4 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #stable)
   load.
 
-Transcript cr; show: 'SUCCESSFUL LOAD'.
+Transcript cr; show: '-------------->SUCCESSFUL LOAD'.

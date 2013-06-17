@@ -4,7 +4,7 @@ version102: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec description: '- non UTF-8 data in monticello.meta/version file
   https://github.com/dalehenrich/filetree/issues/72
 - Missing FileTreeUrl in Pharo
