@@ -1,5 +1,5 @@
-| gitPath repository |
-gitPath := (FileDirectory default directoryNamed: 'git_cache') fullName.
+| repository repoDir gitCache |
+gitCache := 'git_cache'.
 
 Gofer new
   url: 'http://ss3.gemstone.com/ss/FileTree';
@@ -8,10 +8,15 @@ Gofer new
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
   load.
 
-repository := (Smalltalk at: #'MCFileTreeRepository') new
-  directory: (FileDirectory on: gitPath , '/filetree/repository');
-  yourself.
+repoDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
+  ifNil: [ ((Smalltalk at: #FileSystem) workingDirectory / gitCache / 'filetree' / 'repository') ]
+  ifNotNil: [:fileDirectoryClass | 
+    (fileDirectoryClass default directoryNamed , gitCache, '/filetree/repository') ].
 
+repository := (Smalltalk at: #'MCFileTreeRepository') new
+      directory: repoDir;
+      yourself.
+ 
 "Test by loading configuration from FileTree repo and then loading config"
 Gofer new
   repository: repository;
