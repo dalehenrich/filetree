@@ -9,6 +9,7 @@ env:
    - ST=Pharo-3.0
    - ST=Squeak-4.3
    - ST=Squeak-4.4
+   - ST=Squeak-4.5
    - ST=GemStone-2.4.4.1
    - ST=GemStone-2.4.4.7
    - ST=GemStone-2.4.5
