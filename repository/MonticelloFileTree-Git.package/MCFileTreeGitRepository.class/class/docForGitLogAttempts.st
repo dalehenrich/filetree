@@ -9,7 +9,8 @@ docForGitLogAttempts
 	
 	"Notes:
 		- Issue 72 testWriteNRead shows that this code is brittle and require a full unified diff parser to work.
-		- It should be possible to drop to git plumbing to retrieve the objects directly instead of asking for diffs; this would remove the need for the diff parser."
+		- It should be possible to drop to git plumbing to retrieve the objects directly instead of asking for diffs; this would remove the need for the diff parser.
+		- Git plumbing isn't the solution. Creating the processes is slow. Need to do only one PipeableOSProcess call if we are to make it fast."
 	
 
 	| c output commitIDs allNames |
