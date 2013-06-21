@@ -3,4 +3,8 @@
 		 },
 	"instance" : {
 		"getTestRepository:" : "ThierryGoubier 6/20/2013 14:14",
-		"testLoad" : "ThierryGoubier 6/20/2013 16:26" } }
+		"getWriteTestRepository" : "ThierryGoubier 6/21/2013 10:16",
+		"setUp" : "ThierryGoubier 6/20/2013 17:04",
+		"tearDown" : "ThierryGoubier 6/20/2013 17:05",
+		"testLoad" : "ThierryGoubier 6/20/2013 16:26",
+		"testWriteNRead" : "ThierryGoubier 6/21/2013 09:35" } }
