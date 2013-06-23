@@ -2,18 +2,16 @@ documentation
 docForGitLogAttempts2
 	"Some of this code is to test various options."
 
-	"Design documentation:
-	 - git log is reasonably fast
-	 - git archive for each version is not that fast.
-	This doc provides code for testing various choices."
-
 	"Testing a solution encapsulating the object and the commitID in one go."
 	
-	"timeToRun: 5135 (x2 sur l'ancienne version). Mais timeToRun: 1862 sur la partie OSProcess seule."
+	"MCFileTreeGitRepository docForGitLogAttempts2"
+	
+	"timeToRun: 5135 (x2 sur l'ancienne version). Mais timeToRun: 1862 sur la partie OSProcess seule. timeToRun on splitting then scanning the info: 3818. timeToRun for splitting: 392. Longuest bit is the scan."
+	
+	"Minimizing the scan: 474 to split and scan :) Removing the error handling... 450. Result is correct."
 
 	| c commitIDs allNames tag |
 	tag := '^øø--øø^'.
-	[ 
 	c := PipeableOSProcess
 		command:
 			'cd /home/thierry/src/GitFileTree/AltBrowser/Alt-Browser.package/monticello.meta/; for i in `git log --pretty="%H" version`; do echo "'
@@ -23,16 +21,16 @@ docForGitLogAttempts2
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
 	self assert: (commitIDs match: tag).
-	[ commitIDs atEnd ]
+	^ [ [ commitIDs atEnd ]
 		whileFalse: [ 
 			| commitID rawInfo info |
 			commitID := commitIDs upToAll: tag.
-			rawInfo := commitIDs upToAll: tag.
-			info := [ 
+			rawInfo := (ReadStream on: (commitIDs upToAll: tag)) upToAll: 'ancestors'.
+			info := "["
 			((MCFileTreeGitStReader on: '/home/thierry/src/GitFileTree/AltBrowser' asFileReference fileName: 'Alt-Browser.package')
-				commitID: commitID) loadVersionInfo: rawInfo ]
+				commitID: commitID) loadVersionInfo: rawInfo , 'ancestors () stepChildren ())' "]
 				on: KeyNotFound
-				do: [ nil ].
+				do: [ nil ]".
 			info notNil
 				ifTrue: [ allNames add: (GitFileTreePackageEntry on: 'Alt-Browser.package' id: commitID info: info) ] ].
 	allNames ] timeToRun

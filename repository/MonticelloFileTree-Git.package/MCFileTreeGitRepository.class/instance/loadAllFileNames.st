@@ -2,7 +2,7 @@ accessing
 loadAllFileNames
 	"When reading the file names, generate GitFileTreePackageEntry objects with the path and the info."
 
-	| allNames entries |
+	| allNames entries commitIDs |
 	allNames := OrderedCollection new.
 	entries := self directory entries select: [ :entry | entry isDirectory and: [ self canReadFileNamed: entry name ] ].
 	'loading packages versions from git'
@@ -12,10 +12,17 @@ loadAllFileNames
 			1 to: entries size do: [ :i | 
 				(entries at: i)
 					in: [ :entry | 
-						(self gitVersionsForPackage: entry name)
-							do: [ :commitID | 
-								| info |
-								info := [ ((MCFileTreeGitStReader on: directory fileName: entry name) commitID: commitID) info ]
+						commitIDs := self gitVersionsForPackage: entry name.
+						(commitIDs match: self tag)
+							ifFalse: [ self error: 'Unable to find tag in input' ].
+						[ commitIDs atEnd ]
+							whileFalse: [ 
+								| commitID rawInfo info |
+								commitID := (commitIDs upToAll: self tag) trimBoth.
+								rawInfo := (ReadStream on: (commitIDs upToAll: self tag)) upToAll: 'ancestors'.
+								info := [ 
+								((MCFileTreeGitStReader on: directory fileName: entry name) commitID: commitID)
+									loadVersionInfo: rawInfo , 'ancestors () stepChildren ())' ]
 									on: KeyNotFound
 									do: [ nil ].
 								info notNil
