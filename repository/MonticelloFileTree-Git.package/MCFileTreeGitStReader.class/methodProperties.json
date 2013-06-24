@@ -15,6 +15,7 @@
 		"definitionFromEntry:" : "ThierryGoubier 6/16/2013 12:29",
 		"definitionFromFile:inDirectory:" : "ThierryGoubier 6/4/2013 16:39",
 		"hasMonticelloMetadata" : "ThierryGoubier 6/4/2013 15:30",
+		"loadDefinitionFor:" : "ThierryGoubier 6/24/2013 16:04",
 		"loadDefinitions" : "ThierryGoubier 6/5/2013 09:55",
 		"loadDependencies" : "ThierryGoubier 6/5/2013 11:02",
 		"loadVersionInfo:" : "ThierryGoubier 6/17/2013 16:49",
@@ -22,4 +23,5 @@
 		"parseMember:" : "ThierryGoubier 6/20/2013 15:37",
 		"slash" : "ThierryGoubier 6/5/2013 09:55",
 		"zip" : "ThierryGoubier 6/4/2013 15:51",
-		"zipEntryContents:" : "ThierryGoubier 6/20/2013 16:20" } }
+		"zipEntryContents:" : "ThierryGoubier 6/20/2013 16:20",
+		"zipForDefinition:" : "ThierryGoubier 6/24/2013 15:22" } }
