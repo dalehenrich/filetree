@@ -1,22 +1,23 @@
 accessing
 zipForDefinition: aMCDefinition
 	"We suppose we are trying to load a specific method definition. Recover the relevant archive as needed."
-	
+
 	"Ask in the archive, the method file, and the two properties file."
 
 	| c classDirectory methodFile methodPropertiesFile classPropertiesFile |
 	self assert: aMCDefinition isMethodDefinition.
 	zip := ZipArchive new.
-	classDirectory := packageDirectory , self slash , aMCDefinition class , self slash
+	classDirectory := packageDirectory , self slash , aMCDefinition className
 		,
 			(aMCDefinition isExtensionMethod
 				ifTrue: [ '.extension' ]
-				ifFalse: [ ^ '.class' ]).
+				ifFalse: [ '.class' ]).
 	methodFile := classDirectory , self slash
 		,
 			(aMCDefinition classIsMeta
 				ifTrue: [ 'class' ]
-				ifFalse: [ 'instance' ]) , self slash , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector).
+				ifFalse: [ 'instance' ]) , self slash , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector)
+		, '.st'.
 	methodPropertiesFile := classDirectory , self slash , 'methodProperties.json'.
 	classPropertiesFile := classDirectory , self slash , 'properties.json'.
 	c := PipeableOSProcess

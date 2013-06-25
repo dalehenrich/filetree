@@ -5,23 +5,17 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 	| c commitIDs fileDirectory methodFile |
 	fileDirectory := self fileUtils
 		directoryFromPath:
-			aMCDefinition class name
+			aMCDefinition className
 				,
 					(aMCDefinition isExtensionMethod
 						ifTrue: [ '.extension' ]
-						ifFalse: [ ^ '.class' ])
+						ifFalse: [ '.class' ])
 		relativeTo: (self fileUtils directoryFromPath: aPackageName , '.package' relativeTo: directory).
-	methodFile := self fileUtils
-		directoryFromPath: (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector)
-		relativeTo:
-			(aMCDefinition classIsMeta
-				ifTrue: [ 'class' ]
-				ifFalse: [ 'instance' ]) asFileReference.
-	c := PipeableOSProcess
-		command:
-			'cd ' , fileDirectory pathString , '; for i in `git log --pretty="%H" ' , methodFile pathString , '`; do echo "'
-				, self tag , '"; echo $i; echo "' , self tag , '"; echo `git show $i:./version`; done'.
+	methodFile := (aMCDefinition classIsMeta
+		ifTrue: [ 'class' ]
+		ifFalse: [ 'instance' ]) , '/' , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector) , '.st'.
+	c := PipeableOSProcess command: 'cd ' , fileDirectory pathString , '; git log --pretty="%H" ' , methodFile.
 	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
-	^ commitIDs
+	^ commitIDs contents substrings

@@ -10,11 +10,12 @@ docForGitLogAttempts2
 	
 	"Minimizing the scan: 474 to split and scan :) Removing the error handling... 450. Result is correct."
 
-	| c commitIDs allNames tag |
+	| c commitIDs allNames tag uuid |
 	tag := '^øø--øø^'.
+	uuid := UUID new printString.
 	c := PipeableOSProcess
 		command:
-			'cd /home/thierry/src/GitFileTree/AltBrowser/Alt-Browser.package/monticello.meta/; for i in `git log --pretty="%H" version`; do echo "'
+			'cd /home/thierry/src/gitfiletree/AltBrowser/Alt-Browser.package/monticello.meta/; for i in `git log --pretty="%H" version`; do echo "'
 				, tag , '"; echo $i; echo "' , tag , '"; echo `git show $i:./version`; done'.
 	commitIDs := ReadStream on: c output.
 	allNames := OrderedCollection new.
@@ -25,10 +26,10 @@ docForGitLogAttempts2
 		whileFalse: [ 
 			| commitID rawInfo info |
 			commitID := commitIDs upToAll: tag.
-			rawInfo := (ReadStream on: (commitIDs upToAll: tag)) upToAll: 'ancestors'.
+			rawInfo := (ReadStream on: (commitIDs upToAll: tag)) upToAll: ''' message '''.
 			info := "["
 			((MCFileTreeGitStReader on: '/home/thierry/src/GitFileTree/AltBrowser' asFileReference fileName: 'Alt-Browser.package')
-				commitID: commitID) loadVersionInfo: rawInfo , 'ancestors () stepChildren ())' "]
+				commitID: commitID) loadVersionInfo: rawInfo , ''' message '''' id ''', uuid, ''' date '''' time '''' author '''' ancestors () stepChildren ())' "]
 				on: KeyNotFound
 				do: [ nil ]".
 			info notNil
