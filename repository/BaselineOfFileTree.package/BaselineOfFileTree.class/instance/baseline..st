@@ -13,10 +13,12 @@ baseline: spec
                     with: [ spec requires: #('MonticelloFileTree-Tests') ];
                 package: 'MonticelloFileTree-Git'
                     with: [ spec requires: #('MonticelloFileTree-Core') ];
+                package: 'MonticelloFileTree-GitTests'
+                    with: [ spec requires: #('MonticelloFileTree-Git' 'MonticelloFileTree-Tests') ];
                 yourself.
             spec
                 group: 'default' with: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileSystem-Utilities');
                 group: 'Git' with: #('MonticelloFileTree-Git');
-                group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-FileSystem-Tests');
+                group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-GitTests' 'MonticelloFileTree-FileSystem-Tests');
                 group: 'TravisCI' with: #('Git' 'Tests');
                 yourself ]
