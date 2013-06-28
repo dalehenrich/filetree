@@ -5,7 +5,7 @@ testStoreReadGitFileTree
 	"Problem: order of reading the definitions is different from the order in which the snapshot is extracted."
 
 	| dir c mcR pV |
-	[dir := FileSystem disk workingDirectory / 'temp'.
+	dir := FileSystem disk workingDirectory / 'temp'.
 	dir ensureDirectory.
 	self assert: dir isWritable.
 	c := self class gitCreateAndInitRepo: dir.
@@ -32,5 +32,3 @@ testStoreReadGitFileTree
 	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists.
 	self
 		assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions asSet = pV snapshot definitions asSet
-] 
-    on: Error do: [:ex | Transcript cr; show: ex description. ex pass]

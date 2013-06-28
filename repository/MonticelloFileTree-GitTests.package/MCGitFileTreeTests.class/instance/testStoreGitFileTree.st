@@ -3,7 +3,6 @@ testStoreGitFileTree
 	"Create a gitfiletree repo, and store our test package on it. Record the snapshot and compare with a reread."
 
 	| dir c mcR pV |
-[
 	dir := FileSystem disk workingDirectory / 'temp'.
 	dir ensureDirectory.
 	self assert: dir isWritable.
@@ -28,5 +27,4 @@ testStoreGitFileTree
 						ancestors: #())
 				snapshot: pV snapshot
 				dependencies: #()).
-	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists] 
-    on: Error do: [:ex | Transcript cr; show: ex description. ex pass]
+	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists 
