@@ -1,19 +1,18 @@
 git querying
 gitVersionsForPackage: aDirectoryEntry
 	"Query git for all the versions related to that directory entry"
+
+	"Fact: if a package is updated without increasing the version, we don't see it with this code. If we see it (different git query), then we have multiple packages with the same version and not real way to distinguish them in the GUI."
 	
-	"Problem: if a package is updated without increasing the version, we don't see it."
-	
-	"Problem 2: if I extend this scan  by using
-		c := PipeableOSProcess command: 'cd ' , directory pathString , '; git log --pretty=""%H"" ', aDirectoryEntry.
-	I see the additional commits and it takes longer to scan, but, still, I can't load that version (there is a GUI problem anyway with multiple entries with the same version name which is linked to the use of text as items the MCRepositoryInspector GUI, and we select based on the version name)."
+	"As of now, see only changes to version."
 
 	| c commitIDs monticelloMetaDirectory |
 	monticelloMetaDirectory := self fileUtils
 		directoryFromPath: self class monticelloMetaDirName
 		relativeTo: (self fileUtils directoryFromPath: aDirectoryEntry relativeTo: directory).
-	c := PipeableOSProcess command: 'cd ' , monticelloMetaDirectory pathString , '; git log --pretty="%H" version'.
-	commitIDs := c output substrings.
+	c := PipeableOSProcess command: 'cd ' , monticelloMetaDirectory pathString , '; for i in `git log --pretty="%H" version`; do echo "'
+				, self tag , '"; echo $i; echo "' , self tag , '"; echo `git show $i:./version`; done'.
+	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
 	^ commitIDs

@@ -7,7 +7,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties in: e
 			classIsMeta := false.
 			(methodEntry fileName beginsWith: aClassEntry fileName , 'class' , self slash)
 				ifTrue: [ classIsMeta := true ].
-			fileStream := ReadStream on: methodEntry contents.
+			fileStream := self zipEntryContents: methodEntry.
 			category := fileStream nextLine.
 			source := fileStream upToEnd.
 			selector := self methodSelectorFor: source.
