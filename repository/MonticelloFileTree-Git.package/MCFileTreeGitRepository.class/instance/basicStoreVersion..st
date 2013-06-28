@@ -11,12 +11,13 @@ basicStoreVersion: aVersion
 	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
 	c := PipeableOSProcess
 		command:
-			'cd ' , directory pathString , '; git add ' , packageDirectoryString , '; git commit -m "' , aVersion info message
+			'cd ' , directory pathString , '; git add ' , packageDirectoryString , '; git commit -m "'
+				, (self escapeForShell: ((TextConverter newForEncoding: 'utf8') convertToSystemString: aVersion info message))
 				, '" -- ' , packageDirectoryString.
 	c output.
 	c succeeded
-		ifTrue: [ 
+		ifFalse: [ 
 			| serr |
 			serr := c errorPipelineContents.
 			serr notEmpty
-				ifTrue: [ c self error: 'Git error: ' , serr ] ]
+				ifTrue: [ self error: 'Git error: ' , serr ] ]
