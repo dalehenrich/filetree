@@ -6,6 +6,6 @@ testInitGitRepo
 	dir := FileSystem disk workingDirectory / 'temp'.
 	dir ensureDirectory.
 	self assert: dir isWritable.
-	c := PipeableOSProcess command: 'cd ' , dir pathString , '; git init'.
+	c := self class gitCreateAndInitRepo: dir.
 	c output.
-	self assert: c succeeded.
+	self assert: c succeeded

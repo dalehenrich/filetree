@@ -19,5 +19,5 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 	c := PipeableOSProcess command: 'cd ' , fileDirectory pathString , '; git log --pretty="%H" ' , methodFile.
 	commitIDs := ReadStream on: c output.
 	c succeeded
-		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+		ifFalse: [ NotFound signalFor: c errorPipelineContents ].
 	^ commitIDs contents substrings

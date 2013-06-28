@@ -10,7 +10,7 @@ getWriteTestRepository
 		ifFalse: [ 
 			dir ensureDirectory.
 			self assert: dir isWritable.
-			c := PipeableOSProcess command: 'cd ' , dir pathString , '; git init'.
+			c := MCGitFileTreeTests gitCreateAndInitRepo: dir.
 			c output.
 			self assert: c succeeded ].
 	self assert: dir isDirectory.
