@@ -5,6 +5,13 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
+                configuration: 'OSProcess'
+                   with: [
+                       spec
+                           versionString: #'stable';
+                           repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+                yourself.
+            spec
                 package: 'MonticelloFileTree-Core';
                 package: 'MonticelloFileTree-Tests' with: [ spec requires: #('default') ];
                 package: 'MonticelloFileTree-FileSystem-Utilities'
