@@ -19,7 +19,7 @@ baseline: spec
                 package: 'MonticelloFileTree-FileSystem-Tests'
                     with: [ spec requires: #('MonticelloFileTree-Tests') ];
                 package: 'MonticelloFileTree-Git'
-                    with: [ spec requires: #('MonticelloFileTree-Core') ];
+                    with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ];
                 package: 'MonticelloFileTree-GitTests'
                     with: [ spec requires: #('MonticelloFileTree-Git' 'MonticelloFileTree-Tests') ];
                 yourself.
