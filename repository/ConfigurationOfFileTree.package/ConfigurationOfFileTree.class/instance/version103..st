@@ -4,7 +4,7 @@ version103: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec
         description:
           '- fix Issue #86 : update config to use seaside.gemtalksystems.com and ss3.gemtalksystems.com

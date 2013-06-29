@@ -3,7 +3,7 @@
 		"DevelopmentSupport" : "dkh 4/5/2012 16:22:00",
 		"baseConfigurationClassIfAbsent:" : "dkh 4/5/2012 16:22:00",
 		"ensureMetacello" : "dkh 4/5/2012 16:22:00",
-		"ensureMetacelloBaseConfiguration" : "dkh 4/5/2012 16:22:00",
+		"ensureMetacelloBaseConfiguration" : "dkh 06/29/2013 07:10",
 		"isMetacelloConfig" : "dkh 4/5/2012 16:22:00",
 		"load" : "dkh 4/5/2012 16:22:00",
 		"loadBleedingEdge" : "dkh 4/5/2012 16:22:00",
@@ -20,4 +20,4 @@
 		"version100:" : "dkh 9/15/2012 20:27",
 		"version101:" : "dkh 03/12/2013 16:30",
 		"version102:" : "dkh 06/16/2013 19:43",
-		"version103:" : "dkh 06/28/2013 16:24" } }
+		"version103:" : "dkh 06/29/2013 07:11" } }
