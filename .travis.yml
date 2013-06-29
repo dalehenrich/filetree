@@ -15,7 +15,7 @@ env:
    - ST=GemStone-2.4.5
    - ST=GemStone-2.4.5.1
    - ST=GemStone-3.0.1
-   - ST=GemStone-3.1.0.2
+   - ST=GemStone-3.1.0.4
 
 install:
    - export PROJECT_HOME="$(pwd)"
