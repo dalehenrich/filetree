@@ -1,8 +1,10 @@
 | repository repoDir gitCache |
+Transcript cr; show: 'travis---->travisCI.st'.
+
 gitCache := 'git_cache'.
 
 Gofer new
-  url: 'http://ss3.gemstone.com/ss/FileTree';
+  url: 'http://ss3.gemtalksystems.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
   load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
