@@ -4,7 +4,7 @@ testInitGitFileTree
 
 	| dir c |
 	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureDirectory.
+	dir ensureCreateDirectory.
 	self assert: dir isWritable.
 	c := self class gitCreateAndInitRepo: dir.
 	c output.
