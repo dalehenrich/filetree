@@ -11,7 +11,7 @@ docForGitLogAttempts2
 	"Minimizing the scan: 474 to split and scan :) Removing the error handling... 450. Result is correct."
 
 	| c commitIDs allNames tag uuid |
-	tag := '^øø--øø^'.
+	tag := '^6c776b42^'.
 	uuid := UUID new printString.
 	c := PipeableOSProcess
 		command:

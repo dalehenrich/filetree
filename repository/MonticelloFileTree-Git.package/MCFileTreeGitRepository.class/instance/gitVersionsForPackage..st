@@ -10,7 +10,7 @@ gitVersionsForPackage: aDirectoryEntry
 	monticelloMetaDirectory := self fileUtils
 		directoryFromPath: self class monticelloMetaDirName
 		relativeTo: (self fileUtils directoryFromPath: aDirectoryEntry relativeTo: directory).
-	c := PipeableOSProcess command: 'cd ' , monticelloMetaDirectory pathString , '; for i in `git log --pretty="%H" version`; do echo "'
+	c := PipeableOSProcess command: 'cd ' , monticelloMetaDirectory pathString , '; for i in `git log --pretty="%H" -- version`; do echo "'
 				, self tag , '"; echo $i; echo "' , self tag , '"; echo `git show $i:./version`; done'.
 	commitIDs := ReadStream on: c output.
 	c succeeded
