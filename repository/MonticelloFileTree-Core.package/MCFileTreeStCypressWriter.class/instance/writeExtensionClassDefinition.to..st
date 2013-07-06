@@ -3,5 +3,5 @@ writeExtensionClassDefinition: definition to: classPath
     self
         writeInDirectoryName: classPath
         fileName: 'properties'
-        extension: '.ston'
+        extension: '.json'
         visit: [ self writeExtensionClassDefinition: definition ]
