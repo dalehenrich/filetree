@@ -8,10 +8,10 @@ writeClassDefinition: definition to: classPath
     self
         writeInDirectoryName: classPath
         fileName: 'properties'
-        extension: '.json'
+        extension: '.ston'
         visit: [ self writeClassDefinition: definition ].
     self
         writeInDirectoryName: classPath
         fileName: 'methodProperties'
-        extension: '.json'
+        extension: '.ston'
         visit: [ self writeMethodProperties: (self methodDefinitions at: definition className ifAbsent: [ #() ]) ]
