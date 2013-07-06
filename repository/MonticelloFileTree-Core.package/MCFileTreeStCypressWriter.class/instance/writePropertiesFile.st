@@ -13,5 +13,5 @@ writePropertiesFile
     self
         writeInDirectoryName: '.'
         fileName: 'properties'
-        extension: '.ston'
+        extension: '.json'
         visit: [ Dictionary new writeCypressJsonOn: fileStream ]
