@@ -1,7 +1,6 @@
 tests
 testWriteNRead
-Transcript cr; show: 'Update: ', SystemVersion current highestUpdate printString.
-[    | packageName versionInfo version |
+  | packageName versionInfo version |
   #('Issue69') do: [ :pn | self deny: (self hasPackage: pn) ].
   packageName := 'Issue69'.
   Gofer new
@@ -30,4 +29,4 @@ Transcript cr; show: 'Update: ', SystemVersion current highestUpdate printString
         load ]
     raise: Error.
   #('Issue69') do: [ :pn | self assert: (self hasPackage: pn) ].
-  self validateSelectors] on: Error do: [ :ex | Transcript cr; show: ex description. ex pass]
+  self validateSelectors
