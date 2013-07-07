@@ -9,7 +9,7 @@ ensureMetacelloBaseConfiguration
         user: ''
         password: ''.
       repository
-        versionReaderForFileNamed: 'Metacello-Base-DaleHenrichs.2.mcz'
+        versionReaderForFileNamed: 'Metacello-Base-DaleHenrichs.19'
         do: [ :reader | 
           version := reader version.
           version load.
