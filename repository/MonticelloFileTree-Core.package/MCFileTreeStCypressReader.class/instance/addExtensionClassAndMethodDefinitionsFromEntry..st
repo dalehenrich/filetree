@@ -2,10 +2,10 @@ utilities
 addExtensionClassAndMethodDefinitionsFromEntry: classEntry
     | classDirectory classPropertiesDict methodPropertiesDict entries |
     classDirectory := self fileUtils directoryFromEntry: classEntry.
-    ((entries := classDirectory entries) detect: [ :entry | entry name = 'properties.json' ] ifNone: [  ])
+    ((entries := classDirectory entries) detect: [ :entry | self isPropertyFile: entry] ifNone: [  ])
         ifNotNil: [ :propertyEntry | propertyEntry readStreamDo: [ :fileStream | classPropertiesDict := MCFileTreeJsonParser parseStream: fileStream ] ].
     methodPropertiesDict := Dictionary new.
-    (entries detect: [ :entry | entry name = 'methodProperties.json' ] ifNone: [  ])
+    (entries detect: [ :entry | self isMethodPropertyFile: entry] ifNone: [  ])
         ifNotNil: [ :propertyEntry | 
             propertyEntry
                 readStreamDo: [ :fileStream | 
