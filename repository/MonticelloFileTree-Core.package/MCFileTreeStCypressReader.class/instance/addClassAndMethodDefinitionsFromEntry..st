@@ -3,7 +3,7 @@ addClassAndMethodDefinitionsFromEntry: classEntry
   | classDirectory classPropertiesDict classComment entries methodPropertiesDict |
   classDirectory := self fileUtils directoryFromEntry: classEntry.
   ((entries := classDirectory entries)
-    detect: [ :entry | entry name = 'properties.json' ]
+    detect: [ :entry | self isPropertyFile: entry ]
     ifNone: [  ])
     ifNotNil: [ :propertyEntry | 
       propertyEntry
@@ -16,7 +16,7 @@ addClassAndMethodDefinitionsFromEntry: classEntry
         readStreamDo: [ :fileStream | classComment := fileStream contents decodeFromUTF8 ] ].
   methodPropertiesDict := Dictionary new.
   (entries
-    detect: [ :entry | entry name = 'methodProperties.json' ]
+    detect: [ :entry | self isMethodPropertyFile: entry ]
     ifNone: [  ])
     ifNotNil: [ :propertyEntry | 
       propertyEntry
