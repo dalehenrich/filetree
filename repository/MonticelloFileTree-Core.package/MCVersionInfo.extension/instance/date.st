@@ -1,0 +1,3 @@
+*monticellofiletree-core
+date
+	^ date
