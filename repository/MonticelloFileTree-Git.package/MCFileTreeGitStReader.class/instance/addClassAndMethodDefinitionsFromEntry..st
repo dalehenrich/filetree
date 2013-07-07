@@ -7,12 +7,12 @@ addClassAndMethodDefinitionsFromEntry: classEntry
 	| classPropertiesDict classComment methodPropertiesDict entries |
 	entries := self zip members
 		select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: classEntry fileName ] ].
-	(entries detect: [ :entry | entry splitFileName last = 'properties.json' ] ifNone: [  ])
+	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	(entries detect: [ :entry | entry splitFileName last = 'README.md' ] ifNone: [  ])
 		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents ].
 	methodPropertiesDict := Dictionary new.
-	(entries detect: [ :entry | entry splitFileName last = 'methodProperties.json' ] ifNone: [  ])
+	(entries detect: [ :entry | self isMethodPropertyFile: entry ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	self addClassDefinitionFrom: classPropertiesDict comment: classComment withSqueakLineEndings.
 	self

@@ -7,19 +7,10 @@ refresh
 	newer := Set new.
 	inherited := Set new.
 	loaded := Set new.
-	MCWorkingCopy allManagers
+	self allManagers
 		do: [ :each | 
 			| latest |
-			each ancestors
-				do: [ :ancestor | 
-					loaded add: ancestor name.
-					ancestor
-						ancestorsDoWhileTrue: [ :heir | 
-							(inherited includes: heir name)
-								ifTrue: [ false ]
-								ifFalse: [ 
-									inherited add: heir name.
-									true ] ] ].
+			self computeLoadedAndInheritedFromManager: each.
 			latest := (versions select: [ :v | v first = each package name ]) detectMax: [ :v | v third ].
 			(latest notNil
 				and: [ 
@@ -29,7 +20,8 @@ refresh
 							av := ((ancestor name copyAfterLast: $-) copyAfter: $.) asInteger.
 							av < latest third
 								or: [ av = latest third and: [ ((ancestor name copyAfterLast: $-) copyUpTo: $.) ~= latest second ] ] ] ])
-				ifTrue: [ newer add: each package name ] ].	"		select: [ :each | packageNames includes: each packageName]"
+				ifTrue: [ newer add: each package name ] ].
 	self
 		changed: #packageList;
+		changed: #packageSelection;
 		changed: #versionList
