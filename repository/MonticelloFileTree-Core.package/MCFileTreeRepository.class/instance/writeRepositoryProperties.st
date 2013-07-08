@@ -6,8 +6,9 @@ writeRepositoryProperties
         do: [ :fileStream | 
             fileStream lineEndConvention: #'lf'.
             fileStream
-                nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
+                nextPutAll: '{ "packageExtension" : "' , self class
+defaultPackageExtension , '",';
                 cr;
-                nextPutAll: '{ "propertyFileExtension" : "' , self propertyFileExtension , '" }';
+                nextPutAll: '  "propertyFileExtension" : "' , self propertyFileExtension , '" }';
                 cr;
                 yourself]
