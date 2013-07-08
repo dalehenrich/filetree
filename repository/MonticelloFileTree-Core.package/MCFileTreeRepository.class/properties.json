@@ -1,7 +1,8 @@
 {
 	"category" : "MonticelloFileTree-Core",
 	"classinstvars" : [
-		"defaultPackageExtension" ],
+		"defaultPackageExtension",
+		"defaultPropertyFileExtension" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
