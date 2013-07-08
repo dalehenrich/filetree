@@ -3,7 +3,7 @@
 		 },
 	"instance" : {
 		"tearDownPackagesList" : "dkh 07/07/2013 20:56",
-		"testCreateStonRepository" : "dkh 07/07/2013 23:25",
+		"testCreateStonRepository" : "dkh 7/7/2013 22:41",
 		"testLoad" : "dkh 07/07/2013 21:05",
 		"testWriteNRead" : "dkh 07/07/2013 22:18",
 		"validateStonPropertyFilesFor:" : "dkh 07/07/2013 22:23" } }
