@@ -5,8 +5,9 @@ writeRepositoryProperties
         in: self directory
         do: [ :fileStream | 
             fileStream
-                nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
+                nextPutAll: '{ "packageExtension" : "' , self class
+defaultPackageExtension , '",';
                 lf;
-                nextPutAll: '{ "propertyFileExtension" : "' , self propertyFileExtension , '" }';
+                nextPutAll: '  "propertyFileExtension" : "' , self propertyFileExtension , '" }';
                 lf;
                 yourself]
