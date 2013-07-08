@@ -7,4 +7,7 @@ writeRepositoryProperties
             fileStream lineEndConvention: #'lf'.
             fileStream
                 nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
-                cr ]
+                cr;
+                nextPutAll: '{ "propertyFileExtension" : "' , self propertyFileExtension , '" }';
+                cr;
+                yourself]
