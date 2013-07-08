@@ -1,13 +1,12 @@
 as yet unclassified
 writeRepositoryProperties
-  self directory
-    forceNewFileNamed: '.filetree'
-    do: [ :file | 
-      file
-        nextPutAll:
-            '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
-        lf;
-        nextPutAll:
-            '{ "propertyFileExtension" : "' , self propertyFileExtension , '" }';
-        lf;
-        yourself ]
+    self fileUtils
+        writeStreamFor: '.filetree'
+        in: self directory
+        do: [ :fileStream | 
+            fileStream
+                nextPutAll: '{ "packageExtension" : "' , self class defaultPackageExtension , '" }';
+                lf;
+                nextPutAll: '{ "propertyFileExtension" : "' , self propertyFileExtension , '" }';
+                lf;
+                yourself]
