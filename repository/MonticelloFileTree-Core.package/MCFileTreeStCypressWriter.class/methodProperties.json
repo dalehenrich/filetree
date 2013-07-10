@@ -1,18 +1,23 @@
 {
 	"class" : {
+<<<<<<< HEAD
 		"initializeSpecials" : "bf 7/4/2012 16:24",
+=======
+		"initializeSpecials" : "PeterMcLain 10/02/2012 14:47",
+>>>>>>> master
 		"monticelloMetaDirName" : "dkh 4/4/2012 15:05",
 		"specials" : "dkh 4/4/2012 11:27" },
 	"instance" : {
-		"fileNameForSelector:" : "dkh 4/4/2012 11:25",
+		"fileNameForSelector:" : "dkh 02/13/2013 17:04",
+		"propertyFileExtension" : "dkh 07/07/2013 22:15",
 		"setFileStream:" : "dkh 4/4/2012 14:01",
-		"writeClassComment:" : "dkh 4/5/2012 10:01",
-		"writeClassDefinition:" : "dkh 4/5/2012 11:09",
-		"writeClassDefinition:to:" : "dkh 6/12/2012 17:33:23",
-		"writeDefinitions:" : "dkh 8/10/2012 07:28",
+		"writeClassComment:" : "dkh 03/22/2013 11:30",
+		"writeClassDefinition:" : "dkh 03/22/2013 13:51",
+		"writeClassDefinition:to:" : "dkh 07/07/2013 22:13",
+		"writeDefinitions:" : "dkh 07/07/2013 22:14",
 		"writeExtensionClassDefinition:" : "dkh 4/4/2012 17:52",
-		"writeExtensionClassDefinition:to:" : "dkh 4/4/2012 17:52",
-		"writeMethodDefinition:" : "dkh 4/5/2012 10:02",
+		"writeExtensionClassDefinition:to:" : "dkh 07/07/2013 22:14",
+		"writeMethodDefinition:" : "dkh 03/22/2013 11:30",
 		"writeMethodDefinition:to:" : "dkh 4/4/2012 11:37",
 		"writeMethodProperties:" : "dkh 6/12/2012 17:33:23",
-		"writePropertiesFile" : "dkh 4/4/2012 13:53" } }
+		"writePropertiesFile" : "dkh 07/07/2013 22:14" } }
