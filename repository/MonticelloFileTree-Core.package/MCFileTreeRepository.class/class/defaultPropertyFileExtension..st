@@ -2,6 +2,5 @@ accessing
 defaultPropertyFileExtension: aString
   "self defaultPropertyFileExtension:'.ston'"
 
-  (#('.json' '.ston') includes: aString)
-    ifFalse: [ self error: 'Unsupported property file extension: ' , aString printString ].
+  self validatePropertyFileExtension: aString.
   defaultPropertyFileExtension := aString

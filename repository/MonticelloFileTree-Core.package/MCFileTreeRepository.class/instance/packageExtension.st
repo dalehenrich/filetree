@@ -1,3 +1,5 @@
 private
 packageExtension
-    ^ self repositoryProperties at: 'packageExtension' ifAbsent: [ '.tree' ]
+  ^ self repositoryProperties
+    at: 'packageExtension'
+    ifAbsent: [ self class defaultPackageExtension ]
