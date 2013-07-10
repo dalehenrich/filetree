@@ -1,7 +1,5 @@
 as yet unclassified
 directory: aDirectory
-    super directory: aDirectory.
-    self repositoryProperties isEmpty
-        ifTrue: [ 
-            (self fileUtils directoryExists: aDirectory)
-                ifTrue: [ self writeRepositoryProperties ] ]
+  super directory: aDirectory.
+  repositoryProperties := nil.	"force properties to be reloaded from new location"
+  self repositoryProperties	"NOW"
