@@ -1,12 +1,10 @@
 as yet unclassified
-writeRepositoryProperties
-  self fileUtils
+writeRepositoryProperties: repositoryProperties in: aDirectory
+  self utilityClass
     writeStreamFor: '.filetree'
-    in: self directory
+    in: aDirectory
     do: [ :fileStream | 
       | keyCount propertyCount |
-      repositoryProperties
-        ifNil: [ repositoryProperties := self defaultRepositoryProperties ].
       keyCount := repositoryProperties size.
       propertyCount := 0.
       fileStream nextPutAll: '{'.
