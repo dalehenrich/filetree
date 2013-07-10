@@ -4,7 +4,7 @@ version104: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec description: '- fix Issue #66: Pharo install instructions incorrect
   https://github.com/dalehenrich/filetree/issues/66
 - fix Issue #82: Sqeak4.5 builds failing....
@@ -29,7 +29,7 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo11-dkh.95';
+          with: 'MonticelloFileTree-Core.pharo11-dkh.101';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14' ].
   spec
@@ -37,7 +37,7 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo11-dkh.95';
+          with: 'MonticelloFileTree-Core.pharo11-dkh.101';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14' ].
   spec
@@ -45,7 +45,7 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo13-dkh.93';
+          with: 'MonticelloFileTree-Core.pharo13-dkh.99';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo13-dkh.12' ].
   spec
@@ -53,7 +53,7 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo14-dkh.93';
+          with: 'MonticelloFileTree-Core.pharo14-dkh.99';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo14-dkh.12' ].
   spec
@@ -61,11 +61,11 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo20-dkh.109';
+          with: 'MonticelloFileTree-Core.pharo20-dkh.134';
         package: 'MonticelloFileTree-FileSystem-Utilities'
           with: 'MonticelloFileTree-FileSystem-Utilities.pharo20-dkh.17';
         package: 'MonticelloFileTree-Git'
-          with: 'MonticelloFileTree-Git.pharo20-dkh.24' ].
+          with: 'MonticelloFileTree-Git.pharo20-dkh.42' ].
   spec
     for: #'pharo3.x'
     do: [ 
@@ -79,7 +79,7 @@ version104: spec
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.squeak43-dkh.92';
+          with: 'MonticelloFileTree-Core.squeak43-dkh.132';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.squeak43-dkh.12' ].
   spec
@@ -90,6 +90,6 @@ version104: spec
         project: 'Monticello' with: '0.243'.
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.gemstone24-dkh.108';
+          with: 'MonticelloFileTree-Core.gemstone24-dkh.129';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.gemstone24-dkh.14' ]
