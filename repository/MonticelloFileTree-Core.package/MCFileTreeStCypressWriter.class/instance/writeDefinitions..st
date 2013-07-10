@@ -49,5 +49,5 @@ writeDefinitions: aCollection
             self
                 writeInDirectoryName: classPath
                 fileName: 'methodProperties'
-                extension: '.json'
+                extension: self propertyFileExtension
                 visit: [ self writeMethodProperties: classMethodDefinitions ] ]
