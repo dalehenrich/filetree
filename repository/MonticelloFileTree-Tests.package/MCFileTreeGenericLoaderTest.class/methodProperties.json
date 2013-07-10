@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getMczTestRepository:" : "dkh 07/07/2013 10:44:01",
+		"getTestRepositoriesDirectory" : "dkh 07/07/2013 10:44:01",
+		"getTestRepository:" : "dkh 07/07/2013 10:44:01",
+		"hasPackage:" : "dkh 07/07/2013 10:44:01",
+		"tearDown" : "dkh 07/07/2013 10:44:01",
+		"tearDownPackages:" : "dkh 07/07/2013 10:44:01",
+		"tearDownPackagesList" : "dkh 07/07/2013 10:44:01" } }
