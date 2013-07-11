@@ -3,13 +3,12 @@ Transcript cr; show: 'travis---->travisCI.st'.
 
 gitCache := 'git_cache'.
 
-false ifTrue: [
 Gofer new
   url: 'http://ss3.gemtalksystems.com/ss/FileTree';
   package: 'ConfigurationOfFileTree';
   load.
 ((Smalltalk at: #'ConfigurationOfFileTree') project version: #'stable')
-  load].
+  load.
 
 repoDir := (Smalltalk at: #'FileDirectory' ifAbsent: [  ])
   ifNil: [ ((Smalltalk at: #FileSystem) workingDirectory / gitCache / 'filetree' / 'repository') ]
