@@ -1,0 +1,9 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"tearDownPackagesList" : "dkh 07/07/2013 01:11:20",
+		"testCreateStonRepository" : "dkh 07/07/2013 01:11:20",
+		"testLoad" : "dkh 07/07/2013 01:11:20",
+		"testWriteNRead" : "dkh 07/07/2013 01:11:20",
+		"validateStonPropertyFilesFor:" : "dkh 07/07/2013 01:11:20" } }
