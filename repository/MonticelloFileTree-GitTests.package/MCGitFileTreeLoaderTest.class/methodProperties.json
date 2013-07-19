@@ -2,8 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseDefinitionsWithClassDefinition:timestamp:" : "ThierryGoubier 6/20/2013 14:01",
+		"baseDefinitions" : "ThierryGoubier 7/19/2013 15:37",
+		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 7/19/2013 15:39",
 		"getTestRepository:" : "ThierryGoubier 6/20/2013 14:14",
+		"targetDefinitions" : "ThierryGoubier 7/19/2013 15:41",
+		"targetDefinitionsWithClassDefinition:" : "ThierryGoubier 7/19/2013 15:42",
 		"testBaseLoad" : "ThierryGoubier 6/20/2013 13:52",
 		"testCypressCuisLoad" : "ThierryGoubier 6/20/2013 13:58",
 		"testIssue74" : "ThierryGoubier 6/20/2013 14:04",
