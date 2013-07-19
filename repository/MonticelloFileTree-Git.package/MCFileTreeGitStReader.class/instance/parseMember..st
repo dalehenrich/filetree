@@ -5,7 +5,7 @@ parseMember: fileName
 	"Leftover: protect from version reading attempts."
 
 	| monticelloMetaDirectory c tokens tempZip |
-	self assert: fileName ~= 'version'.
+	self assert: (fileName = 'version') not.
 	monticelloMetaDirectory := self fileUtils
 		directoryFromPath: self monticelloMetaDirName
 		relativeTo: (self fileUtils directoryFromPath: packageDirectory relativeTo: stream).
