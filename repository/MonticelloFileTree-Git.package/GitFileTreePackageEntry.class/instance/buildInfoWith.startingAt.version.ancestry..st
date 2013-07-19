@@ -32,7 +32,7 @@ buildInfoWith: aList startingAt: anIndex version: aNumber ancestry: aDictionary
 			stack := newStack ].
 	info := MCVersionInfo
 		name: (packageDirectory copyUpToLast: $.) , '-' , author , '.' , aNumber printString
-		id: (self class uuidFromGitSHA: commitID)
+		id: UUID new
 		message: message
 		date: timeStamp asDate
 		time: timeStamp asTime

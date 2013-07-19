@@ -39,7 +39,7 @@ loadAllFileNames
 								commitID := ByteArray readHexFrom: (commitIDs upTo: $|) trimBoth.
 								author := (commitIDs upTo: $|) onlyLetters.
 								dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
-								message := commitIDs next: logSize + 1 + position - commitIDs position.
+								message := (commitIDs next: logSize + 1 + position - commitIDs position) convertFromSystemString.
 								entryVersions
 									add:
 										(GitFileTreePackageEntry
