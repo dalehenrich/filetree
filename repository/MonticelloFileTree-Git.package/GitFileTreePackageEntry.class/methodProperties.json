@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"on:id:parentIDs:author:message:timeStamp:" : "ThierryGoubier 7/18/2013 15:47",
+		"on:id:author:message:timeStamp:" : "ThierryGoubier 7/19/2013 15:58",
 		"uuidFromGitSHA:" : "ThierryGoubier 7/19/2013 10:58" },
 	"instance" : {
 		"author:" : "ThierryGoubier 7/18/2013 14:42",
@@ -13,7 +13,6 @@
 		"name" : "ThierryGoubier 6/16/2013 22:48",
 		"packageDirectory" : "ThierryGoubier 5/31/2013 22:34",
 		"packageDirectory:" : "ThierryGoubier 5/31/2013 22:35",
-		"parentIDs:" : "ThierryGoubier 7/18/2013 14:59",
 		"printString" : "ThierryGoubier 5/31/2013 22:41",
 		"summary" : "ThierryGoubier 7/18/2013 15:42",
 		"timeStamp:" : "ThierryGoubier 7/18/2013 15:40",

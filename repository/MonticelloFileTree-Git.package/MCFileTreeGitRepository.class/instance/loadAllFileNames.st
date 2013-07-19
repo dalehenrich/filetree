@@ -10,7 +10,7 @@ loadAllFileNames
 	log_size :
 		'log size' <integer> ;
 	log_data :
-		<SHA1> ':' (<SHA1>) * ':' user_name ':' message ;
+		<SHA1> '|' user_name '|' time_stamp '|' message ;
 	End of message can be obtained by the log_size entry.
 	"
 
@@ -30,14 +30,13 @@ loadAllFileNames
 						commitIDs := self gitVersionsForPackage: entry name.
 						[ commitIDs atEnd ]
 							whileFalse: [ 
-								| logSize commitID parentIDs author position message dateAndTime |
+								| logSize commitID author position message dateAndTime |
 								(commitIDs match: 'log size ')
 									ifFalse: [ self error: 'Unable to find git data in input' ].
 								logSize := Integer readFrom: commitIDs.
 								commitIDs next.
 								position := commitIDs position.
 								commitID := ByteArray readHexFrom: (commitIDs upTo: $|) trimBoth.
-								parentIDs := (commitIDs upTo: $|) substrings.
 								author := (commitIDs upTo: $|) onlyLetters.
 								dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
 								message := commitIDs next: logSize + 1 + position - commitIDs position.
@@ -46,7 +45,6 @@ loadAllFileNames
 										(GitFileTreePackageEntry
 											on: entry name
 											id: commitID
-											parentIDs: parentIDs
 											author: author
 											message: message
 											timeStamp: dateAndTime) ].

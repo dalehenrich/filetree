@@ -9,7 +9,7 @@ gitVersionsForPackage: aDirectoryEntry
 	| c commitIDs packageDirectory |
 	packageDirectory := self fileUtils directoryFromPath: aDirectoryEntry relativeTo: directory.
 	c := PipeableOSProcess
-		command: 'cd ' , packageDirectory pathString , '; git log --log-size --format="%H|%P|%an|%ai|%s" -- .'.
+		command: 'cd ' , packageDirectory pathString , '; git log --log-size --format="%H|%an|%ai|%s" -- .'.
 	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].

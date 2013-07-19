@@ -9,7 +9,6 @@
 		"packageDirectory",
 		"info",
 		"commitID",
-		"parentIDs",
 		"message",
 		"author",
 		"timeStamp" ],
