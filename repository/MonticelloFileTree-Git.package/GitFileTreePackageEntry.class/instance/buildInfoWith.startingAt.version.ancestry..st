@@ -26,7 +26,9 @@ buildInfoWith: aList startingAt: anIndex version: aNumber ancestry: aDictionary
 									found := true ].
 							j := j + 1 ].
 					found
-						ifFalse: [ newStack addAll: (aDictionary at: current) ] ].
+						ifFalse: [ 
+							aIDs add: current.
+							newStack addAll: (aDictionary at: current) ] ].
 			stack := newStack ].
 	info := MCVersionInfo
 		name: (packageDirectory copyUpToLast: $.) , '-' , author , '.' , aNumber printString
