@@ -1,1 +1,0 @@
-This is a tree object to be able to represent and process the ancestry of commitIDs. It's only a few hundreds, it shouldn't take forever!
