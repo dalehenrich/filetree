@@ -1,6 +1,7 @@
 {
 	"class" : {
-		"gitCreateAndInitRepo:" : "ThierryGoubier 6/28/2013 17:26" },
+		"gitCreateAndInitRepo:" : "ThierryGoubier 6/28/2013 17:26",
+		"gitCreateAndInitRepo:author:" : "ThierryGoubier 7/19/2013 16:34" },
 	"instance" : {
 		"setUp" : "ThierryGoubier 6/11/2013 09:59",
 		"tearDown" : "ThierryGoubier 6/11/2013 16:20",

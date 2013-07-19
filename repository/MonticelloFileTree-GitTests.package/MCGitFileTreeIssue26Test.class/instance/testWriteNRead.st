@@ -12,7 +12,7 @@ testWriteNRead
 		do: [ :pn | 
 			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
 			version := (self getTestRepository: 'dependency02') versionWithInfo: versionInfo.
-			self getWriteTestRepository storeVersion: version ].
+			(self getWriteTestRepositoryWithAuthor: versionInfo author) storeVersion: version ].
 	Gofer new
 		package: 'AAA';
 		package: 'BBB';
