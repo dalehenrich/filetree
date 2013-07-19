@@ -6,14 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"packageDirectory",
-		"info",
-		"commitID",
-		"parentIDs",
-		"message",
-		"author",
-		"timeStamp" ],
-	"name" : "GitFileTreePackageEntry",
+		"id",
+		"parents" ],
+	"name" : "GitFileTreeCommit",
 	"pools" : [
 		 ],
 	"super" : "Object",

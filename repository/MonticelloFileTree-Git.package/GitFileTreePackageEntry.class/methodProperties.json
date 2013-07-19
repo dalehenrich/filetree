@@ -1,13 +1,20 @@
 {
 	"class" : {
-		"on:id:info:" : "ThierryGoubier 6/2/2013 21:35",
-		"on:info:" : "ThierryGoubier 5/31/2013 22:37" },
+		"on:id:parentIDs:author:message:timeStamp:" : "ThierryGoubier 7/18/2013 15:47",
+		"uuidFromGitSHA:" : "ThierryGoubier 7/19/2013 10:58" },
 	"instance" : {
+		"author:" : "ThierryGoubier 7/18/2013 14:42",
+		"buildInfoWith:startingAt:version:ancestry:" : "ThierryGoubier 7/19/2013 10:57",
 		"commitID" : "ThierryGoubier 6/2/2013 21:36",
 		"commitID:" : "ThierryGoubier 6/2/2013 21:36",
 		"info" : "ThierryGoubier 5/31/2013 22:34",
 		"info:" : "ThierryGoubier 5/31/2013 22:35",
+		"message:" : "ThierryGoubier 7/18/2013 14:42",
 		"name" : "ThierryGoubier 6/16/2013 22:48",
 		"packageDirectory" : "ThierryGoubier 5/31/2013 22:34",
 		"packageDirectory:" : "ThierryGoubier 5/31/2013 22:35",
-		"printString" : "ThierryGoubier 5/31/2013 22:41" } }
+		"parentIDs:" : "ThierryGoubier 7/18/2013 14:59",
+		"printString" : "ThierryGoubier 5/31/2013 22:41",
+		"summary" : "ThierryGoubier 7/18/2013 15:42",
+		"timeStamp:" : "ThierryGoubier 7/18/2013 15:40",
+		"version" : "ThierryGoubier 7/18/2013 15:43" } }
