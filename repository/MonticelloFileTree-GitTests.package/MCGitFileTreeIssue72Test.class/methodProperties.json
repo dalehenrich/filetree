@@ -6,5 +6,6 @@
 		"getWriteTestRepository" : "ThierryGoubier 6/28/2013 17:28",
 		"setUp" : "ThierryGoubier 6/20/2013 17:04",
 		"tearDown" : "ThierryGoubier 6/20/2013 17:05",
-		"testLoad" : "ThierryGoubier 6/20/2013 16:26",
-		"testWriteNRead" : "ThierryGoubier 7/19/2013 15:28" } }
+		"testLoad" : "ThierryGoubier 7/22/2013 10:17",
+		"testWriteNRead" : "ThierryGoubier 7/22/2013 10:17",
+		"versionInfoMessageString" : "ThierryGoubier 7/22/2013 10:46" } }
