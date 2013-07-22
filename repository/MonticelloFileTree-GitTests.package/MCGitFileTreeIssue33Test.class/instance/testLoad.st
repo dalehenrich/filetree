@@ -9,4 +9,4 @@ testLoad
 		package: packageName;
 		load.
 	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ].
-	self validateTimestamp: 'dkh 11/2/1954 16:15'
+	self validateTimestamp: 'DaleHenrichs 6/12/2012 17:33:02'
