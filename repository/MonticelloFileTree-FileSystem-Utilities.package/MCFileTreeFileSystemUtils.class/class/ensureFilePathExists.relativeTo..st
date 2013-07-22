@@ -1,3 +1,3 @@
 utilities
 ensureFilePathExists: fileNameOrPath relativeTo: aDirectory
-    (aDirectory resolveString: fileNameOrPath) parent ensureDirectory
+    (aDirectory resolveString: fileNameOrPath) parent ensureCreateDirectory
