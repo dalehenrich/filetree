@@ -2,7 +2,7 @@ utilities
 loadDefinitionFor: aMCDefinition
 	"Load the definition in this commit for that MCDefinition. Return nil if it is empty (effect of git tracking renames :))"
 
-	| classPropertiesDict methodPropertiesDict entries classEntry |
+	| classPropertiesDict entries classEntry |
 	definitions := OrderedCollection new.
 	self zipForDefinition: aMCDefinition.
 	classEntry := packageDirectory , self slash , aMCDefinition className , '.class/'.
@@ -12,12 +12,8 @@ loadDefinitionFor: aMCDefinition
 	classPropertiesDict := Dictionary new.
 	(entries detect: [ :entry | entry splitFileName last = 'properties.json' ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
-	methodPropertiesDict := Dictionary new.
-	(entries detect: [ :entry | entry splitFileName last = 'methodProperties.json' ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	self
 		addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
-		methodProperties: methodPropertiesDict
 		in: entries
 		root: (self zip members detect: [ :entry | entry isDirectory and: [ entry fileName endsWith: classEntry ] ]).
 	^ definitions

@@ -1,6 +1,6 @@
 utilities
-addMethodDefinitionsForClass: className methodProperties: methodProperties in: entries root: aClassEntry
-	"Removing the metadata for the methods as well could be done there."
+addMethodDefinitionsForClass: className in: entries root: aClassEntry
+	"Timestamp for methods is recreated from the package info."
 
 	(entries
 		select: [ :entry | entry fileName matchesRegex: aClassEntry fileName , '((class)|(instance))' , self slash , '[^' , self slash , ']+.st' ])
@@ -13,13 +13,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties in: e
 			category := fileStream nextLine.
 			source := fileStream upToEnd.
 			selector := self methodSelectorFor: source.
-			timestamp := "methodProperties
-				at:
-					(classIsMeta
-						ifTrue: [ 'class' ]
-						ifFalse: [ 'instance' ])
-				ifPresent: [ :map | map at: selector asString ifAbsent: [  ] ]."	"Issue 33: https://github.com/dalehenrich/filetree/issues/33"
-			"timestamp ifNil: [ timestamp :=" self info author , ' ' , self info date mmddyyyy , ' ' , self info time print24" ]".
+			timestamp := self info author , ' ' , self info date mmddyyyy , ' ' , self info time print24.	" ]"
 			definitions
 				add:
 					(MCMethodDefinition
