@@ -8,8 +8,8 @@ testWriteNRead
 		repository: (self getTestRepository: 'issue72.2');
 		package: packageName;
 		load.
-"	self validatePackageMetadata.
-"	{packageName}
+	self validatePackageMetadata.
+	{packageName}
 		do: [ :pn | 
 			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
 			version := (self getTestRepository: 'issue72.2') versionWithInfo: versionInfo.
