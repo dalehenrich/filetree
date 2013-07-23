@@ -3,6 +3,7 @@
 		"readerClass" : "dkh 3/1/2012 13:09" },
 	"instance" : {
 		"addString:at:" : "dkh 8/10/2012 05:26",
+		"addString:at:encodedTo:" : "ChristopheDemarey 7/23/2013 16:01",
 		"deleteExistingPackageStructureFor:" : "dkh 8/10/2012 07:12",
 		"fileUtils" : "dkh 8/10/2012 07:05",
 		"flush" : "dkh 2/16/2012 14:49:00",
