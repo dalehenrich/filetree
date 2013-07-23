@@ -17,4 +17,8 @@ git log --follow --pretty="%H" --no-notes MonticelloFileTree-Git.package/montice
 git archive 5562cc769a36b0cdf29dbcb53aa84704b72ce60d MonticelloFileTree-Git.package/monticello.meta/version | tar x -O
 	Will dump the version file for that specific commit on the command line, so that we may recover all we need from it.
 	
-Approach. Get all commits hashes related to a package versions. Then get all version files to recover the data. Store the version and hash in the listing in the GUI... Now, about loading it... Change the reader to bring along the hash for that version, and use the git archive trick to load each file (loading as a zip will certainly be more efficient)
+Implementation. Get all commits hashes related to a package versions. Then get all version files to recover the data. Store the version and hash in the listing in the GUI... Now, about loading it... Change the reader to bring along the hash for that version, and use the git archive trick to load each package as a zip.
+
+Has now a Gofer interface. Tries to correctly load utf8 data from the zip archive. Cuts the runtime by two.
+
+[MCFileTreeGitRepository allInstances first cacheAllFileNamesDuring: [  Gofer new url: 'gitfiletree:///home/thierry/src/GitFileTree/AltBrowser'; version: 'ConfigurationOfAltBrowser-ThierryGoubier.1'; load]] timeToRun

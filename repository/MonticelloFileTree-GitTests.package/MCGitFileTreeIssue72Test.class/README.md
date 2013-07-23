@@ -1,0 +1,1 @@
+It's a partial test of issue 72 (testWriteNRead is disactivated). In cause: the fact that the 'empty' repository is not a git repository.
