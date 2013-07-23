@@ -4,7 +4,7 @@
 	"instance" : {
 		"setUp" : "ThierryGoubier 6/11/2013 09:59",
 		"tearDown" : "ThierryGoubier 6/11/2013 16:20",
-		"testInitGitFileTree" : "ThierryGoubier 6/28/2013 17:26",
-		"testInitGitRepo" : "ThierryGoubier 6/28/2013 17:26",
-		"testStoreGitFileTree" : "ThierryGoubier 6/28/2013 17:27",
-		"testStoreReadGitFileTree" : "ThierryGoubier 6/28/2013 17:27" } }
+		"testInitGitFileTree" : "ThierryGoubier 7/5/2013 12:48",
+		"testInitGitRepo" : "ThierryGoubier 7/5/2013 12:48",
+		"testStoreGitFileTree" : "ThierryGoubier 7/5/2013 12:49",
+		"testStoreReadGitFileTree" : "ThierryGoubier 7/5/2013 12:49" } }

@@ -1,3 +1,3 @@
 utilities
 methodSelectorFor: source
-    ^ Object parserClass new parseSelector: source
+    ^ Object compilerClass new parseSelector: source

@@ -21,12 +21,15 @@ loadAllFileNames
 								| commitID rawInfo info |
 								commitID := (commitIDs upToAll: self tag) trimBoth.
 								rawInfo := (ReadStream on: (commitIDs upToAll: self tag)) upToAll: ''' message '''.
-								info := [ 
-								((MCFileTreeGitStReader on: directory fileName: entry name) commitID: commitID)
-									loadVersionInfo:
-										rawInfo , ''' message '''' id ''' , uuid , ''' date '''' time '''' author '''' ancestors () stepChildren ())' ]
-									on: KeyNotFound
-									do: [ nil ].
+								rawInfo trimBoth isEmpty
+									ifTrue: [ info := nil ]
+									ifFalse: [ 
+										info := [ 
+										((MCFileTreeGitStReader on: directory fileName: entry name) commitID: commitID)
+											loadVersionInfo:
+												rawInfo , ''' message '''' id ''' , uuid , ''' date '''' time '''' author '''' ancestors () stepChildren ())' ]
+											on: KeyNotFound
+											do: [ nil ] ].
 								info notNil
 									ifTrue: [ allNames add: (GitFileTreePackageEntry on: entry name id: commitID info: info) ] ] ].
 				bar value: i ] ].

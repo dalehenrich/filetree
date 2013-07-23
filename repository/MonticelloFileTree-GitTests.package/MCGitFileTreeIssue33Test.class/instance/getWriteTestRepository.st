@@ -8,7 +8,7 @@ getWriteTestRepository
 			c output.
 			self assert: c succeeded ]
 		ifFalse: [ 
-			dir ensureDirectory.
+			dir ensureCreateDirectory.
 			self assert: dir isWritable.
 			c := MCGitFileTreeTests gitCreateAndInitRepo: dir.
 			c output.

@@ -4,7 +4,7 @@ testStoreGitFileTree
 
 	| dir c mcR pV |
 	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureDirectory.
+	dir ensureCreateDirectory.
 	self assert: dir isWritable.
 	c := self class gitCreateAndInitRepo: dir.
 	c output.
@@ -27,4 +27,4 @@ testStoreGitFileTree
 						ancestors: #())
 				snapshot: pV snapshot
 				dependencies: #()).
-	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists 
+	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists
