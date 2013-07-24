@@ -1,5 +1,5 @@
 utility
-uuidFromGitSHA: cid
+uuidFromSHA: cid
 	"Return an adequate uuid from a git commit ID."
 
 	^ UUID nilUUID

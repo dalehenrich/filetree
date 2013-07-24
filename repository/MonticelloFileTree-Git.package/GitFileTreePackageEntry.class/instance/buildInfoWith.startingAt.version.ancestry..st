@@ -2,7 +2,8 @@ building
 buildInfoWith: aList startingAt: anIndex version: aNumber ancestry: aDictionary
 	"Build the MCVersionInfo we need with all the relevant data."
 
-	| ancestors aIDs stack |
+	| ancestors aIDs stack packageName |
+	packageName := packageDirectory copyUpToLast: $..
 	ancestors := OrderedCollection new.
 	stack := Set new.
 	aIDs := Set new.
@@ -31,8 +32,8 @@ buildInfoWith: aList startingAt: anIndex version: aNumber ancestry: aDictionary
 							newStack addAll: (aDictionary at: current) ] ].
 			stack := newStack ].
 	info := MCVersionInfo
-		name: (packageDirectory copyUpToLast: $.) , '-' , author , '.' , aNumber printString
-		id: UUID new
+		name: packageName , '-' , author , '.' , aNumber printString
+		id: (self class uuidFromGitSHA: commitID package: packageName)
 		message: message
 		date: timeStamp asDate
 		time: timeStamp asTime
