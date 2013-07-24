@@ -1,12 +1,15 @@
 testing
 testBaseLoad
 	"If I inherit, I have to recreate all tests?"
-	
-	| packageName |
+
+	| packageName repo |
 	packageName := 'Cypress-Mocks'.
+	repo := self getTestRepository: 'ver01'.
 	Gofer new
 		disablePackageCache;
-		repository: (self getTestRepository: 'ver01');
+		repository: repo;
 		package: packageName;
 		load.
-	self validateAgainst: self baseDefinitions for: packageName
+	repo allFileNames first commitID hex = '4058b81ec118a0acc9ca55714e53385278e2a908'
+		ifTrue: [ self validateAgainst: self baseDefinitionsForTravis for: packageName ]
+		ifFalse: [ self validateAgainst: self baseDefinitions for: packageName ]

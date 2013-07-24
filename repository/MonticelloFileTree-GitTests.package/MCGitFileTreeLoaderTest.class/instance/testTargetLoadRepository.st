@@ -5,8 +5,7 @@ testTargetLoadRepository
 	| repo files |
 	repo := self getTestRepository: 'ver02'.
 	files := repo allFileNames.
-	Transcript
-		cr;
-		show: files first commitID hex , ' ' , files first info summary;
-		cr.
-	self assert: repo allFileNames first commitID hex = '8d225c9b0158aed04882b0836958672ba8204bf4'
+	self
+		assert:
+			(files first commitID hex = '8d225c9b0158aed04882b0836958672ba8204bf4'
+				or: [ files first commitID hex = '4058b81ec118a0acc9ca55714e53385278e2a908' ])
