@@ -2,7 +2,7 @@ utility
 targetDefinitionsWithClassDefinition: classDefinition
 	| className timestamp |
 	className := classDefinition className.
-	timestamp := 'DaleHenrichs ' , (self conditionTimestamp: '4/6/2012 14:44:01').
+	timestamp := 'ThierryGoubier 7/25/2013 07:34:19'.
 	^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
 	classDefinition.
 	(MCMethodDefinition
