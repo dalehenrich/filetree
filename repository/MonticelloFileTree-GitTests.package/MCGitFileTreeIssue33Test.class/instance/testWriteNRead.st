@@ -1,18 +1,18 @@
 testing
 testWriteNRead
-	| packageName versionInfo version |
+	| packageName versionInfo version repo |
 	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].
 	packageName := 'CCC'.
 	Gofer new
 		disablePackageCache;
-		repository: (self getTestRepository: 'issue33');
+		repository: (repo := self getTestRepository: 'issue33.2');
 		package: packageName;
 		load.
-	self validateTimestamp: 'dkh 11/2/1954 16:15'.
+	self validateTimestamp: 'ThierryGoubier 7/25/2013 07:34:19'.
 	#('CCC')
 		do: [ :pn | 
 			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
-			version := (self getTestRepository: 'issue33') versionWithInfo: versionInfo.
+			version := repo versionWithInfo: versionInfo.
 			self getWriteTestRepository storeVersion: version ].
 	Gofer new
 		package: 'CCC';
@@ -26,5 +26,4 @@ testWriteNRead
 				package: packageName;
 				load ]
 		raise: Error.
-	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ].
-	self validateTimestamp: 'dkh 11/2/1954 16:15'
+	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ]

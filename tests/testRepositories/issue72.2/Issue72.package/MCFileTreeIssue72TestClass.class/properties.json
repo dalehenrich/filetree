@@ -1,0 +1,14 @@
+{
+	"category" : "Issue72-Glâsässe",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeIssue72TestClass",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

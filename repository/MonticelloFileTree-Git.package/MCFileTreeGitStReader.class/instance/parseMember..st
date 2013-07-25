@@ -2,16 +2,17 @@ utilities
 parseMember: fileName
 	"Parse a metadata member? Try to load directly the file, have a fallback in case it doesn't exist."
 
-	"Todo: ensure we have the right encoding."
+	"Leftover: protect from version reading attempts."
 
 	| monticelloMetaDirectory c tokens tempZip |
+	self assert: (fileName = 'version') not.
 	monticelloMetaDirectory := self fileUtils
 		directoryFromPath: self monticelloMetaDirName
 		relativeTo: (self fileUtils directoryFromPath: packageDirectory relativeTo: stream).
 	monticelloMetaDirectory exists
 		ifFalse: [ ^ self associate: #() ].
 	c := PipeableOSProcess
-		command: 'cd ' , monticelloMetaDirectory pathString , '; git archive --format=zip ' , commitID , ' ' , fileName.
+		command: 'cd ' , monticelloMetaDirectory pathString , '; git archive --format=zip ' , commitID hex , ' ' , fileName.
 	tempZip := ZipArchive new.
 	tempZip readFrom: (ReadStream on: c output asByteArray).
 	c succeeded

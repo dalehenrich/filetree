@@ -7,7 +7,7 @@ writeRepositoryProperties
 			'cd ' , directory pathString , '; git add .filetree; git commit -m "gitfiletree repository properties" -- .filetree'.
 	s := c output.
 	c succeeded
-		ifTrue: [ 
+		ifFalse: [ 
 			| serr |
 			serr := c errorPipelineContents.
 			serr notEmpty

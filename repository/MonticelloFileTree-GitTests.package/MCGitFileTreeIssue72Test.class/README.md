@@ -1,1 +1,1 @@
-It's a partial test of issue 72 (testWriteNRead is disactivated). In cause: the fact that the 'empty' repository is not a git repository.
+A test for utf8 version string. Requires a slightly different repository and message reference than the one used in the FileTree Issue72 test.
