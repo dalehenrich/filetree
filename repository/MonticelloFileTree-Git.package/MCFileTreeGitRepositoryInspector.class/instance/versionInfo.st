@@ -1,3 +1,3 @@
 accessing
 versionInfo
-	^ self version info
+	^ (Cursor wait showWhile: [ (versions detect: [ :e | e last name = selectedVersion ]) last ]) info

@@ -4,15 +4,8 @@ addExtensionClassAndMethodDefinitionsFromEntry: classEntry
 
 	"Would have been convenient to have directory members listing the files they contain."
 
-	| classPropertiesDict methodPropertiesDict entries |
+	| classPropertiesDict entries |
 	entries := self zip members select: [ :entry | entry fileName beginsWith: classEntry fileName ].
 	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
-	methodPropertiesDict := Dictionary new.
-	(entries detect: [ :entry | self isMethodPropertyFile: entry ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
-	self
-		addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
-		methodProperties: methodPropertiesDict
-		in: entries
-		root: classEntry
+	self addMethodDefinitionsForClass: (classPropertiesDict at: 'name') in: entries root: classEntry

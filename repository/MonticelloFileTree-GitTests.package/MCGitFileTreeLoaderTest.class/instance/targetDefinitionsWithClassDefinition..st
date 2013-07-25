@@ -1,21 +1,19 @@
-private
-baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
-	"Changed because the recorded git package has end of line at end of file. Tests HEAD is one commit in advance to the package version."
-
-	| className |
+utility
+targetDefinitionsWithClassDefinition: classDefinition
+	| className timestamp |
 	className := classDefinition className.
+	timestamp := 'ThierryGoubier 7/25/2013 07:34:19'.
 	^ {(MCOrganizationDefinition categories: #('Cypress-Mocks')).
 	classDefinition.
 	(MCMethodDefinition
 		className: className
 		classIsMeta: false
-		selector: 'extra'
+		selector: 'added'
 		category: 'accessing'
 		timeStamp: timestamp
 		source:
-			'extra
-	"extra method"
-').
+			'added
+    "added method"').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: false
@@ -25,8 +23,7 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		source:
 			'initialize
 	super initialize.
-	self name: ''Unknown''
-').
+	self name: ''Unknown''').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: false
@@ -35,8 +32,7 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		timeStamp: timestamp
 		source:
 			'name
-	^name
-').
+	^name').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: false
@@ -45,8 +41,9 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		timeStamp: timestamp
 		source:
 			'name: aString
-	name := aString
-').
+    "changed method"
+
+    name := aString').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: true
@@ -55,8 +52,7 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		timeStamp: timestamp
 		source:
 			'current
-	^current
-').
+	^current').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: true
@@ -65,8 +61,7 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		timeStamp: timestamp
 		source:
 			'current: anObject
-	current := anObject
-').
+	current := anObject').
 	(MCMethodDefinition
 		className: className
 		classIsMeta: true
@@ -75,15 +70,4 @@ baseDefinitionsWithClassDefinition: classDefinition timestamp: timestamp
 		timeStamp: timestamp
 		source:
 			'initialize
-	self current: self new
-').
-	(MCMethodDefinition
-		className: 'Object'
-		classIsMeta: false
-		selector: 'isCypressMockBasic'
-		category: '*Cypress-Mocks'
-		timeStamp: timestamp
-		source:
-			'isCypressMockBasic
-	^false
-')}
+	self current: self new')}

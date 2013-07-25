@@ -1,0 +1,16 @@
+{
+	"category" : "BBB",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BBB",
+	"pools" : [
+		 ],
+	"super" : "AAA",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

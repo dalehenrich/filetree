@@ -8,3 +8,7 @@ Remember:
 	* zip contains the archive of the package (the contents of NameOfPackage.package according to the commitID)
 	
 Complex work-arounds to handle incorrect incoming streams; see parseMember:
+
+Avoid reading the version metadata : consider the MCVersionInfo is given by the GUI before loading the package.
+
+Why do I read on a special basis the package metadata as well and not directly with the snapshot?
