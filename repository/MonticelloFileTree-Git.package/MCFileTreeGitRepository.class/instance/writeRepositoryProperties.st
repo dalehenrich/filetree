@@ -1,5 +1,7 @@
 i/o
 writeRepositoryProperties
+	"When writing the repository properties, commit them as well."
+
 	| c s |
 	super writeRepositoryProperties.
 	c := PipeableOSProcess
