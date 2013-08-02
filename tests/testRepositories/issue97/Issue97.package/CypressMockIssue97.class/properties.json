@@ -1,0 +1,11 @@
+{
+	"classinstvars" : [
+		"current" ],
+	"classvars" : [
+		"Something" ],
+	"instvars" : [
+		"name" ],
+	"name" : "CypressMockIssue97",
+	"pools" : [
+		 ],
+	"super" : "Object" }
