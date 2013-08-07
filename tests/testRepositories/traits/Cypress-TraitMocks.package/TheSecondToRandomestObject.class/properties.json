@@ -1,0 +1,16 @@
+{
+	"category" : "Cypress-TraitMocks",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "WavingTrait classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TheSecondToRandomestObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "WavingTrait",
+	"type" : "normal" }
