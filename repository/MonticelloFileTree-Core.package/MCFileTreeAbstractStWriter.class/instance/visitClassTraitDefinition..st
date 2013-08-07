@@ -1,3 +1,3 @@
 visiting
 visitClassTraitDefinition: definition
-    self flag: #'skippedForNow'
+    self subclassResponsibility

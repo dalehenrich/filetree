@@ -1,0 +1,6 @@
+{
+	"category" : "Cypress-TraitMocks",
+	"classtraitcomposition" : "GreetingTrait classTrait + FooTrait",
+	"commentStamp" : "",
+	"name" : "WavingTrait",
+	"traitcomposition" : "GreetingTrait" }
