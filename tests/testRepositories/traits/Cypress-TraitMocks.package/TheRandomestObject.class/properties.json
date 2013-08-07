@@ -1,0 +1,16 @@
+{
+	"category" : "Cypress-TraitMocks",
+	"classinstvars" : [
+		 ],
+	"classtraitcomposition" : "GreetingTrait classTrait",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "TheRandomestObject",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "GreetingTrait",
+	"type" : "normal" }
