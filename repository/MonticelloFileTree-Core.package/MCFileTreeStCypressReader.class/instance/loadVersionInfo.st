@@ -6,8 +6,8 @@ loadVersionInfo
     name: self packageNameFromPackageDirectory , '-cypress.1'
     id: UUID new
     message: 'fabricated from a Cypress format repository'
-    date: nil
-    time: nil
+    date: Date today
+    time: Time now
     author: ''
     ancestors: #()
     stepChildren: #()
