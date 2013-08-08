@@ -1,49 +1,24 @@
 initialize-release
 writeDefinitions: aCollection
-  | classDirExtension extensionClasses extensionMethodDefinitions extensionMethodMap |
+  | classDirExtension extensionClasses extensionMethodDefinitions extensionMethodMap methodHolders |
   self writeBasicDefinitions: aCollection.
   extensionClasses := OrderedCollection new.
   extensionMethodDefinitions := OrderedCollection new.
+  methodHolders := self classDefinitions.
   self methodDefinitions
     keysAndValuesDo: [ :className :extensionMethods | 
-      self classDefinitions
+      methodHolders
         at: className
         ifAbsent: [ 
           extensionClasses add: className.
           extensionMethodDefinitions addAll: extensionMethods ] ].
   extensionClasses
     do: [ :className | self methodDefinitions removeKey: className ].
-  classDirExtension := '.class'.
-  self classDefinitions
-    keysAndValuesDo: [ :className :definition | 
-      | classPath instanceMethodPath classMethodPath filenameMetaMap theMethodDefinitions |
-      classPath := definition className , classDirExtension
-        , self fileUtils pathNameDelimiter asString.
-      self writeClassDefinition: definition to: classPath.
-      instanceMethodPath := classPath , 'instance'
-        , self fileUtils pathNameDelimiter asString.
-      classMethodPath := classPath , 'class'
-        , self fileUtils pathNameDelimiter asString.
-      theMethodDefinitions := self methodDefinitions
-        at: className
-        ifAbsent: [ #() ].
-      filenameMetaMap := self fileNameMapFor: theMethodDefinitions.
-      theMethodDefinitions
-        do: [ :methodDefinition | 
-          | filename |
-          filename := (filenameMetaMap at: methodDefinition classIsMeta)
-            at: methodDefinition selector.
-          methodDefinition classIsMeta
-            ifTrue: [ 
-              self
-                writeMethodDefinition: methodDefinition
-                to: classMethodPath
-                filename: filename ]
-            ifFalse: [ 
-              self
-                writeMethodDefinition: methodDefinition
-                to: instanceMethodPath
-                filename: filename ] ] ].
+  self
+    writeMethodHolderDefinitions: self classDefinitions
+    extension: '.class'
+    to: ''
+    do: [ :definition :classPath | self writeClassDefinition: definition to: classPath ].
   classDirExtension := '.extension'.
   extensionMethodMap := Dictionary new.
   extensionMethodDefinitions
