@@ -2,8 +2,8 @@ initialize-release
 writeDefinitions: aCollection
   | basePath extensionClasses extensionMethodDefinitions methodHolders |
   self writeBasicDefinitions: aCollection.
-  basePath := 'snapshot' , ServerFileDirectory slash , 'classes'
-    , ServerFileDirectory slash.
+  basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'classes'
+        , self fileUtils pathNameDelimiter asString.
   extensionClasses := OrderedCollection new.
   extensionMethodDefinitions := OrderedCollection new.
   methodHolders := self classDefinitions.
@@ -21,16 +21,16 @@ writeDefinitions: aCollection
     extension: '.class'
     to: basePath
     do: [ :definition :classPath | self writeClassDefinition: definition to: classPath ].
-  basePath := 'snapshot' , ServerFileDirectory slash , 'extensions'
+  basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'extensions'
     , ServerFileDirectory slash.
   extensionMethodDefinitions
     do: [ :methodDefinition | 
       | methodPath |
       methodPath := basePath , methodDefinition className , '.class'
-        , ServerFileDirectory slash
+        , self fileUtils pathNameDelimiter asString
         ,
           (methodDefinition classIsMeta
             ifTrue: [ 'class' ]
             ifFalse: [ 'instance' ])
-        , ServerFileDirectory slash.
+        , self fileUtils pathNameDelimiter asString.
       self writeMethodDefinition: methodDefinition to: methodPath ]
