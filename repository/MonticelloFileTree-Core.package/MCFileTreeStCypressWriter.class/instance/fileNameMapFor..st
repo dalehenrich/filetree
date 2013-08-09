@@ -29,7 +29,7 @@ fileNameMapFor: aMethodDefinitionCollection
         ifAbsent: [ filenameMetaMap at: metaKey put: Dictionary new ].
       methMap values
         do: [ :col | 
-          | selector filename sortedCol |
+          | selector sortedCol |
           col size = 1
             ifTrue: [ 
               | def |
