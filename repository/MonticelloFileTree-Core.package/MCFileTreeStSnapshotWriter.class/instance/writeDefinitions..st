@@ -3,7 +3,7 @@ writeDefinitions: aCollection
   | basePath extensionClasses extensionMethodDefinitions methodHolders |
   self writeBasicDefinitions: aCollection.
   basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'classes'
-        , self fileUtils pathNameDelimiter asString.
+    , self fileUtils pathNameDelimiter asString.
   extensionClasses := OrderedCollection new.
   extensionMethodDefinitions := OrderedCollection new.
   methodHolders := self classDefinitions, self traitDefinitions..
@@ -25,8 +25,8 @@ writeDefinitions: aCollection
     extension: '.class'
     to: basePath
     do: [ :definition :classPath | self writeClassDefinition: definition to: classPath ].
-  basePath := 'snapshot' , self fileUtils pathNameDelimiter asString , 'extensions'
-    , self fileUtils pathNameDelimiter asString.
+  basePath := 'snapshot' , self fileUtils pathNameDelimiter asString
+    , 'extensions' , self fileUtils pathNameDelimiter asString.
   extensionMethodDefinitions
     do: [ :methodDefinition | 
       | methodPath |
