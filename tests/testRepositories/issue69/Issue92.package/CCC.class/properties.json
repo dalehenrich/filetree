@@ -1,0 +1,14 @@
+{
+	"category" : "Issue92",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CCC",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
