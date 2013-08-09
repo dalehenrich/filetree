@@ -7,7 +7,7 @@ managing Smalltalk source code.*
 The current version of **FileTree** has been tested in 
 GemStone2.x, GemStone3.x, 
 Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, 
-Squeak4.3, and Squeak4.4.
+Squeak4.3, Squeak4.4, Squeak4.5.
 
 To install in GemStone or Pharo:
 
@@ -51,6 +51,7 @@ Here are some guidelines on contributing to the project:
 
 **pharo3.0** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=pharo3.0)](http://travis-ci.org/dalehenrich/filetree)
 
-**squeak4.3 & squeak4.4** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
+**squeak4.3, squeak4.4 & squeak4.5** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
 
 **configuration** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=configuration)](http://travis-ci.org/dalehenrich/filetree)
+
