@@ -4,7 +4,7 @@ version105: spec
   spec
     for: #'common'
     do: [ 
-      spec blessing: #'development'.
+      spec blessing: #'release'.
       spec description: '-fix Issue #11: Traits and Script support
 - fix Issue #92: Mac case insensitivity `must` be addressed
 - fix Issue #97: Load packages from repos with no monticello meta data 
@@ -17,7 +17,7 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo11-dkh.101';
+          with: 'MonticelloFileTree-Core.pharo11-dkh.154';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14' ].
   spec
@@ -25,7 +25,7 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo11-dkh.101';
+          with: 'MonticelloFileTree-Core.pharo11-dkh.154';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo11-dkh.14' ].
   spec
@@ -33,7 +33,7 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo13-dkh.99';
+          with: 'MonticelloFileTree-Core.pharo13-dkh.154';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo13-dkh.12' ].
   spec
@@ -41,7 +41,7 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo14-dkh.99';
+          with: 'MonticelloFileTree-Core.pharo14-dkh.154';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.pharo14-dkh.12' ].
   spec
@@ -49,18 +49,18 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo20-EstebanLorenzano.137';
+          with: 'MonticelloFileTree-Core.pharo20-dkh.160';
         package: 'MonticelloFileTree-FileSystem-Utilities'
           with:
             'MonticelloFileTree-FileSystem-Utilities.pharo20-EstebanLorenzano.19';
         package: 'MonticelloFileTree-Git'
-          with: 'MonticelloFileTree-Git.pharo20-dkh.42' ].
+          with: 'MonticelloFileTree-Git.pharo20-dkh.61' ].
   spec
     for: #'pharo3.x'
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.pharo30-dkh.143';
+          with: 'MonticelloFileTree-Core.pharo30-dkh.154';
         package: 'MonticelloFileTree-FileSystem-Utilities'
           with: 'MonticelloFileTree-FileSystem-Utilities.pharo30-dkh.27' ].
   spec
@@ -68,7 +68,7 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
     do: [ 
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.squeak43-dkh.132';
+          with: 'MonticelloFileTree-Core.squeak43-dkh.161';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.squeak43-dkh.12' ].
   spec
@@ -79,6 +79,6 @@ for details: https://github.com/dalehenrich/filetree/issues?direction=desc&miles
         project: 'Monticello' with: '0.243'.
       spec
         package: 'MonticelloFileTree-Core'
-          with: 'MonticelloFileTree-Core.gemstone24-dkh.147';
+          with: 'MonticelloFileTree-Core.gemstone24-dkh.154';
         package: 'MonticelloFileTree-FileDirectory-Utilities'
           with: 'MonticelloFileTree-FileDirectory-Utilities.gemstone24-dkh.14' ]
