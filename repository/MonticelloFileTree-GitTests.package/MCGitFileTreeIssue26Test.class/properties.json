@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-GitTests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "MCGitFileTreeIssue26Test",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeIssue26Test",
+	"type" : "normal" }

@@ -3,9 +3,16 @@
 		 },
 	"instance" : {
 		"classDefinitions" : "dkh 2/29/2012 14:36",
+		"classTraitDefinitions" : "topa 7/22/2013 13:50",
 		"methodDefinitions" : "dkh 2/29/2012 14:37",
+		"traitDefinitions" : "topa 7/22/2013 00:12",
 		"visitClassDefinition:" : "dkh 3/1/2012 14:52",
+		"visitClassTraitDefinition:" : "topa 7/22/2013 13:50",
 		"visitMethodDefinition:" : "dkh 3/1/2012 14:53",
+		"visitTraitDefinition:" : "topa 7/22/2013 00:18",
 		"writeClassDefinition:to:" : "dkh 2/29/2012 16:51",
-		"writeDefinitions:" : "dkh 8/10/2012 07:29",
-		"writeMethodDefinition:to:" : "dkh 2/29/2012 16:48" } }
+		"writeClassTraitDefinition:to:" : "topa 7/22/2013 13:38",
+		"writeDefinitions:" : "dkh 08/08/2013 18:34",
+		"writeMethodDefinition:to:" : "dkh 2/29/2012 16:48",
+		"writeMethodHolderDefinitions:extension:to:do:" : "topa 7/22/2013 13:54",
+		"writeTraitDefinition:to:" : "topa 7/22/2013 00:19" } }

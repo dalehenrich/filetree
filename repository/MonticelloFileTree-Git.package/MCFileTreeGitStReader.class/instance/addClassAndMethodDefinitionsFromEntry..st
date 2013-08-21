@@ -7,13 +7,13 @@ addClassAndMethodDefinitionsFromEntry: classEntry
 	| classPropertiesDict classComment methodPropertiesDict entries |
 	entries := self zip members
 		select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: classEntry fileName ] ].
-	(entries detect: [ :entry | entry splitFileName last = 'properties.json'] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (ReadStream on: propertyEntry contents) ].
-	(entries detect: [ :entry | entry splitFileName last = 'README.md'] ifNone: [  ])
-		ifNotNil: [ :commentEntry | classComment := commentEntry contents ].
+	(entries detect: [ :entry | entry splitFileName last = 'properties.json' ] ifNone: [  ])
+		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
+	(entries detect: [ :entry | entry splitFileName last = 'README.md' ] ifNone: [  ])
+		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents ].
 	methodPropertiesDict := Dictionary new.
 	(entries detect: [ :entry | entry splitFileName last = 'methodProperties.json' ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (ReadStream on: propertyEntry contents) ].
+		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	self addClassDefinitionFrom: classPropertiesDict comment: classComment withSqueakLineEndings.
 	self
 		addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
