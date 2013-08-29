@@ -14,4 +14,16 @@ loadDefinitions
         ifTrue: [ 
             self
                 addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'initializers' ] ifNone: [  ])
-                inDirectory: directory ]
+                inDirectory: directory;
+                addDefinitionFromFile: (entries detect: [ :entry | 
+                   (entry name beginsWith: 'preamble') and: [
+                   (entry name includesSubstring: 'OfRemoval' caseSensitive: true) not] ] ifNone: [  ])
+                inDirectory: directory;
+                addDefinitionFromFile: (entries detect: [ :entry |
+                   (entry name beginsWith: 'postscript') and: [
+                   (entry name includesSubstring: 'OfRemoval' caseSensitive: true) not] ] ifNone: [  ])
+                inDirectory: directory;
+                addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'preambleOfRemoval' ] ifNone: [  ])
+                inDirectory: directory;
+                addDefinitionFromFile: (entries detect: [ :entry | entry name beginsWith: 'postscriptOfRemoval' ] ifNone: [  ])
+                inDirectory: directory. ]
