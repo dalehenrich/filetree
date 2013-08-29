@@ -1,1 +1,1 @@
-(PackageInfo named: 'Issue102') preamble: '(Smalltalk at: #_MC_Scriptstuff ifAbsentPut: [OrderedCollection new]) add: 1'!
+(PackageInfo named: 'Issue102') preamble: '(Smalltalk at: #xxMCScriptTestGlobalxx ifAbsentPut: [OrderedCollection new]) add: 1'!
