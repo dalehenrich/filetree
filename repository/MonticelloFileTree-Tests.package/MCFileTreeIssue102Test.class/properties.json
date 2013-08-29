@@ -1,7 +1,7 @@
 {
 	"category" : "MonticelloFileTree-Tests",
 	"classinstvars" : [
-		 ],
+		"testglobal" ],
 	"classvars" : [
 		 ],
 	"commentStamp" : "",

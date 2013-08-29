@@ -1,1 +1,1 @@
-(PackageInfo named: 'Issue102') postscript: '(Smalltalk at: #xxMCScriptTestGlobalxx ifAbsentPut: [OrderedCollection new]) add: 2'!
+(PackageInfo named: 'Issue102') postscript: 'MCFileTreeIssue102Test testglobal add: 2'!

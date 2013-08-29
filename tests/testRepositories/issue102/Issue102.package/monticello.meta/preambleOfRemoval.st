@@ -1,1 +1,1 @@
-(PackageInfo named: 'Issue102') preambleOfRemoval: '(Smalltalk at: #xxMCScriptTestGlobalxx ifAbsentPut: [OrderedCollection new]) add: 3'!
+(PackageInfo named: 'Issue102') preambleOfRemoval: 'MCFileTreeIssue102Test testglobal add: 3'!
