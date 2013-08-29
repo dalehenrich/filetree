@@ -22,7 +22,7 @@ testWriteNRead
   metaDir := self utilityClass
     directoryFromPath: MCFileTreeStCypressWriter monticelloMetaDirName
     relativeTo:  (otherRepo directory entries select: [:e | 
-      e isDirectory and: [ e name endsWith: otherRepo packageExtension]]) first asFileDirectory.
+      e isDirectory and: [ e name endsWith: otherRepo packageExtension]]) first asFileReference.
   self assert: (self utilityClass directoryExists: metaDir).
   #('postscript.st' 'postscriptOfRemoval.st' 'preamble.st' 'preambleOfRemoval.st') do: [:scriptFile |
     self assert: (self utilityClass filePathExists: scriptFile relativeTo: metaDir)].
