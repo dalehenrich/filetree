@@ -27,5 +27,5 @@ baseline: spec
                 group: 'default' with: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileSystem-Utilities');
                 group: 'Git' with: #('MonticelloFileTree-Git');
                 group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-GitTests' 'MonticelloFileTree-FileSystem-Tests');
-                group: 'TravisCI' with: #('Git' 'Tests');
+                group: 'TravisCI' with: #('Tests');
                 yourself ]
