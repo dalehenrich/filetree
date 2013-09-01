@@ -1,4 +1,4 @@
-as yet unclassified
+writing
 writeMethodHolderDefinitions: aCollection extension: extension to: basePath do: aBlock
   aCollection
     keysAndValuesDo: [ :className :definition | 
