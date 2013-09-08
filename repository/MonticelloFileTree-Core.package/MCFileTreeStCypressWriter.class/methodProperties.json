@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"initialize" : "dkh 07/07/2013 19:38:45",
+		"initialize" : "dkh 07/07/2013 15:42:23",
 		"initializeSpecials" : "PeterMcLain 10/02/2012 14:47",
 		"monticelloMetaDirName" : "dkh 4/4/2012 15:05",
 		"specials" : "dkh 4/4/2012 11:27" },
@@ -12,7 +12,7 @@
 		"writeClassComment:" : "dkh 03/22/2013 11:30",
 		"writeClassDefinition:" : "dkh 03/22/2013 13:51",
 		"writeClassDefinition:to:" : "dkh 07/07/2013 22:13",
-		"writeDefinitions:" : "08/08/2013 16:08",
+		"writeDefinitions:" : "dkh 07/07/2013 22:14",
 		"writeExtensionClassDefinition:" : "dkh 4/4/2012 17:52",
 		"writeExtensionClassDefinition:to:" : "dkh 07/07/2013 22:14",
 		"writeMethodDefinition:" : "dkh 03/22/2013 11:30",
