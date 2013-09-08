@@ -3,10 +3,10 @@
 		"readerClass" : "ezra 11/1/2011 17:52" },
 	"instance" : {
 		"initialize" : "ezra 10/26/2011 17:16",
-		"visitClassDefinition:" : "dkh 4/5/2012 11:15:15",
+		"visitClassDefinition:" : "dkh 2/29/2012 14:52",
 		"visitClassTraitDefinition:" : "dkh 1/30/2012 16:30",
 		"visitMetaclassDefinition:" : "ezra 10/26/2011 17:37",
-		"visitMethodDefinition:" : "dkh 4/5/2012 11:15:15",
+		"visitMethodDefinition:" : "dkh 2/29/2012 14:55",
 		"visitScriptDefinition:" : "dkh 1/30/2012 16:30",
 		"visitTraitDefinition:" : "dkh 1/30/2012 16:31",
 		"writeDefinitions:" : "ezra 5/13/2005 15:15",

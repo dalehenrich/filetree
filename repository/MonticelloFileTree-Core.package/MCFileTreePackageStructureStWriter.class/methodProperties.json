@@ -1,16 +1,16 @@
 {
 	"class" : {
-		"useCypressWriter" : "dkh 4/5/2012 11:15:15",
-		"useSnapShotWriter" : "dkh 4/5/2012 11:15:15" },
+		"useCypressWriter" : "dkh 4/5/2012 10:37",
+		"useSnapShotWriter" : "dkh 3/1/2012 10:30" },
 	"instance" : {
-		"absentInitializers" : "dkh 4/5/2012 11:15:15",
-		"acceptVisitor:forDefinitions:" : "dkh 4/5/2012 11:15:15",
-		"initializers:" : "dkh 4/5/2012 11:15:15",
-		"presentInitializers" : "dkh 4/5/2012 11:15:15",
+		"absentInitializers" : "dkh 2/29/2012 13:46",
+		"acceptVisitor:forDefinitions:" : "dkh 2/29/2012 13:46",
+		"initializers:" : "dkh 2/29/2012 13:45",
+		"presentInitializers" : "dkh 2/29/2012 13:46",
 		"writeAbsentInitializers" : "dkh 03/22/2013 11:30",
 		"writeCategory:" : "dkh 03/22/2013 13:56",
-		"writeClassDefinition:" : "dkh 4/5/2012 11:15:15",
-		"writeDefinitions:" : "dkh 4/5/2012 11:15:15",
-		"writeMethodPreamble:" : "dkh 4/5/2012 11:15:15",
+		"writeClassDefinition:" : "dkh 2/29/2012 14:48",
+		"writeDefinitions:" : "dkh 2/29/2012 13:42",
+		"writeMethodPreamble:" : "dkh 2/16/2012 14:49:00",
 		"writePresentInitializers" : "dkh 03/22/2013 11:30",
-		"writeProperties" : "dkh 4/5/2012 11:15:15" } }
+		"writeProperties" : "dkh 3/1/2012 14:21" } }
