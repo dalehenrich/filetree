@@ -1,10 +1,11 @@
 {
 	"class" : {
-		"gitCreateAndInitRepo:" : "ThierryGoubier 6/28/2013 17:26" },
+		"gitCreateAndInitRepo:" : "ThierryGoubier 7/5/2013 13:25:06",
+		"gitCreateAndInitRepo:author:" : "ThierryGoubier 7/26/2013 11:48:39" },
 	"instance" : {
-		"setUp" : "ThierryGoubier 6/11/2013 09:59",
-		"tearDown" : "ThierryGoubier 6/11/2013 16:20",
-		"testInitGitFileTree" : "ThierryGoubier 7/5/2013 12:48",
-		"testInitGitRepo" : "ThierryGoubier 7/5/2013 12:48",
-		"testStoreGitFileTree" : "ThierryGoubier 7/5/2013 12:49",
-		"testStoreReadGitFileTree" : "ThierryGoubier 7/5/2013 12:49" } }
+		"setUp" : "ThierryGoubier 7/5/2013 13:25:06",
+		"tearDown" : "ThierryGoubier 7/5/2013 13:25:06",
+		"testInitGitFileTree" : "ThierryGoubier 7/5/2013 13:25:06",
+		"testInitGitRepo" : "ThierryGoubier 7/5/2013 13:25:06",
+		"testStoreGitFileTree" : "ThierryGoubier 7/26/2013 11:48:39",
+		"testStoreReadGitFileTree" : "ThierryGoubier 7/26/2013 11:48:39" } }
