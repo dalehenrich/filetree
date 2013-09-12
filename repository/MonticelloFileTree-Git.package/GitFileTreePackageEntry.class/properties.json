@@ -8,7 +8,10 @@
 	"instvars" : [
 		"packageDirectory",
 		"info",
-		"commitID" ],
+		"commitID",
+		"message",
+		"author",
+		"timeStamp" ],
 	"name" : "GitFileTreePackageEntry",
 	"pools" : [
 		 ],
