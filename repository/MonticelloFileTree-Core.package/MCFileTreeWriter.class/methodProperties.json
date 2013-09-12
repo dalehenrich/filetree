@@ -2,8 +2,8 @@
 	"class" : {
 		"readerClass" : "dkh 3/1/2012 13:09" },
 	"instance" : {
-		"addString:at:" : "dkh 8/10/2012 05:26",
-		"addString:at:encodedTo:" : "ThierryGoubier 7/5/2013 12:44",
+		"addString:at:" : "dkh 07/22/2013 23:08:07",
+		"addString:at:encodedTo:" : "dkh 07/22/2013 21:12:21",
 		"deleteExistingPackageStructureFor:" : "dkh 8/10/2012 07:12",
 		"fileUtils" : "dkh 8/10/2012 07:05",
 		"flush" : "dkh 2/16/2012 14:49:00",
