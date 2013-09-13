@@ -1,3 +1,3 @@
 utility
 baseDefinitionsWithClassDefinition: classDefinition
-	^ self baseDefinitionsWithClassDefinition: classDefinition timestamp: 'ThierryGoubier 7/25/2013 07:34:19'
+	^ self baseDefinitionsWithClassDefinition: classDefinition timestamp: 'ThierryGoubier 9/12/2013 17:10:44'
