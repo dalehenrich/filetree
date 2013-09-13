@@ -4,7 +4,7 @@ testStoreGitFileTree
 
 	| dir c mcR pV pVInfo |
 	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureCreateDirectory.
+	dir ensureDirectory.
 	self assert: dir isWritable.
 	pV := MCWorkingCopy forPackage: (MCPackage named: 'MonticelloFileTree-GitTests').
 	pVInfo := pV ancestry ancestors first.

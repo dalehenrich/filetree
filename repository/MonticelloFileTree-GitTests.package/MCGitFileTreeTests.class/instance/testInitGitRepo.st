@@ -4,7 +4,7 @@ testInitGitRepo
 
 	| dir c |
 	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureCreateDirectory.
+	dir ensureDirectory.
 	self assert: dir isWritable.
 	c := self class gitCreateAndInitRepo: dir.
 	c output.

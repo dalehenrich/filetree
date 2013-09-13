@@ -8,7 +8,7 @@ getWriteTestRepositoryWithAuthor: authorName
 			c output.
 			self assert: c succeeded ]
 		ifFalse: [ 
-			dir ensureCreateDirectory.
+			dir ensureDirectory.
 			self assert: dir isWritable.
 			c := MCGitFileTreeTests gitCreateAndInitRepo: dir author: authorName.
 			c output.
