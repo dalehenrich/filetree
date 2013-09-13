@@ -13,4 +13,4 @@ writeRepositoryProperties
 			| serr |
 			serr := c errorPipelineContents.
 			serr notEmpty
-				ifTrue: [ c self error: 'Git error: ' , serr , ': ' , s ] ]
+				ifTrue: [ self error: 'Git error: ' , serr , ': ' , s ] ]
