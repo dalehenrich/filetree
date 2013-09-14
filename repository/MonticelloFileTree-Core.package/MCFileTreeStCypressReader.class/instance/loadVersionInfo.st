@@ -1,7 +1,9 @@
 accessing
 loadVersionInfo
   self hasMonticelloMetadata
-    ifTrue: [ ^ info := self extractInfoFrom: (self parseMember: 'version') ].
+    ifTrue: [ ^ info := self extractInfoFrom: (self hasVersionsDir
+	ifTrue: [self loadVersionsDir]
+	ifFalse: [self parseMember: 'version'])].
   info := MCVersionInfo
     name: self packageNameFromPackageDirectory , '-cypress.1'
     id: UUID new

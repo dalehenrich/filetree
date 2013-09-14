@@ -13,8 +13,15 @@
 		"basicVersion" : "dkh 6/27/2012 20:19",
 		"isMethodPropertyFile:" : "dkh 6/16/2013 12:47:20",
 		"isPropertyFile:" : "dkh 6/16/2013 12:47:20",
+		"isVersionFile:" : "topa 9/14/2013 22:56",
+		"isVersionFileName:" : "topa 9/15/2013 00:08",
 		"loadDefinitions" : "topa 8/29/2013 00:57",
 		"loadPackage" : "dkh 6/27/2012 20:21",
-		"loadVersionInfo" : "08/08/2013 15:01",
+		"loadVersionIdIn:" : "topa 9/14/2013 22:26",
+		"loadVersionInfo" : "topa 9/13/2013 23:36",
+		"loadVersionsDir" : "topa 9/14/2013 14:36",
+		"loadVersionsInDir:" : "topa 9/15/2013 00:12",
 		"methodSelectorFor:" : "ChristopheDemarey 5/31/2013 23:28",
-		"packageNameFromPackageDirectory" : "dkh 8/10/2012 14:55" } }
+		"packageNameFromPackageDirectory" : "dkh 8/10/2012 14:55",
+		"postProcessVersionsDict:" : "topa 9/14/2013 11:30",
+		"versionsDir" : "topa 9/14/2013 11:31" } }

@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"expectedBasicVersionInfo" : "topa 9/14/2013 15:22",
+		"mockAuthor" : "topa 9/14/2013 15:22",
+		"mockMessageString" : "topa 9/14/2013 15:04",
+		"mockVersionInfo:" : "topa 9/14/2013 15:04",
+		"mockVersionInfo:ancestors:" : "topa 9/14/2013 15:04",
+		"mockVersionInfo:ancestors:stepChildren:" : "topa 9/14/2013 15:23",
+		"mockVersionInfo:id:" : "topa 9/14/2013 15:13",
+		"mockVersionInfo:id:date:time:ancestors:stepChildren:" : "topa 9/14/2013 15:08",
+		"mockVersionName" : "topa 9/14/2013 15:04",
+		"setUp" : "topa 9/14/2013 14:52",
+		"testBasicVersionInfo" : "topa 9/14/2013 15:17",
+		"testFlattenVersionInfos" : "topa 9/14/2013 15:05",
+		"testVersionAsId" : "topa 9/14/2013 15:27",
+		"testVersionFileName" : "topa 9/15/2013 00:17" } }

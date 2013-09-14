@@ -1,0 +1,15 @@
+{
+	"category" : "MonticelloFileTree-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"sut",
+		"mock" ],
+	"name" : "MCFileTreeVersionInfoTest",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeAbstractTest",
+	"type" : "normal" }

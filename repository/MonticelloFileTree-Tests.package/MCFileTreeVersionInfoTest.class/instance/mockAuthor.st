@@ -1,0 +1,3 @@
+mocks
+mockAuthor
+    ^ 'TestMonkey'

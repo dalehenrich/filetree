@@ -1,0 +1,4 @@
+constants
+versionDirName
+
+	^ 'version.d'
