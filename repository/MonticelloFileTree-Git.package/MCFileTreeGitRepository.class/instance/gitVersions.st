@@ -6,7 +6,7 @@ gitVersions
 
 	| c commitIDs |
 	c := PipeableOSProcess
-		command: 'cd ' , directory pathString , '; git log --format="commit %H %P"'.
+		command: 'cd ' , (self fileUtils directoryPathString: directory) , '; git log --format="commit %H %P"'.
 	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].

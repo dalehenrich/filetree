@@ -14,9 +14,10 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 	methodFile := (aMCDefinition classIsMeta
 		ifTrue: [ 'class' ]
 		ifFalse: [ 'instance' ]) , '/' , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector) , '.st'.
-	fileDirectory exists
+	(self fileUtils directoryExists: fileDirectory)
 		ifFalse: [ NotFound signalFor: fileDirectory ].
-	c := PipeableOSProcess command: 'cd ' , fileDirectory pathString , '; git log --format="%H" -- ' , methodFile.
+	c := PipeableOSProcess
+		command: 'cd ' , (self fileUtils directoryPathString: directory) , '; git log --format="%H" -- ' , methodFile.
 	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ NotFound signalFor: c errorPipelineContents ].
