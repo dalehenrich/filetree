@@ -3,8 +3,9 @@ setUp
 	"Test for the context. We need: a writeable directory, not handled by git."
 
 	| directory c |
-	directory := FileSystem disk workingDirectory.
+	directory := self utilityClass default.
 	self assert: directory isWritable.
-	c := PipeableOSProcess command: 'cd ' , directory pathString , '; git status'.
+	c := PipeableOSProcess command: 'cd ' , (self utilityClass directoryPathString: directory) , '; git status'.
 	c output.
-	self assert: c succeeded not
+	self assert: c succeeded not.
+	super setUp

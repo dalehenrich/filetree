@@ -3,10 +3,10 @@
 		 },
 	"instance" : {
 		"getTestRepository:" : "ThierryGoubier 7/26/2013 13:17:13",
-		"getWriteTestRepository" : "ThierryGoubier 7/26/2013 13:17:13",
-		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 7/26/2013 13:17:13",
-		"setUp" : "ThierryGoubier 7/26/2013 13:17:13",
-		"tearDown" : "ThierryGoubier 7/26/2013 13:17:13",
+		"getWriteTestRepository" : "ThierryGoubier 9/18/2013 14:59",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 9/18/2013 15:16",
+		"setUp" : "ThierryGoubier 9/18/2013 15:02",
+		"tearDown" : "ThierryGoubier 9/18/2013 15:11",
 		"testLoad" : "ThierryGoubier 7/26/2013 13:17:13",
 		"testWrite" : "ThierryGoubier 7/26/2013 13:17:13",
 		"testWriteNRead" : "ThierryGoubier 7/26/2013 13:17:13" } }

@@ -3,7 +3,9 @@
 		 },
 	"instance" : {
 		"getTestRepository:" : "ThierryGoubier 9/13/2013 17:07",
-		"getWriteTestRepository" : "ThierryGoubier 9/13/2013 17:10",
-		"setUp" : "ThierryGoubier 9/13/2013 17:14",
-		"tearDown" : "ThierryGoubier 9/13/2013 17:14",
+		"getWriteTestRepository" : "ThierryGoubier 9/18/2013 14:59",
+		"setUp" : "ThierryGoubier 9/18/2013 14:57",
+		"tearDown" : "ThierryGoubier 9/18/2013 15:11",
+		"testLoad" : "ThierryGoubier 9/18/2013 10:09",
+		"testLoad:" : "ThierryGoubier 9/18/2013 16:28",
 		"testWriteNRead" : "ThierryGoubier 9/13/2013 17:13" } }
