@@ -9,6 +9,6 @@ Remember:
 	
 Complex work-arounds to handle incorrect incoming streams; see parseMember:
 
-Avoid reading the version metadata : consider the MCVersionInfo is given by the GUI before loading the package.
+Avoid reading the version metadata : consider the MCVersionInfo is given by the GUI before loading the package. Do not read any metadata outside of the zip archive, since we know that the repository inspector won't use us for reading the metadata.
 
-Why do I read on a special basis the package metadata as well and not directly with the snapshot?
+shouldNotImplement methods are here to protect against program paths I haven't been able to cover in the superclass, or changes in the superclass implementation. It may indicate that the superclass isn't the right one.
