@@ -17,4 +17,4 @@ packageDescriptionFromPackageEntry: packageEntry
 			{(filename copyFrom: 1 to: (filename lastIndexOf: $.) - 1).
 			'cypress'.
 			1.
-			filename} ]
+			packageEntry} ]
