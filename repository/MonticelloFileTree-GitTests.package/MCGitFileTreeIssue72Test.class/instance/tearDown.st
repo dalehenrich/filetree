@@ -2,10 +2,10 @@ resources
 tearDown
 	"Test for the context. We need: a writeable directory, not handled by git."
 
-	| directory c |
+	| directory writeTempDir |
 	super tearDown.
-	directory := FileSystem disk workingDirectory.
-	self assert: directory isWritable.
-	c := PipeableOSProcess command: 'cd ' , directory pathString , '; rm -rf temp'.
-	c output.
-	self assert: (directory / 'temp') exists not
+	directory := utilityClass default.
+	writeTempDir := utilityClass directoryFromPath: 'temp' relativeTo: directory.
+	(utilityClass directoryExists: writeTempDir)
+		ifTrue: [ utilityClass deleteAll: writeTempDir ].
+	self assert: (utilityClass directoryExists: writeTempDir) not

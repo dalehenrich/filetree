@@ -21,7 +21,7 @@ zipForDefinition: aMCDefinition
 	classPropertiesFile := classDirectory , self slash , 'properties.json'.
 	c := PipeableOSProcess
 		command:
-			'cd ' , stream pathString , '; git archive --format=zip ' , commitID hex , ' ' , methodFile , ' ' , classPropertiesFile.
+			'cd ' , (self fileUtils directoryPathString: stream)  , '; git archive --format=zip ' , commitID hex , ' ' , methodFile , ' ' , classPropertiesFile.
 	zip readFrom: (ReadStream on: c output asByteArray).
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
