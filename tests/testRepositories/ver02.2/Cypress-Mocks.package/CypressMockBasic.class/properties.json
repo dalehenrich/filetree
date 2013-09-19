@@ -1,0 +1,16 @@
+{
+	"category" : "Cypress-Mocks",
+	"classinstvars" : [
+		"current" ],
+	"classtraitcomposition" : "{}",
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name" ],
+	"name" : "CypressMockBasic",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"traitcomposition" : "{}",
+	"type" : "normal" }

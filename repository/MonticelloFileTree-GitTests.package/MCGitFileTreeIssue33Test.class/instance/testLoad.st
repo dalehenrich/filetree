@@ -5,8 +5,8 @@ testLoad
 	packageName := 'CCC'.
 	Gofer new
 		disablePackageCache;
-		repository: (self getTestRepository: 'issue33');
+		repository: (self getTestRepository: 'issue33.2');
 		package: packageName;
 		load.
 	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ].
-	self validateTimestamp: 'dkh 11/2/1954 16:15'
+	self validateTimestamp: 'ThierryGoubier 9/12/2013 17:14:30'

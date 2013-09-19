@@ -4,31 +4,27 @@ testStoreReadGitFileTree
 
 	"Problem: order of reading the definitions is different from the order in which the snapshot is extracted."
 
-	| dir c mcR pV |
-	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureDirectory.
+	| dir c mcR pV pVInfo |
+	dir := self utilityClass directoryFromPath: 'temp' relativeTo: self utilityClass default.
+	self utilityClass ensureDirectoryExists: dir.
 	self assert: dir isWritable.
-	c := self class gitCreateAndInitRepo: dir.
+	pV := MCWorkingCopy forPackage: (MCPackage named: 'MonticelloFileTree-GitTests').
+	pVInfo := pV ancestry ancestors first.
+	c := self class gitCreateAndInitRepo: dir author: pVInfo author.
 	c output.
 	self assert: c succeeded.
 	mcR := MCFileTreeGitRepository new directory: dir.
-	self assert: (dir / '.filetree') exists.
-	pV := MCWorkingCopy forPackage: (MCPackage named: 'MonticelloFileTree-GitTests').
+	self assert: (self utilityClass filePathExists: '.filetree' relativeTo: dir).
 	mcR
 		basicStoreVersion:
 			(MCVersion new
 				setPackage: (MCPackage named: 'MonticelloFileTree-GitTests')
-				info:
-					(MCVersionInfo
-						name: pV package name , '-MCFileTreeGitTests'
-						id: UUID new
-						message: 'This is a mock version'
-						date: Date today
-						time: Time now
-						author: 'MCFileTreeGitTests'
-						ancestors: #())
+				info: pVInfo
 				snapshot: pV snapshot
 				dependencies: #()).
-	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists.
 	self
-		assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions asSet = pV snapshot definitions asSet
+		assert:
+			(self utilityClass
+				directoryExists: (self utilityClass directoryFromPath: 'MonticelloFileTree-GitTests.package' relativeTo: dir)).
+	self
+		assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions size = pV snapshot definitions size

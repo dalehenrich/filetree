@@ -1,5 +1,5 @@
 testing
 testCypressCuisLoad
-	"Unsupported format in gitfiletree://"
+	"Ok, is this format now supported?"
 
-	self should: [ super testCypressCuisLoad ] raise: Error
+	super testCypressCuisLoad
