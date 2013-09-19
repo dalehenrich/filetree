@@ -1,13 +1,21 @@
 {
 	"class" : {
-		"on:id:info:" : "ThierryGoubier 6/2/2013 21:35",
-		"on:info:" : "ThierryGoubier 5/31/2013 22:37" },
+		"on:id:author:message:timeStamp:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"on:id:info:" : "ThierryGoubier 9/12/2013 17:04:50",
+		"uuidFromGitSHA:package:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"uuidFromSHA:" : "ThierryGoubier 9/13/2013 16:09:13" },
 	"instance" : {
-		"commitID" : "ThierryGoubier 6/2/2013 21:36",
-		"commitID:" : "ThierryGoubier 6/2/2013 21:36",
-		"info" : "ThierryGoubier 5/31/2013 22:34",
-		"info:" : "ThierryGoubier 5/31/2013 22:35",
-		"name" : "ThierryGoubier 6/16/2013 22:48",
-		"packageDirectory" : "ThierryGoubier 5/31/2013 22:34",
-		"packageDirectory:" : "ThierryGoubier 5/31/2013 22:35",
-		"printString" : "ThierryGoubier 5/31/2013 22:41" } }
+		"author:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"buildInfoWith:startingAt:version:ancestry:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"commitID" : "ThierryGoubier 9/13/2013 16:09:13",
+		"commitID:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"info" : "ThierryGoubier 9/13/2013 16:09:13",
+		"info:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"message:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"name" : "ThierryGoubier 9/13/2013 16:09:13",
+		"packageDirectory" : "ThierryGoubier 9/13/2013 16:09:13",
+		"packageDirectory:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"printString" : "ThierryGoubier 9/13/2013 16:09:13",
+		"summary" : "ThierryGoubier 9/13/2013 16:09:13",
+		"timeStamp:" : "ThierryGoubier 9/13/2013 16:09:13",
+		"version" : "ThierryGoubier 9/13/2013 16:09:13" } }

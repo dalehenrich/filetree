@@ -2,11 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"baseDefinitionsWithClassDefinition:timestamp:" : "ThierryGoubier 6/20/2013 14:01",
-		"getTestRepository:" : "ThierryGoubier 6/20/2013 14:14",
-		"testBaseLoad" : "ThierryGoubier 6/20/2013 13:52",
-		"testCypressCuisLoad" : "ThierryGoubier 6/20/2013 13:58",
-		"testIssue74" : "ThierryGoubier 6/20/2013 14:04",
-		"testSnapshotBaseLoad" : "ThierryGoubier 6/20/2013 13:59",
-		"testTargetLoad" : "ThierryGoubier 6/20/2013 13:57",
-		"testTreeBaseLoad" : "ThierryGoubier 6/20/2013 13:59" } }
+		"baseDefinitions" : "ThierryGoubier 9/19/2013 14:39:58",
+		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 9/19/2013 14:39:58",
+		"getTestRepository:" : "ThierryGoubier 9/19/2013 14:39:58",
+		"targetDefinitions" : "ThierryGoubier 9/19/2013 14:39:58",
+		"targetDefinitionsWithClassDefinition:" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testBaseLoad" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testBaseLoadRepository" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testCypressCuisLoad" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testIssue74" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testTargetLoad" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testTargetLoadRepository" : "ThierryGoubier 9/19/2013 14:39:58" } }

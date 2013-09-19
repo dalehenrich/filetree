@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 6/21/2013 11:47",
-		"getWriteTestRepository" : "ThierryGoubier 6/28/2013 17:28",
-		"setUp" : "ThierryGoubier 6/21/2013 11:47",
-		"tearDown" : "ThierryGoubier 6/21/2013 11:47",
-		"testLoad" : "ThierryGoubier 6/21/2013 11:47",
-		"testWrite" : "ThierryGoubier 6/21/2013 11:47",
-		"testWriteNRead" : "ThierryGoubier 6/21/2013 11:48" } }
+		"getTestRepository:" : "ThierryGoubier 9/19/2013 14:39:58",
+		"getWriteTestRepository" : "ThierryGoubier 9/19/2013 14:39:58",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 9/19/2013 14:39:58",
+		"setUp" : "ThierryGoubier 9/19/2013 14:39:58",
+		"tearDown" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testLoad" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testWrite" : "ThierryGoubier 9/19/2013 14:39:58",
+		"testWriteNRead" : "ThierryGoubier 9/19/2013 14:39:58" } }

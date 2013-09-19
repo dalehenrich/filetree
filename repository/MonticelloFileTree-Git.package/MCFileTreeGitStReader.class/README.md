@@ -8,3 +8,7 @@ Remember:
 	* zip contains the archive of the package (the contents of NameOfPackage.package according to the commitID)
 	
 Complex work-arounds to handle incorrect incoming streams; see parseMember:
+
+Avoid reading the version metadata : consider the MCVersionInfo is given by the GUI before loading the package. Do not read any metadata outside of the zip archive, since we know that the repository inspector won't use us for reading the metadata.
+
+shouldNotImplement methods are here to protect against program paths I haven't been able to cover in the superclass, or changes in the superclass implementation. It may indicate that the superclass isn't the right one.
