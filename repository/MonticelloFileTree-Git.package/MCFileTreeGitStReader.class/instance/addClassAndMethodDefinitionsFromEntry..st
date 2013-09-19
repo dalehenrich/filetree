@@ -10,6 +10,6 @@ addClassAndMethodDefinitionsFromEntry: classEntry
 	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	(entries detect: [ :entry | entry splitFileName last = 'README.md' ] ifNone: [  ])
-		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents ].
-	self addClassDefinitionFrom: classPropertiesDict comment: classComment withSqueakLineEndings.
+		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents withSqueakLineEndings ].
+	self addClassDefinitionFrom: classPropertiesDict comment: classComment .
 	self addMethodDefinitionsForClass: (classPropertiesDict at: 'name') in: entries root: classEntry
