@@ -5,4 +5,4 @@ testBaseLoadRepository
 	| repo files |
 	repo := self getTestRepository: 'ver01.1'.
 	files := repo allFileNames.
-	self assert: files first commitID hex = '6b56f0838ef7ec773e3878eabb38e6f694293696'
+	self assert: files first commitID hex = '0a3a0b53ae2252421411b8a1dfa5c32923247cfc'

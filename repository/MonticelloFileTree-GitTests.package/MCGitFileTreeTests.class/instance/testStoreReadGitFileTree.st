@@ -5,8 +5,8 @@ testStoreReadGitFileTree
 	"Problem: order of reading the definitions is different from the order in which the snapshot is extracted."
 
 	| dir c mcR pV pVInfo |
-	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureDirectory.
+	dir := self utilityClass directoryFromPath: 'temp' relativeTo: self utilityClass default.
+	self utilityClass ensureDirectoryExists: dir.
 	self assert: dir isWritable.
 	pV := MCWorkingCopy forPackage: (MCPackage named: 'MonticelloFileTree-GitTests').
 	pVInfo := pV ancestry ancestors first.
@@ -14,7 +14,7 @@ testStoreReadGitFileTree
 	c output.
 	self assert: c succeeded.
 	mcR := MCFileTreeGitRepository new directory: dir.
-	self assert: (dir / '.filetree') exists.
+	self assert: (self utilityClass filePathExists: '.filetree' relativeTo: dir).
 	mcR
 		basicStoreVersion:
 			(MCVersion new
@@ -22,5 +22,9 @@ testStoreReadGitFileTree
 				info: pVInfo
 				snapshot: pV snapshot
 				dependencies: #()).
-	self assert: (dir / 'MonticelloFileTree-GitTests.package') exists.
-	self assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions size = pV snapshot definitions size
+	self
+		assert:
+			(self utilityClass
+				directoryExists: (self utilityClass directoryFromPath: 'MonticelloFileTree-GitTests.package' relativeTo: dir)).
+	self
+		assert: (mcR versionFromFileNamed: mcR allFileNames first) snapshot definitions size = pV snapshot definitions size

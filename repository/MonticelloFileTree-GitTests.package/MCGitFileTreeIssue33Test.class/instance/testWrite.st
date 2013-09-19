@@ -8,7 +8,7 @@ testWrite
 		repository: (repo := self getTestRepository: 'issue33.2');
 		package: packageName;
 		load.
-	self validateTimestamp: 'ThierryGoubier 7/25/2013 07:34:19'.
+	self validateTimestamp: 'ThierryGoubier 9/12/2013 17:14:30'.
 	#('CCC')
 		do: [ :pn | 
 			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.

@@ -1,0 +1,3 @@
+resources
+utilityClass
+	^ MCFileTreeFileUtils current

@@ -12,8 +12,7 @@ testFlushCache
 	self utilityClass ensureDirectoryExists: repoDir.
 	c := MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
 	c output.
-	self assert: c succeeded.
-	"
+	self assert: c succeeded.	"
 ---
 verify that we're getting default propertyExtension
 "
