@@ -4,19 +4,12 @@ addClassAndMethodDefinitionsFromEntry: classEntry
 
 	"Would have been convenient to have directory members listing the files they contain."
 
-	| classPropertiesDict classComment methodPropertiesDict entries |
+	| classPropertiesDict classComment entries |
 	entries := self zip members
 		select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: classEntry fileName ] ].
-	(entries detect: [ :entry | entry splitFileName last = 'properties.json' ] ifNone: [  ])
+	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
 		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
 	(entries detect: [ :entry | entry splitFileName last = 'README.md' ] ifNone: [  ])
-		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents ].
-	methodPropertiesDict := Dictionary new.
-	(entries detect: [ :entry | entry splitFileName last = 'methodProperties.json' ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | methodPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
-	self addClassDefinitionFrom: classPropertiesDict comment: classComment withSqueakLineEndings.
-	self
-		addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
-		methodProperties: methodPropertiesDict
-		in: entries
-		root: classEntry
+		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents withSqueakLineEndings ].
+	self addClassDefinitionFrom: classPropertiesDict comment: classComment .
+	self addMethodDefinitionsForClass: (classPropertiesDict at: 'name') in: entries root: classEntry
