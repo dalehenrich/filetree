@@ -1,12 +1,13 @@
 tests
 testLoad
-    | packageName |
-    #('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].
-    packageName := 'CCC'.
-    Gofer new
-        disablePackageCache;
-        repository: (self getTestRepository: 'issue113');
-        package: packageName;
-        load.
-    #('CCC') do: [ :pn | self assert: (self hasPackage: pn) ].
-    self validateTimestamp: 'dkh 11/2/1954 16:15'
+	"When loading without metadata, we will not check the timestamp since it is auto-generated."
+
+	| packageName |
+	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].
+	packageName := 'CCC'.
+	Gofer new
+		disablePackageCache;
+		repository: (self getTestRepository: 'issue113');
+		package: packageName;
+		load.
+	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ]
