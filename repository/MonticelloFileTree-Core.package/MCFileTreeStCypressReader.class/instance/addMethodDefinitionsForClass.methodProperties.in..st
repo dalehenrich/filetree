@@ -21,7 +21,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties in: e
                                             (classIsMeta
                                                 ifTrue: [ 'class' ]
                                                 ifFalse: [ 'instance' ])
-                                        ifPresent: [ :map | map at: selector asString ifAbsent: [  ] ].	"Issue 33: https://github.com/dalehenrich/filetree/issues/33"
+                                        ifPresent: [ :map | map at: selector asString ifAbsent: [ self halt ] ].	"Issue 33: https://github.com/dalehenrich/filetree/issues/33"
                                     timestamp
                                         ifNil: [ timestamp := self info author , ' ' , self info date mmddyyyy , ' ' , self info time print24 ].
                                     definitions
