@@ -1,3 +1,0 @@
-*ccc
-aFiletreeCCCClassMethod
-    ^ self

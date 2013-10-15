@@ -1,5 +1,5 @@
 {
-	"category" : "CCC",
+	"category" : "DDD",
 	"classinstvars" : [
 		 ],
 	"classtraitcomposition" : "{}",
@@ -9,7 +9,7 @@
 	"instvars" : [
 		"definition",
 		"token" ],
-	"name" : "CCC",
+	"name" : "DDD",
 	"pools" : [
 		 ],
 	"super" : "Object",

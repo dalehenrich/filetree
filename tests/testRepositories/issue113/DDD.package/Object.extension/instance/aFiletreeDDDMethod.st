@@ -1,0 +1,3 @@
+*ddd
+aFiletreeDDDMethod
+    ^ self
