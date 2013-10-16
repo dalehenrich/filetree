@@ -1,12 +1,12 @@
 {
 	"class" : {
-		"resetTestglobal" : "ThierryGoubier 9/27/2013 16:17:43",
-		"testglobal" : "ThierryGoubier 9/27/2013 16:17:43",
-		"testglobal:" : "ThierryGoubier 9/27/2013 16:17:43" },
+		"resetTestglobal" : "ThierryGoubier 10/4/2013 14:06:53",
+		"testglobal" : "ThierryGoubier 10/4/2013 14:06:53",
+		"testglobal:" : "ThierryGoubier 10/4/2013 14:06:53" },
 	"instance" : {
-		"initialize" : "ThierryGoubier 9/27/2013 16:17:43",
-		"tearDown" : "ThierryGoubier 9/27/2013 16:17:43",
-		"tearDownPackagesList" : "ThierryGoubier 9/27/2013 16:17:43",
-		"testLoad" : "ThierryGoubier 9/27/2013 16:17:43",
-		"testLoad:" : "ThierryGoubier 9/27/2013 16:17:43",
-		"testWriteNRead" : "ThierryGoubier 9/27/2013 16:17:43" } }
+		"initialize" : "ThierryGoubier 10/4/2013 14:06:53",
+		"tearDown" : "ThierryGoubier 10/4/2013 14:06:53",
+		"tearDownPackagesList" : "ThierryGoubier 10/4/2013 14:06:53",
+		"testLoad" : "ThierryGoubier 10/4/2013 14:06:53",
+		"testLoad:" : "ThierryGoubier 10/4/2013 14:06:53",
+		"testWriteNRead" : "ThierryGoubier 10/4/2013 14:06:53" } }

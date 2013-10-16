@@ -1,0 +1,1 @@
+Test loading with partial metadata and fallback.
