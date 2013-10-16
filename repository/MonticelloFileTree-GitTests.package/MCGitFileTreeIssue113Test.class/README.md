@@ -1,0 +1,1 @@
+Issue 113 is about partial metadata support. Here, gitfiletree will extract the metadata from git, and won't even notice the missing metadata files.

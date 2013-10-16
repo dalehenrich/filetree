@@ -1,12 +1,12 @@
 testing
 testLoad
 	| packageName |
-	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].
-	packageName := 'CCC'.
+	#('DDD') do: [ :pn | self deny: (self hasPackage: pn) ].
+	packageName := 'DDD'.
 	Gofer new
 		disablePackageCache;
 		repository: (self getTestRepository: 'issue113');
 		package: packageName;
 		load.
-	#('CCC') do: [ :pn | self assert: (self hasPackage: pn) ].
-	self validateTimestamp: 'ThierryGoubier 9/27/2013 16:05:48'
+	#('DDD') do: [ :pn | self assert: (self hasPackage: pn) ].
+	self validateTimestamp: 'ThierryGoubier 10/15/2013 17:29:13'
