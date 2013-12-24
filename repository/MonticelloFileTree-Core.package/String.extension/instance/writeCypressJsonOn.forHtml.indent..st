@@ -5,5 +5,5 @@ writeCypressJsonOn: aStream forHtml: forHtml indent: startIndent
 	aStream nextPutAll: '"'.
 	forHtml
 		ifTrue: [ aStream nextPutAll: self cypressEscape ]
-		ifFalse: [ self do: [ :c | aStream nextPutAll: (self cypressEscapeCharacter: c) ] ].
+		ifFalse: [ self cypressEscapeCharactersOn: aStream ].
 	aStream nextPutAll: '"'

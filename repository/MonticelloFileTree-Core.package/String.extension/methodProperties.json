@@ -3,6 +3,7 @@
 		 },
 	"instance" : {
 		"cypressEscape" : "SvenVanCaekenberghe 10/27/2013 11:46",
-		"cypressEscapeCharacter:" : "BenjaminVanRyseghem 12/24/2013 01:08",
+		"cypressEscapeCharacter:on:" : "BenjaminVanRyseghem 12/24/2013 01:53",
+		"cypressEscapeCharactersOn:" : "BenjaminVanRyseghem 12/24/2013 01:53",
 		"cypressUnescape" : "SvenVanCaekenberghe 10/27/2013 12:18",
-		"writeCypressJsonOn:forHtml:indent:" : "BenjaminVanRyseghem 12/24/2013 01:09" } }
+		"writeCypressJsonOn:forHtml:indent:" : "BenjaminVanRyseghem 12/24/2013 01:53" } }

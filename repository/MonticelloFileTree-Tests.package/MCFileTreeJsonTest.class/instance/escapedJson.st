@@ -1,5 +1,6 @@
 private
 escapedJson
 	^ '{
+	"\''" : "\"",
 	"\\" : "\\\\" }
 '

@@ -5,6 +5,7 @@ testCharacterEscape
 	
 	propertyDictionary := Dictionary new
 		at: '\' put: '\\';
+		at: '''' put: '"';
 		yourself.
 	stream := WriteStream on: String new.
 	propertyDictionary writeCypressJsonOn: stream.
