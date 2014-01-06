@@ -5,8 +5,10 @@ parseCharacter
 		ifFalse: [ ^ char ].
 	(char := stream next) = $" 
 		ifTrue: [ ^ char ].
-	char = $\
+	char = $'
 		ifTrue: [ ^ char ].
+	char = $\
+		ifTrue: [ ^ char ].	
 	char = $/
 		ifTrue: [ ^ char ].
 	char = $b
