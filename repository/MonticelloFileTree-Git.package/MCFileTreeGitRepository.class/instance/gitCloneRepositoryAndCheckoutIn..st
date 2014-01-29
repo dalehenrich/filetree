@@ -16,6 +16,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 	c output.	"Force the command to terminate."
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+	GrowlMorph openWithLabel: 'gitfiletree://' contents: 'Cloning remote repository: done!'.
 	self
 		directory:
 			(subdirectory isNil
