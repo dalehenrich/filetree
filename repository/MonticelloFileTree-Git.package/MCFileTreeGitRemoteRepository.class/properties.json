@@ -6,11 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"remoteUrl",
-		"branch",
-		"subdirectory" ],
-	"name" : "MCFileTreeGitRepository",
+		 ],
+	"name" : "MCFileTreeGitRemoteRepository",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeRepository",
+	"super" : "MCFileTreeGitRepository",
 	"type" : "normal" }
