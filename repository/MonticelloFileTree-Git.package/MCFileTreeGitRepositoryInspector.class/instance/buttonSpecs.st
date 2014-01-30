@@ -1,4 +1,5 @@
 morphic ui
 buttonSpecs
-	^#(('Pull' gitPull 'git pull and refresh')
-		('Push' gitPush 'git push')) , super buttonSpecs
+	repository readonly
+		ifTrue: [ ^ super buttonSpecs ]
+		ifFalse: [ ^ #(#('Pull' #gitPull 'git pull and refresh') #('Push' #gitPush 'git push')) , super buttonSpecs ]

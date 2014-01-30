@@ -1,24 +1,22 @@
 A MCFileTreeGitRepository adds git commands via OSProcess when saving a package in a filetree.
 Uses gitfiletree: as a protocol (:().
 
-Commands done so far:
-git add name.package; git commit ...
-git add .filetree
-	when creating the repository
-git archive
-	on a specific commit, retrieve the package (or part of it)
-
-Git commands of interest:
-
-git status
-	To test if we are really in a git repo and that the git command works.
-git log --follow --pretty="%H" --no-notes MonticelloFileTree-Git.package/monticello.meta/version
-	To get all the commitIDs with all the versions of the packages.
-git archive 5562cc769a36b0cdf29dbcb53aa84704b72ce60d MonticelloFileTree-Git.package/monticello.meta/version | tar x -O
-	Will dump the version file for that specific commit on the command line, so that we may recover all we need from it.
+A gitfiletree url with a protocol parameter is the target for a remote. Otherwise the url is considered as a local file reference.
+	Parameters are:
+		dir : the directory inside the repository where the target MC packages are.
+		branch : the git branch to fetch.
+		protocol : the protocol to use to access the repository from git. Essentially make the difference between ssh (git@hostname:pathToRepo) and others urls (https://hostname/pathToRepo).
+		readOnly : is the repository read only? If yes, reduce the history to a minimum, restrict operations on the GUI and append the created repository name.
+	Once parameters are set, it becomes mandatory to have a protocol and a remote url
+	Among parameters, protocol is mandatory, all others are optional.
 	
-Implementation. Get all commits hashes related to a package versions. Then get all version files to recover the data. Store the version and hash in the listing in the GUI... Now, about loading it... Change the reader to bring along the hash for that version, and use the git archive trick to load each package as a zip.
+Example :
+	MCFileTreeGitRepository fromZnUrl: (ZnUrl fromString: 'gitfiletree://github.com/ThierryGoubier/filetree.git?protocol=git&dir=repository&branch=pharo3.0' ).
+	Creates a MC repository on a git clone of github.com/ThierryGoubier/filetree.git,
+	on branch pharo3.0
+	stored in a directory named filetree under the Pharo working directory,
+	and pointing to the repository/ subdirectory where the filetree packages  are kept.
 
-Has now a Gofer interface. Tries to correctly load utf8 data from the zip archive. Cuts the runtime by two.
+gitfiletree core documentation :
 
-[MCFileTreeGitRepository allInstances first cacheAllFileNamesDuring: [  Gofer new url: 'gitfiletree:///home/thierry/src/GitFileTree/AltBrowser'; version: 'ConfigurationOfAltBrowser-ThierryGoubier.1'; load]] timeToRun
+gitfiletree maps MC commands onto git commands via OSProcess, and MC metadata out of git commit data. That's all there is to it. A bit of git knowledge can help, but no git command line work is necessary. The inner workings are a bit more complex than that of course, but not by much.
