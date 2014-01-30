@@ -8,7 +8,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 	targetDirName := readonly
 		ifTrue: [ aDirectoryName , '-readonly' ]
 		ifFalse: [ aDirectoryName ].
-	(targetDir := FileSystem workingDirectory) / targetDirName.
+	targetDir := FileSystem workingDirectory / targetDirName.
 	targetDir exists
 		ifTrue: [ 
 			self
