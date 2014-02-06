@@ -1,3 +1,0 @@
-constants
-schemeName
-	^ 'gitfiletree'
