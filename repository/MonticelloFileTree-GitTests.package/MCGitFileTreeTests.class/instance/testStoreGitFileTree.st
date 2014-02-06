@@ -3,8 +3,8 @@ testStoreGitFileTree
 	"Create a gitfiletree repo, and store our test package on it. Record the snapshot and compare with a reread."
 
 	| dir c mcR pV pVInfo |
-	dir := FileSystem disk workingDirectory / 'temp'.
-	dir ensureDirectory.
+	dir := self utilityClass directoryFromPath: 'temp' relativeTo: self utilityClass default.
+	self utilityClass ensureDirectoryExists: dir.
 	self assert: dir isWritable.
 	pV := MCWorkingCopy forPackage: (MCPackage named: 'MonticelloFileTree-GitTests').
 	pVInfo := pV ancestry ancestors first.
@@ -12,7 +12,7 @@ testStoreGitFileTree
 	c output.
 	self assert: c succeeded.
 	mcR := MCFileTreeGitRepository new directory: dir.
-	self assert: (dir / '.filetree') exists.
+	self assert: (self utilityClass filePathExists: '.filetree' relativeTo: dir).
 	mcR
 		basicStoreVersion:
 			(MCVersion new
@@ -20,4 +20,4 @@ testStoreGitFileTree
 				info: pVInfo
 				snapshot: pV snapshot
 				dependencies: #()).
-	mcR assert: (dir / 'MonticelloFileTree-GitTests.package') exists
+	self assert: (self utilityClass directoryExists: (self utilityClass directoryFromPath: 'MonticelloFileTree-GitTests.package' relativeTo: dir))
