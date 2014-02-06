@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'MonticelloFileTree-Git.pharo20'!
+SystemOrganization addCategory: #'MonticelloFileTree-Git'!
