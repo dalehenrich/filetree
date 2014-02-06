@@ -10,5 +10,5 @@
 	"name" : "GitFileTreeUrl",
 	"pools" : [
 		 ],
-	"super" : "FileUrl",
+	"super" : "HierarchicalUrl",
 	"type" : "normal" }
