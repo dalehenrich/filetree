@@ -15,5 +15,6 @@ location: aGitUrl name: aName subdirectory: aDirectoryName branch: aBranch
 				ifTrue: [ nil ]
 				ifFalse: [ aBranch ]).
 	repo remoteUrl: aGitUrl.
+	repo readonly: false.
 	repo gitCloneRepositoryAndCheckoutIn: aName.
 	^ repo
