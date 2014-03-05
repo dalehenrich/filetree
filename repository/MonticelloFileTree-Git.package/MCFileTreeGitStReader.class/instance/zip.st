@@ -2,13 +2,16 @@ accessing
 zip
 	"Get the zip based on the commitID."
 
-	| c |
+	| c output |
 	zip isNil
 		ifTrue: [ 
 			zip := ZipArchive new.
 			c := PipeableOSProcess
-				command: 'cd ' , (self fileUtils directoryPathString: stream) , '; git archive --format=zip ' , commitID hex , ' ' , packageDirectory.
-			zip readFrom: (ReadStream on: c output asByteArray).
+				command:
+					'cd ' , (self fileUtils directoryPathString: stream) , '; git archive --format=zip ' , commitID hex , ' '
+						, packageDirectory.
+			output := c output.
 			c succeeded
-				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ].
+				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+			zip readFrom: (ReadStream on: output asByteArray) ].
 	^ zip
