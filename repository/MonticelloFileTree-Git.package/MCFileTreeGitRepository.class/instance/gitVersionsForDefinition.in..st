@@ -17,7 +17,7 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 	(self fileUtils directoryExists: fileDirectory)
 		ifFalse: [ NotFound signalFor: fileDirectory ].
 	c := PipeableOSProcess
-		command: 'cd ' , (self fileUtils directoryPathString: fileDirectory) , '; git log --format="%H" -- ' , methodFile.
+		command: 'cd "' , (self fileUtils directoryPathString: fileDirectory) , '"; git log --format="%H" -- ' , methodFile.
 	commitIDs := ReadStream on: c output.
 	c succeeded
 		ifFalse: [ NotFound signalFor: c errorPipelineContents ].

@@ -4,9 +4,9 @@ gitBranchs
 
 	"This is used to determine the current branch."
 
-	| c commitIDs |
-	c := PipeableOSProcess command: 'cd ' , (self fileUtils directoryPathString: directory) , '; git branch'.
-	commitIDs := c output.
+	| c output |
+	c := PipeableOSProcess command: 'cd "' , (self fileUtils directoryPathString: directory) , '"; git branch'.
+	output := c output.
 	c succeeded
 		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
-	^ commitIDs substrings
+	^ output substrings

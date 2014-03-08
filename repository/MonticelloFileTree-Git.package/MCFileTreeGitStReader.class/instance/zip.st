@@ -8,7 +8,7 @@ zip
 			zip := ZipArchive new.
 			c := PipeableOSProcess
 				command:
-					'cd ' , (self fileUtils directoryPathString: stream) , '; git archive --format=zip ' , commitID hex , ' '
+					'cd "' , (self fileUtils directoryPathString: stream) , '"; git archive --format=zip ' , commitID hex , ' '
 						, packageDirectory.
 			output := c output.
 			c succeeded
