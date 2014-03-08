@@ -3,6 +3,8 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 	"Do a clone on the remote repository and do a checkout on it to get the right branch. Complement the directory as well with the working directory. Note the name change when the directory is read-only: this is to protect of a Metacello problem when loading from a configuration with both a read-only and a read-write target (do I also need to protect when dealing with branches?)."
 
 	"Metacello issues: even when selecting a specific version, will I load all repositories? It seems no."
+	
+	"Interesting. I can't use relative paths with MCFileTreeUtils"
 
 	| c targetDir targetDirName |
 	targetDirName := readonly
@@ -13,10 +15,11 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 		ifTrue: [ 
 			self
 				error:
-					'GitFileTree target directory already exists, cancelling clone and repository instanciation : ' , targetDir pathString ].
+					'GitFileTree target directory already exists, cancelling clone and repository instanciation : ' , (self fileUtils directoryPathString: targetDir) ].
 	c := PipeableOSProcess
 		command:
-			'cd ' , FileSystem workingDirectory pathString , '; git clone ' , (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
+			'cd "' , (self fileUtils directoryPathString: FileSystem workingDirectory) , '"; git clone '
+				, (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
 				,
 					(readonly
 						ifTrue: [ ' --depth 1 ' ]
