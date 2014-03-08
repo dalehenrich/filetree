@@ -11,7 +11,7 @@ basicStoreVersion: aVersion
 	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
 	c := PipeableOSProcess
 		command:
-			'cd ' , (self fileUtils directoryPathString: directory) , '; git add ' , packageDirectoryString , '; git commit -m "'
+			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add ' , packageDirectoryString , '; git commit -m "'
 				, (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString.
 	c output.
 	c succeeded

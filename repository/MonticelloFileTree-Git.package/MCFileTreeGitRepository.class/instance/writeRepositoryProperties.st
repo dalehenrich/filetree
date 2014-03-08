@@ -6,7 +6,7 @@ writeRepositoryProperties
 	super writeRepositoryProperties.
 	c := PipeableOSProcess
 		command:
-			'cd ' , (self fileUtils directoryPathString: directory) , '; git add .filetree; git commit -m "gitfiletree repository properties" -- .filetree'.
+			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add .filetree; git commit -m "gitfiletree repository properties" -- .filetree'.
 	s := c output.
 	c succeeded
 		ifFalse: [ 
