@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fileStream" ],
+	"name" : "MCFileTreeVersionInfoWriter",
+	"pools" : [
+		 ],
+	"super" : "MCWriter",
+	"type" : "normal" }
