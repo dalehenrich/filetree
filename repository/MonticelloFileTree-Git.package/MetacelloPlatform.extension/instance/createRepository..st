@@ -1,4 +1,4 @@
-*monticellofiletree-git
+*monticellofiletree-git-override
 createRepository: aRepositorySpec
 	| type |
 	type := aRepositorySpec type.
