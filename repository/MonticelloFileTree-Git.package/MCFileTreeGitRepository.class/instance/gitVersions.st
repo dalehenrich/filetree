@@ -5,9 +5,11 @@ gitVersions
 	"This is used to establish an ancestry chain package per package."
 
 	| c commitIDs |
+	[ 
 	c := PipeableOSProcess
 		command: 'cd "' , (self fileUtils directoryPathString: directory) , '"; git log --format="commit %H %P"'.
 	commitIDs := ReadStream on: c output.
 	c succeeded
-		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
+		ensure: [ c closePipes ].
 	^ commitIDs

@@ -27,6 +27,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 							'GitFileTree target directory already exists and is on another branch, cancelling clone and repository instanciation : '
 								, (self fileUtils directoryPathString: targetDir) ] ]
 		ifFalse: [ 
+			[ 
 			c := PipeableOSProcess
 				command:
 					'cd "' , (self fileUtils directoryPathString: FileSystem workingDirectory) , '"; git clone '
@@ -37,7 +38,8 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 								ifFalse: [ ' ' ]) , remoteUrl , ' ' , targetDirName.
 			c output.	"Force the command to terminate."
 			c succeeded
-				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
+				ensure: [ c closePipes ].
 			GrowlMorph openWithLabel: 'gitfiletree://' contents: 'Cloning remote repository: done!'.
 			self
 				directory:
