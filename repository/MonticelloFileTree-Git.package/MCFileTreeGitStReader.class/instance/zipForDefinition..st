@@ -19,12 +19,14 @@ zipForDefinition: aMCDefinition
 				ifFalse: [ 'instance' ]) , self slash , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector)
 		, '.st'.
 	classPropertiesFile := classDirectory , self slash , 'properties.json'.
+	[ 
 	c := PipeableOSProcess
 		command:
 			'cd "' , (self fileUtils directoryPathString: stream) , '"; git archive --format=zip ' , commitID hex , ' ' , methodFile
 				, ' ' , classPropertiesFile.
 	output := c output.
 	c succeeded
-		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
+		ensure: [ c closePipes ].
 	zip readFrom: (ReadStream on: output asByteArray).
 	^ zip
