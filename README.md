@@ -17,7 +17,7 @@ Gofer new
   url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
   load.
 (Smalltalk at: #GsUpgrader) upgradeMetacello.
-Metacello new
+(Smalltalk at: #Metacello) new
   baseline: 'FileTree';
   repository: 'github://dalehenrich/filetree:gemstone2.4/repository';
   load.
