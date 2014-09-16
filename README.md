@@ -6,10 +6,24 @@ managing Smalltalk source code.*
 
 The current version of **FileTree** has been tested in 
 GemStone2.x, GemStone3.x, 
-Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, 
+Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, Pharo3.0,
 Squeak4.3, Squeak4.4, Squeak4.5.
 
-To install in GemStone or Pharo:
+To install in **GemStone**:
+
+```Smalltalk
+Gofer new
+  package: 'GsUpgrader-Core';
+  url: 'http://ss3.gemtalksystems.com/ss/gsUpgrader';
+  load.
+(Smalltalk at: #GsUpgrader) upgradeMetacello.
+(Smalltalk at: #Metacello) new
+  baseline: 'FileTree';
+  repository: 'github://dalehenrich/filetree:gemstone2.4/repository';
+  load.
+```
+
+To install in **Pharo** (note FileTree is pre-installed in **Pharo3.0** and **Pharo4.0**):
 
 ```Smalltalk
 Gofer new
@@ -19,7 +33,7 @@ Gofer new
 ((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
 ```
 
-To install in Squeak:
+To install in **Squeak**:
 
 ```Smalltalk
 Installer ss3
