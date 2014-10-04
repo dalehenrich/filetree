@@ -1,6 +1,6 @@
 accessing
 fileNameForSelector: selector
-  ^ selector last = $:
+  ^ (selector includes: $:)
     ifTrue: [ 
       selector
         collect: [ :each | 
