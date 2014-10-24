@@ -4,4 +4,4 @@ conditionTimestamp: aString
 	
 	| ts | 
 	ts := TimeStamp readFrom: aString readStream.
-	^ts date mmddyyyy, ' ', (String streamContents: [:s | ts time print24: true on: s])
+	^ts asDate mmddyyyy, ' ', (String streamContents: [:s | ts asTime print24: true on: s])
