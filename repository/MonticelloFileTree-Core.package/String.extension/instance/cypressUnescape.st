@@ -1,3 +1,3 @@
 *monticellofiletree-core
 cypressUnescape
-    ^ self unescapePercents
+    ^ self urlDecoded
