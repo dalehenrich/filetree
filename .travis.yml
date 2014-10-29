@@ -10,7 +10,7 @@ env:
    - ST=Squeak-4.3
    - ST=Squeak-4.4
    - ST=Squeak-4.5
-   - ST=Squeak-Trunk
+#   - ST=Squeak-Trunk # see https://github.com/dalehenrich/metacello-work/issues/308
    - ST=GemStone-2.4.4.1
    - ST=GemStone-2.4.4.7
    - ST=GemStone-2.4.5
