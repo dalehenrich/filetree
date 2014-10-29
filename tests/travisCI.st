@@ -29,3 +29,6 @@ Gofer new
   load.
 
 Transcript cr; show: '-------------->SUCCESSFUL LOAD'; cr.
+
+TravisCISuccessNoFailure
+      value: 'TravisCISuccess.txt'.
