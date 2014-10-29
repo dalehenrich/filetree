@@ -4,7 +4,7 @@ zipForDefinition: aMCDefinition
 
 	"Ask in the archive, the method file, and the class properties file."
 
-	| c classDirectory methodFile classPropertiesFile |
+	| c output classDirectory methodFile classPropertiesFile |
 	self assert: aMCDefinition isMethodDefinition.
 	zip := ZipArchive new.
 	classDirectory := packageDirectory , self slash , aMCDefinition className
@@ -19,10 +19,14 @@ zipForDefinition: aMCDefinition
 				ifFalse: [ 'instance' ]) , self slash , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector)
 		, '.st'.
 	classPropertiesFile := classDirectory , self slash , 'properties.json'.
+	[ 
 	c := PipeableOSProcess
 		command:
-			'cd ' , (self fileUtils directoryPathString: stream)  , '; git archive --format=zip ' , commitID hex , ' ' , methodFile , ' ' , classPropertiesFile.
-	zip readFrom: (ReadStream on: c output asByteArray).
+			'cd "' , (self fileUtils directoryPathString: stream) , '"; git archive --format=zip ' , commitID hex , ' ' , methodFile
+				, ' ' , classPropertiesFile.
+	output := c output.
 	c succeeded
-		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ].
+		ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
+		ensure: [ c closePipes ].
+	zip readFrom: (ReadStream on: output asByteArray).
 	^ zip

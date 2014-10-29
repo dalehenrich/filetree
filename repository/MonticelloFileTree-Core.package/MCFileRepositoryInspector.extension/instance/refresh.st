@@ -2,7 +2,6 @@
 refresh
 	| packageNames |
 	packageNames := Set new.
-	packageList := nil.
 	versions := repository retrieveVersionsWithPackageNames: packageNames.
 	newer := Set new.
 	inherited := Set new.
@@ -31,5 +30,5 @@ refresh
 								or: [ av = latest third and: [ ((ancestor name copyAfterLast: $-) copyUpTo: $.) ~= latest second ] ] ] ])
 				ifTrue: [ newer add: each package name ] ].	"		select: [ :each | packageNames includes: each packageName]"
 	self
-		changed: #packageList;
+		packageListUpdate;
 		changed: #versionList

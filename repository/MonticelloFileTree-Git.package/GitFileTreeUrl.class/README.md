@@ -1,1 +1,0 @@
-A FileTreeUrl represent a gitfiletree:// path for Gofer.

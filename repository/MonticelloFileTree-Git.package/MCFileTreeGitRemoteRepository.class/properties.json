@@ -7,8 +7,8 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
-	"name" : "GitFileTreeUrl",
+	"name" : "MCFileTreeGitRemoteRepository",
 	"pools" : [
 		 ],
-	"super" : "FileUrl",
+	"super" : "MCFileTreeGitRepository",
 	"type" : "normal" }

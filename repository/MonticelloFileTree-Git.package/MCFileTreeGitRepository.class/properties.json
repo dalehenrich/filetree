@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		 ],
+		"remoteUrl",
+		"branch",
+		"subdirectory" ],
 	"name" : "MCFileTreeGitRepository",
 	"pools" : [
 		 ],

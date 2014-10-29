@@ -5,5 +5,5 @@ testIssue74
 	| dir |
 	dir := self getTestRepositoriesDirectory.
 	Gofer new
-		url: 'gitfiletree://' , (utilityClass directoryPathString: dir) , '/issue72';
+		repository: (MCFileTreeGitRepository new directory: ((utilityClass directoryPathString: dir) , '/issue72') asFileReference);
 		allResolved
