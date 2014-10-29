@@ -122,14 +122,12 @@ baseline103: spec
           with: [ 
               spec
                 className: 'ConfigurationOfGsCore';
-                repository:
-                    'http://seaside.https://github.com/dalehenrich/filetree/issues/86.com/ss/MetacelloRepository' ];
+                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ];
         project: 'Monticello'
           with: [ 
               spec
                 className: 'ConfigurationOfGsMonticello';
-                repository:
-                    'http://seaside.https://github.com/dalehenrich/filetree/issues/86.com/ss/MetacelloRepository' ].
+                repository: 'http://seaside.gemstone.com/ss/MetacelloRepository' ].
       spec
         package: 'MonticelloFileTree-Core'
           with: [ 
