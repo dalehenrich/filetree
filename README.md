@@ -9,6 +9,7 @@ GemStone2.x, GemStone3.x,
 Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, Pharo3.0,
 Squeak4.3, Squeak4.4, Squeak4.5.
 
+### GemStone
 To install in **GemStone**:
 
 ```Smalltalk
@@ -23,6 +24,7 @@ Gofer new
   load.
 ```
 
+### Pharo
 To install in **Pharo** (note FileTree is pre-installed in **Pharo3.0** and **Pharo4.0**):
 
 ```Smalltalk
@@ -33,6 +35,24 @@ Gofer new
 ((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
 ```
 
+To get the latest and greatest version of FileTree for **Pharo** make sure that you've installed the [Metacello Preview](https://github.com/dalehenrich/metacello-work#install-preview-version) and then execute the following:
+
+```Smalltalk
+Metacello new
+  baseline: 'FileTree';
+  repository: 'github://dalehenrich/filetree:<pharo-branch>/repository';
+  load.
+```
+
+replacing *\<pharo-branch\>* with the proper version-based branch name (use **pharo3.0** for Pharo-4.0):
+
+* pharo1.1
+* pharo1.3
+* pharo1.4
+* pharo2.0
+* pharo3.0
+
+### Squeak
 To install in **Squeak**:
 
 ```Smalltalk
@@ -40,6 +60,15 @@ Installer ss3
     project: 'FileTree';
     install: 'ConfigurationOfFileTree'.
 ((Smalltalk at: #ConfigurationOfFileTree) project version: #'stable') load.
+```
+
+To get the latest and greatest version of FileTree for **Squeak** make sure that you've installed the [Metacello Preview](https://github.com/dalehenrich/metacello-work#install-preview-version) and then execute the following:
+
+```Smalltalk
+Metacello new
+  baseline: 'FileTree';
+  repository: 'github://dalehenrich/filetree:squeak4.3/repository';
+  load.
 ```
 
 ## Contributing
