@@ -6,7 +6,7 @@ managing Smalltalk source code.*
 
 The current version of **FileTree** has been tested in 
 GemStone2.x, GemStone3.x, 
-Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, Pharo3.0,
+Pharo1.1, Pharo1.2, Pharo1.3, Pharo1.4, Pharo2.0, Pharo3.0, Pharo4.0,
 Squeak4.3, Squeak4.4, Squeak4.5.
 
 ### GemStone
