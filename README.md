@@ -92,7 +92,7 @@ Here are some guidelines on contributing to the project:
 
 **pharo2.0** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=pharo2.0)](http://travis-ci.org/dalehenrich/filetree)
 
-**pharo3.0** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=pharo3.0)](http://travis-ci.org/dalehenrich/filetree)
+**pharo3.0 & pharo4.0** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=pharo3.0)](http://travis-ci.org/dalehenrich/filetree)
 
 **squeak4.3, squeak4.4 & squeak4.5** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=squeak4.3)](http://travis-ci.org/dalehenrich/filetree) 
 
