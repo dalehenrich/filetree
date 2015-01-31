@@ -2,8 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "dkh 01/31/2015 12:48",
 		"tearDown" : "dkh 01/31/2015 12:59",
-		"tearDownPackagesList" : "dkh 01/31/2015 13:28",
+		"tearDownPackagesList" : "dkh 01/31/2015 14:59",
 		"testClassError" : "dkh 01/31/2015 12:43",
-		"testExtensionMethodError" : "dkh 01/31/2015 12:43" } }
+		"testClassV3" : "dkh 01/31/2015 15:30",
+		"testExtensionMethodError" : "dkh 01/31/2015 12:43",
+		"testExtensionMethodV3" : "dkh 01/31/2015 15:30" } }
