@@ -15,4 +15,5 @@ testExtensionMethodError
       hitError := (description := ex description)
         endsWith:
           'Method protocol ''*Issue97'' for the method ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-2''' ].
+  Transcript cr; show: 'testExtensionMethodError: ', hitError printString, ' :: ', description printString.
   self assert: hitError description: description
