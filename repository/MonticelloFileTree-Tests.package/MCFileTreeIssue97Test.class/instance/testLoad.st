@@ -11,12 +11,14 @@ testLoad
   Transcript
     cr;
     show:
-        'Issue97 testLoad: [1]: ' , (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]).
+        'Issue97 testLoad: [1]: '
+            , (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]) printString.
   self assert: (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]) == nil.
   Transcript
     cr;
     show:
-        'Issue97 testLoad: [2]: ' , (Object selectors includes: #'isCypressMockIssue97').
+        'Issue97 testLoad: [2]: '
+            , (Object selectors includes: #'isCypressMockIssue97') printString.
   self deny: (Object selectors includes: #'isCypressMockIssue97').
   Gofer new
     disablePackageCache;
@@ -26,12 +28,14 @@ testLoad
   Transcript
     cr;
     show:
-        'Issue97 testLoad: [3]: ' , (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]).
+        'Issue97 testLoad: [3]: '
+            , (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]) printString.
   self deny: (Smalltalk at: #'CypressMockIssue97' ifAbsent: [  ]) == nil.
   Transcript
     cr;
     show:
-        'Issue97 testLoad: [4]: ' , (Object selectors includes: #'isCypressMockIssue97').
+        'Issue97 testLoad: [4]: '
+            , (Object selectors includes: #'isCypressMockIssue97') printString.
   self assert: (Object selectors includes: #'isCypressMockIssue97').
   Transcript
     cr;
