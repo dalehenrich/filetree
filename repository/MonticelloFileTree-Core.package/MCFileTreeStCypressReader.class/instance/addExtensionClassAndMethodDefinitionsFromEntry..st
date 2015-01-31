@@ -9,7 +9,7 @@ addExtensionClassAndMethodDefinitionsFromEntry: classEntry
       propertyEntry
         readStreamDo: [ :fileStream | 
           classPropertiesDict := MCFileTreeJsonParser
-            parse: fileStream contents decodeFromUTF8 ] ].
+            parseStream: fileStream ] ].
   methodPropertiesDict := Dictionary new.
   (entries detect: [ :entry | self isMethodPropertyFile: entry ] ifNone: [  ])
     ifNotNil: [ :propertyEntry | 
