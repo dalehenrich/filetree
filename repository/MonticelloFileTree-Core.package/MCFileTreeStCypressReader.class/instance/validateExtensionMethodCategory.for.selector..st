@@ -1,0 +1,22 @@
+validation
+validateExtensionMethodCategory: categoryName for: className selector: selector
+  "https://github.com/dalehenrich/filetree/issues/136"
+
+  "method category must match the package name for extension methods... guard against manual editing mistakes"
+
+  "extracted from PackageInfo>>isForeignClassExtension:"
+
+  | prefix prefixSize catSize |
+  prefix := '*' , self packageNameFromPackageDirectory asLowercase.
+  categoryName
+    ifNotNil: [ 
+      (categoryName isEmpty not
+        and: [ 
+          categoryName first = $*
+            and: [ self verifyCategory: categoryName matches: prefix ] ])
+        ifTrue: [ ^ self ] ].
+  self
+    error:
+      'Method protocol ' , categoryName printString , ' for the maethod '
+        , selector printString , ' in class ' , className printString
+        , ' is inconsistent with the package name ' , prefix printString

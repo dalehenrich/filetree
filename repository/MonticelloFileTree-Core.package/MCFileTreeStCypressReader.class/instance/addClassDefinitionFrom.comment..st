@@ -1,6 +1,6 @@
 utilities
 addClassDefinitionFrom: classPropertiesDict comment: classComment
-  | typeSymbolOrArray |
+  | typeSymbolOrArray categoryName className |
   typeSymbolOrArray := classPropertiesDict at: 'type' ifAbsent: [ 'normal' ].
   typeSymbolOrArray isArray
     ifTrue: [ 
@@ -10,15 +10,17 @@ addClassDefinitionFrom: classPropertiesDict comment: classComment
             ifTrue: [ each collect: [ :ea | ea asSymbol ] ]
             ifFalse: [ each asSymbol ] ] ]
     ifFalse: [ typeSymbolOrArray := typeSymbolOrArray asSymbol ].
+  className := classPropertiesDict at: 'name'.
+  categoryName := classPropertiesDict
+    at: 'category'
+    ifAbsent: [ self packageNameFromPackageDirectory ].
+  self validateClassCategory: categoryName for: className.
   definitions
     add:
       (MCClassDefinition
-        name: (classPropertiesDict at: 'name')
+        name: className
         superclassName: (classPropertiesDict at: 'super')
-        category:
-          (classPropertiesDict
-            at: 'category'
-            ifAbsent: [ self packageNameFromPackageDirectory ])
+        category: categoryName
         instVarNames: (classPropertiesDict at: 'instvars' ifAbsent: [ #() ])
         classVarNames: (classPropertiesDict at: 'classvars' ifAbsent: [ #() ])
         poolDictionaryNames: (classPropertiesDict at: 'pools' ifAbsent: [ #() ])
