@@ -7,6 +7,10 @@ validateExtensionMethodCategory: categoryName for: className selector: selector
   "extracted from PackageInfo>>isForeignClassExtension:"
 
   | prefix prefixSize catSize |
+  true
+    ifTrue: [ 
+      "https://github.com/GsDevKit/gsDevKitHome/issues/53: faulty filetree package validation logic"
+      ^ self ].
   prefix := '*' , self packageNameFromPackageDirectory asLowercase.
   categoryName
     ifNotNil: [ 
