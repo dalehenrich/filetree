@@ -15,4 +15,5 @@ testClassError
       hitError := (description := ex description)
         endsWith:
           'Class category name ''Issue97'' for the class ''CypressMockIssue97'' is inconsistent with the package name ''Issue136-1''' ].
+  Transcript cr; show: 'testClassError: ', hitError printString, ' :: ', description printString.
   self assert: hitError description: description
