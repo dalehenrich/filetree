@@ -13,10 +13,12 @@ validateExtensionMethodCategory: categoryName for: className selector: selector
       (categoryName isEmpty not
         and: [ 
           categoryName first = $*
-            and: [ self verifyCategory: categoryName matches: prefix ] ])
+            and: [ 
+              "asLowercase needed in GemStone 3.1.0.6?"
+              self verifyCategory: categoryName asLowercase matches: prefix ] ])
         ifTrue: [ ^ self ] ].
   self
     error:
-      'Method protocol ' , categoryName printString , ' for the maethod '
+      'Method protocol ' , categoryName printString , ' for the method '
         , selector printString , ' in class ' , className printString
         , ' is inconsistent with the package name ' , prefix printString
