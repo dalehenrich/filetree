@@ -14,5 +14,5 @@ testExtensionMethodError
     do: [ :ex | 
       hitError := (description := ex description)
         endsWith:
-          'Method protocol ''*Issue97'' for the maethod ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-2''' ].
+          'Method protocol ''*Issue97'' for the method ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-2''' ].
   self assert: hitError description: description
