@@ -1,6 +1,5 @@
 testing
 testLoad
-	<expectedFailure>
     | packageName |
     packageName := 'Cypress-TraitMocks'.
     Gofer new
