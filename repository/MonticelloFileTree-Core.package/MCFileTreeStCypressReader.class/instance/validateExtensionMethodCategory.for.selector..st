@@ -24,5 +24,5 @@ validateExtensionMethodCategory: categoryName for: className selector: selector
   self
     error:
       'Method protocol ' , categoryName printString , ' for the method '
-        , selector printString , ' in class ' , className printString
+        , selector asString printString , ' in class ' , className printString
         , ' is inconsistent with the package name ' , prefix printString

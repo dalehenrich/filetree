@@ -1,5 +1,7 @@
 tests
 testLoad
+  ""
+
   | packageName |
   packageName := 'Issue97'.
   {packageName}

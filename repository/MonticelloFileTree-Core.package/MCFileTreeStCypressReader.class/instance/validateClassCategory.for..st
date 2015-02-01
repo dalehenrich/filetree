@@ -5,10 +5,6 @@ validateClassCategory: categoryName for: className
   "class category must match the package name ... guard against manual editing mistakes"
 
   | prefix |
-  true
-    ifTrue: [ 
-      "https://github.com/GsDevKit/gsDevKitHome/issues/53: faulty filetree package validation logic"
-      ^ self ].
   prefix := self packageNameFromPackageDirectory.
   (self verifyCategory: categoryName matches: prefix)
     ifTrue: [ ^ self ].
