@@ -1,15 +1,21 @@
 validation
-verifyCategory: categoryName matches: prefix
+verifyCategory: categoryName matches: basicPackageName
   "https://github.com/dalehenrich/filetree/issues/136"
 
-  "copied from PackageInfo>>category:matches:"
+  "copied from PackageInfo>>category:matches: and GoferVersionReference>>parseName:"
 
-  | prefixSize catSize |
+  | prefixSize catSize packagePrefix |
   categoryName ifNil: [ ^ false ].
+  packagePrefix := basicPackageName.
+  (packagePrefix includes: $.)
+    ifTrue: [ 
+      "exclude branch name"
+      packagePrefix := packagePrefix copyUpTo: $. ].
   catSize := categoryName size.
-  prefixSize := prefix size.
+  prefixSize := packagePrefix size.
   catSize < prefixSize
     ifTrue: [ ^ false ].
-  (categoryName findString: prefix startingAt: 1 caseSensitive: false) = 1
+  (categoryName findString: packagePrefix startingAt: 1 caseSensitive: false)
+    = 1
     ifFalse: [ ^ false ].
-  ^ (categoryName at: prefix size + 1 ifAbsent: [ ^ true ]) = $-
+  ^ (categoryName at: packagePrefix size + 1 ifAbsent: [ ^ true ]) = $-
