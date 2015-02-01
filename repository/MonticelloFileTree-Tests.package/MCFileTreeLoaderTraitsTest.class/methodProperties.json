@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
+		"expectedFailures" : "dkh 2/1/2015 15:26",
 		"tearDownPackagesList" : "topa 8/7/2013 14:44",
-		"testLoad" : "ChristopheDemarey 9/8/2013 12:11",
+		"testLoad" : "dkh 2/1/2015 15:26",
 		"traitDefinitions" : "topa 8/7/2013 16:07" } }

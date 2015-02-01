@@ -1,6 +1,6 @@
 tests
 testExtensionMethodError
-  | packageName gofer hitError description |
+| packageName gofer hitError description |
   packageName := 'Issue136-2'.
   {packageName} do: [ :pn | self deny: (self hasPackage: pn) ].
   gofer := Gofer new
@@ -12,7 +12,10 @@ testExtensionMethodError
   [ gofer load ]
     on: Error
     do: [ :ex | 
-      hitError := (description := ex description)
+      description := ex description.
+      description = 'Bad BitBlt arg (Fraction?); proceed to convert.'
+        ifTrue: [ ex resume ].
+     hitError := description
         endsWith:
           'Method protocol ''*Issue97'' for the method ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-2''' ].
   Transcript
