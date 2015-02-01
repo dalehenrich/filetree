@@ -9,8 +9,8 @@ zip
 			[ 
 			c := PipeableOSProcess
 				command:
-					'cd "' , (self fileUtils directoryPathString: stream) , '"; git archive --format=zip ' , commitID hex , ' '
-						, packageDirectory.
+					'cd "' , (self fileUtils directoryPathString: stream) , '"; git archive --format=zip ' , commitID hex , ' "'
+						, packageDirectory , '"'.
 			output := c output.
 			c succeeded
 				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
