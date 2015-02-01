@@ -14,8 +14,8 @@ basicStoreVersion: aVersion
 	[ 
 	c := PipeableOSProcess
 		command:
-			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add ' , packageDirectoryString , '; git commit -m "'
-				, (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString.
+			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add "' , packageDirectoryString , '"; git commit -m "'
+				, (self escapeForShell: aVersion info message convertToSystemString) , '" -- "' , packageDirectoryString , '"'.
 	output := c output.
 	c succeeded
 		ifFalse: [ 
