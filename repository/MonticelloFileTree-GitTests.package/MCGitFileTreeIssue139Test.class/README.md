@@ -1,0 +1,1 @@
+This test check for errors with spaces in the repository path and in the package name
