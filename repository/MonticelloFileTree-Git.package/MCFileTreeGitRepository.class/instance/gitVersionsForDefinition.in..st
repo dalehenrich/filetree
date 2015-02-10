@@ -2,7 +2,7 @@ git querying
 gitVersionsForDefinition: aMCDefinition in: aPackageName
 	"Query git for all the versions related to that method definition."
 
-	| c commitIDs fileDirectory methodFile |
+	| fileDirectory methodFile |
 	fileDirectory := self fileUtils
 		directoryFromPath:
 			aMCDefinition className
@@ -16,11 +16,5 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 		ifFalse: [ 'instance' ]) , '/' , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector) , '.st'.
 	(self fileUtils directoryExists: fileDirectory)
 		ifFalse: [ NotFound signalFor: fileDirectory ].
-	[ 
-	c := PipeableOSProcess
-		command: 'cd "' , (self fileUtils directoryPathString: fileDirectory) , '"; git log --format="%H" -- ' , methodFile.
-	commitIDs := ReadStream on: c output.
-	c succeeded
-		ifFalse: [ NotFound signalFor: c errorPipelineContents ] ]
-		ensure: [ c closePipes ].
-	^ commitIDs contents substrings collect: [ :e | ByteArray readHexFrom: e ]
+	^ (self gitCommand: 'log --format="%H" -- ' , methodFile in: fileDirectory) substrings
+		collect: [ :e | ByteArray readHexFrom: e ]

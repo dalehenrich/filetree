@@ -8,34 +8,17 @@ basicStoreVersion: aVersion
 
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id."
 
-	| c packageDirectory packageDirectoryString output |
+	| packageDirectory packageDirectoryString output |
 	super basicStoreVersion: aVersion.
 	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
-	[ 
-	c := PipeableOSProcess
-		command:
-			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add "' , packageDirectoryString , '"; git commit -m "'
-				, (self escapeForShell: aVersion info message convertToSystemString) , '" -- "' , packageDirectoryString , '"'.
-	output := c output.
-	c succeeded
-		ifFalse: [ 
-			| serr |
-			serr := c errorPipelineContents.
-			serr notEmpty
-				ifTrue: [ self error: 'Git error: ' , serr ] ] ]
-		ensure: [ c closePipes ].
+	self gitCommand: 'add "' , packageDirectoryString , '"' in: directory.
+	self
+		gitCommand:
+			'commit -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- "' , packageDirectoryString
+				, '"'
+		in: directory.
 	packageDirectory := self fileUtils directoryFromPath: packageDirectoryString relativeTo: directory.
-	[ 
-	c := PipeableOSProcess
-		command: 'cd "' , (self fileUtils directoryPathString: packageDirectory) , '"; git log -1 --format="%H" '.
-	output := c output.
-	c succeeded
-		ifFalse: [ 
-			| serr |
-			serr := c errorPipelineContents.
-			serr notEmpty
-				ifTrue: [ self error: 'Git log error: ' , serr ] ] ]
-		ensure: [ c closePipes ].
+	output := self gitCommand: 'log -1 --format="%H" ' in: packageDirectory.
 	aVersion info
 		id:
 			(GitFileTreePackageEntry
