@@ -1,4 +1,4 @@
-i/o
+storing
 basicStoreVersion: aVersion
 	"Do a filetree store followed by the right git commands."
 
