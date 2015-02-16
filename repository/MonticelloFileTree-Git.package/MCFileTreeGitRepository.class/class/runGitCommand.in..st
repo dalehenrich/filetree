@@ -8,7 +8,9 @@ runGitCommand: aCommandString in: aDirectory
 	r := c output.	"Force the command to terminate."
 	c succeeded
 		ifFalse: [ 
-			self error: 'Git error: ' , c errorPipelineContents.
+			| errorString |
+			errorString := c errorPipelineContents.
+			errorString notEmpty ifTrue: [ self error: 'Git error: ' , errorString].
 			r := '' ] ]
 		ensure: [ c closePipes ].
 	^ r

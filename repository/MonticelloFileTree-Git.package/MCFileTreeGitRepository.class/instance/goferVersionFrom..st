@@ -11,4 +11,5 @@ goferVersionFrom: aVersionReference
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
 	mcR commitID: (entry := self allFileNames detect: [ :e | e name = aVersionReference name ]) commitID.
 	mcR info: entry info.
+	mcR repository: self.
 	^ mcR version

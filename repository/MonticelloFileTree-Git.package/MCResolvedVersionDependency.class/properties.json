@@ -6,10 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"commitID",
-		"repository" ],
-	"name" : "MCFileTreeGitStReader",
+		"version" ],
+	"name" : "MCResolvedVersionDependency",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeStCypressReader",
+	"super" : "MCVersionDependency",
 	"type" : "normal" }

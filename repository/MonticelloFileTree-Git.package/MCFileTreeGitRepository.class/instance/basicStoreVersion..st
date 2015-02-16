@@ -1,26 +1,36 @@
 storing
 basicStoreVersion: aVersion
-	"Do a filetree store followed by the right git commands."
+	"Do a filetree store followed by in order, a check and save dependencies, a commit and an update of the version info."
 
-	"cd in the repository; do git add the package to register the new files, then git commit the package with the package message."
+	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	"A git commit without any change return a non zero status without any error message."
-
-	"Recover the last commit id and update the version info to have a correctly synchronized in image id."
-
-	| packageDirectory packageDirectoryString output |
-	super basicStoreVersion: aVersion.
-	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
-	self gitCommand: 'add "' , packageDirectoryString , '"' in: directory.
+	| packageDirectory packageDirectoryString output deps |
+	self internalStoreVersion: aVersion.
+	deps := self internalStoreDependencies: aVersion.
+	packageDirectory := self fileUtils
+		directoryFromPath: (self class parseName: aVersion info name) first , self packageExtension
+		relativeTo: directory.
+	deps notEmpty
+		ifTrue: [ self writeGitFileTreeProperties: packageDirectory ].
+	packageDirectoryString := String
+		streamContents: [ :stream | 
+			stream nextPut: $".
+			{aVersion} , deps
+				do: [ :each | 
+					stream
+						nextPutAll: (self class parseName: each info name) first;
+						nextPutAll: self packageExtension ]
+				separatedBy: [ stream nextPutAll: '" "' ].
+			stream nextPutAll: '"' ].
 	self
 		gitCommand:
-			'commit -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- "' , packageDirectoryString
-				, '"'
+			'commit -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString
 		in: directory.
-	packageDirectory := self fileUtils directoryFromPath: packageDirectoryString relativeTo: directory.
-	output := self gitCommand: 'log -1 --format="%H" ' in: packageDirectory.
-	aVersion info
-		id:
-			(GitFileTreePackageEntry
-				uuidFromGitSHA: (ByteArray readHexFrom: output substrings last)
-				package: (aVersion info name copyFrom: 1 to: (aVersion info name lastIndexOf: $-) - 1))
+	output := (self gitCommand: 'log -1 --format="%H" ' in: packageDirectory) substrings last.
+	{aVersion} , deps
+		do: [ :each | 
+			each info
+				id:
+					(GitFileTreePackageEntry
+						uuidFromGitSHA: (ByteArray readHexFrom: output)
+						package: (aVersion info name copyFrom: 1 to: (aVersion info name lastIndexOf: $-) - 1)) ]
