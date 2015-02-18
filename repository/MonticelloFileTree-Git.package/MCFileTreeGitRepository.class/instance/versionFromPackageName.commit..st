@@ -1,10 +1,18 @@
 accessing
 versionFromPackageName: aPackageName commit: aCommitID
-	| entry mcR packageName |
+	| entry mcR packageName entries |
 	packageName := aPackageName , self packageExtension.
-	entry := self allFileNames detect: [ :each | each packageDirectory = packageName and: [ each commitID = aCommitID ] ].
+	entries := self allFileNames select: [ :each | each packageDirectory = packageName ].
+	entry := entries detect: [ :each | each commitID = aCommitID ] ifNone: [  ].
+	entry
+		ifNil: [ 
+			| ancestry cid |
+			ancestry := self loadAncestry.
+			cid := (ancestry at: aCommitID) first.
+			[ (entry := entries detect: [ :each | each commitID = cid ] ifNone: [  ]) isNil ]
+				whileTrue: [ cid := (ancestry at: cid) first ] ].
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
-	mcR commitID: aCommitID.
+	mcR commitID: entry commitID.
 	mcR info: entry info.
 	mcR repository: self.
 	^ mcR version

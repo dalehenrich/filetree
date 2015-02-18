@@ -1,8 +1,8 @@
 {
 	"class" : {
-		 },
+		"package:fromGit:in:" : "ThierryGoubier 2/16/2015 19:42" },
 	"instance" : {
-		"loadVersionFromGit:in:" : "ThierryGoubier 2/15/2015 23:31",
+		"initializeWithPackage:fromGit:in:" : "ThierryGoubier 2/16/2015 19:39",
 		"resolve" : "ThierryGoubier 2/15/2015 23:24",
 		"version" : "ThierryGoubier 2/15/2015 15:46",
 		"version:" : "ThierryGoubier 2/15/2015 15:46" } }

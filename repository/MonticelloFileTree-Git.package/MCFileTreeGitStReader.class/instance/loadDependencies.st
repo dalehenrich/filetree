@@ -6,7 +6,8 @@ loadDependencies
 
 	| dependencyDir singleGitCommit isSingleCommit |
 	dependencyDir := packageDirectory , self slash , self monticelloMetaDirName , self slash , 'dependencies' , self slash.
-	singleGitCommit := packageDirectory , self slash , self monticelloMetaDirName , self slash , '.gitfiletree'.
+	singleGitCommit := packageDirectory , self slash , self monticelloMetaDirName , self slash
+		, MCFileTreeGitRepository gitPerPackageProperties.
 	isSingleCommit := self zip members anySatisfy: [ :entry | entry fileName = singleGitCommit ].
 	dependencies := OrderedCollection new.
 	(self zip members select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: dependencyDir ] ])
@@ -16,12 +17,7 @@ loadDependencies
 			dependencies
 				add:
 					(isSingleCommit
-						ifTrue: [ 
-							(MCResolvedVersionDependency
-								package: (MCPackage named: name)
-								info: (self extractInfoFrom: (self parseMember: 'dependencies' , self slash , name)))
-								loadVersionFromGit: commitID
-								in: repository ]
+						ifTrue: [ MCResolvedVersionDependency package: (MCPackage named: name) fromGit: commitID in: repository ]
 						ifFalse: [ 
 							MCVersionDependency
 								package: (MCPackage named: name)
