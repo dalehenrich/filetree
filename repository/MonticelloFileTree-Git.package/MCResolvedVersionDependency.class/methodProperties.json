@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"package:fromGit:in:" : "ThierryGoubier 2/16/2015 19:42" },
+		"package:fromGit:in:" : "ThierryGoubier 2/18/2015 23:20:01" },
 	"instance" : {
-		"initializeWithPackage:fromGit:in:" : "ThierryGoubier 2/16/2015 19:39",
-		"resolve" : "ThierryGoubier 2/15/2015 23:24",
-		"version" : "ThierryGoubier 2/15/2015 15:46",
-		"version:" : "ThierryGoubier 2/15/2015 15:46" } }
+		"initializeWithPackage:fromGit:in:" : "ThierryGoubier 2/18/2015 23:20:01",
+		"resolve" : "ThierryGoubier 2/19/2015 07:41",
+		"version" : "ThierryGoubier 2/18/2015 23:20:01",
+		"version:" : "ThierryGoubier 2/18/2015 23:20:01" } }

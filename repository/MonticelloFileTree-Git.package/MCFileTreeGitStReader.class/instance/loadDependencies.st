@@ -10,16 +10,20 @@ loadDependencies
 		, MCFileTreeGitRepository gitPerPackageProperties.
 	isSingleCommit := self zip members anySatisfy: [ :entry | entry fileName = singleGitCommit ].
 	dependencies := OrderedCollection new.
-	(self zip members select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: dependencyDir ] ])
-		do: [ :entry | 
-			| name |
-			name := entry splitFileName last.
-			dependencies
-				add:
-					(isSingleCommit
-						ifTrue: [ MCResolvedVersionDependency package: (MCPackage named: name) fromGit: commitID in: repository ]
-						ifFalse: [ 
-							MCVersionDependency
-								package: (MCPackage named: name)
-								info: (self extractInfoFrom: (self parseMember: 'dependencies' , self slash , name)) ]) ].
+	MCCacheRepository uniqueInstance
+		cacheAllFileNamesDuring: [ 
+			repository
+				cacheAllFileNamesDuring: [ 
+					(self zip members select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: dependencyDir ] ])
+						do: [ :entry | 
+							| name |
+							name := entry splitFileName last.
+							dependencies
+								add:
+									(isSingleCommit
+										ifTrue: [ MCResolvedVersionDependency package: (MCPackage named: name) fromGit: commitID in: repository ]
+										ifFalse: [ 
+											MCVersionDependency
+												package: (MCPackage named: name)
+												info: (self extractInfoFrom: (self parseMember: 'dependencies' , self slash , name)) ]) ] ] ].
 	dependencies := dependencies asArray
