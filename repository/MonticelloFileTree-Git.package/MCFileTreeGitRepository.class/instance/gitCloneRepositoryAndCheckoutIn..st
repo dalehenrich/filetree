@@ -29,7 +29,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 		ifFalse: [ 
 			self
 				gitCommand:
-					'" clone ' , (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
+					' clone ' , (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
 						,
 							(readonly
 								ifTrue: [ ' --depth 1 ' ]
