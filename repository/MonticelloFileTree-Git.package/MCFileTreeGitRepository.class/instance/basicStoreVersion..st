@@ -19,7 +19,7 @@ basicStoreVersion: aVersion
 			stream nextPutAll: '"' ].
 	self
 		gitCommand:
-			'commit -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString
+			'commit --allow-empty-message -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString
 		in: directory.
 	output := (self gitCommand: 'log -1 --format="%H" ' in: directory) substrings last.
 	{aVersion} , deps
