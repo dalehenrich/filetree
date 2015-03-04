@@ -1,4 +1,4 @@
-testing
+tests
 testBaseLoad
 	"If I inherit, I have to recreate all tests?"
 

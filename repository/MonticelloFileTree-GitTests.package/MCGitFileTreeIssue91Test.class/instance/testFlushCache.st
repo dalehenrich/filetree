@@ -1,4 +1,4 @@
-testing
+tests
 testFlushCache
 	"create repository and set propertyFileExtension to .ston"
 
@@ -6,13 +6,12 @@ testFlushCache
 	workingDir := self utilityClass default.
 	tempDir := self utilityClass directoryFromPath: 'temp' relativeTo: workingDir.
 	[ 
-	| repoDir repo expected c |
+	| repoDir repo expected  |
 	self utilityClass ensureDirectoryExists: tempDir.
 	repoDir := self utilityClass directoryFromPath: 'repo' relativeTo: tempDir.
 	self utilityClass ensureDirectoryExists: repoDir.
-	c := MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
-	c output.
-	self assert: c succeeded.	"
+	MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
+	"
 ---
 verify that we're getting default propertyExtension
 "

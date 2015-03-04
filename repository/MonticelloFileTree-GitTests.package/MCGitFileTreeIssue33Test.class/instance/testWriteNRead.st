@@ -1,4 +1,4 @@
-testing
+tests
 testWriteNRead
 	| packageName versionInfo version repo |
 	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].

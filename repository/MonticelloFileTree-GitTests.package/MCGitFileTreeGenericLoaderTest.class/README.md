@@ -1,0 +1,1 @@
+This class contains generic setup and teardown methods for the GitFileTree tests.

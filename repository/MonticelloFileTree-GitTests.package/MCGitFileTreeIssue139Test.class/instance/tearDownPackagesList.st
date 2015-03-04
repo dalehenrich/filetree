@@ -1,3 +1,3 @@
-running
+resources
 tearDownPackagesList
     ^ #('Issue 139')
