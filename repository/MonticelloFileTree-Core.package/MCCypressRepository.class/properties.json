@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "MCCypressRepository",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeRepository",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
-visiting
+writing
 writeVersion: aVersion
     | members |
     directory := (members := MCFileTreeRepository parseName: aVersion info name) last.

@@ -1,4 +1,4 @@
-as yet unclassified
+storing
 basicStoreVersion: aVersion
   self readonly
     ifTrue: [ 

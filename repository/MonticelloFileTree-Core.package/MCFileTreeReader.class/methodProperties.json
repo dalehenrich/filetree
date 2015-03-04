@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"on:fileName:" : "DamienPollet 3/2/2015 16:36" },
+	"instance" : {
+		"addClassAndMethodDefinitionsFromDirectory:" : "DamienPollet 3/3/2015 16:50",
+		"addClassAndMethodDefinitionsFromEntry:" : "DamienPollet 3/4/2015 14:56",
+		"addClassDefinitionFrom:comment:" : "DamienPollet 3/3/2015 15:50",
+		"addExtensionClassAndMethodDefinitionsFromEntry:" : "DamienPollet 3/4/2015 16:15",
+		"addMethodDefinitionsForClass:methodProperties:extension:meta:in:" : "DamienPollet 3/4/2015 14:57",
+		"addTraitAndMethodDefinitionsFromEntry:" : "DamienPollet 3/3/2015 16:53",
+		"fileUtils" : "DamienPollet 2/27/2015 18:38",
+		"isMethodPropertyFile:" : "DamienPollet 3/3/2015 15:42",
+		"isPropertyFile:" : "DamienPollet 3/3/2015 15:42",
+		"loadClassCommentFromEntries:" : "DamienPollet 3/3/2015 15:59",
+		"loadClassPropertiesFromEntries:" : "DamienPollet 3/3/2015 15:26",
+		"loadDefinitions" : "DamienPollet 3/3/2015 13:39",
+		"loadDependencies" : "DamienPollet 3/2/2015 18:00",
+		"loadMethodDefinitionForClass:properties:extension:meta:fromEntry:" : "DamienPollet 3/4/2015 16:53",
+		"loadMethodPropertiesFromEntries:" : "DamienPollet 3/3/2015 15:29",
+		"loadVersionInfo" : "DamienPollet 3/2/2015 17:21",
+		"methodSelectorFor:" : "DamienPollet 3/4/2015 15:53",
+		"packageDirectory:" : "DamienPollet 3/2/2015 16:38",
+		"packageNameFromPackageDirectory" : "DamienPollet 2/27/2015 18:38",
+		"validateClassCategory:for:" : "DamienPollet 3/4/2015 16:51",
+		"validateExtensionMethodCategory:for:selector:" : "DamienPollet 3/4/2015 16:55",
+		"verifyCategory:matches:" : "DamienPollet 3/3/2015 15:53" } }
