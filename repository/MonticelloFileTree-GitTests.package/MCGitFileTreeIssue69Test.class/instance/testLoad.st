@@ -1,4 +1,4 @@
-testing
+tests
 testLoad
 	"The other test will fail due to the fact the 'empty' repo is ignored by git"
 

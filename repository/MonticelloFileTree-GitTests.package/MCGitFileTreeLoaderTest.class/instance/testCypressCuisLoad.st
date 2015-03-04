@@ -1,5 +1,10 @@
-testing
+tests
 testCypressCuisLoad
-	"Ok, is this format now supported?"
-
-	super testCypressCuisLoad
+    | packageName |
+    packageName := 'Cypress-Mocks'.
+    Gofer new
+        disablePackageCache;
+        repository: (self getTestRepository: 'cuisCypress');
+        package: packageName;
+        load.
+    self validateAgainst: self snapshotCypressCuisDefinitions for: packageName

@@ -7,8 +7,8 @@
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		 ],
-	"name" : "MCGitFileTreeLoaderTest",
+	"name" : "MCGitFileTreeGenericLoaderTest",
 	"pools" : [
 		 ],
-	"super" : "MCGitFileTreeGenericLoaderTest",
+	"super" : "MCFileTreeGenericLoaderTest",
 	"type" : "normal" }

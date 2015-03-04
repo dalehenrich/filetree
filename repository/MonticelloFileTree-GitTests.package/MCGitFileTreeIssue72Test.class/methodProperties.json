@@ -2,10 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 2/19/2015 11:08:45",
-		"getWriteTestRepository" : "ThierryGoubier 2/19/2015 11:08:45",
-		"setUp" : "ThierryGoubier 2/19/2015 11:08:45",
-		"tearDown" : "ThierryGoubier 2/19/2015 11:08:45",
+		"categoryString" : "ThierryGoubier 3/4/2015 07:22",
+		"tearDownPackagesList" : "ThierryGoubier 3/4/2015 07:21",
 		"testLoad" : "ThierryGoubier 2/19/2015 11:08:45",
 		"testWriteNRead" : "ThierryGoubier 2/19/2015 11:08:45",
+		"validatePackageMetadata" : "ThierryGoubier 3/4/2015 07:22",
 		"versionInfoMessageString" : "ThierryGoubier 2/19/2015 11:08:45" } }

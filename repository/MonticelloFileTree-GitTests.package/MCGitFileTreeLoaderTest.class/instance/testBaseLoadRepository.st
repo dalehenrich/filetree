@@ -1,4 +1,4 @@
-testing
+tests
 testBaseLoadRepository
 	"Check that the base load repository is the one we expect"
 

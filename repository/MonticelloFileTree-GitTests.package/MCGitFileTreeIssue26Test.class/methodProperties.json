@@ -2,11 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 2/19/2015 11:08:45",
-		"getWriteTestRepository" : "ThierryGoubier 2/19/2015 11:08:45",
-		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 2/19/2015 11:08:45",
-		"setUp" : "ThierryGoubier 2/19/2015 11:08:45",
-		"tearDown" : "ThierryGoubier 2/19/2015 11:08:45",
+		"tearDownPackagesList" : "ThierryGoubier 3/4/2015 07:15",
 		"testLoad" : "ThierryGoubier 2/19/2015 11:08:45",
 		"testWrite" : "ThierryGoubier 2/19/2015 11:08:45",
 		"testWriteNRead" : "ThierryGoubier 2/19/2015 11:08:45",

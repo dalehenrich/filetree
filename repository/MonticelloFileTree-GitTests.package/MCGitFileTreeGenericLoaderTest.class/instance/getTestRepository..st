@@ -1,4 +1,4 @@
-test utility
+resources
 getTestRepository: repositoryName
 	| repo dir |
 	dir := utilityClass directoryFromPath: repositoryName relativeTo: self getTestRepositoriesDirectory.

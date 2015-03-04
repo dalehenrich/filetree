@@ -1,18 +1,13 @@
-utility
+resources
 getWriteTestRepositoryWithAuthor: authorName
-	| repo dir c |
+	| repo dir  |
 	dir := utilityClass directoryFromPath: 'temp' relativeTo: utilityClass default.
 	(utilityClass directoryExists: dir)
-		ifTrue: [ 
-			c := PipeableOSProcess command: 'cd ' , (utilityClass directoryPathString: dir) , '; git status'.
-			c output.
-			self assert: c succeeded ]
+		ifTrue: [ MCFileTreeGitRepository runGitCommand: 'status' in: dir ]
 		ifFalse: [ 
 			utilityClass ensureDirectoryExists: dir.
 			self assert: dir isWritable.
-			c := MCGitFileTreeTests gitCreateAndInitRepo: dir author: authorName.
-			c output.
-			self assert: c succeeded ].
+			MCGitFileTreeTests gitCreateAndInitRepo: dir author: authorName ].
 	self assert: (utilityClass directoryExists: dir).
 	repo := MCFileTreeGitRepository new directory: dir.
 	^ MCRepositoryGroup default repositories detect: [ :each | each = repo ] ifNone: [ repo ]

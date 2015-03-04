@@ -2,5 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 2/19/2015 11:08:45",
-		"testLoad" : "ThierryGoubier 2/19/2015 11:08:45" } }
+		"tearDownPackagesList" : "ThierryGoubier 3/4/2015 13:15",
+		"testLoad" : "ThierryGoubier 3/4/2015 13:23",
+		"traitDefinitions" : "ThierryGoubier 3/4/2015 13:16" } }

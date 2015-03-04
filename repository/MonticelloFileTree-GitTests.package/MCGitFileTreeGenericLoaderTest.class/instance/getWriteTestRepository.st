@@ -1,4 +1,4 @@
-private
+resources
 getWriteTestRepository
 	| repo dir c |
 	dir := utilityClass directoryFromPath: 'temp issue139' relativeTo: utilityClass default.

@@ -1,4 +1,4 @@
-testing
+tests
 testRepository
 	| repo files |
 	repo := self getTestRepository: 'issue33.2'.

@@ -1,3 +1,3 @@
 resources
 tearDownPackagesList
-    ^ #('Issue 139')
+    ^#('Cypress-Mocks')
