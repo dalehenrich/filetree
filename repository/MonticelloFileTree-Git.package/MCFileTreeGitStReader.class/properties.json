@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"commitID" ],
+		"commitID",
+		"repository" ],
 	"name" : "MCFileTreeGitStReader",
 	"pools" : [
 		 ],

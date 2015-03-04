@@ -11,6 +11,13 @@ baseline: spec
                            versionString: #'stable';
                            repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
                 yourself.
+           spec
+                configuration: 'ProcessWrapper'
+                   with: [
+                       spec
+                           versionString: #'stable';
+                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main' ];
+                yourself.
             spec
                 package: 'MonticelloFileTree-Core';
                 package: 'MonticelloFileTree-Tests' with: [ spec requires: #('default') ];
@@ -19,7 +26,7 @@ baseline: spec
                 package: 'MonticelloFileTree-FileSystem-Tests'
                     with: [ spec requires: #('MonticelloFileTree-Tests') ];
                 package: 'MonticelloFileTree-Git'
-                    with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ];
+                    with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess' 'ProcessWrapper') ];
                 package: 'MonticelloFileTree-GitTests'
                     with: [ spec requires: #('MonticelloFileTree-Git' 'MonticelloFileTree-Tests') ];
                 yourself.

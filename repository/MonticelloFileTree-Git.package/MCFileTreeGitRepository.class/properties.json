@@ -3,12 +3,13 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"GitCommand" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"remoteUrl",
 		"branch",
-		"subdirectory" ],
+		"subdirectory",
+		"ancestry" ],
 	"name" : "MCFileTreeGitRepository",
 	"pools" : [
 		 ],

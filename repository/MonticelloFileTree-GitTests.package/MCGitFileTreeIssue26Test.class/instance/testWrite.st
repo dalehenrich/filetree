@@ -8,7 +8,7 @@ testWrite
 		repository: (self getTestRepository: 'dependency02');
 		package: packageName;
 		load.
-	#('AAA' 'BBB')
+	#('AAA')
 		do: [ :pn | 
 			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
 			version := (self getTestRepository: 'dependency02') versionWithInfo: versionInfo.
