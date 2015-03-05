@@ -1,0 +1,1 @@
+Test adding a different author name. Based on issue 146 package.

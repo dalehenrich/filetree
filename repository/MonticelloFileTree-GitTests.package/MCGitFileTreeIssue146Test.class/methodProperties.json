@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 3/3/2015 21:21",
-		"testWrite" : "ThierryGoubier 3/3/2015 23:04",
-		"testWriteNRead" : "ThierryGoubier 3/3/2015 23:05" } }
+		"tearDownPackagesList" : "ThierryGoubier 3/4/2015 14:00:53",
+		"testWrite" : "ThierryGoubier 3/4/2015 14:00:53",
+		"testWriteNRead" : "ThierryGoubier 3/4/2015 14:00:53",
+		"writeTestRepositoryName" : "ThierryGoubier 3/5/2015 20:53" } }
