@@ -1,7 +1,7 @@
 resources
 getWriteTestRepositoryWithAuthor: authorName
-	| repo dir  |
-	dir := utilityClass directoryFromPath: 'temp' relativeTo: utilityClass default.
+	| repo dir |
+	dir := utilityClass directoryFromPath: self writeTestRepositoryName relativeTo: utilityClass default.
 	(utilityClass directoryExists: dir)
 		ifTrue: [ MCFileTreeGitRepository runGitCommand: 'status' in: dir ]
 		ifFalse: [ 

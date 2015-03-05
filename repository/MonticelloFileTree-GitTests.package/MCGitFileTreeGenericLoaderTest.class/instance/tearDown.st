@@ -5,7 +5,7 @@ tearDown
 	| directory writeTempDir |
 	super tearDown.
 	directory := utilityClass default.
-	writeTempDir := utilityClass directoryFromPath: 'temp' relativeTo: directory.
+	writeTempDir := utilityClass directoryFromPath: self writeTestRepositoryName relativeTo: directory.
 	(utilityClass directoryExists: writeTempDir)
 		ifTrue: [ utilityClass deleteAll: writeTempDir ].
 	self assert: (utilityClass directoryExists: writeTempDir) not

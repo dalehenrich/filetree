@@ -4,7 +4,7 @@ basicStoreVersion: aVersion
 
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	| packageDirectoryString output deps |
+	| packageDirectoryString output deps gitCommand |
 	self internalStoreVersion: aVersion.
 	deps := self internalStoreDependencies: aVersion.
 	packageDirectoryString := String
@@ -17,10 +17,23 @@ basicStoreVersion: aVersion
 						nextPutAll: self packageExtension ]
 				separatedBy: [ stream nextPutAll: '" "' ].
 			stream nextPutAll: '"' ].
-	self
-		gitCommand:
-			'commit --allow-empty-message -m "' , (self escapeForShell: aVersion info message convertToSystemString) , '" -- ' , packageDirectoryString
-		in: directory.
+	gitCommand := String
+		streamContents: [ :stream | 
+			stream nextPutAll: 'commit --allow-empty-message'.
+			(self class namesAt: aVersion info author)
+				ifNotNil: [ :n | 
+					stream
+						nextPutAll: ' --author="';
+						nextPutAll: (n at: #name);
+						nextPut: $ ;
+						nextPutAll: (n at: #email);
+						nextPut: $" ].
+			stream
+				nextPutAll: ' -m "';
+				nextPutAll: (self escapeForShell: aVersion info message convertToSystemString);
+				nextPutAll: '" -- ';
+				nextPutAll: packageDirectoryString ].
+	self gitCommand: gitCommand in: directory.
 	output := (self gitCommand: 'log -1 --format="%H" ' in: directory) substrings last.
 	{aVersion} , deps
 		do: [ :each | 

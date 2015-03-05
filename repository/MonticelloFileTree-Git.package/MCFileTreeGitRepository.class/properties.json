@@ -3,7 +3,8 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"GitCommand" ],
+		"GitCommand",
+		"NamesMap" ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
 		"remoteUrl",
