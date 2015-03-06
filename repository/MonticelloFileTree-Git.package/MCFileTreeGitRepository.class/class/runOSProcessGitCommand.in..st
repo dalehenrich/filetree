@@ -3,7 +3,7 @@ runOSProcessGitCommand: aCommandString in: aDirectory
 	| c r |
 	[ 
 	c := PipeableOSProcess
-		command: self gitCommand , ' ', aCommandString
+		command: self gitCommand , ' ' , aCommandString
 		environment: nil
 		workingDir: (MCFileTreeFileUtils current directoryPathString: aDirectory)
 		input: nil
@@ -14,7 +14,7 @@ runOSProcessGitCommand: aCommandString in: aDirectory
 	c succeeded
 		ifFalse: [ 
 			| errorString |
-			errorString := c errorPipelineContents.
+			errorString := c errorUpToEndOfFile.
 			errorString notEmpty
 				ifTrue: [ self error: 'Git error: ' , errorString ].
 			r := '' ] ]
