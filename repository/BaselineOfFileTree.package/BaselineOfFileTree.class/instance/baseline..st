@@ -9,7 +9,7 @@ baseline: spec
                    with: [
                        spec
                            versionString: #'stable';
-                           repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo20' ];
+                           repository: 'http://ss3.gemtalksystems.com/ss/MetaRepoForPharo30' ];
                 yourself.
            spec
                 configuration: 'ProcessWrapper'
