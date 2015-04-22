@@ -1,4 +1,3 @@
 actions
 readerClassForFileNamed: fileName
-	^ "MCReader readerClassForFileNamed: fileName"
-		MCFileTreeReader
+	^ MCReader readerClassForFileNamed: fileName
