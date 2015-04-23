@@ -1,4 +1,4 @@
-adding
+loading
 loadPackageDirectory: aDirectory
 	aDirectory entries do:
 		[ :entry |

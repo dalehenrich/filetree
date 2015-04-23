@@ -5,7 +5,7 @@ addMethodDefinitionsForClass: className methodProperties: methodProperties exten
 		thenDo: [ :methodEntry | 
 			definitions add:
 				(self
-					loadMethodDefinitionForClass: className
+					methodDefinitionForClass: className
 					properties: methodProperties
 					extension: extensionMethod
 					meta: classIsMeta

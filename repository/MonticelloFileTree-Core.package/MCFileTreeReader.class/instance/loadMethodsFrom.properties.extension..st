@@ -1,4 +1,4 @@
-adding
+loading
 loadMethodsFrom: entries properties: classProperties extension: extension
 	| methodProperties |
 	methodProperties := self loadMethodPropertiesFromEntries: entries.

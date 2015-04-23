@@ -1,5 +1,5 @@
 loading
-loadMethodDefinitionForClass: className properties: methodProperties extension: extensionMethod meta: classIsMeta fromEntry: methodEntry
+methodDefinitionForClass: className properties: methodProperties extension: extensionMethod meta: classIsMeta fromEntry: methodEntry
 	| category source timestamp selector |
 	methodEntry readStreamDo: [ :fileStream |
 		category := fileStream
