@@ -1,16 +1,15 @@
 loading
 loadClassDirectory: aDirectory
-	| entries classProperties classComment |
-	self flag: 'try explicit entries by name'.
+	| entries properties comment |
 	entries := (self fileUtils directoryFromEntry: aDirectory) entries.
-	classProperties := self loadClassPropertiesFromEntries: entries.
+	properties := self loadClassPropertiesFromEntries: entries.
 	
-	classComment := self loadClassCommentFromEntries: entries.
+	comment := self loadClassCommentFromEntries: entries.
 	self
-		addClassDefinitionFrom: classProperties
-		comment: classComment.
+		addClassDefinitionFrom: properties
+		comment: comment.
 	
 	self
 		loadMethodsFrom: entries
-		properties: classProperties
+		properties: properties
 		extension: false

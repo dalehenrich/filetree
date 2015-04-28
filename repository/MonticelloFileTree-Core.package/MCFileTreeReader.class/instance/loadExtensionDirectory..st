@@ -1,11 +1,11 @@
 loading
 loadExtensionDirectory: aDirectory
-	| entries classProperties |
+	| entries properties |
 	
 	entries := (self fileUtils directoryFromEntry: aDirectory) entries.
-	classProperties := self loadClassPropertiesFromEntries: entries.
+	properties := self loadClassPropertiesFromEntries: entries.
 	
 	self
 		loadMethodsFrom: entries
-		properties: classProperties
+		properties: properties
 		extension: true

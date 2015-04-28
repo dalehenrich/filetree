@@ -1,5 +1,5 @@
 reading
-on: s fileName: f
-	^ (self on: s)
-		packageDirectory: f;
+on: aStream fileName: aDirectoryName
+	^ (self on: aStream)
+		packageDirectory: aDirectoryName;
 		yourself
