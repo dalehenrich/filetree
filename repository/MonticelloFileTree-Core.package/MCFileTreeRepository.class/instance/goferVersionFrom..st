@@ -1,4 +1,4 @@
-as yet unclassified
+gofer compatibility
 goferVersionFrom: aVersionReference
     "until we no longer find .tree directories in the wild"
 

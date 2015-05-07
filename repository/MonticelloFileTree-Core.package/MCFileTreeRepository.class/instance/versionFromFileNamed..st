@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 versionFromFileNamed: aString
 	^ self loadVersionFromFileNamed: aString

@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "DamienPollet 4/23/2015 16:24",
+	"instvars" : [
+		"packageDirectory" ],
+	"name" : "MCFileTreeReader",
+	"pools" : [
+		 ],
+	"super" : "MCVersionReader",
+	"type" : "normal" }

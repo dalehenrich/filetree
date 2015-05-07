@@ -1,3 +1,3 @@
-as yet unclassified
+accessing
 allFileNamesForVersionNamed: aString
 	^ self filterFileNames: self readableFileNames forVersionNamed: aString
