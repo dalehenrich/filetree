@@ -1,5 +1,6 @@
 {
 	"class" : {
+		"commentFilenames" : "DamienPollet 5/7/2015 16:14",
 		"on:fileName:" : "DamienPollet 4/27/2015 19:01" },
 	"instance" : {
 		"addClassDefinitionFrom:comment:" : "DamienPollet 4/28/2015 15:32",
@@ -8,7 +9,7 @@
 		"fileUtils" : "DamienPollet 2/27/2015 18:38",
 		"isMethodPropertyFile:" : "DamienPollet 3/3/2015 15:42",
 		"isPropertyFile:" : "DamienPollet 3/3/2015 15:42",
-		"loadClassCommentFromEntries:" : "DamienPollet 3/3/2015 15:59",
+		"loadClassCommentFromEntries:" : "DamienPollet 5/7/2015 18:08",
 		"loadClassDirectory:" : "DamienPollet 4/28/2015 15:36",
 		"loadClassPropertiesFromEntries:" : "DamienPollet 3/3/2015 15:26",
 		"loadDefinitions" : "DamienPollet 4/28/2015 16:06",

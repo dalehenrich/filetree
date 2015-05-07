@@ -1,6 +1,12 @@
 loading
 loadClassCommentFromEntries: entries
-	^ entries
-		detect: [ :entry | entry name = 'README.md' ]
-		ifFound: [ :commentEntry | commentEntry contents withSqueakLineEndings ]
-		ifNone: [ '' ]
+	| commentEntry rank |
+	rank := 0.
+	entries do: [ :entry |
+		| entryRank |
+		entryRank := self class commentFilenames indexOf: entry name.
+		entryRank > rank
+			ifTrue: [ rank := entryRank. commentEntry := entry ] ].
+	^ commentEntry
+		ifNotNil: [ commentEntry readStream contents withSqueakLineEndings ]
+		ifNil: [ '' ]
