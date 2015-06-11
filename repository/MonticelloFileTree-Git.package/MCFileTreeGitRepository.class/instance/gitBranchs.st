@@ -4,4 +4,6 @@ gitBranchs
 
 	"This is used to determine the current branch."
 
-	^ (self gitCommand: 'branch' in: directory) substrings
+	| s |
+	s := (self gitCommand: #('branch') in: directory) substrings.
+	^ s

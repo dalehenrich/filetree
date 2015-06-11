@@ -7,4 +7,4 @@ gitCommand
 		description: 'The complete path for the git command, if not in the default PATH and different in name'
 		type: #String>
 		
-	^ GitCommand ifNil: [ 'git' ]
+	^ GitCommand ifNil: [ '/usr/bin/git' ]

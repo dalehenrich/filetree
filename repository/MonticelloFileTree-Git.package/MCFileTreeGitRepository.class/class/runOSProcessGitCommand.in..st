@@ -1,22 +1,37 @@
 accessing
-runOSProcessGitCommand: aCommandString in: aDirectory
-	| c r |
+runOSProcessGitCommand: arrayOfStrings in: aDirectory
+	| c r d in out err |
 	[ 
-	c := PipeableOSProcess
-		command: self gitCommand , ' ' , aCommandString
-		environment: nil
-		workingDir: (MCFileTreeFileUtils current directoryPathString: aDirectory)
-		input: nil
-		output: nil
-		error: nil
-		errorPipelineStream: nil.
-	r := c output.	"Force the command to terminate."
+	in := ExternalPipe nonBlockingPipe.
+	out := ExternalPipe nonBlockingPipe.
+	err := ExternalPipe nonBlockingPipe.
+	c := PipeableOSProcess externalProxyClass
+		programName: self gitCommand
+		arguments: arrayOfStrings
+		initialEnvironment: nil.
+	c initialStdIn: in reader.
+	c initialStdOut: out writer.
+	c initialStdErr: err writer.
+	c pwd: (MCFileTreeFileUtils current directoryPathString: aDirectory).
+	c := c initialize value.
+	d := nil.
+	r := out upToEnd.
+	[ 
+	c update: #runState.
+	c isComplete ]
+		whileFalse: [ 
+			(d ifNil: [ d := Delay forMilliseconds: 5 ]) wait.
+			r := r , out upToEnd ].
+	r := r , out upToEndOfFile.
 	c succeeded
 		ifFalse: [ 
 			| errorString |
-			errorString := c errorUpToEndOfFile.
+			errorString := err upToEndOfFile.
 			errorString notEmpty
 				ifTrue: [ self error: 'Git error: ' , errorString ].
 			r := '' ] ]
-		ensure: [ c closePipes ].
+		ensure: [ 
+			in close.
+			out close.
+			err close ].
 	^ r
