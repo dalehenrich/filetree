@@ -6,4 +6,4 @@ setUp
 	super setUp.
 	directory := utilityClass default.
 	self assert: directory isWritable.
-	self should: [ MCFileTreeGitRepository runGitCommand: 'status' in: directory ] raise: Error
+	self should: [ MCFileTreeGitRepository runGitCommand: #('status') in: directory ] raise: Error
