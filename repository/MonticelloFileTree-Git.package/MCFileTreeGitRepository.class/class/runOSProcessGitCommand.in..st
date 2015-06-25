@@ -1,5 +1,5 @@
 accessing
-runOSProcessGitCommand: arrayOfStrings in: aDirectory
+runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 	| c r d in out err |
 	[ 
 	in := ExternalPipe nonBlockingPipe.
@@ -7,7 +7,7 @@ runOSProcessGitCommand: arrayOfStrings in: aDirectory
 	err := ExternalPipe nonBlockingPipe.
 	c := PipeableOSProcess externalProxyClass
 		programName: self gitCommand
-		arguments: arrayOfStrings
+		arguments: anArrayOfStrings
 		initialEnvironment: nil.
 	c initialStdIn: in reader.
 	c initialStdOut: out writer.
