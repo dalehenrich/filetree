@@ -29,11 +29,20 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 		ifFalse: [ 
 			self
 				gitCommand:
-					' clone ' , (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
+					#('clone')
+						,
+							(branch
+								ifNil: [ #() ]
+								ifNotNil: [ 
+									{'-b'.
+									branch} ])
 						,
 							(readonly
-								ifTrue: [ ' --depth 1 ' ]
-								ifFalse: [ ' ' ]) , remoteUrl , ' ' , targetDirName
+								ifTrue: [ #('--depth' '1') ]
+								ifFalse: [ #() ])
+						,
+							{remoteUrl.
+							targetDirName}
 				in: FileSystem workingDirectory.
 			GrowlMorph openWithLabel: 'gitfiletree://' contents: 'Cloning remote repository: done!'.
 			self

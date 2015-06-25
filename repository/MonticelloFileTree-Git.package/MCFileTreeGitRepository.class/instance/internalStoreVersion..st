@@ -9,4 +9,8 @@ internalStoreVersion: aVersion
 	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
 	aVersion dependencies notEmpty
 		ifTrue: [ self writeGitFileTreeProperties: (self fileUtils directoryFromPath: packageDirectoryString relativeTo: directory) ].
-	self gitCommand: 'add "' , packageDirectoryString , '"' in: directory
+	self
+		gitCommand:
+			{'add'.
+			packageDirectoryString}
+		in: directory

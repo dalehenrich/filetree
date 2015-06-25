@@ -7,34 +7,24 @@ basicStoreVersion: aVersion
 	| packageDirectoryString output deps gitCommand |
 	self internalStoreVersion: aVersion.
 	deps := self internalStoreDependencies: aVersion.
-	packageDirectoryString := String
+	packageDirectoryString := Array
 		streamContents: [ :stream | 
-			stream nextPut: $".
 			{aVersion} , deps
 				do: [ :each | 
 					stream
-						nextPutAll: (self class parseName: each info name) first;
-						nextPutAll: self packageExtension ]
-				separatedBy: [ stream nextPutAll: '" "' ].
-			stream nextPutAll: '"' ].
-	gitCommand := String
+						nextPut: (self class parseName: each info name) first, self packageExtension ] ].
+	gitCommand := Array
 		streamContents: [ :stream | 
-			stream nextPutAll: 'commit --allow-empty-message'.
+			stream nextPutAll: #('commit' '--allow-empty-message').
 			(self class namesAt: aVersion info author)
-				ifNotNil: [ :n | 
-					stream
-						nextPutAll: ' --author="';
-						nextPutAll: (n at: #name);
-						nextPut: $ ;
-						nextPutAll: (n at: #email);
-						nextPut: $" ].
+				ifNotNil: [ :n | stream nextPut: '--author=' , (n at: #name) , ' ', (n at: #email) ].
 			stream
-				nextPutAll: ' -m "';
-				nextPutAll: (self escapeForShell: aVersion info message convertToSystemString);
-				nextPutAll: '" -- ';
+				nextPut: '-m';
+				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
+				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
 	self gitCommand: gitCommand in: directory.
-	output := (self gitCommand: 'log -1 --format="%H" ' in: directory) substrings last.
+	output := (self gitCommand: #('log' '-1' '--format=%H') in: directory) substrings last.
 	{aVersion} , deps
 		do: [ :each | 
 			each info
