@@ -1,5 +1,5 @@
 accessing
-goferVersionFrom: aVersionReference
+versionFrom: aVersionReferenceAsString
 	"gitfiletree:// provides all version names as found by git."
 
 	"Should be part of gofer, but isn't."
@@ -7,9 +7,9 @@ goferVersionFrom: aVersionReference
 	"Since gofer is text based, we can't give him git entries, but strings and those are then rematched to get the right entry."
 
 	| mcR packageName entry |
-	packageName := (self class parseName: aVersionReference name) first , self packageExtension.
+	packageName := (self class parseName: aVersionReferenceAsString) first , self packageExtension.
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
-	mcR commitID: (entry := self allFileNames detect: [ :e | e name = aVersionReference name ]) commitID.
+	mcR commitID: (entry := self allFileNames detect: [ :e | e name = aVersionReferenceAsString ]) commitID.
 	mcR info: entry info.
 	mcR repository: self.
 	^ mcR version
