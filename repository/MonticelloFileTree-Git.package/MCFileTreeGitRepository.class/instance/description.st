@@ -1,5 +1,7 @@
 descriptions
 description
-	remoteUrl ifNil: [ ^ 'gitfiletree://' , directory fullName , ' ' , self currentBranch ].
-	branch ifNotNil: [ ^ remoteUrl , '  ' , self currentBranch ].
+	directory exists
+		ifFalse: [ ^ 'deleted' ].
+	remoteUrl ifNil: [ ^ self shortDirectoryDescription , ' [' , self branch , '] (GitFileTree)' ].
+	self branch ifNotNil: [ ^ self shortRemoteDescription , ' [' , self branch , '] (Remote Git)' ].
 	^ remoteUrl

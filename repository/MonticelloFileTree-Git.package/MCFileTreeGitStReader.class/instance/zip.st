@@ -7,5 +7,11 @@ zip
 			zip := ZipArchive new.
 			zip
 				readFrom:
-					(self gitCommand: 'archive --format=zip ' , commitID hex , ' "' , packageDirectory , '"' in: stream) asByteArray readStream ].
+					(self
+						gitCommand:
+							{'archive'.
+							'--format=zip'.
+							(commitID hex).
+							packageDirectory}
+						in: stream) asByteArray readStream ].
 	^ zip
