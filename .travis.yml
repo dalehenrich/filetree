@@ -5,6 +5,9 @@ env:
    - ST=Squeak-4.4
    - ST=Squeak-4.5
    - ST=Squeak-Trunk
+matrix:
+   allow_failures:
+   - env: ST=Squeak-Trunk
 
 # blacklist
 branches:
