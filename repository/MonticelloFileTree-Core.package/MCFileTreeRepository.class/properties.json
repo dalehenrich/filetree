@@ -9,7 +9,8 @@
 	"instvars" : [
 		"readonly",
 		"repositoryProperties",
-		"versionNameToFileNameMap" ],
+		"versionNameToFileNameMap",
+		"cacheInvalidationFlag" ],
 	"name" : "MCFileTreeRepository",
 	"pools" : [
 		 ],
