@@ -1,8 +1,6 @@
 language: erlang
 
 env:
-   - ST=Pharo-3.0
-   - ST=Pharo-4.0
    - ST=Pharo-5.0
 
 install:
