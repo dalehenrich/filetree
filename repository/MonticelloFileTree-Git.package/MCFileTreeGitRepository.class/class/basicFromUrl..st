@@ -1,5 +1,5 @@
 instance creation
-fromZnUrl: aZnUrl
+basicFromUrl: aZnUrl
 	"Let hack that. Fed up with the lack of progress at times, can't work."
 
 	"A gitfiletree url with a host is the target for a remote. All other parameters are optional.
@@ -28,5 +28,5 @@ fromZnUrl: aZnUrl
 			repo
 				gitCloneRepositoryAndCheckoutIn:
 					(aZnUrl lastPathSegment ifNil: [ aZnUrl host ] ifNotNil: [ :n | n asFileReference basenameWithoutExtension ]) ]
-		ifFalse: [ repo directory: aZnUrl asGitFileReference ].
+		ifFalse: [ repo directory: (self urlAsFileReference: aZnUrl) ].
 	^ repo
