@@ -5,10 +5,10 @@
 	"instance" : {
 		"addClassAndMethodDefinitionsFromDirectory:" : "topa 7/22/2013 01:41",
 		"addClassAndMethodDefinitionsFromEntry:" : "dkh 8/10/2012 13:48",
-		"addClassDefinitionFrom:comment:" : "dkh 01/31/2015 06:51",
-		"addExtensionClassAndMethodDefinitionsFromEntry:" : "dkh 01/31/2015 06:56",
-		"addMethodDefinitionsForClass:methodProperties:in:" : "dkh 01/31/2015 06:55",
-		"addMethodDefinitionsForClass:methodProperties:in:extensionMethod:" : "dkh 01/31/2015 06:56",
+		"addClassDefinitionFrom:comment:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"addExtensionClassAndMethodDefinitionsFromEntry:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"addMethodDefinitionsForClass:methodProperties:in:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"addMethodDefinitionsForClass:methodProperties:in:extensionMethod:" : "DEMAREYChristophe 7/10/2015 18:06:15",
 		"addTraitAndMethodDefinitionsFromEntry:" : "topa 7/22/2013 14:41",
 		"addTraitDefinitionFrom:comment:" : "topa 7/22/2013 15:15",
 		"basicVersion" : "dkh 6/27/2012 20:19",
@@ -19,6 +19,6 @@
 		"loadVersionInfo" : "08/08/2013 15:01",
 		"methodSelectorFor:" : "ChristopheDemarey 5/31/2013 23:28",
 		"packageNameFromPackageDirectory" : "dkh 8/10/2012 14:55",
-		"validateClassCategory:for:" : "dkh 01/31/2015 12:20",
-		"validateExtensionMethodCategory:for:selector:" : "dkh 01/31/2015 13:41",
-		"verifyCategory:matches:" : "dkh 01/31/2015 15:14" } }
+		"validateClassCategory:for:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"validateExtensionMethodCategory:for:selector:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"verifyCategory:matches:" : "DEMAREYChristophe 7/10/2015 18:06:15" } }
