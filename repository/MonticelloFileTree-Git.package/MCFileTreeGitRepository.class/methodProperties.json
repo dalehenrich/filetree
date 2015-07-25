@@ -22,6 +22,7 @@
 		"urlSchemes" : "ThierryGoubier 7/23/2015 07:41" },
 	"instance" : {
 		"allFileNames" : "ThierryGoubier 7/19/2015 18:02:38",
+		"allVersionNames" : "ThierryGoubier 7/24/2015 19:44",
 		"basicStoreVersion:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"branch" : "ThierryGoubier 7/19/2015 18:02:38",
 		"branch:" : "ThierryGoubier 7/19/2015 18:02:38",
@@ -30,6 +31,7 @@
 		"description" : "ThierryGoubier 7/19/2015 18:02:38",
 		"escapeForShell:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"fileDirectoryOn:" : "ThierryGoubier 7/19/2015 18:02:38",
+		"filterFileNames:forVersionNamed:" : "ThierryGoubier 7/24/2015 19:45",
 		"gitBranchs" : "ThierryGoubier 7/19/2015 18:02:38",
 		"gitCloneRepositoryAndCheckoutIn:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"gitCommand" : "ThierryGoubier 7/19/2015 18:02:38",
@@ -61,6 +63,9 @@
 		"versionFromFileNamed:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"versionFromPackageName:commit:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"versionFromRepositoryFromFileNamed:" : "ThierryGoubier 7/19/2015 18:02:38",
+		"versionInfoFromFileNamed:" : "ThierryGoubier 7/24/2015 19:34",
+		"versionInfoFromPackageEntry:" : "ThierryGoubier 7/24/2015 19:48",
+		"versionInfoFromVersionNamed:" : "ThierryGoubier 7/25/2015 23:03",
 		"versionNameFromFileName:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"writeGitFileTreeProperties:" : "ThierryGoubier 7/19/2015 18:02:38",
 		"writeRepositoryProperties" : "ThierryGoubier 7/19/2015 18:02:38" } }
