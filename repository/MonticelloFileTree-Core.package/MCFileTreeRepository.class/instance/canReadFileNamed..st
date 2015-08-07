@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 canReadFileNamed: aString
     ^ (aString endsWith: self packageExtension)
         or: [ 
