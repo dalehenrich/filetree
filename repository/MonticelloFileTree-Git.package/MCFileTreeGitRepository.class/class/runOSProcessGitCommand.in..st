@@ -12,23 +12,27 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 	c initialStdIn: in reader.
 	c initialStdOut: out writer.
 	c initialStdErr: err writer.
-	c pwd: (MCFileTreeFileUtils current directoryPathString: aDirectory).
+	c pwd:
+		(MCFileTreeFileUtils current directoryPathString: aDirectory).
 	c := c initialize value.
 	d := nil.
 	r := out upToEnd.
 	[ 
 	c update: #runState.
 	c isComplete ]
-		whileFalse: [ 
+		whileFalse:
+			[ 
 			(d ifNil: [ d := Delay forMilliseconds: 5 ]) wait.
 			r := r , out upToEnd ].
 	r := r , out upToEndOfFile.
 	c succeeded
-		ifFalse: [ 
+		ifFalse:
+			[ 
 			| errorString |
 			errorString := err upToEndOfFile.
 			errorString notEmpty
-				ifTrue: [ self error: 'Git error: ' , errorString ].
+				ifTrue:
+					[ MCFileTreeGitError new signal: 'Git error: ' , errorString ].
 			r := '' ] ]
 		ensure: [ 
 			in close.
