@@ -1,0 +1,7 @@
+{
+	"classinstvars" : [
+		"current" ],
+	"instvars" : [
+		"name" ],
+	"name" : "CypressMockBasic",
+	"super" : "Object" }
