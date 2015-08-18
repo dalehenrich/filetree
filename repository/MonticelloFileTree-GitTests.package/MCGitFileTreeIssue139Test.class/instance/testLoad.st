@@ -9,4 +9,4 @@ testLoad
 		package: packageName;
 		load.
 	#('Issue 139') do: [ :pn | self assert: (self hasPackage: pn) ].
-	self validateTimestamp: 'ThierryGoubier 2/3/2015 22:27:31'
+	self validateTimestamp: 'ThierryGoubier 8/18/2015 19:10:23'
