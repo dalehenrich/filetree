@@ -2,4 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+<<<<<<< HEAD
 		"createRepository:" : "ThierryGoubier 7/25/2015 23:19:47" } }
+=======
+		"createRepository:" : "ThierryGoubier 6/11/2015 22:49:32" } }
+>>>>>>> 3e18ef9... Lazy version info improvement
