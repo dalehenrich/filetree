@@ -4,20 +4,15 @@ runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory
 
 	| r aCommandString |
 	aCommandString := String
-		streamContents:
-			[ :stream | 
+		streamContents: [ :stream | 
 			anArrayOfStrings
-				do:
-					[ :e | 
+				do: [ :e | 
 					stream
 						nextPut: $";
 						nextPutAll: e;
 						nextPutAll: '" ' ] ].
-	(Smalltalk
-		at: #ProcessWrapper
-		ifAbsent: [ self error: 'Please load ProcessWrapper' ])
-		ifNotNil:
-			[ :pW | 
+	(Smalltalk at: #ProcessWrapper ifAbsent: [ self error: 'Please load ProcessWrapper' ])
+		ifNotNil: [ :pW | 
 			| command |
 			command := pW new
 				useStdout;
@@ -26,7 +21,10 @@ runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory
 					self gitCommand , ' -C "'
 						,
 							(MCFileTreeFileUtils current directoryPathString: aDirectory)
-						, '" ' , aCommandString.
+						, '" ' , aCommandString;
+				yourself.
+			command waitForExit.
+			self assert: command isRunning not.
 			r := command upToEnd.
 			command exitCode > 0
 				ifTrue:
