@@ -22,6 +22,11 @@ zipForDefinition: aMCDefinition
 	zip
 		readFrom:
 			(self
-				gitCommand: 'archive --format=zip ' , commitID hex , ' "' , methodFile , '" "' , classPropertiesFile , '"'
+				gitCommand:
+					{'archive'.
+					'--format=zip'.
+					(commitID hex).
+					methodFile.
+					classPropertiesFile}
 				in: stream) asByteArray readStream.
 	^ zip

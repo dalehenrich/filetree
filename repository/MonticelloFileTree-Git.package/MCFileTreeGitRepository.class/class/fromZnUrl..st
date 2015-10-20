@@ -28,5 +28,5 @@ fromZnUrl: aZnUrl
 			repo
 				gitCloneRepositoryAndCheckoutIn:
 					(aZnUrl lastPathSegment ifNil: [ aZnUrl host ] ifNotNil: [ :n | n asFileReference basenameWithoutExtension ]) ]
-		ifFalse: [ repo directory: aZnUrl asFileReference ].
+		ifFalse: [ repo directory: aZnUrl asGitFileReference ].
 	^ repo
