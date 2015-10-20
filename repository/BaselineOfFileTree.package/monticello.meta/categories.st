@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #'BaselineOfFileTree'!
+SystemOrganization addCategory: #BaselineOfFileTree!

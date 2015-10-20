@@ -10,4 +10,5 @@ versionFromFileNamed: aGitFileTreePackageEntry
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
 	mcR commitID: aGitFileTreePackageEntry commitID.
 	mcR info: aGitFileTreePackageEntry info.
+	mcR repository: self.
 	^ mcR version

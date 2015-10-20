@@ -10,5 +10,5 @@
 	"name" : "MCGitFileTreeIssue91Test",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeIssue91Test",
+	"super" : "MCGitFileTreeGenericLoaderTest",
 	"type" : "normal" }

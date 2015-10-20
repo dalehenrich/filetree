@@ -1,0 +1,3 @@
+resources
+tearDownPackagesList
+  ^ #('Issue72')

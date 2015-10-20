@@ -14,14 +14,14 @@ loadAllFileNames
 	End of message can be obtained by the log_size entry.
 	"
 
-	| allNames entries commitIDs ancestry |
+	| allNames entries commitIDs anAncestry |
 	allNames := OrderedCollection new.
 	entries := self directory entries select: [ :entry | entry isDirectory and: [ self canReadFileNamed: entry name ] ].
 	'loading packages versions from git'
 		displayProgressFrom: 0
 		to: entries size
 		during: [ :bar | 
-			ancestry := self loadAncestry.
+			anAncestry := self loadAncestry.
 			1 to: entries size do: [ :i | 
 				(entries at: i)
 					in: [ :entry | 
@@ -54,7 +54,7 @@ loadAllFileNames
 								buildInfoWith: entryVersions
 								startingAt: j + 1
 								version: v
-								ancestry: ancestry.
+								ancestry: anAncestry.
 							v := v + 1 ].
 						allNames addAll: entryVersions ].
 				bar value: i ] ].

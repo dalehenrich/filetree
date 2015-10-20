@@ -1,4 +1,4 @@
-testing
+tests
 testTargetLoad
 	| packageName |
 	packageName := 'Cypress-Mocks'.

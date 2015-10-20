@@ -1,4 +1,4 @@
-testing
+tests
 testLoad
 	| packageName |
 	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].

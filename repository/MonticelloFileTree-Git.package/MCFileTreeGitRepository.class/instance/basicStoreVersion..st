@@ -1,43 +1,34 @@
-i/o
+storing
 basicStoreVersion: aVersion
-	"Do a filetree store followed by the right git commands."
+	"Do a filetree store followed by in order, a check and save dependencies, a commit and an update of the version info."
 
-	"cd in the repository; do git add the package to register the new files, then git commit the package with the package message."
+	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	"A git commit without any change return a non zero status without any error message."
-
-	"Recover the last commit id and update the version info to have a correctly synchronized in image id."
-
-	| c packageDirectory packageDirectoryString output |
-	super basicStoreVersion: aVersion.
-	packageDirectoryString := (self class parseName: aVersion info name) first , self packageExtension.
-	[ 
-	c := PipeableOSProcess
-		command:
-			'cd "' , (self fileUtils directoryPathString: directory) , '"; git add "' , packageDirectoryString , '"; git commit -m "'
-				, (self escapeForShell: aVersion info message convertToSystemString) , '" -- "' , packageDirectoryString , '"'.
-	output := c output.
-	c succeeded
-		ifFalse: [ 
-			| serr |
-			serr := c errorPipelineContents.
-			serr notEmpty
-				ifTrue: [ self error: 'Git error: ' , serr ] ] ]
-		ensure: [ c closePipes ].
-	packageDirectory := self fileUtils directoryFromPath: packageDirectoryString relativeTo: directory.
-	[ 
-	c := PipeableOSProcess
-		command: 'cd "' , (self fileUtils directoryPathString: packageDirectory) , '"; git log -1 --format="%H" '.
-	output := c output.
-	c succeeded
-		ifFalse: [ 
-			| serr |
-			serr := c errorPipelineContents.
-			serr notEmpty
-				ifTrue: [ self error: 'Git log error: ' , serr ] ] ]
-		ensure: [ c closePipes ].
-	aVersion info
-		id:
-			(GitFileTreePackageEntry
-				uuidFromGitSHA: (ByteArray readHexFrom: output substrings last)
-				package: (aVersion info name copyFrom: 1 to: (aVersion info name lastIndexOf: $-) - 1))
+	| packageDirectoryString output deps gitCommand |
+	self internalStoreVersion: aVersion.
+	deps := self internalStoreDependencies: aVersion.
+	packageDirectoryString := Array
+		streamContents: [ :stream | 
+			{aVersion} , deps
+				do: [ :each | 
+					stream
+						nextPut: (self class parseName: each info name) first, self packageExtension ] ].
+	gitCommand := Array
+		streamContents: [ :stream | 
+			stream nextPutAll: #('commit' '--allow-empty-message').
+			(self class namesAt: aVersion info author)
+				ifNotNil: [ :n | stream nextPut: '--author=' , (n at: #name) , ' ', (n at: #email) ].
+			stream
+				nextPut: '-m';
+				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
+				nextPut: '--';
+				nextPutAll: packageDirectoryString ].
+	self gitCommand: gitCommand in: directory.
+	output := (self gitCommand: #('log' '-1' '--format=%H') in: directory) substrings last.
+	{aVersion} , deps
+		do: [ :each | 
+			each info
+				id:
+					(GitFileTreePackageEntry
+						uuidFromGitSHA: (ByteArray readHexFrom: output)
+						package: (aVersion info name copyFrom: 1 to: (aVersion info name lastIndexOf: $-) - 1)) ]

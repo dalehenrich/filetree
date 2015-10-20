@@ -10,5 +10,5 @@
 	"name" : "MCGitFileTreeLoaderTest",
 	"pools" : [
 		 ],
-	"super" : "MCFileTreeLoaderTest",
+	"super" : "MCGitFileTreeGenericLoaderTest",
 	"type" : "normal" }

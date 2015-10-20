@@ -1,4 +1,4 @@
-utility
+tests
 testCreateStonRepository
 	"create repository and set propertyFileExtension to .ston"
 
@@ -6,11 +6,9 @@ testCreateStonRepository
 	workingDir := self utilityClass default.
 	tempDir := self utilityClass directoryFromPath: 'temp' relativeTo: workingDir.
 	[ 
-	| repoDir repo newRepo c |
+	| repoDir repo newRepo  |
 	self utilityClass ensureDirectoryExists: tempDir.
-	c := MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
-	c output.
-	self assert: c succeeded.
+	MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
 	repoDir := self utilityClass directoryFromPath: 'repo' relativeTo: tempDir.
 	self utilityClass ensureDirectoryExists: repoDir.
 	repo := MCFileTreeGitRepository new directory: repoDir.

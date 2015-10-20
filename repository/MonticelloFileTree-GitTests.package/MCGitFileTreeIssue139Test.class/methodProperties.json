@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"tearDownPackagesList" : "ThierryGoubier 6/11/2015 22:50:04",
+		"testLoad" : "ThierryGoubier 6/11/2015 22:50:04",
+		"testRepository" : "ThierryGoubier 6/11/2015 22:50:04",
+		"testWrite" : "ThierryGoubier 6/11/2015 22:50:04",
+		"testWriteNRead" : "ThierryGoubier 6/11/2015 22:50:04",
+		"validateTimestamp:" : "ThierryGoubier 6/11/2015 22:50:04",
+		"writeTestRepositoryName" : "ThierryGoubier 6/11/2015 22:50:04" } }

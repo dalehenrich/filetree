@@ -6,7 +6,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 
 	"Interesting. I can't use relative paths with MCFileTreeUtils"
 
-	| c targetDir targetDirName |
+	| targetDir targetDirName |
 	targetDirName := readonly
 		ifTrue: [ aDirectoryName , '-readonly' ]
 		ifFalse: [ aDirectoryName ].
@@ -27,19 +27,23 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 							'GitFileTree target directory already exists and is on another branch, cancelling clone and repository instanciation : '
 								, (self fileUtils directoryPathString: targetDir) ] ]
 		ifFalse: [ 
-			[ 
-			c := PipeableOSProcess
-				command:
-					'cd "' , (self fileUtils directoryPathString: FileSystem workingDirectory) , '"; git clone '
-						, (branch ifNil: [ '' ] ifNotNil: [ '-b ' , branch ])
+			self
+				gitCommand:
+					#('clone')
+						,
+							(branch
+								ifNil: [ #() ]
+								ifNotNil: [ 
+									{'-b'.
+									branch} ])
 						,
 							(readonly
-								ifTrue: [ ' --depth 1 ' ]
-								ifFalse: [ ' ' ]) , remoteUrl , ' ' , targetDirName.
-			c output.	"Force the command to terminate."
-			c succeeded
-				ifFalse: [ self error: 'Git error: ' , c errorPipelineContents ] ]
-				ensure: [ c closePipes ].
+								ifTrue: [ #('--depth' '1') ]
+								ifFalse: [ #() ])
+						,
+							{remoteUrl.
+							targetDirName}
+				in: FileSystem workingDirectory.
 			GrowlMorph openWithLabel: 'gitfiletree://' contents: 'Cloning remote repository: done!'.
 			self
 				directory:

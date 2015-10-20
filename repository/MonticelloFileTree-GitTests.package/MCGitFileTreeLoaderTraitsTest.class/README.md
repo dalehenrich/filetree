@@ -1,0 +1,1 @@
+Test loading a class with traits?

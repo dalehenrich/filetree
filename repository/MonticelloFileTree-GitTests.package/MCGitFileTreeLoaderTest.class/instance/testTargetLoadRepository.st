@@ -1,4 +1,4 @@
-testing
+tests
 testTargetLoadRepository
 	"Check that the target load repository is the one we expect"
 

@@ -1,4 +1,4 @@
-testing
+tests
 testIssue74
 	"run without errors"
 

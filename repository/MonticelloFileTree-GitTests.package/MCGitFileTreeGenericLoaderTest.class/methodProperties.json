@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"getTestRepository:" : "ThierryGoubier 6/11/2015 22:50:04",
+		"getWriteTestRepository" : "ThierryGoubier 6/11/2015 22:50:04",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 6/11/2015 22:50:04",
+		"setUp" : "ThierryGoubier 6/11/2015 22:50:04",
+		"tearDown" : "ThierryGoubier 6/11/2015 22:50:04",
+		"writeTestRepositoryName" : "ThierryGoubier 6/11/2015 22:50:04" } }

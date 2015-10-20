@@ -1,5 +1,7 @@
-as yet unclassified
+resources
 gitCreateAndInitRepo: dir author: aName
-	^ PipeableOSProcess
-		command:
-			'cd ' , (MCFileTreeFileUtils current directoryPathString: dir) , '; git init; git config user.email "you@example.com"; git config user.name "' , aName , '"'
+	{#('init').
+	#('config' 'user.email' 'you@example.com').
+	{'config'.
+	'user.name'.
+	aName}} do: [ :c | MCFileTreeGitRepository runGitCommand: c in: dir ]
