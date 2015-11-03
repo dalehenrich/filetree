@@ -1,3 +1,3 @@
-accessing
+private
 gitCommand
 	^ self class gitCommand
