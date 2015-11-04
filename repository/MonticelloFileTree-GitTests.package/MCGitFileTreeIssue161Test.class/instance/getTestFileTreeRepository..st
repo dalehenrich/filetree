@@ -1,10 +1,10 @@
 resources
-getTestRepository: repositoryName
+getTestFileTreeRepository: repositoryName
 	| repo dir |
-	dir := utilityClass
+	dir := self utilityClass
 		directoryFromPath: repositoryName
 		relativeTo: self getTestRepositoriesDirectory.
-	repo := MCFileTreeGitRepository new directory: dir.
+	repo := MCFileTreeRepository new directory: dir.
 	^ MCRepositoryGroup default repositories
 		detect: [ :each | each = repo ]
 		ifNone: [ repo ]
