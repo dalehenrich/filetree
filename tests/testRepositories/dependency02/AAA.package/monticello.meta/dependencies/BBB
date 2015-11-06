@@ -1,1 +1,2 @@
-(name 'BBB-ThierryGoubier.1' message 'new test repository for dependencies' id '6b9b38b8-6111-5561-9743-9de5797583f4' date '19 July 2013' time '4:05:28 pm' author 'ThierryGoubier' ancestors () stepChildren ())
+(name 'BBB-ThierryGoubier.1' message 'merging gitfiletree from 2.0 to 3.0: step2: test repositories.
+' id 'f3e6cd96-778b-5da3-880b-5aa4c147e3a1' date '12 September 2013' time '5:10:44 pm' author 'ThierryGoubier' ancestors () stepChildren ())
