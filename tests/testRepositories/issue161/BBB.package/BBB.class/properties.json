@@ -2,7 +2,6 @@
 	"category" : "BBB",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
@@ -12,5 +11,4 @@
 	"pools" : [
 		 ],
 	"super" : "AAA",
-	"traitcomposition" : "{}",
 	"type" : "normal" }

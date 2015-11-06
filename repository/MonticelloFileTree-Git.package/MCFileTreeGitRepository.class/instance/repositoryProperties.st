@@ -1,4 +1,4 @@
-accessing
+accessing-repository
 repositoryProperties
 	repositoryProperties
 		ifNil: [ 
