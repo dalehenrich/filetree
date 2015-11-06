@@ -2,15 +2,13 @@
 	"category" : "BBB",
 	"classinstvars" : [
 		 ],
-	"classtraitcomposition" : "{}",
 	"classvars" : [
 		 ],
 	"commentStamp" : "",
 	"instvars" : [
 		 ],
-	"name" : "BBB",
+	"name" : "BBBClass",
 	"pools" : [
 		 ],
-	"super" : "AAA",
-	"traitcomposition" : "{}",
+	"super" : "Object",
 	"type" : "normal" }
