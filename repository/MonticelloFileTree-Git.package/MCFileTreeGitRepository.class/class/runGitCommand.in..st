@@ -5,7 +5,7 @@ runGitCommand: anArrayOfStrings in: aDirectory
 	UIManager default
 		informUserDuring:
 			[ :bar | 
-			bar label: self gitCommand , anArrayOfStrings first.
+			bar label: self gitCommand , ' ' , anArrayOfStrings first.
 			Smalltalk platform isWin32
 				ifTrue:
 					[ ^ self
