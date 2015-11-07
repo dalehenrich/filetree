@@ -10,10 +10,7 @@ runGitCommand: anArrayOfStrings in: aDirectory
 				ifTrue:
 					[ ^ self
 						runProcessWrapperGitCommand: anArrayOfStrings
-						in: aDirectory
-						inform: bar ]
-				ifFalse:
-					[ ^ self
+						in: aDirectory ]
+				ifFalse: [ ^ self
 						runOSProcessGitCommand: anArrayOfStrings
-						in: aDirectory
-						inform: bar ] ]
+						in: aDirectory ] ]
