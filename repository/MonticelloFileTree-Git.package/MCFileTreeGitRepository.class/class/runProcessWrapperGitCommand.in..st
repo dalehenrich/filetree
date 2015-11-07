@@ -1,4 +1,4 @@
-accessing
+private-commands
 runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory
 	"Enclose all parameters with double quotes to protect."
 
