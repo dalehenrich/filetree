@@ -47,6 +47,6 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 			GrowlMorph openWithLabel: 'gitfiletree://' contents: 'Cloning remote repository: done!'.
 			self
 				directory:
-					(subdirectory isNil
+					(subdirectory isEmpty
 						ifTrue: [ targetDir ]
 						ifFalse: [ targetDir / subdirectory ]) ]
