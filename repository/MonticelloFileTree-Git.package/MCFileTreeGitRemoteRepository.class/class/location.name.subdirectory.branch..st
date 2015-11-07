@@ -7,7 +7,7 @@ location: aGitUrl name: aName subdirectory: aDirectoryName branch: aBranch
 	repo
 		subdirectory:
 			(aDirectoryName isEmpty
-				ifTrue: [ nil ]
+				ifTrue: [ '' ]
 				ifFalse: [ aDirectoryName ]).
 	repo
 		branch:

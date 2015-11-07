@@ -16,7 +16,7 @@ gitCloneRepositoryAndCheckoutIn: aDirectoryName
 			| targetDirBranch |
 			self
 				directory:
-					(subdirectory isNil
+					(subdirectory isEmpty
 						ifTrue: [ targetDir ]
 						ifFalse: [ targetDir / subdirectory ]).
 			targetDirBranch := self currentBranch.
