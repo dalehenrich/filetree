@@ -6,7 +6,7 @@ extractDir: aZnUrl
 	segments := aZnUrl segments.
 	pivot := aZnUrl segments
 		detect: [ :e | e includes: $: ]
-		ifNone: [ ^ aZnUrl queryAt: 'dir' ifAbsent: [  ] ].
+		ifNone: [ ^ aZnUrl queryAt: 'dir' ifAbsent: [ '' ] ].
 	^ String
 		streamContents:
 			[ :stream | 
