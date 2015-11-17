@@ -11,16 +11,16 @@ fileNameForSelector: selector
       (self specials includes: selector first)
         ifFalse: [ selector ]
         ifTrue: [ 
-          | output specials |
-          specials := self specials.
+          | output specialCharacters |
+          specialCharacters := self specials.
           output := String new writeStream.
           output nextPut: $^.
           selector
             do: [ :each | 
               output
                 nextPutAll:
-                  ((specials includes: each)
-                    ifTrue: [ specials at: each ]
+                  ((specialCharacters includes: each)
+                    ifTrue: [ specialCharacters at: each ]
                     ifFalse: [ each asString ]) ]
             separatedBy: [ output nextPut: $. ].
           output contents ] ]

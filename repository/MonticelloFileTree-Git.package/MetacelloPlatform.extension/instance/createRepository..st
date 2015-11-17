@@ -1,9 +1,9 @@
-*monticellofiletree-git-override
+*monticellofiletree-git
 createRepository: aRepositorySpec
 	| type |
 	type := aRepositorySpec type.
 	aRepositorySpec description asZnUrl scheme = #gitfiletree
-		ifTrue: [ ^ MCFileTreeGitRepository fromZnUrl: aRepositorySpec description asZnUrl ].
+		ifTrue: [ ^ MCFileTreeGitRepository basicFromUrl: aRepositorySpec description asZnUrl ].
 	type = 'http'
 		ifTrue: [ 
 			^ MCHttpRepository

@@ -1,4 +1,4 @@
-as yet unclassified
+testing
 writeRepositoryProperties
   self fileUtils
     writeStreamFor: '.filetree'

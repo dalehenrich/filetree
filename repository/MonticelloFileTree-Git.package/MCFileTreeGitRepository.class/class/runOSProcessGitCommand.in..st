@@ -1,11 +1,10 @@
-accessing
+private-commands
 runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 	| c r d in out err |
-	[ 
 	in := ExternalPipe nonBlockingPipe.
 	out := ExternalPipe nonBlockingPipe.
 	err := ExternalPipe nonBlockingPipe.
-	c := PipeableOSProcess externalProxyClass
+	[ c := PipeableOSProcess externalProxyClass
 		programName: self gitCommand
 		arguments: anArrayOfStrings
 		initialEnvironment: nil.
@@ -16,22 +15,21 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 	c := c initialize value.
 	d := nil.
 	r := out upToEnd.
-	[ 
-	c update: #runState.
+	[ c update: #runState.
 	c isComplete ]
-		whileFalse: [ 
-			(d ifNil: [ d := Delay forMilliseconds: 5 ]) wait.
+		whileFalse:
+			[ (d ifNil: [ d := Delay forMilliseconds: 5 ]) wait.
 			r := r , out upToEnd ].
 	r := r , out upToEndOfFile.
 	c succeeded
-		ifFalse: [ 
-			| errorString |
+		ifFalse:
+			[ | errorString |
 			errorString := err upToEndOfFile.
 			errorString notEmpty
-				ifTrue: [ self error: 'Git error: ' , errorString ].
+				ifTrue: [ MCFileTreeGitError new
+						signal: 'Git error: ' , errorString ].
 			r := '' ] ]
-		ensure: [ 
-			in close.
+		ensure: [ in close.
 			out close.
 			err close ].
 	^ r

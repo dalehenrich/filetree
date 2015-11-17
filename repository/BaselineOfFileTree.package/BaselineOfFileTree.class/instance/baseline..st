@@ -9,14 +9,14 @@ baseline: spec
                    with: [
                        spec
                            versionString: #'stable';
-                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main' ];
+                           repository: 'http://www.squeaksource.com/MetacelloRepository' ];
                 yourself.
            spec
                 configuration: 'ProcessWrapper'
                    with: [
                        spec
                            versionString: #'stable';
-                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo30/main' ];
+                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo50/main' ];
                 yourself.
             spec
                 package: 'MonticelloFileTree-Core';
@@ -35,5 +35,5 @@ baseline: spec
                 group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-FileSystem-Tests');
                 group: 'Git' with: #('MonticelloFileTree-Git');
                 group: 'Git Tests' with: #('MonticelloFileTree-GitTests');
-                group: 'TravisCI' with: #('Tests');
+                group: 'TravisCI' with: #('Tests' 'Git Tests');
                 yourself ]
