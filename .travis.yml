@@ -1,7 +1,7 @@
 language: erlang
 
 env:
-   - ST=Pharo-5.0
+   - ST=Pharo-4.0
 
 install:
    - export PROJECT_HOME="$(pwd)"
