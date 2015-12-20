@@ -16,30 +16,38 @@ loadAllFileNames
 
 	| allNames entries commitIDs anAncestry |
 	allNames := OrderedCollection new.
-	entries := self directory entries select: [ :entry | entry isDirectory and: [ self canReadFileNamed: entry name ] ].
+	entries := self directory entries
+		select:
+			[ :entry | entry isDirectory and: [ self canReadFileNamed: entry name ] ].
 	'loading packages versions from git'
 		displayProgressFrom: 0
 		to: entries size
-		during: [ :bar | 
+		during:
+			[ :bar | 
 			anAncestry := self loadAncestry.
-			1 to: entries size do: [ :i | 
+			1 to: entries size do:
+				[ :i | 
 				(entries at: i)
-					in: [ :entry | 
+					in:
+						[ :entry | 
 						| entryVersions v |
 						entryVersions := OrderedCollection new.
 						commitIDs := self gitVersionsForPackage: entry name.
 						[ commitIDs atEnd ]
-							whileFalse: [ 
-								| logSize commitID author position message dateAndTime |
+							whileFalse:
+								[ | logSize commitID author position message dateAndTime |
 								(commitIDs match: 'log size ')
 									ifFalse: [ self error: 'Unable to find git data in input' ].
 								logSize := Integer readFrom: commitIDs.
 								commitIDs next.
 								position := commitIDs position.
-								commitID := ByteArray readHexFrom: (commitIDs upTo: $|) trimBoth.
+								commitID := ByteArray
+									readHexFrom: (commitIDs upTo: $|) trimBoth.
 								author := (commitIDs upTo: $|) onlyLetters.
 								dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
-								message := (commitIDs next: logSize + 1 + position - commitIDs position) convertFromSystemString.
+								message := (commitIDs
+									next: logSize + 1 + position - commitIDs position)
+									convertFromSystemString.
 								entryVersions
 									add:
 										(GitFileTreePackageEntry
@@ -47,9 +55,11 @@ loadAllFileNames
 											id: commitID
 											author: author
 											message: message
-											timeStamp: dateAndTime) ].
+											timeStamp: dateAndTime
+											repository: self) ].
 						v := 1.
-						entryVersions size to: 1 by: -1 do: [ :j | 
+						entryVersions size to: 1 by: -1 do:
+							[ :j | 
 							(entryVersions at: j)
 								buildInfoWith: entryVersions
 								startingAt: j + 1

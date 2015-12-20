@@ -26,7 +26,7 @@
 	"instance" : {
 		"allFileNames" : "ThierryGoubier 11/7/2015 17:56:27",
 		"allVersionNames" : "ThierryGoubier 11/7/2015 17:56:27",
-		"basicStoreVersion:" : "ThierryGoubier 11/7/2015 17:56:27",
+		"basicStoreVersion:" : "ThierryGoubier 12/20/2015 23:34",
 		"branch" : "ThierryGoubier 11/7/2015 17:56:27",
 		"branch:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"cacheAllFileNames" : "ThierryGoubier 11/7/2015 17:56:27",
@@ -49,7 +49,7 @@
 		"hasMetadata" : "ThierryGoubier 11/7/2015 17:56:27",
 		"internalStoreDependencies:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"internalStoreVersion:" : "ThierryGoubier 11/7/2015 17:56:27",
-		"loadAllFileNames" : "ThierryGoubier 11/7/2015 17:56:27",
+		"loadAllFileNames" : "ThierryGoubier 12/19/2015 22:11",
 		"loadAncestry" : "ThierryGoubier 11/7/2015 17:56:27",
 		"morphicOpen:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"packageDescriptionFromPackageEntry:" : "ThierryGoubier 11/7/2015 17:56:27",
@@ -71,8 +71,7 @@
 		"versionFromPackageName:commit:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"versionFromRepositoryFromFileNamed:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"versionInfoFromFileNamed:" : "ThierryGoubier 11/7/2015 17:56:27",
-		"versionInfoFromPackageEntry:" : "ThierryGoubier 11/7/2015 17:56:27",
-		"versionInfoFromVersionNamed:" : "ThierryGoubier 11/7/2015 17:56:27",
+		"versionInfoFromVersionNamed:" : "ThierryGoubier 12/20/2015 23:24",
 		"versionNameFromFileName:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"writeGitFileTreeProperties:" : "ThierryGoubier 11/7/2015 17:56:27",
 		"writeRepositoryProperties" : "ThierryGoubier 11/7/2015 17:56:27" } }
