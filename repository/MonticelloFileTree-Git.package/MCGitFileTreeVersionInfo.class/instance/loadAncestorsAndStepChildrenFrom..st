@@ -1,4 +1,4 @@
-*monticellofiletree-git
+initialization
 loadAncestorsAndStepChildrenFrom: aVersionInfo
 	"Make this non-lazy if we have some version information."
 

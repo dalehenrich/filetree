@@ -8,4 +8,4 @@ versionInfoFromVersionNamed: aString
 		ifTrue: [ ^ nil ].
 	versions := versions
 		asSortedCollection: [ :a :b | (a name copyAfterLast: $.) asNumber <= (b name copyAfterLast: $.) asNumber ].
-	^ self versionInfoFromPackageEntry: versions last
+	^ versions last info
