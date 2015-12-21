@@ -17,5 +17,5 @@ location: aGitUrl name: aName subdirectory: aDirectoryName branch: aBranch
 	repo remoteUrl: aGitUrl.
 	repo readonly: false.
 	repo
-		gitCloneRepositoryAndCheckoutIn: (aName ifEmpty: [ self extractFolderName: aGitUrl ]).
+		gitCloneRepositoryAndCheckoutIn: (aName ifEmpty: [ self extractFolderNameFrom: aGitUrl ]).
 	^ repo
