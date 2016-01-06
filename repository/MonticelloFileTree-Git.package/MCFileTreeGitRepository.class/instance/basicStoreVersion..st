@@ -31,5 +31,8 @@ basicStoreVersion: aVersion
 	{aVersion} , deps
 		do:
 			[ :each | 
-			(MCWorkingCopy hasPackageNamed: each package name)
-				versionInfo: (self versionInfoFromVersionNamed: each package name) ]
+			| b |
+			(b := MCWorkingCopy hasPackageNamed: each package name) == false
+				ifFalse:
+					[ b
+						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
