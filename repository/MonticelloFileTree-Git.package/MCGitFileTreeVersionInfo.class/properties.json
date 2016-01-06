@@ -6,15 +6,9 @@
 		 ],
 	"commentStamp" : "<historical>",
 	"instvars" : [
-		"packageDirectory",
-		"info",
-		"commitID",
-		"message",
-		"author",
-		"timeStamp",
-		"repository" ],
-	"name" : "GitFileTreePackageEntry",
+		"repo" ],
+	"name" : "MCGitFileTreeVersionInfo",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "MCLazyVersionInfo",
 	"type" : "normal" }

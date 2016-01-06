@@ -1,9 +1,10 @@
 {
 	"class" : {
-		"creationTemplate" : "ThierryGoubier 4/25/2015 15:44:06",
-		"description" : "ThierryGoubier 4/25/2015 15:44:06",
-		"fillInTheBlankRequest" : "ThierryGoubier 4/25/2015 15:44:06",
-		"location:name:subdirectory:branch:" : "ThierryGoubier 11/17/2015 06:42:16",
-		"morphicConfigure" : "ThierryGoubier 4/25/2015 15:44:06" },
+		"creationTemplate" : "ThierryGoubier 1/2/2016 11:00:04",
+		"description" : "ThierryGoubier 1/2/2016 11:00:04",
+		"extractFolderNameFrom:" : "ThierryGoubier 1/2/2016 11:00:04",
+		"fillInTheBlankRequest" : "ThierryGoubier 1/2/2016 11:00:04",
+		"location:name:subdirectory:branch:" : "ThierryGoubier 1/2/2016 11:00:04",
+		"morphicConfigure" : "ThierryGoubier 1/2/2016 11:00:04" },
 	"instance" : {
 		 } }
