@@ -5,11 +5,11 @@ baseline: spec
         for: #'common'
         do: [ 
             spec
-                configuration: 'OSProcess'
+                configuration: 'OSSubprocess'
                    with: [
                        spec
                            versionString: #'stable';
-                           repository: 'http://www.squeaksource.com/MetacelloRepository' ];
+                           repository: 'github://marianopeck/OSSubprocess/repository' ];
                 yourself.
            spec
                 configuration: 'ProcessWrapper'
