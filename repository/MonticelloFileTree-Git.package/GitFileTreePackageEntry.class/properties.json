@@ -11,7 +11,8 @@
 		"commitID",
 		"message",
 		"author",
-		"timeStamp" ],
+		"timeStamp",
+		"repository" ],
 	"name" : "GitFileTreePackageEntry",
 	"pools" : [
 		 ],

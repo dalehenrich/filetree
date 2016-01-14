@@ -1,4 +1,4 @@
-utility
+private
 urlAsFileReference: aZnUrl
 	"Extracted from ZnUrl since the scheme is restricted."
 

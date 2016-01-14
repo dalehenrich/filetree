@@ -1,0 +1,14 @@
+{
+	"category" : "AAA",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "AAA",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

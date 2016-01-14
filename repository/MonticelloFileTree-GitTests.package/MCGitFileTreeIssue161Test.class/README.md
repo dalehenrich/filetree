@@ -1,0 +1,1 @@
+A new test repository in metadata-less mode. With dependencies.

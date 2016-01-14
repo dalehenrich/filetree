@@ -1,4 +1,4 @@
-accessing
+private
 loadAncestry
 	"Load the ancestry chain to be able to scan it properly."
 
