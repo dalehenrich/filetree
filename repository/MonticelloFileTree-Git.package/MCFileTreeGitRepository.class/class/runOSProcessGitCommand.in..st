@@ -6,8 +6,8 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 			{'-C'.
 			(MCFileTreeFileUtils current directoryPathString: aDirectory)}
 				, anArrayOfStrings;
-		createAndSetStdoutStream;
-		createAndSetStderrStream;
+		redirectStdout;
+		redirectStderr;
 		runAndWaitPollingEvery: (Delay forMilliseconds: 5)
 			retrievingStreams: true
 			onExitDo:
