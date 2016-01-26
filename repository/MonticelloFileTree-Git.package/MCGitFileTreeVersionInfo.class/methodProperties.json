@@ -1,8 +1,8 @@
 {
 	"class" : {
-		"name:id:message:date:time:author:ancestors:repository:" : "ThierryGoubier 1/6/2016 18:39:16" },
+		"name:id:message:date:time:author:ancestors:repository:" : "ThierryGoubier 1/25/2016 21:48:45" },
 	"instance" : {
-		"id:" : "ThierryGoubier 1/6/2016 18:39:16",
-		"loadAncestorsAndStepChildren" : "ThierryGoubier 1/6/2016 18:39:16",
-		"loadAncestorsAndStepChildrenFrom:" : "ThierryGoubier 1/6/2016 18:39:16",
-		"repo:" : "ThierryGoubier 1/6/2016 18:39:16" } }
+		"id:" : "ThierryGoubier 1/25/2016 21:48:45",
+		"loadAncestorsAndStepChildren" : "ThierryGoubier 1/25/2016 21:48:45",
+		"loadAncestorsAndStepChildrenFrom:" : "ThierryGoubier 1/25/2016 21:48:45",
+		"repo:" : "ThierryGoubier 1/25/2016 21:48:45" } }
