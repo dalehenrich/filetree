@@ -24,12 +24,16 @@ baseline: spec
                 package: 'MonticelloFileTree-FileSystem-Utilities'
                     with: [ spec requires: #('MonticelloFileTree-Core') ];
                 package: 'MonticelloFileTree-FileSystem-Tests'
-                    with: [ spec requires: #('MonticelloFileTree-Tests') ];
-                package: 'MonticelloFileTree-Git'
-                    with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess' 'ProcessWrapper') ];
-                package: 'MonticelloFileTree-GitTests'
+                    with: [ spec requires: #('MonticelloFileTree-Tests') ].
+                
+				spec for: #MacOS do: [ spec package: 'MonticelloFileTree-Git' with: [spec requires: #('MonticelloFileTree-Core' 'OSProcess')] ].
+				spec for: #Unix do: [ spec package: 'MonticelloFileTree-Git' with: [spec requires: #('MonticelloFileTree-Core' 'OSProcess')] ].
+				spec for: #Windows do: [ spec package: 'MonticelloFileTree-Git' with: [spec requires: #('MonticelloFileTree-Core' 'ProcessWrapper')]].
+							
+            spec    
+					package: 'MonticelloFileTree-GitTests'
                     with: [ spec requires: #('MonticelloFileTree-Git' 'MonticelloFileTree-Tests') ];
-                yourself.
+               	yourself.
             spec
                 group: 'default' with: #('MonticelloFileTree-Core' 'MonticelloFileTree-FileSystem-Utilities');
                 group: 'Tests' with: #('MonticelloFileTree-Tests' 'MonticelloFileTree-FileSystem-Tests');
