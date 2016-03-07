@@ -12,7 +12,8 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 	c initialStdOut: out writer.
 	c initialStdErr: err writer.
 	c pwd: (MCFileTreeFileUtils current directoryPathString: aDirectory).
-	c := c initialize value.
+	c := c initialize.
+	c forkChild.
 	d := nil.
 	r := out upToEnd.
 	[ c update: #runState.
@@ -20,6 +21,7 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory
 		whileFalse:
 			[ (d ifNil: [ d := Delay forMilliseconds: 5 ]) wait.
 			r := r , out upToEnd ].
+	c closeStreams.
 	r := r , out upToEndOfFile.
 	c succeeded
 		ifFalse:
