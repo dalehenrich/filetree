@@ -3,4 +3,4 @@ testRepository
 	| repo files |
 	repo := self getTestRepository: 'issue 139'.
 	files := repo allFileNames.
-	self assert: files first commitID hex = '419d5fe5035877f1bea848961d7475a919731e95'
+	self assert: files first commitID hex = '738eb9172c33331aa978272d2c4803d009333ed6'
