@@ -25,7 +25,6 @@ loadAllFileNames
 				doWithIndex: [ :entry :index | 
 					| entryVersions |
 					entryVersions := self getVersionsForPackageDirectoryEntry: entry.
-					entryVersions doWithIndex: [ :entryVersion :version | entryVersion setMCVersionInfoWithNumber: version ].
 					allNames addAll: entryVersions.
 					bar value: index ] ].
 	^ allNames
