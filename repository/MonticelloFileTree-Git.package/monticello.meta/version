@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-Git-ThierryGoubier.128' message 'Renames to avoid ancestry instance variable' id '2492c854-3b50-4d70-b7ca-c9d4bbebd3a2' date '26 March 2016' time '3:07:10.210662 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.127' message 'Reactivated recovering the ancestry for dependencies.
-' id 'bbd9f2df-b5a0-55cf-b6b3-2e41373d4c55' date '26 March 2016' time '9:29:22 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-Git-ThierryGoubier.129' message 'remve ancestry instance variable' id '0ca0dae4-550d-43cf-b8df-a3b065c5b3e1' date '26 March 2016' time '3:08:16.968385 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.128' message 'Renames to avoid ancestry instance variable
+' id '99836603-fedb-5843-876d-81e4d17300fe' date '26 March 2016' time '3:07:44 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
