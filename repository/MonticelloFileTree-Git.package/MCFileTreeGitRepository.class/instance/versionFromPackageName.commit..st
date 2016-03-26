@@ -10,11 +10,11 @@ versionFromPackageName: aPackageName commit: aCommitID
 	entry := entries detect: [ :each | each commitID = aCommitID ] ifNone: [  ].
 	entry
 		ifNil: [ 
-			| cid |
-			ancestry := self loadAncestry.
-			cid := (ancestry at: aCommitID) first.
+			| cid a |
+			a := self loadAncestry.
+			cid := (a at: aCommitID) first.
 			[ (entry := entries detect: [ :each | each commitID = cid ] ifNone: [  ]) isNil ]
-				whileTrue: [ cid := (ancestry at: cid) first ] ].
+				whileTrue: [ cid := (a at: cid) first ] ].
 	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
 	mcR commitID: entry commitID.
 	mcR info: entry info.
