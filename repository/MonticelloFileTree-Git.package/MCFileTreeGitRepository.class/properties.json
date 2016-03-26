@@ -9,8 +9,7 @@
 	"instvars" : [
 		"remoteUrl",
 		"branch",
-		"subdirectory",
-		"ancestry" ],
+		"subdirectory" ],
 	"name" : "MCFileTreeGitRepository",
 	"pools" : [
 		 ],
