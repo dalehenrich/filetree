@@ -3,6 +3,10 @@
 		 },
 	"instance" : {
 		"getTestRepository:" : "ThierryGoubier 1/6/2016 18:46:42",
+		"getTopAuthorNameFor:in:" : "ThierryGoubier 3/27/2016 15:11",
+		"getTopCommitFor:in:" : "ThierryGoubier 3/27/2016 15:11",
+		"getTopDateAndTimeFor:in:" : "ThierryGoubier 3/27/2016 15:11",
+		"getTopTimestampFor:in:" : "ThierryGoubier 3/27/2016 15:11",
 		"getWriteTestRepository" : "ThierryGoubier 1/6/2016 18:46:42",
 		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 1/6/2016 18:46:42",
 		"setUp" : "ThierryGoubier 1/6/2016 18:46:42",
