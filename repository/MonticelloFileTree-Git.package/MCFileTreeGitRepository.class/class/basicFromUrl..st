@@ -19,28 +19,23 @@ basicFromUrl: aZnUrl
 	repo := self new.
 	self assert: aZnUrl scheme = #gitfiletree.
 	aZnUrl hasHost
-		ifTrue: [ 
-			| protocol path |
+		ifTrue:
+			[ | protocol path |
 			repo subdirectory: (self extractDir: aZnUrl).
 			repo branch: (self extractBranch: aZnUrl).
 			path := self extractPath: aZnUrl.
 			protocol := aZnUrl queryAt: 'protocol' ifAbsent: [ 'git' ].
 			repo readonly: (aZnUrl queryAt: 'readOnly' ifAbsent: [  ]) notNil.
-			(aZnUrl hasUsername and: [ aZnUrl hasPassword ])
-				ifTrue: [ protocol := 'https' ].
 			protocol = 'git'
 				ifTrue: [ repo remoteUrl: 'git@' , aZnUrl host , ':' , path ].
 			protocol = 'https'
-				ifTrue: [ 
-					| targetUrl |
-					targetUrl := 'https://' asZnUrl.
-					targetUrl host: aZnUrl host.
-					targetUrl addPathSegments: ($/ split: path).
-					targetUrl username: aZnUrl username.
-					targetUrl password: aZnUrl password.
-					repo remoteUrl: targetUrl printString ].
+				ifTrue:
+					[ repo remoteUrl: 'https://' , aZnUrl host , '/' , path.
+					repo readonly: true ].
 			repo
 				gitCloneRepositoryAndCheckoutIn:
-					(path ifNil: [ aZnUrl host ] ifNotNil: [ :n | n asFileReference basenameWithoutExtension ]) ]
+					(path
+						ifNil: [ aZnUrl host ]
+						ifNotNil: [ :n | n asFileReference basenameWithoutExtension ]) ]
 		ifFalse: [ repo directory: (self urlAsFileReference: aZnUrl) ].
 	^ repo

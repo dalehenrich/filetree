@@ -1,5 +1,5 @@
 accessing-metadata
 defaultRepositoryProperties
 	^ super defaultRepositoryProperties
-		at: 'Metadata' put: 'true';
+		at: 'Metadata' put: 'false';
 		yourself

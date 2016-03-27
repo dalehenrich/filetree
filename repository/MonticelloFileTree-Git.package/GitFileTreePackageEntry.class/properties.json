@@ -12,9 +12,7 @@
 		"message",
 		"author",
 		"timeStamp",
-		"repository",
-		"shortCommitID",
-		"parents" ],
+		"repository" ],
 	"name" : "GitFileTreePackageEntry",
 	"pools" : [
 		 ],
