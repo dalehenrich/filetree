@@ -4,4 +4,4 @@ gitVersionsForPackage: aDirectoryEntry
 
 	| packageDirectory |
 	packageDirectory := self fileUtils directoryFromPath: aDirectoryEntry relativeTo: directory.
-	^ ReadStream on: (self gitCommand: #('log' '--log-size' '--format=%H|%an|%ai|%s' '--' '.') in: packageDirectory)
+	^ ReadStream on: (self gitCommand: #('log' '--log-size' '--parents' '--reverse' '--format=|%H|%an|%ai|%p|%s' '--' '.') in: packageDirectory)
