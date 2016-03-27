@@ -16,7 +16,7 @@ baseline: spec
                    with: [
                        spec
                            versionString: #'stable';
-                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo50/main' ];
+                           repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo40/main' ];
                 yourself.
             spec
                 package: 'MonticelloFileTree-Core';
