@@ -5,4 +5,4 @@ testBaseLoadRepository
 	| repo files |
 	repo := self getTestRepository: 'ver01.1'.
 	files := repo allFileNames.
-	self assert: files last commitID hex printString = (self getTopCommitFor: 'Cypress-Mocks' in: 'ver01.1')
+	self assert: files first commitID hex printString = (self getTopCommitFor: 'Cypress-Mocks' in: 'ver01.1')
