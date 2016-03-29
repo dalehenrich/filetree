@@ -2,9 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 11/4/2015 23:38:47",
-		"getWriteTestRepository" : "ThierryGoubier 11/4/2015 23:38:47",
-		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 11/4/2015 23:38:47",
-		"setUp" : "ThierryGoubier 11/4/2015 23:38:47",
-		"tearDown" : "ThierryGoubier 11/4/2015 23:38:47",
-		"writeTestRepositoryName" : "ThierryGoubier 11/4/2015 23:38:47" } }
+		"getTestRepository:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getTopAuthorNameFor:in:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getTopCommitFor:in:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getTopDateAndTimeFor:in:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getTopTimestampFor:in:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getWriteTestRepository" : "ThierryGoubier 3/27/2016 15:51:07",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 3/27/2016 15:51:07",
+		"setUp" : "ThierryGoubier 3/27/2016 15:51:07",
+		"tearDown" : "ThierryGoubier 3/27/2016 15:51:07",
+		"writeTestRepositoryName" : "ThierryGoubier 3/27/2016 15:51:07" } }
