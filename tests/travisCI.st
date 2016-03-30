@@ -20,7 +20,7 @@ Metacello new
   load: 'TravisCI'.
 
 "Run the tests"
-('TravisCIHarness' asClass)
+TravisCIHarness
   value: #( 'BaselineOfFileTree' )
   value: 'TravisCISuccess.txt' 
   value: 'TravisCIFailure.txt'.
