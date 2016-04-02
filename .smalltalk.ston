@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'FileTree',
+      #directory : 'repository',
+      #load : [ 'Git Tests' ],                                  // Define MC load attributes
+    }
+  ]
+}
