@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'FileTree',
-      #directory : 'repository',
+      #directory : '../filetree/repository',
       #platforms : [ #pharo ],            // Define compatible platforms
       #load : [ 'Git Tests' ]                                  // Define MC load attributes
     }
