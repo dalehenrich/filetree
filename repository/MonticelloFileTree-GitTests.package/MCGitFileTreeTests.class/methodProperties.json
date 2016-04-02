@@ -3,7 +3,7 @@
 		"gitCreateAndInitRepo:" : "ThierryGoubier 3/27/2016 21:22:27",
 		"gitCreateAndInitRepo:author:" : "ThierryGoubier 3/27/2016 21:22:27" },
 	"instance" : {
-		"setUp" : "ThierryGoubier 4/2/2016 16:47",
+		"setUp" : "ThierryGoubier 4/2/2016 17:11",
 		"tearDown" : "ThierryGoubier 3/27/2016 21:22:27",
 		"testExtractingFolderName" : "ThierryGoubier 3/27/2016 21:22:27",
 		"testInitGitFileTree" : "ThierryGoubier 3/27/2016 21:22:27",
