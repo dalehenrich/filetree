@@ -1,16 +1,10 @@
-language: erlang
+language: smalltalk
+sudo: false
 
-env:
-   - ST=Pharo-5.0
+# Select operating system(s)
+os:
+  - linux
 
-install:
-   - export PROJECT_HOME="$(pwd)"
-   - cd $HOME
-   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
-   - unzip -q builderCI.zip
-   - cd dalehenrich-builderCI*
-   - source build_env_vars
-   - ln -s $PROJECT_HOME $GIT_PATH
-   - ./build_image.sh
-
-script: $BUILDER_CI_HOME/testTravisCI.sh  -verbose
+# Select compatible Smalltalk image(s)
+smalltalk:
+  - Pharo-5.0
