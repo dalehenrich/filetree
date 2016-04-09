@@ -41,8 +41,7 @@ loadAllFileNames
 								logSize := Integer readFrom: commitIDs.
 								commitIDs next.
 								position := commitIDs position.
-								commitID := ByteArray
-									readHexFrom: (commitIDs upTo: $|) trimBoth.
+								commitID := (commitIDs upTo: $|) trimBoth.
 								author := (commitIDs upTo: $|) onlyLetters.
 								dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
 								message := (commitIDs
