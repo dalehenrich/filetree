@@ -5,11 +5,9 @@ basicStoreVersion: aVersion
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
 	| packageDirectoryString output deps gitCommand |
-	(aVersion
-		asDiffAgainst:
-			(self
-				versionWithInfo: (self versionInfoFromVersionNamed: aVersion package name)))
-				inspect.
+	(self versionInfoFromVersionNamed: aVersion package name)
+		ifNotNil:
+			[ :v | aVersion asDiffAgainst: (self versionWithInfo: v) inspect ].
 	self internalStoreVersion: aVersion.
 	deps := self internalStoreDependencies: aVersion.
 	packageDirectoryString := Array
