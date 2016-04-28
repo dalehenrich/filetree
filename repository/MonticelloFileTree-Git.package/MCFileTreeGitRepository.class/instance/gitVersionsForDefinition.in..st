@@ -16,5 +16,5 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 		ifFalse: [ 'instance' ]) , '/' , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector) , '.st'.
 	(self fileUtils directoryExists: fileDirectory)
 		ifFalse: [ NotFound signalFor: fileDirectory ].
-	^ (self gitCommand: #('log' '--format=%H' '-- ') , {methodFile} in: fileDirectory) substrings
+	^ (self gitCommand: #('log' '--format=%H' '--') , {methodFile} in: fileDirectory) substrings
 		collect: [ :e | ByteArray readHexFrom: e ]
