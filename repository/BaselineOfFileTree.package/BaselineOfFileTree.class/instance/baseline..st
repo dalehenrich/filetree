@@ -4,12 +4,6 @@ baseline: spec
 	spec
 		for: #common
 		do: [ spec
-				configuration: 'OSProcess'
-					with: [ spec
-						versionString: #stable;
-						repository: 'http://www.squeaksource.com/MetacelloRepository' ];
-				yourself.
-			spec
 				configuration: 'OSSubprocess'
 					with: [ spec
 						versionString: #stable;
@@ -30,15 +24,15 @@ baseline: spec
 				package: 'MonticelloFileTree-FileSystem-Tests'
 					with: [ spec requires: #('MonticelloFileTree-Tests') ].
 			spec
-				for: #MacOSProcess
+				for: #Mac
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
-						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
+						with: [ spec requires: #('MonticelloFileTree-Core') ] ].
 			spec
-				for: #UnixOSProcess
+				for: #Unix
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
-						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
+						with: [ spec requires: #('MonticelloFileTree-Core' ) ] ].
 			spec
 				for: #MacOSSubprocess
 				do: [ spec
