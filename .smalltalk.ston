@@ -1,6 +1,12 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
+      #baseline : 'OSProcess',
+      #repository : 'http://www.squeaksource.com/MetacelloRepository',
+      #platforms : [ #pharo ],
+      #load : [ 'default' ]
+    }  
+    SCIMetacelloLoadSpec {
       #baseline : 'FileTree',
       #directory : 'repository',
       #platforms : [ #pharo ],
