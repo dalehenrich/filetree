@@ -24,7 +24,7 @@ baseline: spec
 				package: 'MonticelloFileTree-FileSystem-Tests'
 					with: [ spec requires: #('MonticelloFileTree-Tests') ].
 			spec
-				for: #Mac
+				for: #MacOS
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
 						with: [ spec requires: #('MonticelloFileTree-Core') ] ].

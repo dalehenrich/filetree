@@ -10,7 +10,7 @@ customProjectAttributes
 		ifTrue: [ ^ (Smalltalk at: #PipeableOSProcess ifAbsent: [  ])
 				ifNil: [ (Smalltalk at: #OSSUnixSubprocess ifAbsent: [  ])
 						ifNil: [ ^ #(#UnixOSSubprocess) ]
-						ifNotNil: [ ^ #(#UnixOS) ] ]
-				ifNotNil: [ ^ #(#UnixOS) ] ].
+						ifNotNil: [ ^ #(#Unix) ] ]
+				ifNotNil: [ ^ #(#Unix) ] ].
 	Smalltalk os isWindows
 		ifTrue: [ ^ #(#Windows) ]
