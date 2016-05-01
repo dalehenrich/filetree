@@ -1,5 +1,7 @@
 settings
 gitSettingsOn: aBuilder
+	"The group for such settings is #monticello, even if it is labelled Monticello."
+
 	<systemsettings>
 	(aBuilder setting: #gitCommand)
 		type: #File;
