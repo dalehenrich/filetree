@@ -6,5 +6,10 @@ SmalltalkCISpec {
       #platforms : [ #pharo ],
       #load : [ 'Git Tests' ]
     }
-  ]
+  ],
+  #testing : {
+  	#exclude : {
+  		#categories : [ 'OSProcess-Tests' ]
+  	}
+   }
 }
