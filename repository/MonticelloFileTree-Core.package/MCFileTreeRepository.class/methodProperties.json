@@ -1,6 +1,6 @@
 {
 	"class" : {
-		"basicFromUrl:" : "ThierryGoubier 11/4/2015 06:45:37",
+		"basicFromUrl:" : "ThierryGoubier 7/23/2015 07:55",
 		"defaultPackageExtension" : "dkh 4/4/2012 14:27",
 		"defaultPackageExtension:" : "dkh 4/4/2012 14:36",
 		"defaultPropertyFileExtension" : "dkh 07/10/2013 11:43:55",
@@ -8,8 +8,8 @@
 		"description" : "dkh 2/16/2012 14:49:00",
 		"parseName:" : "dkh 2/29/2012 09:40:37",
 		"parseName:extension:" : "dkh 2/16/2012 14:49:00",
-		"urlAsFileReference:" : "ThierryGoubier 11/4/2015 06:45:37",
-		"urlSchemes" : "ThierryGoubier 11/4/2015 06:45:37",
+		"urlAsFileReference:" : "EstebanLorenzano 12/9/2015 13:54",
+		"urlSchemes" : "ThierryGoubier 7/23/2015 07:40",
 		"validatePropertyFileExtension:" : "dkh 07/10/2013 11:43:55" },
 	"instance" : {
 		"allFileNames" : "dkh 07/08/2013 10:59:46",
@@ -25,7 +25,7 @@
 		"fileUtils" : "dkh 8/10/2012 14:55:31.237",
 		"filterFileNames:forVersionNamed:" : "dkh 07/08/2013 10:59:46",
 		"flushCache" : "dkh 07/10/2013 11:43:55",
-		"goferVersionFrom:" : "ThierryGoubier 11/4/2015 06:45:37",
+		"goferVersionFrom:" : "DEMAREYChristophe 7/10/2015 18:06:15",
 		"packageDescriptionFromPackageDirectory:" : "dkh 6/27/2012 20:14",
 		"packageDescriptionsFromReadableFileNames" : "dkh 2/16/2012 14:49:00",
 		"packageExtension" : "dkh 2/29/2012 10:11",
@@ -42,5 +42,5 @@
 		"versionInfoFromFileNamed:" : "dkh 07/08/2013 10:59:46",
 		"versionNameFromFileName:" : "dkh 2/16/2012 14:49:00",
 		"versionWithInfo:ifAbsent:" : "dkh 07/08/2013 10:59:46",
-		"writeRepositoryProperties" : "ThierryGoubier 11/4/2015 06:45:37",
+		"writeRepositoryProperties" : "DEMAREYChristophe 7/10/2015 18:06:15",
 		"writeStreamForFileNamed:replace:do:" : "dkh 2/16/2012 14:49:00" } }
