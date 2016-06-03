@@ -11,7 +11,7 @@ loadDefinitionFor: aMCDefinition
 		ifTrue: [ ^ nil ].
 	classPropertiesDict := Dictionary new.
 	(entries detect: [ :entry | entry splitFileName last = 'properties.json' ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
+		ifNotNil: [ :propertyEntry | classPropertiesDict := STON fromStream: (self zipEntryContents: propertyEntry) ].
 	self
 		addMethodDefinitionsForClass: (classPropertiesDict at: 'name')
 		in: entries

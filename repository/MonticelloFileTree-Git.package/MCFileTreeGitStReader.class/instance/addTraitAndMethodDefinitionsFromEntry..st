@@ -4,7 +4,7 @@ addTraitAndMethodDefinitionsFromEntry: traitEntry
 	entries := self zip members
 		select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: traitEntry fileName ] ].
 	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
+		ifNotNil: [ :propertyEntry | classPropertiesDict := STON fromStream: (self zipEntryContents: propertyEntry) ].
 	(entries detect: [ :entry | entry splitFileName last = 'README.md' ] ifNone: [  ])
 		ifNotNil: [ :commentEntry | classComment := (self zipEntryContents: commentEntry) contents ]
 		ifNil: [ classComment := '' ].

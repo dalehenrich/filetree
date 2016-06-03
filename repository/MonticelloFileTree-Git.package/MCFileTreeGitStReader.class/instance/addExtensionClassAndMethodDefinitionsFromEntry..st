@@ -7,5 +7,5 @@ addExtensionClassAndMethodDefinitionsFromEntry: classEntry
 	| classPropertiesDict entries |
 	entries := self zip members select: [ :entry | entry fileName beginsWith: classEntry fileName ].
 	(entries detect: [ :entry | self isPropertyFile: entry ] ifNone: [  ])
-		ifNotNil: [ :propertyEntry | classPropertiesDict := MCFileTreeJsonParser parseStream: (self zipEntryContents: propertyEntry) ].
+		ifNotNil: [ :propertyEntry | classPropertiesDict := STON fromStream: (self zipEntryContents: propertyEntry) ].
 	self addMethodDefinitionsForClass: (classPropertiesDict at: 'name') in: entries root: classEntry

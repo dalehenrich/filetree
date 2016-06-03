@@ -1,14 +1,11 @@
 {
-	"category" : "MonticelloFileTree-Git",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
-	"instvars" : [
-		 ],
-	"name" : "MCFileTreeGitWriter",
-	"pools" : [
-		 ],
 	"super" : "MCFileTreeWriter",
-	"type" : "normal" }
+	"category" : "MonticelloFileTree-Git",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MCFileTreeGitWriter",
+	"type" : "normal"
+}

@@ -1,17 +1,18 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"buttonSpecs" : "ThierryGoubier 1/26/2016 22:45:30",
-		"gitNeedPush" : "ThierryGoubier 1/26/2016 22:45:30",
-		"gitPull" : "ThierryGoubier 1/26/2016 22:45:30",
-		"gitPush" : "ThierryGoubier 1/26/2016 22:45:30",
-		"packageIcon:" : "ThierryGoubier 1/26/2016 22:45:30",
-		"refresh" : "ThierryGoubier 1/26/2016 22:45:30",
-		"saveChanges" : "ThierryGoubier 1/26/2016 22:45:30",
-		"setRepository:workingCopy:" : "ThierryGoubier 1/26/2016 22:45:30",
-		"version" : "ThierryGoubier 1/26/2016 22:45:30",
-		"versionHighlight:" : "ThierryGoubier 1/26/2016 22:45:30",
-		"versionHighlightEmphasis:" : "ThierryGoubier 1/26/2016 22:45:30",
-		"versionInfo" : "ThierryGoubier 1/26/2016 22:45:30",
-		"versionSummary" : "ThierryGoubier 1/26/2016 22:45:30" } }
+		"gitPull" : "ThierryGoubier 4/30/2016 11:46:50",
+		"saveChanges" : "ThierryGoubier 4/30/2016 11:46:50",
+		"buttonSpecs" : "ThierryGoubier 4/30/2016 11:46:50",
+		"packageIcon:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionInfo" : "ThierryGoubier 4/30/2016 11:46:50",
+		"version" : "ThierryGoubier 4/30/2016 11:46:50",
+		"setRepository:workingCopy:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"gitNeedPush" : "ThierryGoubier 4/30/2016 11:46:50",
+		"gitPush" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionHighlightEmphasis:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"refresh" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionSummary" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionHighlight:" : "ThierryGoubier 4/30/2016 11:46:50"
+	},
+	"class" : { }
+}
