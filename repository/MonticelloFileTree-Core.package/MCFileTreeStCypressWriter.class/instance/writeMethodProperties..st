@@ -3,8 +3,6 @@ writeMethodProperties: classMethodDefinitions
   "Issue 33: https://github.com/dalehenrich/filetree/issues/33"
 
   | properties classMethodsMap instanceMethodMap |
-  self repository hasGitFileTreeMetadata
-    ifFalse: [ ^ self ].
   properties := Dictionary new.
   properties at: 'class' put: (classMethodsMap := Dictionary new).
   properties at: 'instance' put: (instanceMethodMap := Dictionary new).

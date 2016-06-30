@@ -54,8 +54,10 @@ writeDefinitions: aCollection
             filename: filename ].
       classPath := className , classDirExtension
         , self fileUtils pathNameDelimiter asString.
-      self
-        writeInDirectoryName: classPath
-        fileName: 'methodProperties'
-        extension: self propertyFileExtension
-        visit: [ self writeMethodProperties: classMethodDefinitions ] ]
+      self repository hasGitFileTreeMetadata
+        ifTrue: [ 
+          self
+            writeInDirectoryName: classPath
+            fileName: 'methodProperties'
+            extension: self propertyFileExtension
+            visit: [ self writeMethodProperties: classMethodDefinitions ] ] ]
