@@ -1,0 +1,3 @@
+running
+tearDownPackagesList
+    ^ #('AAA' 'BBB')
