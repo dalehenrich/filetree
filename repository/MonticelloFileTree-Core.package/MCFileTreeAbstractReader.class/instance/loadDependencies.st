@@ -17,10 +17,5 @@ loadDependencies
         add:
           (MCVersionDependency
             package: (MCPackage named: entry name)
-            info:
-              (self
-                extractInfoFrom:
-                  (self
-                    parseMember:
-                      'dependencies' , self fileUtils pathNameDelimiter asString , entry name))) ].
+            info: (self extractDependencyInfoFor: entry name)) ].
   dependencies := dependencies asArray

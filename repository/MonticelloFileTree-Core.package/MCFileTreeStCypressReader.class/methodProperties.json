@@ -10,6 +10,7 @@
 		"addMethodDefinitionsForClass:methodProperties:in:" : "dkh 01/31/2015 06:55",
 		"addMethodDefinitionsForClass:methodProperties:in:extensionMethod:" : "dkh 01/31/2015 06:56",
 		"basicVersion" : "dkh 07/09/2016 08:24",
+		"extractDependencyInfoFor:" : "dkh 07/09/2016 09:13",
 		"isMethodPropertyFile:" : "dkh 6/16/2013 12:47:20",
 		"isPropertyFile:" : "dkh 6/16/2013 12:47:20",
 		"loadDefinitions" : "dkh 5/23/2013 21:05",
