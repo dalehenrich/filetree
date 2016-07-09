@@ -1,5 +1,7 @@
 tests
 testWrite02
+  "no  version/dependency/package properties"
+
   | packageName version versionInfo |
   #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
   packageName := 'AAA'.
@@ -8,7 +10,8 @@ testWrite02
     repository: (self getTestRepository: 'metadataless02');
     package: packageName;
     load.
-  #('AAA' 'BBB')
+  #('BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
+  #('AAA')
     do: [ :pn | 
       versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ])
         ancestors first.

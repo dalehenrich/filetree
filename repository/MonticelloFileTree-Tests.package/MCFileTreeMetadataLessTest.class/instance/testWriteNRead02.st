@@ -8,18 +8,18 @@ testWriteNRead02
     repository: (self getTestRepository: 'metadataless02');
     package: packageName;
     load.
-  #('AAA' 'BBB')
+  #('AAA')
     do: [ :pn | 
       versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ])
         ancestors first.
       version := (self getTestRepository: 'metadataless02')
         versionWithInfo: versionInfo.
       (self getTestRepository: 'emptyMetadataless') storeVersion: version ].
+  #('BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
   Gofer new
     package: 'AAA';
-    package: 'BBB';
     unload.
-  #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
+  #('AAA') do: [ :pn | self deny: (self hasPackage: pn) ].
   self
     shouldnt: [ 
       Gofer new
@@ -28,4 +28,4 @@ testWriteNRead02
         package: packageName;
         load ]
     raise: Error.
-  #('AAA' 'BBB') do: [ :pn | self assert: (self hasPackage: pn) ]
+  #('AAA') do: [ :pn | self assert: (self hasPackage: pn) ]

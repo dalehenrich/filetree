@@ -20,12 +20,9 @@ testWriteNRead01
     package: 'BBB';
     unload.
   #('AAA' 'BBB') do: [ :pn | self deny: (self hasPackage: pn) ].
-  self
-    shouldnt: [ 
-      Gofer new
-        disablePackageCache;
-        repository: (self getTestRepository: 'emptyMetadataless');
-        package: packageName;
-        load ]
-    raise: Error.
+  Gofer new
+    disablePackageCache;
+    repository: (self getTestRepository: 'emptyMetadataless');
+    package: packageName;
+    load.
   #('AAA' 'BBB') do: [ :pn | self assert: (self hasPackage: pn) ]

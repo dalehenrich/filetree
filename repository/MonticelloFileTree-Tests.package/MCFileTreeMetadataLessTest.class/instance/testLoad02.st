@@ -8,4 +8,4 @@ testLoad02
     repository: (self getTestRepository: 'metadataless02');
     package: packageName;
     load.
-  #('AAA' 'BBB') do: [ :pn | self assert: (self hasPackage: pn) ]
+  #('AAA') do: [ :pn | self assert: (self hasPackage: pn) ]
