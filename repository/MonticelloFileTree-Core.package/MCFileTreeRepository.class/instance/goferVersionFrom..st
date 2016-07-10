@@ -26,7 +26,9 @@ goferVersionFrom: aVersionReference
       (self versionInfoForPackageDirectory: packageDirectory) name
         = aVersionReference name
         ifTrue: [ 
+          self halt.
           ^ self
             loadVersionFromFileNamed:
               (self fileUtils directoryName: packageDirectory) ] ].
+  self halt.
   ^ nil
