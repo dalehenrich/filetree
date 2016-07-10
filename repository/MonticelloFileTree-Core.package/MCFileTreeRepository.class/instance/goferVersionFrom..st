@@ -11,7 +11,7 @@ goferVersionFrom: aVersionReference
       "assume that package name can be derived from directory name "
       ((MCFileTreeAbstractReader
         packageNameFromPackageDirectory: packageDirectory)
-        = aVersionReference name
+        = aVersionReference packageName
         and: [ 
           "confirm by loading version info"
           (self versionInfoForPackageDirectory: packageDirectory) name
