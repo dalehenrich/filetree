@@ -1,6 +1,8 @@
 testing
 hasMonticelloMetadata
   | metaDir |
+  self withMonticelloMetadata
+    ifFalse: [ ^ false ].
   ^ ((self fileUtils
     directoryExists:
       (metaDir := self fileUtils

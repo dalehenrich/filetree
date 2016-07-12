@@ -2,7 +2,6 @@
 	"class" : {
 		 },
 	"instance" : {
-		"expectedFailures" : "dkh 01/31/2015 12:48",
 		"tearDown" : "dkh 01/31/2015 12:59",
 		"tearDownPackagesList" : "dkh 01/31/2015 14:59",
 		"testClassError" : "dkh 01/31/2015 12:43",

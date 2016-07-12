@@ -1,0 +1,14 @@
+{
+	"category" : "MonticelloFileTree-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "dkh 07/09/2016 07:47",
+	"instvars" : [
+		 ],
+	"name" : "MCFileTreeMetadataLessTest",
+	"pools" : [
+		 ],
+	"super" : "MCFileTreeGenericLoaderTest",
+	"type" : "normal" }
