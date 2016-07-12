@@ -10,7 +10,7 @@ writeClassDefinition: definition to: classPath
     fileName: 'properties'
     extension: self propertyFileExtension
     visit: [ self writeClassDefinition: definition ].
-  self repository hasGitFileTreeMetadata
+  self repository withMonticelloMetadata
     ifTrue: [ 
       self
         writeInDirectoryName: classPath

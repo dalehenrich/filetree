@@ -7,5 +7,5 @@ versionReaderForFileNamed: aString do: aBlock
         ifNotNil: [ :class | 
           | reader |
           reader := class on: s fileName: aString.
-          reader hasGitFileTreeMetadata: self hasGitFileTreeMetadata.
+          reader withMonticelloMetadata: self withMonticelloMetadata.
           aBlock value: reader ] ]

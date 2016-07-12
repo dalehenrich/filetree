@@ -17,7 +17,7 @@ testWrite01
       version := (self getTestRepository: 'metadataless01')
         versionWithInfo: versionInfo.
       repo storeVersion: version.
-      self assert: repo hasGitFileTreeMetadata ].
+      self assert: repo withMonticelloMetadata ].
   repo setNoMetadata.
   #('AAA' 'BBB')
     do: [ :pn | 
@@ -26,7 +26,7 @@ testWrite01
       version := (self getTestRepository: 'metadataless01')
         versionWithInfo: versionInfo.
       repo storeVersion: version.
-      self deny: repo hasGitFileTreeMetadata ].
+      self deny: repo withMonticelloMetadata ].
   repo setWithMetadata.
   #('AAA' 'BBB')
     do: [ :pn | 
@@ -35,4 +35,4 @@ testWrite01
       version := (self getTestRepository: 'metadataless01')
         versionWithInfo: versionInfo.
       repo storeVersion: version.
-      self assert: repo hasGitFileTreeMetadata ]
+      self assert: repo withMonticelloMetadata ]

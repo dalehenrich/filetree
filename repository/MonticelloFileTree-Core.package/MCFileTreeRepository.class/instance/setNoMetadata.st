@@ -1,6 +1,6 @@
 accessing
 setNoMetadata
-  self hasGitFileTreeMetadata
+  self withMonticelloMetadata
     ifTrue: [ 
       self repositoryProperties at: 'Metadata' put: 'false'.
       self writeRepositoryProperties ]

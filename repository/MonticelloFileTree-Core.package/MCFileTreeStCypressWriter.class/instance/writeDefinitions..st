@@ -54,7 +54,7 @@ writeDefinitions: aCollection
             filename: filename ].
       classPath := className , classDirExtension
         , self fileUtils pathNameDelimiter asString.
-      self repository hasGitFileTreeMetadata
+      self repository withMonticelloMetadata
         ifTrue: [ 
           self
             writeInDirectoryName: classPath

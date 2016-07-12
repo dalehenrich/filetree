@@ -11,9 +11,7 @@
 		"definitionFromFile:inDirectory:" : "dkh 03/22/2013 15:01",
 		"extractDependencyInfoFor:" : "dkh 07/09/2016 09:11",
 		"fileUtils" : "dkh 8/10/2012 05:39",
-		"hasGitFileTreeMetadata" : "dkh 07/09/2016 08:44",
-		"hasGitFileTreeMetadata:" : "dkh 07/09/2016 08:52",
-		"hasMonticelloMetadata" : "dkh 07/09/2016 08:48",
+		"hasMonticelloMetadata" : "dkh 07/12/2016 06:33",
 		"loadDefinitions" : "dkh 3/1/2012 12:07",
 		"loadDependencies" : "dkh 07/09/2016 09:12",
 		"monticelloMetaDirName" : "dkh 4/4/2012 17:43",
@@ -21,4 +19,6 @@
 		"packageDirectory:" : "dkh 8/10/2012 05:46",
 		"packageProperties" : "dkh 03/22/2013 12:56",
 		"parseMember:" : "dkh 03/22/2013 15:01",
-		"separateMethodMetaAndSource" : "dkh 3/1/2012 10:10" } }
+		"separateMethodMetaAndSource" : "dkh 3/1/2012 10:10",
+		"withMonticelloMetadata" : "dkh 07/12/2016 06:33",
+		"withMonticelloMetadata:" : "dkh 07/12/2016 06:33" } }

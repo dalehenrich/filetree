@@ -1,4 +1,4 @@
 visiting
 writeVersionInfo: aVersionInfo
-  self repository hasGitFileTreeMetadata
+  self repository withMonticelloMetadata
     ifTrue: [ super writeVersionInfo: aVersionInfo ]

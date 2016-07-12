@@ -1,7 +1,7 @@
 testing
 hasMonticelloMetadata
   | metaDir |
-  self hasGitFileTreeMetadata
+  self withMonticelloMetadata
     ifFalse: [ ^ false ].
   ^ ((self fileUtils
     directoryExists:

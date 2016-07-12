@@ -1,6 +1,6 @@
 private
-hasGitFileTreeMetadata
-  "GitFileTree metadata:
+withMonticelloMetadata
+  "Monticello metadata:
    - monticello.meta/version file
    - method properties files
   "
