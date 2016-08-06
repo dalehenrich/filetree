@@ -3,7 +3,7 @@
 		"readerClass" : "dkh 3/1/2012 13:09" },
 	"instance" : {
 		"addString:at:" : "dkh 03/22/2013 15:27",
-		"deleteExistingPackageStructureFor:" : "dkh 08/06/2016 07:23",
+		"deleteExistingPackageStructureFor:" : "dkh 08/06/2016 11:59",
 		"fileUtils" : "dkh 8/10/2012 07:05",
 		"flush" : "dkh 2/16/2012 14:49:00",
 		"initializePackageFileDirectoryCache" : "dkh 8/10/2012 14:01",

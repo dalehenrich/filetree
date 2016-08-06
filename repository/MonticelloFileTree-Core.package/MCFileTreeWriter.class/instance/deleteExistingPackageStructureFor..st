@@ -5,7 +5,8 @@ deleteExistingPackageStructureFor: members
   | alternateDirName alternateDir packageDirectoryName |
   (self fileUtils directoryExists: self packageFileDirectory)
     ifTrue: [ 
-      MCFileTreePackageStructureStWriter useCypressWriter
+      (MCFileTreePackageStructureStWriter useCypressWriter
+        and: [ self repository withMonticelloMetadata not ])
         ifTrue: [ 
           self packageFileDirectory entries
             do: [ :entry | 
