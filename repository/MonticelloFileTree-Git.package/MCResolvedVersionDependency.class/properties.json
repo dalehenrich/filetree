@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "MCVersionDependency",
 	"category" : "MonticelloFileTree-Git",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"version"
-	],
+		"version" ],
 	"name" : "MCResolvedVersionDependency",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MCVersionDependency",
+	"type" : "normal" }

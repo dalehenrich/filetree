@@ -1,29 +1,26 @@
 {
-	"instance" : {
-		"message:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"commitID" : "ThierryGoubier 4/30/2016 11:46:50",
-		"packageDirectory" : "ThierryGoubier 4/30/2016 11:46:50",
-		"repository" : "ThierryGoubier 4/30/2016 11:46:50",
-		"name" : "ThierryGoubier 4/30/2016 11:46:50",
-		"shortCommitID" : "ThierryGoubier 4/30/2016 11:46:50",
-		"commitID:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"version" : "ThierryGoubier 4/30/2016 11:46:50",
-		"printString" : "ThierryGoubier 4/30/2016 11:46:50",
-		"parents:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"info" : "ThierryGoubier 4/30/2016 11:46:50",
-		"repository:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"info:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"author:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"packageDirectory:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"setMCVersionInfoWithNumber:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"summary" : "ThierryGoubier 4/30/2016 11:46:50",
-		"timeStamp:" : "ThierryGoubier 4/30/2016 11:46:50"
-	},
 	"class" : {
-		"uuidFromSHA:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"on:id:author:message:timeStamp:repository:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"on:id:author:message:timeStamp:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"on:id:author:message:timeStamp:repository:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"on:id:info:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"uuidFromGitSHA:package:" : "ThierryGoubier 4/30/2016 11:46:50"
-	}
-}
+		"uuidFromGitSHA:package:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"uuidFromSHA:" : "ThierryGoubier 4/30/2016 11:46:50" },
+	"instance" : {
+		"author:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"commitID" : "ThierryGoubier 4/30/2016 11:46:50",
+		"commitID:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"info" : "ThierryGoubier 4/30/2016 11:46:50",
+		"info:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"message:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"name" : "ThierryGoubier 4/30/2016 11:46:50",
+		"packageDirectory" : "ThierryGoubier 4/30/2016 11:46:50",
+		"packageDirectory:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"parents:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"printString" : "ThierryGoubier 4/30/2016 11:46:50",
+		"repository" : "ThierryGoubier 4/30/2016 11:46:50",
+		"repository:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"setMCVersionInfoWithNumber:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"shortCommitID" : "ThierryGoubier 4/30/2016 11:46:50",
+		"summary" : "ThierryGoubier 4/30/2016 11:46:50",
+		"timeStamp:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"version" : "ThierryGoubier 4/30/2016 11:46:50" } }

@@ -24,7 +24,7 @@ basicStoreVersion: aVersion
 					[ :n | stream nextPut: '--author=' , (n at: #name) , ' ' , (n at: #email) ].
 			stream
 				nextPut: '-m';
-				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
+				nextPut: (self escapeForShell: aVersion info message asString convertToSystemString);
 				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
 	self gitCommand: gitCommand in: directory.

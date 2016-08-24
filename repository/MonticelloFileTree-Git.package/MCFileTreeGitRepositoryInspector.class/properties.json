@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "MCFileRepositoryInspector",
 	"category" : "MonticelloFileTree-Git",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
 	"name" : "MCFileTreeGitRepositoryInspector",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MCFileRepositoryInspector",
+	"type" : "normal" }
