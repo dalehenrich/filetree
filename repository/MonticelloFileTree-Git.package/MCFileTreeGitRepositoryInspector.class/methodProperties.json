@@ -1,18 +1,17 @@
 {
+	"class" : {
+		 },
 	"instance" : {
-		"gitPull" : "ThierryGoubier 4/30/2016 11:46:50",
-		"saveChanges" : "ThierryGoubier 4/30/2016 11:46:50",
 		"buttonSpecs" : "ThierryGoubier 4/30/2016 11:46:50",
-		"packageIcon:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"versionInfo" : "ThierryGoubier 4/30/2016 11:46:50",
-		"version" : "ThierryGoubier 4/30/2016 11:46:50",
-		"setRepository:workingCopy:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"gitNeedPush" : "ThierryGoubier 4/30/2016 11:46:50",
+		"gitPull" : "ThierryGoubier 4/30/2016 11:46:50",
 		"gitPush" : "ThierryGoubier 4/30/2016 11:46:50",
-		"versionHighlightEmphasis:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"packageIcon:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"refresh" : "ThierryGoubier 4/30/2016 11:46:50",
-		"versionSummary" : "ThierryGoubier 4/30/2016 11:46:50",
-		"versionHighlight:" : "ThierryGoubier 4/30/2016 11:46:50"
-	},
-	"class" : { }
-}
+		"saveChanges" : "ThierryGoubier 4/30/2016 11:46:50",
+		"setRepository:workingCopy:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"version" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionHighlight:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionHighlightEmphasis:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionInfo" : "ThierryGoubier 4/30/2016 11:46:50",
+		"versionSummary" : "ThierryGoubier 4/30/2016 11:46:50" } }
