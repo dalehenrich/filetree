@@ -32,5 +32,5 @@ basicStoreVersion: aVersion
 		do: [ :each | 
 			| b |
 			(b := MCWorkingCopy hasPackageNamed: each package name) == false
-				ifFalse:
-					[ b versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
+				ifFalse: [ b
+						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
