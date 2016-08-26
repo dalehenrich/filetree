@@ -1,11 +1,8 @@
 {
-	"instance" : {
-		"writeTraitDefinition:to:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"writeMethodProperties:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"writeClassDefinition:to:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"writeDefinitions:" : "ThierryGoubier 4/30/2016 11:46:50"
-	},
 	"class" : {
-		"on:" : "ThierryGoubier 4/30/2016 11:46:50"
-	}
-}
+		"on:" : "ThierryGoubier 4/30/2016 11:46:50" },
+	"instance" : {
+		"writeClassDefinition:to:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"writeDefinitions:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"writeMethodProperties:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"writeTraitDefinition:to:" : "ThierryGoubier 4/30/2016 11:46:50" } }

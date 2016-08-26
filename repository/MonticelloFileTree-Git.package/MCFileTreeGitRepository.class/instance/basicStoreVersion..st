@@ -5,19 +5,19 @@ basicStoreVersion: aVersion
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
 	| packageDirectoryString output deps gitCommand |
+	aVersion info message isString
+		ifFalse: [ MCFileTreeGitError new
+				signal: 'version message is not a string: ' , aVersion info name ].
 	self internalStoreVersion: aVersion.
 	deps := self internalStoreDependencies: aVersion.
 	packageDirectoryString := Array
-		streamContents:
-			[ :stream | 
+		streamContents: [ :stream | 
 			{aVersion} , deps
-				do:
-					[ :each | 
+				do: [ :each | 
 					stream
 						nextPut: (self class parseName: each info name) first , self packageExtension ] ].
 	gitCommand := Array
-		streamContents:
-			[ :stream | 
+		streamContents: [ :stream | 
 			stream nextPutAll: #('commit' '--allow-empty-message').
 			(self class namesAt: aVersion info author)
 				ifNotNil:
@@ -29,10 +29,8 @@ basicStoreVersion: aVersion
 				nextPutAll: packageDirectoryString ].
 	self gitCommand: gitCommand in: directory.
 	{aVersion} , deps
-		do:
-			[ :each | 
+		do: [ :each | 
 			| b |
 			(b := MCWorkingCopy hasPackageNamed: each package name) == false
 				ifFalse:
-					[ b
-						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
+					[ b versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]

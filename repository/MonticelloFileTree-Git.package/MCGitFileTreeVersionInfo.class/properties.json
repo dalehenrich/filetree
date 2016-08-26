@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "MCLazyVersionInfo",
 	"category" : "MonticelloFileTree-Git",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
-		"repo"
-	],
+		"repo" ],
 	"name" : "MCGitFileTreeVersionInfo",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "MCLazyVersionInfo",
+	"type" : "normal" }
