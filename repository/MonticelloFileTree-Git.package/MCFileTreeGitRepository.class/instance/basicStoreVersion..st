@@ -33,4 +33,4 @@ basicStoreVersion: aVersion
 			| b |
 			(b := MCWorkingCopy hasPackageNamed: each package name) == false
 				ifFalse: [ b
-						versionInfo: (self versionInfoFromVersionNamed: (each info name copyUpToLast: $.)) ] ]
+						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
