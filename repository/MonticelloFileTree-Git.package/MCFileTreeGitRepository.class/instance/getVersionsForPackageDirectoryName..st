@@ -25,6 +25,7 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 				message: message;
 				timeStamp: dateAndTime;
 				parents: parents;
+				repository: self;
 				yourself.
 			entryVersionIndex at: newPackageEntry shortCommitID put: newPackageEntry.
 			entryVersions add: newPackageEntry ].

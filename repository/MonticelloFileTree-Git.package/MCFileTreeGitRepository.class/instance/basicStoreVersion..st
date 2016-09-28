@@ -4,7 +4,7 @@ basicStoreVersion: aVersion
 
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	| packageDirectoryString output deps gitCommand |
+	| packageDirectoryString output deps gitCommand outString s |
 	aVersion info message isString
 		ifFalse: [ MCFileTreeGitError new
 				signal: 'version message is not a string: ' , aVersion info name ].
@@ -27,10 +27,10 @@ basicStoreVersion: aVersion
 				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
 				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
-	self gitCommand: gitCommand in: directory.
+	self getShortCommitID: (self gitCommand: gitCommand in: directory).
 	{aVersion} , deps
 		do: [ :each | 
 			| b |
 			(b := MCWorkingCopy hasPackageNamed: each package name) == false
-				ifFalse: [ b
-						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
+				ifFalse:
+					[ b versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
