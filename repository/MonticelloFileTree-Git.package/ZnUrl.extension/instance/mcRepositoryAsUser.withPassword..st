@@ -1,4 +1,4 @@
-*monticellofiletree-git-override
+*monticellofiletree-git
 mcRepositoryAsUser: usernameString withPassword: passwordString
 	self isHttp | self isHttps
 		ifTrue: [ ^ MCHttpRepository location: self asString user: usernameString password: passwordString ].
@@ -17,5 +17,5 @@ mcRepositoryAsUser: usernameString withPassword: passwordString
 				user: usernameString
 				password: passwordString	"MCFtpRepository assumes NO prefixed / in the path" ].
 	self scheme = #gitfiletree
-		ifTrue: [ ^ MCFileTreeGitRepository fromZnUrl: self ].
+		ifTrue: [ ^ MCFileTreeGitRepository basicFromUrl: self ].
 	self error: ('No Monticello repository for URL scheme {1}' format: {(self scheme)})

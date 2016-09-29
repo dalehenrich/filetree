@@ -6,7 +6,7 @@ validateExtensionMethodCategory: categoryName for: className selector: selector
 
   "extracted from PackageInfo>>isForeignClassExtension:"
 
-  | prefix prefixSize catSize |
+  | prefix |
   prefix := '*' , self packageNameFromPackageDirectory asLowercase.
   categoryName
     ifNotNil: [ 

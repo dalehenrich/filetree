@@ -8,27 +8,31 @@ basicStoreVersion: aVersion
 	self internalStoreVersion: aVersion.
 	deps := self internalStoreDependencies: aVersion.
 	packageDirectoryString := Array
-		streamContents: [ :stream | 
+		streamContents:
+			[ :stream | 
 			{aVersion} , deps
-				do: [ :each | 
+				do:
+					[ :each | 
 					stream
-						nextPut: (self class parseName: each info name) first, self packageExtension ] ].
+						nextPut: (self class parseName: each info name) first , self packageExtension ] ].
 	gitCommand := Array
-		streamContents: [ :stream | 
+		streamContents:
+			[ :stream | 
 			stream nextPutAll: #('commit' '--allow-empty-message').
 			(self class namesAt: aVersion info author)
-				ifNotNil: [ :n | stream nextPut: '--author=' , (n at: #name) , ' ', (n at: #email) ].
+				ifNotNil:
+					[ :n | stream nextPut: '--author=' , (n at: #name) , ' ' , (n at: #email) ].
 			stream
 				nextPut: '-m';
 				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
 				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
 	self gitCommand: gitCommand in: directory.
-	output := (self gitCommand: #('log' '-1' '--format=%H') in: directory) substrings last.
 	{aVersion} , deps
-		do: [ :each | 
-			each info
-				id:
-					(GitFileTreePackageEntry
-						uuidFromGitSHA: (ByteArray readHexFrom: output)
-						package: (aVersion info name copyFrom: 1 to: (aVersion info name lastIndexOf: $-) - 1)) ]
+		do:
+			[ :each | 
+			| b |
+			(b := MCWorkingCopy hasPackageNamed: each package name) == false
+				ifFalse:
+					[ b
+						versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]

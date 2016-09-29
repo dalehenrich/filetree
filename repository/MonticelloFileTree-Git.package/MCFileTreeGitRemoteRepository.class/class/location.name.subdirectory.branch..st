@@ -7,7 +7,7 @@ location: aGitUrl name: aName subdirectory: aDirectoryName branch: aBranch
 	repo
 		subdirectory:
 			(aDirectoryName isEmpty
-				ifTrue: [ nil ]
+				ifTrue: [ '' ]
 				ifFalse: [ aDirectoryName ]).
 	repo
 		branch:
@@ -16,5 +16,6 @@ location: aGitUrl name: aName subdirectory: aDirectoryName branch: aBranch
 				ifFalse: [ aBranch ]).
 	repo remoteUrl: aGitUrl.
 	repo readonly: false.
-	repo gitCloneRepositoryAndCheckoutIn: aName.
+	repo
+		gitCloneRepositoryAndCheckoutIn: (aName ifEmpty: [ self extractFolderNameFrom: aGitUrl ]).
 	^ repo
