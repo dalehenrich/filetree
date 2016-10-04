@@ -20,8 +20,9 @@ basicStoreVersion: aVersion
 		streamContents: [ :stream | 
 			stream nextPutAll: #('commit' '--allow-empty-message').
 			(self class namesAt: aVersion info author)
-				ifNotNil:
-					[ :n | stream nextPut: '--author=' , (n at: #name) , ' ' , (n at: #email) ].
+				ifNotNil: [ :n | 
+					stream nextPut: '--author=' , (n at: #name) , ' ' , (n at: #email).
+					stream nextPut: '--date=' , aVersion info timeStamp printString ].
 			stream
 				nextPut: '-m';
 				nextPut: (self escapeForShell: aVersion info message convertToSystemString);

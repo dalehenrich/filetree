@@ -1,13 +1,13 @@
 {
 	"class" : {
-		"gitCreateAndInitRepo:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"gitCreateAndInitRepo:author:" : "ThierryGoubier 4/2/2016 17:12:47" },
+		"gitCreateAndInitRepo:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"gitCreateAndInitRepo:author:" : "ThierryGoubier 4/10/2016 13:01:52" },
 	"instance" : {
-		"setUp" : "ThierryGoubier 4/2/2016 17:12:47",
-		"tearDown" : "ThierryGoubier 4/2/2016 17:12:47",
-		"testExtractingFolderName" : "ThierryGoubier 4/2/2016 17:12:47",
-		"testInitGitFileTree" : "ThierryGoubier 4/2/2016 17:12:47",
-		"testInitGitRepo" : "ThierryGoubier 4/2/2016 17:12:47",
-		"testStoreGitFileTree" : "ThierryGoubier 4/2/2016 17:12:47",
-		"testStoreReadGitFileTree" : "ThierryGoubier 4/2/2016 17:12:47",
-		"utilityClass" : "ThierryGoubier 4/2/2016 17:12:47" } }
+		"setUp" : "ThierryGoubier 4/10/2016 13:01:52",
+		"tearDown" : "ThierryGoubier 4/10/2016 13:01:52",
+		"testExtractingFolderName" : "ThierryGoubier 4/10/2016 13:01:52",
+		"testInitGitFileTree" : "ThierryGoubier 4/10/2016 13:01:52",
+		"testInitGitRepo" : "ThierryGoubier 4/10/2016 13:01:52",
+		"testStoreGitFileTree" : "ThierryGoubier 4/10/2016 13:01:52",
+		"testStoreReadGitFileTree" : "ThierryGoubier 4/10/2016 13:01:52",
+		"utilityClass" : "ThierryGoubier 4/10/2016 13:01:52" } }
