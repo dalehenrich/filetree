@@ -1,0 +1,1 @@
+Test setting the name and maintaining the timestamp of a package. Reuse test139 package.
