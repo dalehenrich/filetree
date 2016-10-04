@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-GitTests-ThierryGoubier.37' message 'Update git tests' id '66d41036-807e-42ae-8d30-cb22c5145dc1' date '10 April 2016' time '1:01:51.822804 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-GitTests-ThierryGoubier.1' message 'Remove the commented lines
-' id 'e16d9a74-2c91-584c-8bee-c183c1d9925c' date '10 April 2016' time '12:48:45 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-GitTests-ThierryGoubier.38' message 'Add a test for issue 210 (setting name and package timestamp)' id '09185fb6-4264-4061-90e9-49069c533e8b' date '4 October 2016' time '10:13:52.735811 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-GitTests-ThierryGoubier.1' message 'Update git tests
+' id '84804d91-883e-5fad-8c45-5e47393e0316' date '4 October 2016' time '10:05:39 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

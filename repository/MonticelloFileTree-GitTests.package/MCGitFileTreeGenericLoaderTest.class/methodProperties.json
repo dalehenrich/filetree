@@ -2,13 +2,13 @@
 	"class" : {
 		 },
 	"instance" : {
-		"getTestRepository:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getTopAuthorNameFor:in:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getTopCommitFor:in:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getTopDateAndTimeFor:in:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getTopTimestampFor:in:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getWriteTestRepository" : "ThierryGoubier 4/2/2016 17:12:47",
-		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 4/2/2016 17:12:47",
-		"setUp" : "ThierryGoubier 4/2/2016 17:12:47",
-		"tearDown" : "ThierryGoubier 4/2/2016 17:12:47",
-		"writeTestRepositoryName" : "ThierryGoubier 4/2/2016 17:12:47" } }
+		"getTestRepository:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getTopAuthorNameFor:in:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getTopCommitFor:in:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getTopDateAndTimeFor:in:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getTopTimestampFor:in:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getWriteTestRepository" : "ThierryGoubier 4/10/2016 13:01:52",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 4/10/2016 13:01:52",
+		"setUp" : "ThierryGoubier 4/10/2016 13:01:52",
+		"tearDown" : "ThierryGoubier 4/10/2016 13:01:52",
+		"writeTestRepositoryName" : "ThierryGoubier 4/10/2016 13:01:52" } }
