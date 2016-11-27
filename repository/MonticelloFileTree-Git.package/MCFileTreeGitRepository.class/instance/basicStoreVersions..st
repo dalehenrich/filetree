@@ -4,7 +4,7 @@ basicStoreVersions: versions
 
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	| packageDirectoryString output deps gitCommand outString s |
+	| packageDirectoryString output deps gitCommand outString s live liveInfo |
 	versions
 		do: [ :aVersion | 
 			aVersion info message isString
@@ -33,9 +33,11 @@ basicStoreVersions: versions
 				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
 	self getShortCommitID: (self gitCommand: gitCommand in: directory).
-	versions
-		do: [ :each | 
-			| b |
-			(b := MCWorkingCopy hasPackageNamed: each package name) == false
-				ifFalse:
-					[ b versionInfo: (self versionInfoFromVersionNamed: each package name) ] ]
+	live := (versions
+		collect: [ :each | MCWorkingCopy hasPackageNamed: each package name ])
+		reject: [ :each | each == false ].
+	liveInfo := self
+		versionInfoFromVersionsNamed: (live collect: [ :e | e package name ]).
+	live
+		with: liveInfo
+		do: [ :b :versionInfo | b versionInfo: versionInfo ]

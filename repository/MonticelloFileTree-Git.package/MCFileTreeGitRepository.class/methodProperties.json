@@ -27,8 +27,8 @@
 	"instance" : {
 		"allFileNames" : "ThierryGoubier 4/30/2016 11:46:50",
 		"allVersionNames" : "ThierryGoubier 4/30/2016 11:46:50",
-		"basicStoreVersion:" : "ThierryGoubier 10/4/2016 21:07",
-		"basicStoreVersions:" : "ThierryGoubier 11/8/2016 11:10",
+		"basicStoreVersion:" : "ThierryGoubier 11/27/2016 15:45",
+		"basicStoreVersions:" : "ThierryGoubier 11/27/2016 15:49",
 		"branch" : "ThierryGoubier 4/30/2016 11:46:50",
 		"branch:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"cacheAllFileNames" : "ThierryGoubier 4/30/2016 11:46:50",
@@ -80,6 +80,7 @@
 		"versionFromRepositoryFromFileNamed:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"versionInfoFromFileNamed:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"versionInfoFromVersionNamed:" : "ThierryGoubier 8/26/2016 17:20",
+		"versionInfoFromVersionsNamed:" : "ThierryGoubier 11/27/2016 15:54",
 		"versionNameFromFileName:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"writeGitFileTreeProperties:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"writeRepositoryProperties" : "ThierryGoubier 4/30/2016 11:46:50" } }
