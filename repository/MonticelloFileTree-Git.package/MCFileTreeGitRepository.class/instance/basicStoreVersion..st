@@ -28,6 +28,7 @@ basicStoreVersion: aVersion
 				nextPut: (self escapeForShell: aVersion info message convertToSystemString);
 				nextPut: '--';
 				nextPutAll: packageDirectoryString ].
+	self getShortCommitID: (self gitCommand: gitCommand in: directory).
 	{aVersion} , deps
 		do: [ :each | 
 			| b |
