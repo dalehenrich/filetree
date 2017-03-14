@@ -1,9 +1,0 @@
-{
-	"class" : {
-		 },
-	"instance" : {
-		"cypressEscape" : "SvenVanCaekenberghe 10/27/2013 11:46",
-		"cypressEscapeCharacter:on:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"cypressEscapeCharactersOn:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"cypressUnescape" : "SvenVanCaekenberghe 10/27/2013 12:18",
-		"writeCypressJsonOn:forHtml:indent:" : "DEMAREYChristophe 7/10/2015 18:06:15" } }

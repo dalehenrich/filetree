@@ -1,5 +1,5 @@
 tests
 testJson
-    "Let's compile the JSON without errors"
+	"Let's compile the JSON without errors"
 
-    MCFileTreeJsonParser parse: self basePackageStructureJson
+	STON fromString: self basePackageStructureJson

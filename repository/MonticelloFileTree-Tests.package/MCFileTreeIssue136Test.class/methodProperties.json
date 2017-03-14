@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDown" : "DaleHenrichs 2/1/2015 15:39:22",
-		"tearDownPackagesList" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testClassError" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testClassV3" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testExtensionMethodError" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testExtensionMethodV3" : "DaleHenrichs 2/1/2015 15:39:22" } }
+		"testExtensionMethodError" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testClassError" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testClassV3" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testExtensionMethodV3" : "ThierryGoubier 7/23/2015 08:03:26",
+		"tearDown" : "ThierryGoubier 7/23/2015 08:03:26",
+		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}

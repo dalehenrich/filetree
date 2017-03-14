@@ -1,10 +1,11 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"categoryString" : "DaleHenrichs 2/1/2015 15:39:22",
-		"tearDownPackagesList" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testLoad" : "DaleHenrichs 2/1/2015 15:39:22",
-		"testWriteNRead" : "DaleHenrichs 2/1/2015 15:39:22",
-		"validatePackageMetadata" : "DaleHenrichs 2/1/2015 15:39:22",
-		"versionInfoMessageString" : "DaleHenrichs 2/1/2015 15:39:22" } }
+		"validatePackageMetadata" : "ThierryGoubier 7/23/2015 08:03:26",
+		"categoryString" : "ThierryGoubier 7/23/2015 08:03:26",
+		"versionInfoMessageString" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testLoad" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testWriteNRead" : "ThierryGoubier 7/23/2015 08:03:26",
+		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}
