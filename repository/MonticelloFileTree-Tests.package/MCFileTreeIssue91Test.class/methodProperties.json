@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testFlushCache" : "ThierryGoubier 7/23/2015 08:03:26",
-		"writeRepositoryProperties:in:" : "ThierryGoubier 7/23/2015 08:03:26" } }
+		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
+		"writeRepositoryProperties:in:" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}

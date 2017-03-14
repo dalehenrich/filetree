@@ -1,9 +1,10 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
+		"validateTimestamp:" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testLoad" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testWrite" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testWriteNRead" : "ThierryGoubier 7/23/2015 08:03:26",
-		"validateTimestamp:" : "ThierryGoubier 7/23/2015 08:03:26" } }
+		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testWrite" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}

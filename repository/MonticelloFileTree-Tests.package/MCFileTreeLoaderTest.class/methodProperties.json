@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testBaseLoad" : "ThierryGoubier 7/23/2015 08:03:26",
+		"validateAgainst:for:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testTreeBaseLoad" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testTargetLoad" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testCypressCuisLoad" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testSnapshotBaseLoad" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testTargetLoad" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testTreeBaseLoad" : "ThierryGoubier 7/23/2015 08:03:26",
-		"validateAgainst:for:" : "ThierryGoubier 7/23/2015 08:03:26" } }
+		"tearDownPackagesList" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testBaseLoad" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}

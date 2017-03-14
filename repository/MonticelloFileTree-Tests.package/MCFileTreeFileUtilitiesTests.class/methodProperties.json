@@ -1,27 +1,30 @@
 {
-	"class" : {
-		"isAbstract" : "ThierryGoubier 7/23/2015 08:03:26" },
 	"instance" : {
-		"createDefaultFileDirectory" : "ThierryGoubier 7/23/2015 08:03:26",
-		"deleteAll:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testDirectoryFromPath_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testDirectoryPathString" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testReadStreamFor_in_do_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testEnsureFilePathExists_relativeTo_" : "ThierryGoubier 7/23/2015 08:03:26",
 		"setUp" : "ThierryGoubier 7/23/2015 08:03:26",
-		"setUp:harness:tearDown:" : "ThierryGoubier 7/23/2015 08:03:26",
-		"setUp:unitUnderTest:validation:tearDown:" : "ThierryGoubier 7/23/2015 08:03:26",
-		"tearDown" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testDirectoryFromEntry" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testDirectoryPathString_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"createDefaultFileDirectory" : "ThierryGoubier 7/23/2015 08:03:26",
+		"setUp:unitUnderTest:validation:tearDown:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"utilityClass" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testEnsureFilePathExistsRelativeTo" : "ThierryGoubier 7/23/2015 08:03:26",
+		"tearDown" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testDirectoryName_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"deleteAll:" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testDirectoryFromEntry_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testDirectoryName" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testDirectoryFromPath" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testDirectoryFromPathRelativeTo" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryFromPath_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryFromPath_relativeTo_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryName" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryName_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryPathString" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testDirectoryPathString_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testEnsureFilePathExistsRelativeTo" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testEnsureFilePathExists_relativeTo_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testReadStreamForInDo" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testReadStreamFor_in_do_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"testWriteStreamForInDo" : "ThierryGoubier 7/23/2015 08:03:26",
 		"testWriteStreamFor_in_do_" : "ThierryGoubier 7/23/2015 08:03:26",
-		"utilityClass" : "ThierryGoubier 7/23/2015 08:03:26" } }
+		"testDirectoryFromPath_relativeTo_" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testWriteStreamForInDo" : "ThierryGoubier 7/23/2015 08:03:26",
+		"setUp:harness:tearDown:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"testReadStreamForInDo" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : {
+		"isAbstract" : "ThierryGoubier 7/23/2015 08:03:26"
+	}
+}

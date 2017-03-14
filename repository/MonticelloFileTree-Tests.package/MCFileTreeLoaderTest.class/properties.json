@@ -1,14 +1,11 @@
 {
-	"category" : "MonticelloFileTree-Tests",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MCFileTreeLoaderTest",
-	"pools" : [
-		 ],
 	"super" : "MCFileTreeGenericLoaderTest",
-	"type" : "normal" }
+	"category" : "MonticelloFileTree-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MCFileTreeLoaderTest",
+	"type" : "normal"
+}

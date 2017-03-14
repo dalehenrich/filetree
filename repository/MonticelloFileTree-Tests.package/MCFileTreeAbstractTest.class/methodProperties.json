@@ -1,19 +1,20 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"baseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
-		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"snapshotCypressCuisDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
 		"baseDefinitionsWithClassDefinition:timestamp:" : "ThierryGoubier 7/23/2015 08:03:26",
 		"basePackageStructureJson" : "ThierryGoubier 7/23/2015 08:03:26",
+		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"utilityClass" : "ThierryGoubier 7/23/2015 08:03:26",
 		"classComment" : "ThierryGoubier 7/23/2015 08:03:26",
-		"conditionTimestamp:" : "ThierryGoubier 7/23/2015 08:03:26",
-		"setUp" : "ThierryGoubier 7/23/2015 08:03:26",
-		"snapshotBaseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
 		"snapshotClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
-		"snapshotCypressCuisDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
-		"snapshotTreeBaseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
-		"standardClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"baseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
 		"targetDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
+		"conditionTimestamp:" : "ThierryGoubier 7/23/2015 08:03:26",
 		"targetDefinitionsWithClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
-		"utilityClass" : "ThierryGoubier 7/23/2015 08:03:26" } }
+		"snapshotBaseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
+		"standardClassDefinition:" : "ThierryGoubier 7/23/2015 08:03:26",
+		"snapshotTreeBaseDefinitions" : "ThierryGoubier 7/23/2015 08:03:26",
+		"setUp" : "ThierryGoubier 7/23/2015 08:03:26"
+	},
+	"class" : { }
+}
