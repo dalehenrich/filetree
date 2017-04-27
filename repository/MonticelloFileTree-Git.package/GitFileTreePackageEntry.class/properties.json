@@ -1,10 +1,10 @@
 {
-	"category" : "MonticelloFileTree-Git",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "MonticelloFileTree-Git",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"packageDirectory",
 		"info",
@@ -14,9 +14,8 @@
 		"timeStamp",
 		"repository",
 		"shortCommitID",
-		"parents" ],
+		"parents"
+	],
 	"name" : "GitFileTreePackageEntry",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}
