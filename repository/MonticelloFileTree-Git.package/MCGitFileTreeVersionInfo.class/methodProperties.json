@@ -1,9 +1,10 @@
 {
 	"instance" : {
-		"loadAncestorsAndStepChildrenFrom:" : "ThierryGoubier 4/30/2016 11:46:50",
 		"id:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"repo:" : "ThierryGoubier 4/30/2016 11:46:50",
-		"loadAncestorsAndStepChildren" : "ThierryGoubier 5/13/2017 17:48"
+		"loadAncestorsAndStepChildrenFrom:" : "ThierryGoubier 4/30/2016 11:46:50",
+		"loadAncestorsAndStepChildren" : "ThierryGoubier 5/13/2017 17:48",
+		"ancestors" : "ThierryGoubier 5/13/2017 18:16",
+		"repo:" : "ThierryGoubier 4/30/2016 11:46:50"
 	},
 	"class" : {
 		"name:id:message:date:time:author:ancestors:repository:" : "ThierryGoubier 4/30/2016 11:46:50"
