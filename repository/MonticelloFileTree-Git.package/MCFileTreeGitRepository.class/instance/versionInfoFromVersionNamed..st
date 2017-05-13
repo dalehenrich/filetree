@@ -12,6 +12,6 @@ versionInfoFromVersionNamed: aString
 		ifTrue: [ ^ nil ].
 	versions := versions
 		asSortedCollection: [ :a :b | 
-			(a name copyAfterLast: $.) asNumber
-				<= (b name copyAfterLast: $.) asNumber ].
+			a timeStamp
+				<= b timeStamp ].
 	^ versions last info
