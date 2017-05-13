@@ -2,7 +2,7 @@ accessing
 getVersionsForPackageDirectoryName: packageDirectoryName
 	| commitIDs entryVersions entryVersionIndex |
 	entryVersions := OrderedCollection new.
-	entryVersionIndex := IdentityDictionary new.
+	entryVersionIndex := Dictionary new.
 	commitIDs := self gitVersionsForPackage: packageDirectoryName.
 	[ commitIDs atEnd ]
 		whileFalse:
@@ -15,9 +15,7 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 			author := (commitIDs upTo: $|) onlyLetters.
 			dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
 			parents := ((commitIDs upTo: $|) trimBoth substrings
-				collect: [ :parent | 
-					entryVersionIndex
-						at: (ByteArray readHexFrom: (parent copyFrom: 1 to: 7)) asInteger ])
+				collect: [ :parent | entryVersionIndex at: (parent copyFrom: 1 to: 7) ])
 				asOrderedCollection.
 			message := (commitIDs next: logSize + position - commitIDs position)
 				convertFromSystemString.
@@ -37,4 +35,4 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 	entryVersions
 		doWithIndex:
 			[ :entryVersion :version | entryVersion setMCVersionInfoWithNumber: version ].
-	^ entryVersions
+	^ entryVersions reversed

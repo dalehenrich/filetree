@@ -6,21 +6,17 @@ refresh
 	loaded := Set new.
 	MCWorkingCopy allManagers
 		do: [ :eachManager | 
-			| latestVersions |
-			loadedPackages add: eachManager packageName.
-			eachManager ancestors do: [ :each | loaded add: each name ].
-			latestVersions := versions select: [ :each | each first beginsWith: eachManager packageName ].
-			latestVersions
-				do: [ :eachVersion | 
-					| maxVersionWithAncestors |
-					maxVersionWithAncestors := eachManager ancestors max: #versionNumber.
-					eachManager ancestors
-						do: [ :eachAncestor | 
-							eachVersion fourth info = eachAncestor
-								ifTrue: [ eachAncestor loadAncestorsAndStepChildrenFrom: eachVersion fourth info ].
-							(maxVersionWithAncestors < eachVersion third
-								or: [ eachAncestor versionNumber = eachVersion third and: [ eachAncestor author ~= eachVersion second ] ])
-								ifTrue: [ newer add: eachVersion last ] ] ] ].
+			| packageVersions allAncestorIDs |
+			packageVersions := versions
+				select: [ :each | each first beginsWith: eachManager packageName ].
+			packageVersions notEmpty
+				ifTrue: [ loadedPackages add: eachManager packageName.
+					eachManager ancestors do: [ :each | loaded add: each name ].
+					allAncestorIDs := eachManager allAncestors collect: [ :e | e id ].
+					packageVersions
+						do: [ :eachVersion | 
+							(allAncestorIDs anySatisfy: [ :e | eachVersion fourth info id = e ])
+								ifFalse: [ newer add: eachVersion fourth info ] ] ] ].
 	self packageListUpdate.
 	repository branch: nil.
 	self changed: #gitNeedPush

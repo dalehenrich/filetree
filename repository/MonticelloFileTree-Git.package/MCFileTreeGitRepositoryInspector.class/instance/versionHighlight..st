@@ -4,4 +4,6 @@ versionHighlight: aPackageEntry
 
 	| verName |
 	verName := aPackageEntry info name.
-	^ Text string: verName attribute: (self versionHighlightEmphasis: verName)
+	^ Text
+		string: verName
+		attribute: (self versionHighlightEmphasis: verName id: aPackageEntry info id)

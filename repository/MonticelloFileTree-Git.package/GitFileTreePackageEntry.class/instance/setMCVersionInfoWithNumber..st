@@ -3,7 +3,7 @@ setMCVersionInfoWithNumber: aNumber
 	| packageName |
 	packageName := packageDirectory copyUpToLast: $..
 	info := MCGitFileTreeVersionInfo
-		name: packageName , '-' , author , '.' , aNumber printString
+		name: packageName , '-' , author , '.' , self shortCommitID
 		id: (self class uuidFromGitSHA: commitID package: packageName)
 		message: message
 		date: timeStamp asDate
