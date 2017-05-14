@@ -1,29 +1,32 @@
 {
-	"class" : {
-		"monticelloMetaDirName" : "dkh 4/5/2012 11:15:15",
-		"on:" : "dkh 4/5/2012 11:15:15",
-		"readerClass" : "dkh 4/5/2012 11:15:15" },
 	"instance" : {
 		"directoryForDirectoryNamed:" : "dkh 4/5/2012 11:15:15",
-		"fileNameForSelector:" : "dkh 4/5/2012 11:15:15",
-		"fileUtils" : "dkh 08/10/2012 02:55:31",
 		"initialize" : "topa 7/22/2013 00:13",
-		"monticelloMetaDirName" : "dkh 4/5/2012 11:15:15",
-		"repository" : "dkh 07/07/2013 22:12",
-		"setFileStream:" : "dkh 4/5/2012 11:15:15",
-		"visitClassDefinition:" : "dkh 4/5/2012 11:15:15",
-		"visitClassTraitDefinition:" : "topa 7/22/2013 14:35",
+		"fileUtils" : "dkh 08/10/2012 02:55:31",
+		"writeMethodDefinition:" : "dkh 4/5/2012 11:15:15",
+		"visitScriptDefinition:" : "dkh 07/07/2013 19:32:57",
+		"writeInDirectoryName:fileName:extension:visit:" : "dkh 04/07/2012 10:32",
+		"writePropertiesFile" : "dkh 4/5/2012 11:15:15",
+		"visitTraitDefinition:" : "topa 7/22/2013 00:05",
 		"visitMetaclassDefinition:" : "dkh 4/5/2012 11:15:15",
 		"visitMethodDefinition:" : "dkh 4/5/2012 11:15:15",
-		"visitOrganizationDefinition:" : "dkh 4/5/2012 11:15:15",
-		"visitScriptDefinition:" : "dkh 07/07/2013 19:32:57",
-		"visitTraitDefinition:" : "topa 7/22/2013 00:05",
-		"writeBasicDefinitions:" : "dkh 4/5/2012 11:15:15",
-		"writeClassDefinition:" : "topa 7/22/2013 13:55",
-		"writeClassTraitDefinition:" : "topa 7/22/2013 13:26",
+		"fileNameForSelector:" : "dkh 4/5/2012 11:15:15",
+		"visitClassTraitDefinition:" : "topa 7/22/2013 14:35",
+		"monticelloMetaDirName" : "dkh 4/5/2012 11:15:15",
+		"writeTraitDefinition:" : "topa 7/22/2013 00:16",
+		"setFileStream:" : "dkh 4/5/2012 11:15:15",
 		"writeDefinitions:" : "dkh 4/5/2012 11:15:15",
-		"writeInDirectoryName:fileName:extension:visit:" : "dkh 04/07/2012 10:32",
 		"writeInitializers" : "dkh 4/5/2012 11:15:15",
-		"writeMethodDefinition:" : "dkh 4/5/2012 11:15:15",
-		"writePropertiesFile" : "dkh 4/5/2012 11:15:15",
-		"writeTraitDefinition:" : "topa 7/22/2013 00:16" } }
+		"visitClassDefinition:" : "dkh 4/5/2012 11:15:15",
+		"writeClassDefinition:" : "topa 7/22/2013 13:55",
+		"visitOrganizationDefinition:" : "dkh 4/5/2012 11:15:15",
+		"writeBasicDefinitions:" : "dkh 4/5/2012 11:15:15",
+		"writeClassTraitDefinition:" : "topa 7/22/2013 13:26",
+		"repository" : "dkh 07/07/2013 22:12"
+	},
+	"class" : {
+		"readerClass" : "dkh 4/5/2012 11:15:15",
+		"monticelloMetaDirName" : "dkh 4/5/2012 11:15:15",
+		"on:" : "dkh 4/5/2012 11:15:15"
+	}
+}

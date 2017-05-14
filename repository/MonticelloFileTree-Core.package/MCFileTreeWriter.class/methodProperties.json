@@ -1,17 +1,20 @@
 {
-	"class" : {
-		"readerClass" : "dkh 3/1/2012 13:09" },
 	"instance" : {
-		"addString:at:" : "dkh 8/10/2012 05:26",
-		"addString:at:encodedTo:" : "ChristopheDemarey 8/21/2013 16:56",
-		"deleteExistingPackageStructureFor:" : "dkh 8/10/2012 07:12",
-		"fileUtils" : "dkh 8/10/2012 07:05",
-		"flush" : "dkh 2/16/2012 14:49:00",
-		"initializePackageFileDirectoryCache" : "dkh 8/10/2012 14:01",
-		"packageFileDirectory" : "dkh 8/10/2012 07:14",
 		"repository" : "dkh 07/07/2013 22:10",
-		"serializeVersionInfo:" : "dkh 07/07/2013 15:42:23",
+		"packageFileDirectory" : "dkh 8/10/2012 07:14",
+		"flush" : "dkh 2/16/2012 14:49:00",
+		"addString:at:" : "dkh 8/10/2012 05:26",
+		"writeVersion:" : "dkh 8/10/2012 14:51",
 		"snapshotWriterClass" : "dkh 2/29/2012 13:59",
-		"subPackageFileDirectoryFor:" : "dkh 8/10/2012 07:16",
 		"writeSnapshot:" : "dkh 2/16/2012 14:49:00",
-		"writeVersion:" : "dkh 8/10/2012 14:51" } }
+		"serializeVersionInfo:" : "dkh 07/07/2013 15:42:23",
+		"addString:at:encodedTo:" : "ChristopheDemarey 8/21/2013 16:56",
+		"initializePackageFileDirectoryCache" : "dkh 8/10/2012 14:01",
+		"fileUtils" : "dkh 8/10/2012 07:05",
+		"subPackageFileDirectoryFor:" : "dkh 8/10/2012 07:16",
+		"deleteExistingPackageStructureFor:" : "dkh 8/10/2012 07:12"
+	},
+	"class" : {
+		"readerClass" : "dkh 3/1/2012 13:09"
+	}
+}

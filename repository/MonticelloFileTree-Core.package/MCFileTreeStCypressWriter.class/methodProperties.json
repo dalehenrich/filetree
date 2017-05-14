@@ -1,25 +1,28 @@
 {
+	"instance" : {
+		"fileNameMapFor:" : "PavelKrivanek 3/13/2017 13:06",
+		"fileNameForSelector:" : "DEMAREYChristophe 7/10/2015 18:06:15",
+		"writeExtensionClassDefinition:to:" : "dkh 07/07/2013 22:14",
+		"writeClassDefinition:to:" : "dkh 07/07/2013 22:13",
+		"writePropertiesFile" : "OffrayLuna 5/27/2016 10:14",
+		"writeMethodDefinition:" : "dkh 03/22/2013 11:30",
+		"setFileStream:" : "dkh 4/4/2012 14:01",
+		"writeClassDefinition:" : "OffrayLuna 5/27/2016 10:09",
+		"writeMethodProperties:" : "OffrayLuna 5/27/2016 10:10",
+		"propertyFileExtension" : "dkh 07/07/2013 22:15",
+		"writeClassComment:" : "dkh 03/22/2013 11:30",
+		"writeMethodDefinition:to:filename:" : "dkh 07/18/2013 16:34",
+		"writeTraitDefinition:" : "OffrayLuna 5/27/2016 10:15",
+		"writeTraitDefinition:to:" : "topa 7/22/2013 14:47",
+		"writeDefinitions:" : "08/08/2013 16:08",
+		"writeMethodDefinition:to:" : "dkh 07/18/2013 17:01",
+		"writeExtensionClassDefinition:" : "OffrayLuna 5/27/2016 10:10"
+	},
 	"class" : {
 		"fileNameForSelector:" : "DEMAREYChristophe 7/10/2015 18:06:15",
 		"initialize" : "dkh 07/07/2013 15:42:23",
-		"initializeSpecials" : "PeterMcLain 10/02/2012 14:47",
 		"monticelloMetaDirName" : "dkh 4/4/2012 15:05",
-		"specials" : "dkh 4/4/2012 11:27" },
-	"instance" : {
-		"fileNameForSelector:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"fileNameMapFor:" : "PavelKrivanek 3/13/2017 13:06",
-		"propertyFileExtension" : "dkh 07/07/2013 22:15",
-		"setFileStream:" : "dkh 4/4/2012 14:01",
-		"writeClassComment:" : "dkh 03/22/2013 11:30",
-		"writeClassDefinition:" : "OffrayLuna 5/27/2016 10:09",
-		"writeClassDefinition:to:" : "dkh 07/07/2013 22:13",
-		"writeDefinitions:" : "08/08/2013 16:08",
-		"writeExtensionClassDefinition:" : "OffrayLuna 5/27/2016 10:10",
-		"writeExtensionClassDefinition:to:" : "dkh 07/07/2013 22:14",
-		"writeMethodDefinition:" : "dkh 03/22/2013 11:30",
-		"writeMethodDefinition:to:" : "dkh 07/18/2013 17:01",
-		"writeMethodDefinition:to:filename:" : "dkh 07/18/2013 16:34",
-		"writeMethodProperties:" : "OffrayLuna 5/27/2016 10:10",
-		"writePropertiesFile" : "OffrayLuna 5/27/2016 10:14",
-		"writeTraitDefinition:" : "OffrayLuna 5/27/2016 10:15",
-		"writeTraitDefinition:to:" : "topa 7/22/2013 14:47" } }
+		"specials" : "dkh 4/4/2012 11:27",
+		"initializeSpecials" : "PeterMcLain 10/02/2012 14:47"
+	}
+}
