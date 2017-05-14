@@ -27,4 +27,4 @@ loadAllFileNames
 					entryVersions := self getVersionsForPackageDirectoryEntry: entry.
 					allNames addAll: entryVersions.
 					bar value: index ] ].
-	^ allNames
+	^ allNames reversed

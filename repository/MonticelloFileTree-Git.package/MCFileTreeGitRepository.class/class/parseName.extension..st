@@ -16,10 +16,10 @@ parseName: aString extension: extension
 	author := (basicName copyAfterLast: $-) copyUpToLast: $..
 	versionNumber := (basicName copyAfterLast: $-) copyAfterLast: $..
 	(versionNumber notEmpty
-		and: [ versionNumber allSatisfy: [ :each | self isDigit: each ] ])
+		and: [ versionNumber allSatisfy: [ :each | each isDigit ] ])
 		ifFalse: [ versionNumber := 0 ].
 	packageName := package , branch.
 	^ {packageName.
 	author.
 	versionNumber.
-	basicName}
+	(packageName , extension)}

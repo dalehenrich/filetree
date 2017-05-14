@@ -15,4 +15,4 @@ versionInfoFromVersionsNamed: names
 				select: [ :each | each packageDirectory = packageDirectory ].
 			versions isEmpty
 				ifTrue: [ nil ]
-				ifFalse: [ versions last info ] ]
+				ifFalse: [ versions first info ] ]

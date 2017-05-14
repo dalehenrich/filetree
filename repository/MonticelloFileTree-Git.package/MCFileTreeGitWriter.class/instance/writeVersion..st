@@ -3,7 +3,8 @@ writeVersion: aVersion
 	"We have to do that to avoid writing the version info."
 
 	| members |
-	directory := (members := aVersion package name) last.
+	directory := (members := MCFileTreeGitRepository
+		parseName: aVersion info name) last.
 	self deleteExistingPackageStructureFor: members.
 	self fileUtils ensureDirectoryExists: self packageFileDirectory.
 	self initializePackageFileDirectoryCache.
