@@ -13,9 +13,7 @@ basicStoreVersion: aVersion
 	packageDirectoryString := Array
 		streamContents: [ :stream | 
 			{aVersion} , deps
-				do: [ :each | 
-					stream
-						nextPut: (self class parseName: each info name) first , self packageExtension ] ].
+				do: [ :each | stream nextPut: each package name , self packageExtension ] ].
 	gitCommand := Array
 		streamContents: [ :stream | 
 			stream nextPutAll: #('commit' '--allow-empty-message').

@@ -1,10 +1,14 @@
 accessing
 refresh
+	| packageNames mcWorkingCopies |
 	loadedPackages := Set new.
-	versions := repository retrieveVersionsWithPackageNames: Set new.
+	packageNames := Set new.
+	versions := repository retrieveVersionsWithPackageNames: packageNames.
 	newer := Set new.
 	loaded := Set new.
-	MCWorkingCopy allManagers
+	mcWorkingCopies := MCWorkingCopy allManagers
+		select: [ :e | packageNames includes: e packageName ].
+	mcWorkingCopies
 		do: [ :eachManager | 
 			| packageVersions allAncestorIDs |
 			packageVersions := versions
@@ -12,11 +16,8 @@ refresh
 			packageVersions notEmpty
 				ifTrue: [ loadedPackages add: eachManager packageName.
 					eachManager ancestors do: [ :each | loaded add: each name ].
-					allAncestorIDs := eachManager allAncestors collect: [ :e | e id ].
-					packageVersions
-						do: [ :eachVersion | 
-							(allAncestorIDs anySatisfy: [ :e | eachVersion fourth info id = e ])
-								ifFalse: [ newer add: eachVersion fourth info ] ] ] ].
+					allAncestorIDs := eachManager ancestors collect: [ :e | e id ].
+					self versions: packageVersions before: allAncestorIDs ] ].
 	self packageListUpdate.
 	repository branch: nil.
 	self changed: #gitNeedPush

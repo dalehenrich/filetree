@@ -15,7 +15,9 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 			author := (commitIDs upTo: $|) onlyLetters.
 			dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
 			parents := ((commitIDs upTo: $|) trimBoth substrings
-				collect: [ :parent | entryVersionIndex at: (parent copyFrom: 1 to: 7) ])
+				collect: [ :parent | 
+					entryVersionIndex
+						at: (parent copyFrom: 1 to: 7) ])
 				asOrderedCollection.
 			message := (commitIDs next: logSize + position - commitIDs position)
 				convertFromSystemString.

@@ -6,9 +6,11 @@ versionInfoFromFileNamed: aGitFileTreePackageEntry
 
 	| mcR packageName |
 	self deprecated: 'I do not answer to queries by filenames'.
-	self assert: aGitFileTreePackageEntry class == GitFileTreePackageEntry.
-	packageName := (self class parseName: aGitFileTreePackageEntry info name) first , self packageExtension.
-	mcR := MCFileTreeGitStReader on: directory fileName: packageName.
+	self
+		assert: aGitFileTreePackageEntry class == GitFileTreePackageEntry.
+	mcR := MCFileTreeGitStReader
+		on: directory
+		fileName: GitFileTreePackageEntry packageDirectory.
 	mcR commitID: aGitFileTreePackageEntry commitID.
 	mcR info: aGitFileTreePackageEntry info.
 	mcR repository: self.

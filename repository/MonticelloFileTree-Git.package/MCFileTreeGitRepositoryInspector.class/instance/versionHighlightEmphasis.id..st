@@ -17,11 +17,6 @@ versionHighlightEmphasis: aString id: anId
 		ifTrue: [ packageName := packageName copyUpTo: $. ].
 	(loaded includes: versionName)
 		ifTrue: [ ^ TextEmphasis underlined ].
-	selectedPackage = packageName
-		ifTrue: [ self selectedPackageAncestors
-				ifNotNil: [ (selectedPackageAncestors includes: anId)
-						ifTrue: [ ^ TextEmphasis normal ]
-						ifFalse: [ ^ TextEmphasis bold ] ] ].
 	(newer anySatisfy: [ :e | e id = anId ])
 		ifTrue: [ ^ TextEmphasis bold ].
 	(loadedPackages includes: packageName)
