@@ -1,11 +1,12 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testLoad" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testRepository" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testWrite" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testWriteNRead" : "ThierryGoubier 4/10/2016 13:01:52",
-		"validateTimestamp:" : "ThierryGoubier 4/10/2016 13:01:52",
-		"writeTestRepositoryName" : "ThierryGoubier 4/10/2016 13:01:52" } }
+		"validateTimestamp:" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testLoad" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testRepository" : "ThierryGoubier 10/4/2016 22:13:53",
+		"writeTestRepositoryName" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testWriteNRead" : "ThierryGoubier 10/4/2016 22:13:53",
+		"tearDownPackagesList" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testWrite" : "ThierryGoubier 10/4/2016 22:13:53"
+	},
+	"class" : { }
+}

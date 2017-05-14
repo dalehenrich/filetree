@@ -1,14 +1,15 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"getPackage:" : "ThierryGoubier 10/4/2016 21:56",
-		"getTestPackage" : "ThierryGoubier 10/4/2016 22:03",
-		"hasTestPackage" : "ThierryGoubier 10/4/2016 22:03",
-		"setUp" : "ThierryGoubier 10/4/2016 21:48",
-		"tearDown" : "ThierryGoubier 10/4/2016 22:09",
-		"tearDownPackagesList" : "ThierryGoubier 10/4/2016 21:54",
-		"testPackageName" : "ThierryGoubier 10/4/2016 21:54",
-		"testWriteNRead" : "ThierryGoubier 10/4/2016 22:12",
-		"validateTimestamp:" : "ThierryGoubier 10/4/2016 21:56",
-		"writeTestRepositoryName" : "ThierryGoubier 10/4/2016 21:41" } }
+		"setUp" : "ThierryGoubier 10/4/2016 22:13:53",
+		"tearDown" : "ThierryGoubier 10/4/2016 22:13:53",
+		"hasTestPackage" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testPackageName" : "ThierryGoubier 10/4/2016 22:13:53",
+		"writeTestRepositoryName" : "ThierryGoubier 10/4/2016 22:13:53",
+		"getPackage:" : "ThierryGoubier 10/4/2016 22:13:53",
+		"getTestPackage" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testWriteNRead" : "ThierryGoubier 10/4/2016 22:13:53",
+		"tearDownPackagesList" : "ThierryGoubier 10/4/2016 22:13:53",
+		"validateTimestamp:" : "ThierryGoubier 10/4/2016 22:13:53"
+	},
+	"class" : { }
+}
