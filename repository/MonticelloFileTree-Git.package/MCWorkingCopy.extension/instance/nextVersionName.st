@@ -1,4 +1,4 @@
-*monticellofiletree-git-overrides
+*monticelloFileTree-Git-override
 nextVersionName
 	| branch oldName base author |
 	branch := ''.

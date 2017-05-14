@@ -3,7 +3,7 @@ refresh
 	| packageNames mcWorkingCopies |
 	loadedPackages := Set new.
 	packageNames := Set new.
-	versions := repository retrieveVersionsWithPackageNames: packageNames.
+	versions := (repository retrieveVersionsWithPackageNames: packageNames) reversed.
 	newer := Set new.
 	loaded := Set new.
 	mcWorkingCopies := MCWorkingCopy allManagers
