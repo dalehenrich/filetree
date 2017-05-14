@@ -1,7 +1,7 @@
 tests
 testExtensionMethodError
 | packageName gofer hitError description |
-  packageName := 'Issue136-2'.
+  packageName := 'Issue136-3'.
   {packageName} do: [ :pn | self deny: (self hasPackage: pn) ].
   gofer := Gofer new
     disablePackageCache;
@@ -17,7 +17,7 @@ testExtensionMethodError
         ifTrue: [ ex resume ].
      hitError := description
         endsWith:
-          'Method protocol ''*Issue97'' for the method ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-2''' ].
+          'Method protocol ''*Issue97'' for the method ''isCypressMockIssue97'' in class ''Object'' is inconsistent with the package name ''*issue136-3''' ].
   Transcript
     cr;
     show:
