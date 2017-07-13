@@ -4,7 +4,7 @@ basicFromUrl: aZnUrl
 	Parameters are:
 		dir : the directory inside the repository where the target MC packages are.
 		branch : the git branch to fetch.
-		protocol: the user name part to add to the ssh Url, default to git, but can also be https (which implies read only access).
+		protocol: the user name part to add to the ssh Url, default to git, but can also be http/https.
 		readOnly : is the repository read only? If present, reduce the history to a minimum (and change the GUI).
 	Alternative url syntax:
 		gitfiletree://github.com/dalehenrich/filetree:pharo5.0_dev/repository
@@ -29,10 +29,11 @@ basicFromUrl: aZnUrl
 				ifTrue: [ protocol := 'https' ].
 			protocol = 'git'
 				ifTrue: [ repo remoteUrl: 'git@' , aZnUrl host , ':' , path ].
-			protocol = 'https'
+			(protocol beginsWith: 'http')
 				ifTrue: [ | targetUrl |
-					targetUrl := 'https://' asZnUrl.
+					targetUrl := (protocol, '://') asZnUrl.
 					targetUrl host: aZnUrl host.
+					targetUrl port: aZnUrl port.
 					targetUrl addPathSegments: ($/ split: path).
 					targetUrl username: aZnUrl username.
 					targetUrl password: aZnUrl password.
