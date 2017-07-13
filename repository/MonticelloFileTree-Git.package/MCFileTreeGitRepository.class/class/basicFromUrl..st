@@ -29,9 +29,9 @@ basicFromUrl: aZnUrl
 				ifTrue: [ protocol := 'https' ].
 			protocol = 'git'
 				ifTrue: [ repo remoteUrl: 'git@' , aZnUrl host , ':' , path ].
-			protocol beginsWith: 'http'
+			(protocol beginsWith: 'http')
 				ifTrue: [ | targetUrl |
-					targetUrl := protocol, '://' asZnUrl.
+					targetUrl := (protocol, '://') asZnUrl.
 					targetUrl host: aZnUrl host.
 					targetUrl port: aZnUrl port.
 					targetUrl addPathSegments: ($/ split: path).
