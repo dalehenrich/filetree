@@ -1,25 +1,16 @@
-language: erlang
+language: smalltalk
+sudo: false
 
-env:
+# Select operating system(s)
+os:
+  - linux
+
+# Select compatible Smalltalk image(s)
+smalltalk:
    - ST=GemStone-2.4.4.1
    - ST=GemStone-2.4.8
    - ST=GemStone-3.1.0.6
-   - ST=GemStone-3.2.15
-   - ST=GemStone-3.3.1
+   - ST=GemStone-3.2.17
+   - ST=GemStone-3.3.7
+   - ST=GemStone-3.4.0
 
-# blacklist 
-branches:
-  except:
-    - master
-
-install:
-   - export PROJECT_HOME="$(pwd)"
-   - cd $HOME
-   - wget -q -O builderCI.zip https://github.com/dalehenrich/builderCI/zipball/master
-   - unzip -q builderCI.zip
-   - cd dalehenrich-builderCI*
-   - source build_env_vars
-   - ln -s $PROJECT_HOME $GIT_PATH
-   - ./build_image.sh
-
-script: $BUILDER_CI_HOME/testTravisCI.sh

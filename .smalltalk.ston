@@ -1,0 +1,15 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'FileTree',
+      #directory : 'repository',
+      #platforms : [ #gemstone ],
+      #load : [ 'Tests' ]
+    }
+  ],
+  #testing : {
+    #include : {
+      #classes : [ #SentButNotImplementedTest, #UndefinedSymbolsTest ]
+  	}
+   }
+}
