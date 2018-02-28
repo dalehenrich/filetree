@@ -10,6 +10,6 @@ writeMethodDefinition: aMCMethodDefinition in: aClassPath
 				ifFalse: [ '/instance/' ]).
 	self
 		outputFileModify:
-			dirName , (self fileNameForSelector: aMCMethodDefinition selector)
+			dirName , (self baseFileNameForSelector: aMCMethodDefinition selector)
 				, '.st'
 		with: (self buildMethodSource: aMCMethodDefinition)
