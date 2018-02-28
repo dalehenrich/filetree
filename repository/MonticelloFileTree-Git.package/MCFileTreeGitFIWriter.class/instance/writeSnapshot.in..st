@@ -23,12 +23,17 @@ writeSnapshot: aSnapshot in: aPackagePath
 				and: [ (classAndTraitNames includes: e className) not ] ].
 	organization := orderedDefinitions
 		select: [ :e | e isKindOf: MCOrganizationDefinition ].
+	extensionClasses := (extensionMethodDefinitions
+		collect: [ :e | e className ]) asSet.
 	self outputFileDelete: aPackagePath.
 	self writePackageGitPropertiesIn: aPackagePath.
 	self writeOrganization: organization in: aPackagePath.
 	self writeClassDefinitions: classDefinitions in: aPackagePath.
 	self writeTraitDefinitions: traitDefinitions in: aPackagePath.
 	self writeMethodDefinitions: methodDefinitions in: aPackagePath.
+	self
+		writeExtensionClassDefinitions: extensionClasses
+		in: aPackagePath.
 	self
 		writeExtensionMethodDefinitions: extensionMethodDefinitions
 		in: aPackagePath.

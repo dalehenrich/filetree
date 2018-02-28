@@ -27,10 +27,10 @@ outputCommit: aVersion
 		nextPut: Character lf.
 	self stream
 		nextPutAll: 'committer ';
-		nextPutAll: (repository authorName: aVersion) utf8Encoded asString;
-		nextPutAll: ' <';
-		nextPutAll: (repository authorEmail: aVersion) utf8Encoded asString;
-		nextPutAll: '> ';
+		nextPutAll: (repository authorName: aVersion);
+		nextPut: Character space;
+		nextPutAll: (repository authorEmail: aVersion);
+		nextPut: Character space;
 		nextPutAll: aVersion info timeStamp asUnixTime printString;
 		nextPut: Character space;
 		nextPutAll: aVersion info timeStamp offset asEmailTimeOffsetString;

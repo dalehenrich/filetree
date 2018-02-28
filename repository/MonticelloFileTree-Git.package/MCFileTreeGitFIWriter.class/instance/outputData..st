@@ -11,5 +11,5 @@ outputData: aString
 		nextPutAll: 'data ';
 		nextPutAll: utf8String size printString.
 	self stream nextPut: Character lf.
-	self stream nextPutAll: utf8String.
+	self stream nextPutAll: aString.
 	self stream nextPut: Character lf

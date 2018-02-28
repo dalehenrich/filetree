@@ -6,5 +6,5 @@ outputFileDelete: aPathAsString
 
 	self stream
 		nextPutAll: 'D ';
-		nextPutAll: aPathAsString utf8Encoded asString.
+		nextPutAll: aPathAsString.
 	self stream nextPut: Character lf

@@ -7,6 +7,6 @@ outputFileModify: aFilenameAsString with: dataAsString
 
 	self stream
 		nextPutAll: 'M 644 inline ';
-		nextPutAll: aFilenameAsString utf8Encoded asString.
+		nextPutAll: aFilenameAsString.
 	self stream nextPut: Character lf.
 	self outputData: dataAsString

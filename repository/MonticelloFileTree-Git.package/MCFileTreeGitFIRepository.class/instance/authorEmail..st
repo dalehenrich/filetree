@@ -1,4 +1,5 @@
 accessing
 authorEmail: aVersion
 	^ (self class namesAt: aVersion info author)
-		ifNil: [ self gitAuthorEmail ]
+		ifNotNil: [ :d | d at: #email ]
+		ifNil: [ '<' , self gitAuthorEmail , '>' ]
