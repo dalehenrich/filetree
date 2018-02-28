@@ -2,7 +2,7 @@ accessing
 writeSnapshot: aSnapshot in: aPackagePath
 	"Separate the snapshot contents into the various types of definitions we expect."
 
-	| orderedDefinitions extensionClasses extensionMethodDefinitions classDefinitions traitDefinitions methodDefinitions classAndTraitNames |
+	| orderedDefinitions extensionClasses extensionMethodDefinitions classDefinitions traitDefinitions methodDefinitions classAndTraitNames organization |
 	orderedDefinitions := MCDependencySorter
 		sortItems: aSnapshot definitions.
 	classDefinitions := orderedDefinitions
@@ -21,8 +21,11 @@ writeSnapshot: aSnapshot in: aPackagePath
 		select: [ :e | 
 			(e isKindOf: MCMethodDefinition)
 				and: [ (classAndTraitNames includes: e className) not ] ].
+	organization := orderedDefinitions
+		select: [ :e | e isKindOf: MCOrganizationDefinition ].
 	self outputFileDelete: aPackagePath.
 	self writePackageGitPropertiesIn: aPackagePath.
+	self writeOrganization: organization in: aPackagePath.
 	self writeClassDefinitions: classDefinitions in: aPackagePath.
 	self writeTraitDefinitions: traitDefinitions in: aPackagePath.
 	self writeMethodDefinitions: methodDefinitions in: aPackagePath.
