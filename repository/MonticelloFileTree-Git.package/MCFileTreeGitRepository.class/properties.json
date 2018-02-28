@@ -11,7 +11,10 @@
 	"instvars" : [
 		"remoteUrl",
 		"branch",
-		"subdirectory"
+		"subdirectory",
+		"subDirectoryString",
+		"gitAuthorName",
+		"gitAuthorEmail"
 	],
 	"name" : "MCFileTreeGitRepository",
 	"type" : "normal"
