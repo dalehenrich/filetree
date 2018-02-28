@@ -10,5 +10,8 @@ fileOutAll: anArrayOfVersions on: aMCFileTreeGitRepository
 		do: [ :each | 
 			aWriter
 				writeSnapshot: each snapshot
-				in: each package name , '.package' ].
+				in: each package name , '.package'.
+			aWriter
+				outputFileModify: each package name , '.package/monticello.meta/package'
+				with: '(name ''' , each package name , ''')' ].
 	^ aWriter stream
