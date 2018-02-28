@@ -9,19 +9,18 @@ writeInitializers: anArrayOfMCMethodDefinition in: aPathAsString
 				ifTrue: [ (Smalltalk hasClassNamed: e className)
 						ifTrue: [ present add: e ]
 						ifFalse: [ absent add: e ] ] ].
-	orderedClasses := (Class
+	orderedClasses := Class
 		superclassOrder:
 			(present
-				collect: [ :each | Smalltalk classOrTraitNamed: each className ]))
-		collect: [ :e | e className ].
+				collect: [ :each | Smalltalk classOrTraitNamed: each className ]).
 	contents := String
 		streamContents: [ :s | 
 			orderedClasses
-				do: [ :aClassName | 
+				do: [ :aClass | 
 					s
 						nextPutAll:
-							aClassName , ' '
-								, (present detect: [ :m | m className = aClassName ]) selector
+							aClass name , ' '
+								, (present detect: [ :m | m className = aClass name ]) selector
 								, '.';
 						nextPut: Character lf ].
 			absent

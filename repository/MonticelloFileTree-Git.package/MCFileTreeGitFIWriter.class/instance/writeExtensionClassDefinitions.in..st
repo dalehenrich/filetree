@@ -11,4 +11,5 @@ writeExtensionClassDefinitions: anArrayOfString in: aPackagePath
 						, self propertyFileExtension
 				with:
 					(String
-						writeStreamDo: [ :s | STON put: properties asJsonOnStreamPretty: s ]) ]
+						writeStreamDo: [ :s | STON put: properties asJsonOnStreamPretty: s ])
+						withUnixLineEndings ]

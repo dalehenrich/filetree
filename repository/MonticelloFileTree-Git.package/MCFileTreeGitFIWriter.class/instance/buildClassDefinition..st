@@ -29,5 +29,6 @@ buildClassDefinition: aMCClassDefinition
 		put: aMCClassDefinition classInstVarNames asArray.
 	properties at: 'type' put: aMCClassDefinition type asString.
 	properties at: 'commentStamp' put: aMCClassDefinition commentStamp.
-	^ String
-		streamContents: [ :s | STON put: properties asJsonOnStreamPretty: s ]
+	^ (String
+		streamContents: [ :s | STON put: properties asJsonOnStreamPretty: s ])
+		withUnixLineEndings
