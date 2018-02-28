@@ -11,12 +11,11 @@ fileOutAll: anArrayOfVersions on: aMCFileTreeGitRepository
 	aWriter outputCommit: anArrayOfVersions first.
 	anArrayOfVersions
 		do: [ :each | 
+			| packageDir |
+			packageDir := subDirectoryString , each package name , '.package'.
+			aWriter writeSnapshot: each snapshot in: packageDir.
 			aWriter
-				writeSnapshot: each snapshot
-				in: subDirectoryString , each package name , '.package'.
-			aWriter
-				outputFileModify:
-					subDirectoryString , each package name
-						, '.package/monticello.meta/package'
-				with: '(name ''' , each package name , ''')' ].
+				outputFileModify: packageDir , '/monticello.meta/package'
+				with: '(name ''' , each package name , ''')'.
+			aWriter writeDependencies: each dependencies in: packageDir ].
 	^ aWriter stream
