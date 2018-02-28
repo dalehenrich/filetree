@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-Git-ThierryGoubier.164' message 'Small correction' id 'f74953d7-a622-0d00-9cf0-697103b06063' date '28 February 2018' time '1:44:29.714215 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.163' message '- Correct missing .st files
-' id 'ef02895f-81d7-5635-a872-88550aafbd29' date '28 February 2018' time '1:24:19 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-Git-ThierryGoubier.165' message 'Added package properties' id '7973931e-a722-0d00-9cf8-254a03b06063' date '28 February 2018' time '2:04:25.101586 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.164' message 'Small correction
+' id '64df1aaa-4f3f-5c58-9178-9095a2a37d9d' date '28 February 2018' time '1:44:31 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

@@ -22,6 +22,7 @@ writeSnapshot: aSnapshot in: aPackagePath
 			(e isKindOf: MCMethodDefinition)
 				and: [ (classAndTraitNames includes: e className) not ] ].
 	self outputFileDelete: aPackagePath.
+	self writePackageGitPropertiesIn: aPackagePath.
 	self writeClassDefinitions: classDefinitions in: aPackagePath.
 	self writeTraitDefinitions: traitDefinitions in: aPackagePath.
 	self writeMethodDefinitions: methodDefinitions in: aPackagePath.
