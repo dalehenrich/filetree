@@ -19,12 +19,18 @@ basicStoreVersion: aVersion
 		in: directory
 		withInput: string contents.
 	self
-		gitCommand: #('reset' 'HEAD') , (Array with: aVersion package name , '.package/')
+		gitCommand:
+			#('reset' 'HEAD')
+				,
+					(Array
+						with: self subDirectoryString , aVersion package name , '.package/')
 		in: directory.
 	self
 		gitCommand:
 			#('checkout' 'HEAD')
-				, (Array with: aVersion package name , '.package/')
+				,
+					(Array
+						with: aVersion package name , '.package/')
 		in: directory.
 	versions
 		do: [ :each | 
