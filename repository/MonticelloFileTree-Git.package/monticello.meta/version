@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-Git-ThierryGoubier.165' message 'Added package properties' id '7973931e-a722-0d00-9cf8-254a03b06063' date '28 February 2018' time '2:04:25.101586 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.164' message 'Small correction
-' id '64df1aaa-4f3f-5c58-9178-9095a2a37d9d' date '28 February 2018' time '1:44:31 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-Git-ThierryGoubier.166' message 'Write initializers...' id '4f340e64-a722-0d00-ab86-b7e20c232a9f' date '28 February 2018' time '2:23:50.774189 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.165' message 'Added package properties
+' id 'f17e57be-7063-58a3-b7bf-0282a93ae831' date '28 February 2018' time '2:04:26 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

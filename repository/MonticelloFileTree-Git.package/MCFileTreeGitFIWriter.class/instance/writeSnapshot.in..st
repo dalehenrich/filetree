@@ -28,4 +28,5 @@ writeSnapshot: aSnapshot in: aPackagePath
 	self writeMethodDefinitions: methodDefinitions in: aPackagePath.
 	self
 		writeExtensionMethodDefinitions: extensionMethodDefinitions
-		in: aPackagePath
+		in: aPackagePath.
+	self writeInitializers: methodDefinitions in: aPackagePath
