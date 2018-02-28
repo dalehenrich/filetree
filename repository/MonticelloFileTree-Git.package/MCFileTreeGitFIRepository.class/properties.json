@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MCFileTreeGitRepository",
+	"category" : "MonticelloFileTree-Git",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MCFileTreeGitFIRepository",
+	"type" : "normal"
+}
