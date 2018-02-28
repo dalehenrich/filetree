@@ -7,8 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"repository",
-		"stream",
-		"specials"
+		"stream"
 	],
 	"name" : "MCFileTreeGitFIWriter",
 	"type" : "normal"

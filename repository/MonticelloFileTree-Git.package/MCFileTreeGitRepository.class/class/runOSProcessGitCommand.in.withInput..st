@@ -33,5 +33,6 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aString
 			r := '' ] ]
 		ensure: [ in close.
 			out close.
-			err close ].
+			err close.
+			file ensureDelete ].
 	^ r
