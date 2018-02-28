@@ -4,10 +4,10 @@ baseline: spec
 	spec
 		for: #common
 		do: [ spec
-				configuration: 'OSSubprocess'
+				configuration: 'OSProcess'
 					with: [ spec
 						versionString: #stable;
-						repository: 'github://marianopeck/OSSubprocess/repository' ];
+						repository: 'http://www.squeaksource.com/MetacelloRepository' ];
 				yourself.
 			spec
 				configuration: 'ProcessWrapper'
@@ -32,17 +32,17 @@ baseline: spec
 				for: #Unix
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
-						with: [ spec requires: #('MonticelloFileTree-Core' ) ] ].
+						with: [ spec requires: #('MonticelloFileTree-Core') ] ].
 			spec
 				for: #MacOSSubprocess
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
-						with: [ spec requires: #('MonticelloFileTree-Core' 'OSSubprocess') ] ].
+						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
 			spec
 				for: #UnixOSSubprocess
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
-						with: [ spec requires: #('MonticelloFileTree-Core' 'OSSubprocess') ] ].
+						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
 			spec
 				for: #Windows
 				do: [ spec
