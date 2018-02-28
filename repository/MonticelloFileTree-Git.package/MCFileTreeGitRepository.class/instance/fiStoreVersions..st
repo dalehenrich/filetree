@@ -1,19 +1,14 @@
 storing
-basicStoreVersion: aVersion
+fiStoreVersions: anArrayOfVersion
 	"Do a filetree store followed by in order, a check and save dependencies, a commit and an update of the version info."
 
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
-	"Note: for each package, the git command to do after the fast-import is:
-	git reset HEAD <package path>
-	git checkout HEAD <package path>"
-
-	| versions string file |
-	aVersion info message isString
+	| string |
+	anArrayOfVersion first info message isString
 		ifFalse: [ MCFileTreeGitError new
-				signal: 'version message is not a string: ' , aVersion info name ].
-	versions := self versionWithAllDependencies: aVersion.
-	string := MCFileTreeGitFIWriter fileOutAll: versions on: self.
+				signal: 'version message is not a string: ' , anArrayOfVersion first info name ].
+	string := MCGitFileTreeWriter fileOutAll: anArrayOfVersion on: self.
 	self
 		gitCommand: #('fast-import')
 		in: directory
@@ -22,15 +17,16 @@ basicStoreVersion: aVersion
 		gitCommand:
 			#('reset' 'HEAD')
 				,
-					(versions
+					(anArrayOfVersion
 						collect: [ :v | self subDirectoryString , v package name , '.package/' ])
-		in: directory.
+		in: self gitTopDirectory.
 	self
 		gitCommand:
 			#('checkout' 'HEAD')
-				, (versions collect: [ :v | v package name , '.package/' ])
+				, (anArrayOfVersion collect: [ :v | v package name , '.package/' ])
 		in: directory.
-	versions
+	self gitCommand: #('clean' '-f') in: directory.
+	anArrayOfVersion
 		do: [ :each | 
 			| b |
 			(b := MCWorkingCopy hasPackageNamed: each package name) == false

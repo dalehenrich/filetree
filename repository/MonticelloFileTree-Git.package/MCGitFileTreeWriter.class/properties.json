@@ -1,11 +1,14 @@
 {
 	"commentStamp" : "<historical>",
-	"super" : "MCFileTreeStCypressWriter",
+	"super" : "Object",
 	"category" : "MonticelloFileTree-Git",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "MCFileTreeGitStCypressWriter",
+	"instvars" : [
+		"repository",
+		"stream"
+	],
+	"name" : "MCGitFileTreeWriter",
 	"type" : "normal"
 }

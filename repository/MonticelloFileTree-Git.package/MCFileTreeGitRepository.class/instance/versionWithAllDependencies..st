@@ -1,4 +1,4 @@
-storing
+private
 versionWithAllDependencies: aVersion
 	| deps |
 	deps := OrderedCollection with: aVersion.
