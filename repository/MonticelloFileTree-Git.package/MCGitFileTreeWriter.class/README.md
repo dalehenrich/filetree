@@ -12,4 +12,4 @@ The structure is very complex and confusing, with multiple objects going back an
 
 All paths inside are strings (git fast-import only understands unix-like paths).
 
-Paths are local to the root of the repository.
+Paths are local to the root of the repository. I don't know if -C would work to make paths relative inside a repository (it could help).

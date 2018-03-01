@@ -31,6 +31,7 @@ runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory withInput: aString
 			command waitForExit.
 			self assert: command isRunning not.
 			r := command upToEnd.
+			file ensureDelete.
 			command exitCode > 0
 				ifTrue: [ | errorString |
 					errorString := command errorUpToEnd.

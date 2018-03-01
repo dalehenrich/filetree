@@ -1,3 +1,3 @@
 constants
 propertyFileExtension
-  ^ self repository propertyFileExtension
+	^ self repository propertyFileExtension
