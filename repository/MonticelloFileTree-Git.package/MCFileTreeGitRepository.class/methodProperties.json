@@ -91,6 +91,7 @@
 		"runOSSubprocessGitCommand:in:" : "ThierryGoubier 2/28/2018 21:10:57",
 		"runOSProcessGitCommand:in:withInput:" : "ThierryGoubier 2/28/2018 21:10:57",
 		"gitCommand" : "ThierryGoubier 2/28/2018 21:10:57",
+		"runOSSubprocessGitCommand:in:withInput:" : "ThierryGoubier 3/1/2018 10:48",
 		"defaultDirectoryName" : "ThierryGoubier 2/28/2018 21:10:57",
 		"description" : "ThierryGoubier 2/28/2018 21:10:57",
 		"parseEntry:extension:" : "ThierryGoubier 2/28/2018 21:10:57",
