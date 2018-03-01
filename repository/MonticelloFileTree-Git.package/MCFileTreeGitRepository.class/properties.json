@@ -14,7 +14,8 @@
 		"subdirectory",
 		"subDirectoryString",
 		"gitAuthorName",
-		"gitAuthorEmail"
+		"gitAuthorEmail",
+		"gitTopLevelDirectory"
 	],
 	"name" : "MCFileTreeGitRepository",
 	"type" : "normal"

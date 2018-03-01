@@ -30,3 +30,26 @@ MCRepository basicFromUrl: 'gitfiletree://github.com/dalehenrich/filetree:pharo5
 gitfiletree core documentation :
 
 gitfiletree maps MC commands onto git commands via OSProcess, and MC metadata out of git commit data. That's all there is to it. A bit of git knowledge can help, but no git command line work is necessary. The inner workings are a bit more complex than that of course, but not by much.
+
+gitfiletree new attempt :
+
+When reading, gitfiletree does not use the working tree. When writing with fast-import, gitfiletree does not use the working tree either. Using bare git repositories could then work nicely, wthout any possible mess of a working tree. It would work, except for the fact that the working tree is necessary for some commands (merge, pull). However, gitfiletree would get the benefit of never using the working tree (and hence have issues with file names and the like)
+
+- Clone:
+git clone --bare
+git clone --mirror
+- Change branch
+git symbolic-ref HEAD refs/heads/pharo6
+- Ok on bare:
+git log <branchName>
+git branch -> git update-ref refs/heads/new_branch refs/heads/master
+git need to pull
+- Not Ok on bare
+git pull -> replaced by git fetch plus a git merge ?
+git push -> has to be explicit? git push origin <branchName> "works very nicely"
+git rev-parse --show-toplevel -> doesn't work, not needed.
+git versions for package -> need object navigation
+- Object navigation
+git cat-file -p <hash> -> various objects starting with a commit (can do git cat-file -p <branch>)
+git ls-tree <branch>:<path> -> show all entries. can recurse (-r)
+git rev-parse --is-inside-work-tree -> answers false (not in a work tree)
