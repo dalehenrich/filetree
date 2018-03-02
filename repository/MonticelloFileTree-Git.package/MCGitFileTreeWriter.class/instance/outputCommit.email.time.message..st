@@ -1,6 +1,6 @@
 private-fast import
-outputCommit: aVersion
-	"Output the git fast-import commit information."
+outputCommit: authorNameAsString email: authorEmailAsString time: aTimeStamp message: aString
+	"Output the git fast-import commit information. Get all raw values."
 
 	"'commit' SP <ref> LF
 	mark?
@@ -27,15 +27,15 @@ outputCommit: aVersion
 		lf.
 	self
 		nextPutAll: 'committer ';
-		nextPutAll: (repository authorName: aVersion);
+		nextPutAll: authorNameAsString;
 		space;
-		nextPutAll: (repository authorEmail: aVersion);
+		nextPutAll: authorEmailAsString;
 		space;
-		nextPutAll: aVersion info timeStamp asUnixTime printString;
+		nextPutAll: aTimeStamp asUnixTime printString;
 		space;
-		nextPutAll: aVersion info timeStamp offset asEmailTimeOffsetString;
+		nextPutAll: aTimeStamp offset asEmailTimeOffsetString;
 		lf.
-	self outputData: aVersion info message.
+	self outputData: aString.
 	self
 		nextPutAll: 'from refs/heads/';
 		nextPutAll: self repository currentBranch;

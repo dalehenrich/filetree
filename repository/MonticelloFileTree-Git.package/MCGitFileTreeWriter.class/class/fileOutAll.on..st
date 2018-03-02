@@ -8,7 +8,13 @@ fileOutAll: anArrayOfVersions on: aMCFileTreeGitRepository
 	aWriter := self new.
 	aWriter repository: aMCFileTreeGitRepository.
 	subDirectoryString := aMCFileTreeGitRepository subDirectoryString.
-	aWriter outputCommit: anArrayOfVersions first.
+	anArrayOfVersions first
+		in: [ :aVersion | 
+			aWriter
+				outputCommit: (aMCFileTreeGitRepository authorName: aVersion)
+				email: (aMCFileTreeGitRepository authorEmail: aVersion)
+				time: aVersion info timestamp
+				message: aVersion info message ].
 	anArrayOfVersions
 		do: [ :each | 
 			| packageDir |

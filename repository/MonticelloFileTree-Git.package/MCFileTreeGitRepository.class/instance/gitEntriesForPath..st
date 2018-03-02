@@ -7,12 +7,16 @@ gitEntriesForPath: aPath
 	| treeish |
 	treeish := String
 		streamContents: [ :s | 
+			| segs |
+			segs := (aPath asAbsolute relativeTo: self gitTopDirectory)
+				segments.
 			s nextPutAll: 'HEAD:'.
-			(aPath asAbsolute relativeTo: self gitTopDirectory) segments
-				do: [ :e | s nextPutAll: e ]
-				separatedBy: [ s nextPut: $/ ] ].
+			segs do: [ :e | s nextPutAll: e ] separatedBy: [ s nextPut: $/ ] ].
 	^ GitFileTreeObjectEntry
 		fromAll:
 			(self
 				gitCommand: (Array with: 'ls-tree' with: treeish)
-				in: self gitTopDirectory)
+				in: self gitTopDirectory
+				onErrorDo: [ :message | 
+					(message beginsWith: 'fatal: Not a valid object name HEAD')
+						ifTrue: [ ^ #() ] ])
