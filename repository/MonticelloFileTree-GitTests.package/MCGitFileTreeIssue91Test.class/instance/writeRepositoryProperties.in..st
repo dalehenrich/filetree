@@ -19,8 +19,13 @@ writeRepositoryProperties: repositoryProperties in: aDirectory
 						nextPut: $";
 						yourself.
 					propertyCount < keyCount
-						ifTrue: [ 
-							fileStream
+						ifTrue: [ fileStream
 								nextPutAll: ',';
 								lf ] ].
-			fileStream nextPutAll: ' }' ]
+			fileStream nextPutAll: ' }' ].
+	MCFileTreeGitRepository
+		runGitCommand: #('add' '.filetree')
+		in: aDirectory.
+	MCFileTreeGitRepository
+		runGitCommand: #('commit' '-m' 'gitfiletree repository properties')
+		in: aDirectory

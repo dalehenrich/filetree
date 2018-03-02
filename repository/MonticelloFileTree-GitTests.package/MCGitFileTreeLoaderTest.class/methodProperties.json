@@ -1,16 +1,17 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"baseDefinitions" : "ThierryGoubier 4/10/2016 13:01:52",
-		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 4/10/2016 13:01:52",
-		"targetDefinitions" : "ThierryGoubier 4/10/2016 13:01:52",
-		"targetDefinitionsWithClassDefinition:" : "ThierryGoubier 4/10/2016 13:01:52",
-		"tearDownPackagesList" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testBaseLoad" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testBaseLoadRepository" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testCypress2CuisLoad" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testIssue74" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testTargetLoad" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testTargetLoadRepository" : "ThierryGoubier 4/10/2016 13:01:52",
-		"validateAgainst:for:" : "ThierryGoubier 4/10/2016 13:01:52" } }
+		"testTargetLoad" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testBaseLoad" : "ThierryGoubier 10/4/2016 22:13:53",
+		"baseDefinitionsWithClassDefinition:" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testIssue74" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testCypress2CuisLoad" : "ThierryGoubier 10/4/2016 22:13:53",
+		"targetDefinitions" : "ThierryGoubier 10/4/2016 22:13:53",
+		"baseDefinitions" : "ThierryGoubier 10/4/2016 22:13:53",
+		"targetDefinitionsWithClassDefinition:" : "ThierryGoubier 10/4/2016 22:13:53",
+		"validateAgainst:for:" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testTargetLoadRepository" : "ThierryGoubier 10/4/2016 22:13:53",
+		"testBaseLoadRepository" : "ThierryGoubier 10/4/2016 22:13:53",
+		"tearDownPackagesList" : "ThierryGoubier 10/4/2016 22:13:53"
+	},
+	"class" : { }
+}
