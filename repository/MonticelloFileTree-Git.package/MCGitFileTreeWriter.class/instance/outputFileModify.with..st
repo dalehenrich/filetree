@@ -5,8 +5,8 @@ outputFileModify: aFilenameAsString with: dataAsString
 	"'M' SP <mode> SP 'inline' SP <path> LF
 	data"
 
-	self stream
+	self
 		nextPutAll: 'M 644 inline ';
-		nextPutAll: aFilenameAsString.
-	self stream nextPut: Character lf.
-	self outputData: dataAsString
+		nextPutAll: aFilenameAsString;
+		lf;
+		outputData: dataAsString

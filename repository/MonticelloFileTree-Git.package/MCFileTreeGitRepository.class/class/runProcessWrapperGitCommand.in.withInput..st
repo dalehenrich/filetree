@@ -1,5 +1,5 @@
 private-commands
-runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory withInput: aString
+runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
 	"Enclose all parameters with double quotes to protect."
 
 	| r aCommandString |
@@ -18,7 +18,10 @@ runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory withInput: aString
 			| command file |
 			(file := FileReference
 				newTempFilePrefix: 'GitCommand'
-				suffix: '.txt') writeStreamDo: [ :s | s nextPutAll: aString ].
+				suffix: '.txt')
+				writeStreamDo: [ :s | 
+					s binary.
+					s nextPutAll: aByteArray ].
 			command := pW new
 				useStdout;
 				useStderr;

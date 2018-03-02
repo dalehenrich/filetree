@@ -1,10 +1,14 @@
 private-commands
-runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aString
+runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
+	"Run a git command, no shell, with a full path and arguments in an array. Add the input encoded in utf8 as stdin."
+
 	| classOfExternalPipe classOfPipeableOSProcess c r d in out err file |
 	classOfExternalPipe := Smalltalk at: #ExternalPipe.
 	classOfPipeableOSProcess := Smalltalk at: #PipeableOSProcess.
 	(file := FileReference newTempFilePrefix: 'GitCommand' suffix: '.txt')
-		writeStreamDo: [ :s | s nextPutAll: aString ].
+		writeStreamDo: [ :s | 
+			s binary.
+			s nextPutAll: aByteArray ].
 	in := FileStream readOnlyFileNamed: file pathString.
 	out := classOfExternalPipe nonBlockingPipe.
 	err := classOfExternalPipe nonBlockingPipe.

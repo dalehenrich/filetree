@@ -4,7 +4,7 @@ outputFileDelete: aPathAsString
 
 	"'D' SP <path> LF"
 
-	self stream
+	self
 		nextPutAll: 'D ';
-		nextPutAll: aPathAsString.
-	self stream nextPut: Character lf
+		nextPutAll: aPathAsString;
+		lf

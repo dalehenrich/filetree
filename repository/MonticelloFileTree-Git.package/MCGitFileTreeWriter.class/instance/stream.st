@@ -1,3 +1,3 @@
 accessing
 stream
-	^ stream ifNil: [ stream := WriteStream on: String new ]
+	^ stream ifNil: [ stream := WriteStream on: ByteArray new ]

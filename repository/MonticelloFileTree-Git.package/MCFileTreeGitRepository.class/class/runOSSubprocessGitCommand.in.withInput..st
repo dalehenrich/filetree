@@ -1,9 +1,11 @@
 private-commands
-runOSSubprocessGitCommand: anArrayOfStrings in: aDirectory withInput: aString
+runOSSubprocessGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
 	| classOfOSSUnixSubprocess file |
 	classOfOSSUnixSubprocess := Smalltalk at: #OSSUnixSubprocess.
 	(file := FileReference newTempFilePrefix: 'GitCommand' suffix: '.txt')
-		writeStreamDo: [ :s | s nextPutAll: aString ].
+		writeStreamDo: [ :s | 
+			s binary.
+			s nextPutAll: aByteArray ].
 	classOfOSSUnixSubprocess new
 		command: self gitCommand;
 		arguments:

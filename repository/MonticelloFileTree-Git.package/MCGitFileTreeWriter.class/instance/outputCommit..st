@@ -21,23 +21,23 @@ outputCommit: aVersion
 	from refs/heads/{repositoryBranchName}^0
 	"
 
-	self stream
+	self
 		nextPutAll: 'commit refs/heads/';
 		nextPutAll: self repository currentBranch;
-		nextPut: Character lf.
-	self stream
+		lf.
+	self
 		nextPutAll: 'committer ';
 		nextPutAll: (repository authorName: aVersion);
-		nextPut: Character space;
+		space;
 		nextPutAll: (repository authorEmail: aVersion);
-		nextPut: Character space;
+		space;
 		nextPutAll: aVersion info timeStamp asUnixTime printString;
-		nextPut: Character space;
+		space;
 		nextPutAll: aVersion info timeStamp offset asEmailTimeOffsetString;
-		nextPut: Character lf.
+		lf.
 	self outputData: aVersion info message.
-	self stream
+	self
 		nextPutAll: 'from refs/heads/';
 		nextPutAll: self repository currentBranch;
 		nextPutAll: '^0';
-		nextPut: Character lf
+		lf

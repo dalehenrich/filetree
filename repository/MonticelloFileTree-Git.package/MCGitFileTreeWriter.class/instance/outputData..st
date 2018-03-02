@@ -5,11 +5,11 @@ outputData: aString
 	"'data' SP <count> LF
 	<raw> LF?"
 
-	| utf8String |
-	utf8String := aString utf8Encoded asString.
-	self stream
+	| utf8ByteArray |
+	utf8ByteArray := aString utf8Encoded.
+	self
 		nextPutAll: 'data ';
-		nextPutAll: utf8String size printString.
-	self stream nextPut: Character lf.
-	self stream nextPutAll: aString.
-	self stream nextPut: Character lf
+		nextPutAll: utf8ByteArray size printString;
+		lf.
+	self stream nextPutAll: utf8ByteArray.
+	self lf
