@@ -15,5 +15,5 @@ repositoryProperties
 					self writeRepositoryProperties ]
 				ifNotNil: [ :configEntry | 
 					repositoryProperties := STON
-						fromString: (self gitCatFile: configEntry file) ] ].
+						fromString: (self gitCatFile: configEntry object) ] ].
 	^ repositoryProperties

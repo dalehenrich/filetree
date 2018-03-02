@@ -13,7 +13,7 @@ fileOutAll: anArrayOfVersions on: aMCFileTreeGitRepository
 			aWriter
 				outputCommit: (aMCFileTreeGitRepository authorName: aVersion)
 				email: (aMCFileTreeGitRepository authorEmail: aVersion)
-				time: aVersion info timestamp
+				time: aVersion info timeStamp
 				message: aVersion info message ].
 	anArrayOfVersions
 		do: [ :each | 
