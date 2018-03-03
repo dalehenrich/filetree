@@ -2,19 +2,19 @@ git querying
 gitVersionsForDefinition: aMCDefinition in: aPackageName
 	"Query git for all the versions related to that method definition."
 
-	| fileDirectory methodFile |
-	fileDirectory := self fileUtils
-		directoryFromPath:
-			aMCDefinition className
-				,
-					(aMCDefinition isExtensionMethod
-						ifTrue: [ '.extension' ]
-						ifFalse: [ '.class' ])
-		relativeTo: (self fileUtils directoryFromPath: aPackageName , '.package' relativeTo: directory).
-	methodFile := (aMCDefinition classIsMeta
-		ifTrue: [ 'class' ]
-		ifFalse: [ 'instance' ]) , '/' , (MCFileTreeStCypressWriter new fileNameForSelector: aMCDefinition selector) , '.st'.
-	(self fileUtils directoryExists: fileDirectory)
-		ifFalse: [ NotFound signalFor: fileDirectory ].
-	^ (self gitCommand: #('log' '--format=%H' '--') , {methodFile} in: fileDirectory) substrings
+	| methodFile |
+	methodFile := self subDirectoryString , aMCDefinition className
+		,
+			(aMCDefinition isExtensionMethod
+				ifTrue: [ '.extension/' ]
+				ifFalse: [ '.class/' ])
+		,
+			(aMCDefinition classIsMeta
+				ifTrue: [ 'class/' ]
+				ifFalse: [ 'instance/' ])
+		, (MCGitFileTreeWriter baseFileNameForSelector: aMCDefinition selector)
+		, '.st'.
+	^ (self
+		gitCommand: #('log' '--format=%H' '--') , {methodFile}
+		in: self gitTopDirectory) substrings
 		collect: [ :e | ByteArray readHexFrom: e ]

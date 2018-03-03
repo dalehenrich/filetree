@@ -1,4 +1,4 @@
-private
+constants
 specials
 	| map |
 	map := Dictionary new: 20.

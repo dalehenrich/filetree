@@ -14,11 +14,10 @@
 		"outputFileDelete:" : "ThierryGoubier 3/1/2018 23:28",
 		"outputData:" : "ThierryGoubier 3/1/2018 23:29",
 		"writeClassDefinitions:in:" : "ThierryGoubier 2/27/2018 11:54",
-		"specials" : "ThierryGoubier 2/28/2018 13:23",
 		"repository:" : "ThierryGoubier 2/26/2018 11:35",
 		"writeMethodDefinitions:in:" : "ThierryGoubier 2/27/2018 11:57",
 		"outputCommit:email:time:message:" : "ThierryGoubier 3/3/2018 11:45",
-		"baseFileNameForSelector:" : "ThierryGoubier 3/1/2018 09:39",
+		"baseFileNameForSelector:" : "ThierryGoubier 3/3/2018 18:16",
 		"writeInitializers:in:" : "ThierryGoubier 2/28/2018 14:31",
 		"writeExtensionClassDefinitions:in:" : "ThierryGoubier 2/28/2018 18:21",
 		"writeOrganization:in:" : "ThierryGoubier 2/28/2018 14:46",
@@ -30,6 +29,8 @@
 	},
 	"class" : {
 		"fileOutSingleFile:in:with:" : "ThierryGoubier 3/3/2018 11:21",
-		"fileOutAll:on:" : "ThierryGoubier 3/2/2018 19:02"
+		"baseFileNameForSelector:" : "ThierryGoubier 3/3/2018 18:16",
+		"fileOutAll:on:" : "ThierryGoubier 3/2/2018 19:02",
+		"specials" : "ThierryGoubier 3/3/2018 18:15"
 	}
 }
