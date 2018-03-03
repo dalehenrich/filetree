@@ -1,16 +1,12 @@
 accessing-repository
 repositoryProperties
+	"Beware: that code has a bad case of hidden recursion inside (defaultRepositoryProperties will call repositoryProperties)."
+
 	repositoryProperties
-		ifNil: [ repositoryProperties := Dictionary new.
-			(self fileUtils directoryExists: self gitTopDirectory)
-				ifFalse: [ self
-						error:
-							'gitfiletree:// repository '
-								, (self fileUtils directoryPathString: self directory) printString
-								, ' does not exist.' ].
-			((self gitEntriesForPath: directory)
-				detect: [ :entry | entry name = '.filetree' ]
-				ifNone: [  ])
+		ifNil: [ | entries |
+			repositoryProperties := Dictionary new.
+			entries := self gitEntriesForPath: directory.
+			(entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
 				ifNil: [ repositoryProperties := self defaultRepositoryProperties.
 					self writeRepositoryProperties ]
 				ifNotNil: [ :configEntry | 
