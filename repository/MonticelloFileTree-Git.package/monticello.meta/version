@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-Git-ThierryGoubier.186' message 'Cleaning up file accesses' id '22fa7628-e722-0d00-81e6-54330f00beea' date '3 March 2018' time '6:28:28.916979 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.185' message 'Forgot I was tracking fast-import command files
-' id '1695d622-88f0-5f5c-8fa0-2eb2ed28fa50' date '3 March 2018' time '12:00:56 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-Git-ThierryGoubier.187' message 'Update the scan for method versions in a git repository.' id '635a4b45-e822-0d00-81e7-02f60f00beea' date '3 March 2018' time '7:48:07.562169 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-Git-ThierryGoubier.186' message 'Cleaning up file accesses
+' id '4d481c90-ea5d-58f7-aea9-5ee0c6964ec2' date '3 March 2018' time '6:28:30 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

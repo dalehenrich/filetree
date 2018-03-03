@@ -3,7 +3,8 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 	"Query git for all the versions related to that method definition."
 
 	| methodFile |
-	methodFile := self subDirectoryString , aMCDefinition className
+	methodFile := self subDirectoryString , aPackageName , '.package/'
+		, aMCDefinition className
 		,
 			(aMCDefinition isExtensionMethod
 				ifTrue: [ '.extension/' ]

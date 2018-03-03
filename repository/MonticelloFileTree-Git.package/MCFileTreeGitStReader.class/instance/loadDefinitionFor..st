@@ -4,7 +4,7 @@ loadDefinitionFor: aMCDefinition
 
 	| classPropertiesDict entries classEntry |
 	definitions := OrderedCollection new.
-	self zipForDefinition: aMCDefinition.
+	[self zipForDefinition: aMCDefinition] on: MCFileTreeGitError do: [:ex | ^ nil ].
 	classEntry := packageDirectory , self slash , aMCDefinition className , '.class/'.
 	entries := self zip members select: [ :entry | entry isDirectory not and: [ entry fileName beginsWith: classEntry ] ].
 	entries isEmpty
