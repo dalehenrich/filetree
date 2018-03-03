@@ -38,5 +38,5 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
 		ensure: [ in close.
 			out close.
 			err close.
-			file ensureDelete ].
+			"file ensureDelete" ].
 	^ r

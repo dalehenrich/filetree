@@ -3,10 +3,9 @@ fileOutSingleFile: fileNameAndPath in: aMCFileTreeGitRepository with: aFileConte
 	| aWriter subDirectoryString |
 	aWriter := self new.
 	aWriter repository: aMCFileTreeGitRepository.
-	subDirectoryString := aMCFileTreeGitRepository subDirectoryString.
 	aWriter
 		outputCommit: aMCFileTreeGitRepository gitAuthorName
-		email: aMCFileTreeGitRepository gitAuthorEmail
+		email: '<', aMCFileTreeGitRepository gitAuthorEmail, '>'
 		time: DateAndTime now
 		message: 'Writing and Commiting ' , fileNameAndPath.
 	aWriter outputFileModify: fileNameAndPath with: aFileContentsAsString.

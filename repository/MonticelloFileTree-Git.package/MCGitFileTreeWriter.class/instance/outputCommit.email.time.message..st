@@ -21,9 +21,13 @@ outputCommit: authorNameAsString email: authorEmailAsString time: aTimeStamp mes
 	from refs/heads/{repositoryBranchName}^0
 	"
 
+	"When the repository is still empty, we don't have a current branch and we will create one (and not add a from line)..."
+
+	| branch |
+	branch := self repository currentBranch.
 	self
 		nextPutAll: 'commit refs/heads/';
-		nextPutAll: self repository currentBranch;
+		nextPutAll: (branch ifNil: [ 'master' ]);
 		lf.
 	self
 		nextPutAll: 'committer ';
@@ -36,8 +40,9 @@ outputCommit: authorNameAsString email: authorEmailAsString time: aTimeStamp mes
 		nextPutAll: aTimeStamp offset asEmailTimeOffsetString;
 		lf.
 	self outputData: aString.
-	self
-		nextPutAll: 'from refs/heads/';
-		nextPutAll: self repository currentBranch;
-		nextPutAll: '^0';
-		lf
+	branch
+		ifNotNil: [ self
+				nextPutAll: 'from refs/heads/';
+				nextPutAll: self repository currentBranch;
+				nextPutAll: '^0';
+				lf ]
