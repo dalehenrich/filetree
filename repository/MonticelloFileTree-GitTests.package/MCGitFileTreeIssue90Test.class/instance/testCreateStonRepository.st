@@ -4,12 +4,15 @@ testCreateStonRepository
 
 	| workingDir tempDir |
 	workingDir := self utilityClass default.
-	tempDir := self utilityClass directoryFromPath: 'temp' relativeTo: workingDir.
-	[ 
-	| repoDir repo newRepo  |
+	tempDir := self utilityClass
+		directoryFromPath: 'temp'
+		relativeTo: workingDir.
+	[ | repoDir repo newRepo |
 	self utilityClass ensureDirectoryExists: tempDir.
 	MCGitFileTreeTests gitCreateAndInitRepo: tempDir.
-	repoDir := self utilityClass directoryFromPath: 'repo' relativeTo: tempDir.
+	repoDir := self utilityClass
+		directoryFromPath: 'repo'
+		relativeTo: tempDir.
 	self utilityClass ensureDirectoryExists: repoDir.
 	repo := MCFileTreeGitRepository new directory: repoDir.
 	self assert: repo propertyFileExtension = '.json'.
