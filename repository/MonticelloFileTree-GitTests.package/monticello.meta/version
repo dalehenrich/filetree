@@ -1,2 +1,2 @@
-(name 'MonticelloFileTree-GitTests-ThierryGoubier.41' message 'Cosmetic changes' id '8c33b26d-e022-0d00-bb61-c79e0d5b82cc' date '3 March 2018' time '10:26:45.652686 am' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-GitTests-ThierryGoubier.40' message 'Ensure that we properly commit properties into the repo if we do it ourselves
-' id '19d579d4-f0f5-51c9-ac47-236c0fdb5cb9' date '3 March 2018' time '10:12:04 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'MonticelloFileTree-GitTests-ThierryGoubier.42' message 'Change slightly the way issue 146 is tested.' id 'e04e71b2-e422-0d00-8cda-c662097ba616' date '3 March 2018' time '3:32:18.896979 pm' author 'ThierryGoubier' ancestors ((name 'MonticelloFileTree-GitTests-ThierryGoubier.41' message 'Cosmetic changes
+' id 'e476659e-4bb6-5920-84be-36d4727ced2e' date '3 March 2018' time '10:26:46 am' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

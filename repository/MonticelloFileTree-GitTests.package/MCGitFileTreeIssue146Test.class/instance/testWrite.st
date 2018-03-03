@@ -13,5 +13,5 @@ testWrite
 			versionInfo := (MCWorkingCopy allManagers
 				detect: [ :wc | wc packageName = pn ]) ancestors first.
 			version := repo versionWithInfo: versionInfo.
-			self assert: version info message = (String with: Character lf).
+			self assert: version info message trim isEmpty.
 			self getWriteTestRepository storeVersion: version ]
