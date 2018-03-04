@@ -22,7 +22,8 @@ refresh
 								and: [ (eachAncestor class name = #IceMCVersionInfo) not ])
 								ifTrue: [ eachAncestor
 										loadAncestorsAndStepChildrenFrom: eachVersion fourth info ].
-							(maxVersionWithAncestors < eachVersion third
+							((maxVersionWithAncestors notNil
+								and: [ maxVersionWithAncestors < eachVersion third ])
 								or: [ eachAncestor versionNumber = eachVersion third
 										and: [ eachAncestor author ~= eachVersion second ] ])
 								ifTrue: [ newer add: eachVersion last ] ] ] ].
