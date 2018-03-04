@@ -9,7 +9,7 @@ getTestRepositoriesDirectory
         ifTrue: [ wc := mgr ] ].
   wc ifNil: [ ^ self assert: false ].
   fileTreeRepo := (wc repositoryGroup repositories
-    reject: [ :repo | MCCacheRepository default = repo ])
+    reject: [ :repo | MCCacheRepository uniqueInstance = repo ])
     detect: [ :repo | repo isKindOf: MCFileTreeRepository ].
   fileTreeRepoPath := fileTreeRepo directory fileTreeUtilityClass
     directoryPathString: fileTreeRepo directory.	"use fileTreeUtilityClass and path so we can test FileDirectory and FileSystem in same image"
