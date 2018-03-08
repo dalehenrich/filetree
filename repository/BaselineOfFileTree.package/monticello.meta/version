@@ -1,2 +1,2 @@
-(name 'BaselineOfFileTree-ThierryGoubier.33' message 'Ensure we load OSProcess and not OSSubprocess' id 'b5284d35-af22-0d00-a5fe-39c20f1ae147' date '28 February 2018' time '11:43:26.109062 pm' author 'ThierryGoubier' ancestors ((name 'BaselineOfFileTree-ThierryGoubier.32' message '#Unix, #MacOS !
-' id 'fdcfe25a-0235-5801-bb11-eb7cdca43496' date '30 April 2016' time '4:03:41 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())
+(name 'BaselineOfFileTree-ThierryGoubier.1520015085' message 'Update the baseline' id '95957f79-4f23-0d00-88b7-a36c0faff969' date '8 March 2018' time '10:55:45.03195 pm' author 'ThierryGoubier' ancestors ((name 'BaselineOfFileTree-ThierryGoubier.1520015084' message 'Revert a change in accessing repository properties.
+' id '57efc516-a8a9-554f-8627-9b0b12407b2b' date '2 March 2018' time '7:24:44 pm' author 'ThierryGoubier' ancestors () stepChildren ())) stepChildren ())

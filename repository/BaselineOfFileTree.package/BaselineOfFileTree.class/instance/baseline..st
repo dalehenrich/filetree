@@ -34,12 +34,12 @@ baseline: spec
 						package: 'MonticelloFileTree-Git'
 						with: [ spec requires: #('MonticelloFileTree-Core') ] ].
 			spec
-				for: #MacOSSubprocess
+				for: #MacOSProcess
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
 						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
 			spec
-				for: #UnixOSSubprocess
+				for: #UnixOSProcess
 				do: [ spec
 						package: 'MonticelloFileTree-Git'
 						with: [ spec requires: #('MonticelloFileTree-Core' 'OSProcess') ] ].
