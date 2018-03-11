@@ -30,4 +30,4 @@ testWriteNRead
 			self assert: (self hasPackage: pn).
 			versionInfo := (MCWorkingCopy allManagers
 				detect: [ :wc | wc packageName = pn ]) ancestors first.
-			self assert: versionInfo message = (String with: Character cr) ]
+			self assert: versionInfo message = '' ]
