@@ -17,4 +17,4 @@ writeRepositoryProperties
 		gitCommand:
 			{'checkout'.
 			'HEAD'.
-			(self subDirectoryString , '.filetree')} i
+			(self subDirectoryString , '.filetree')}
