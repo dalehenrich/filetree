@@ -9,24 +9,19 @@ fiStoreVersions: anArrayOfVersion
 		ifFalse: [ MCFileTreeGitError new
 				signal: 'version message is not a string: ' , anArrayOfVersion first info name ].
 	string := MCGitFileTreeWriter fileOutAll: anArrayOfVersion on: self.
-	self
-		gitCommand: #('fast-import')
-		in: self gitTopDirectory
-		withInput: string contents.
+	self gitCommand: #('fast-import') withInput: string contents.
 	self
 		gitCommand:
 			#('reset' 'HEAD')
 				,
 					(anArrayOfVersion
-						collect: [ :v | self subDirectoryString , v package name , '.package/' ])
-		in: self gitTopDirectory.
+						collect: [ :v | self subDirectoryString , v package name , '.package/' ]).
 	self
 		gitCommand:
 			#('checkout' 'HEAD')
 				,
 					(anArrayOfVersion
-						collect: [ :v | self subDirectoryString , v package name , '.package/' ])
-		in: self gitTopDirectory.
+						collect: [ :v | self subDirectoryString , v package name , '.package/' ]).
 	self gitCommand: #('clean' '-f') in: directory.
 	anArrayOfVersion
 		do: [ :each | 

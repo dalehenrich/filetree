@@ -39,7 +39,7 @@ outputCommit: authorNameAsString email: authorEmailAsString time: aTimeStamp mes
 		space;
 		nextPutAll: aTimeStamp offset asEmailTimeOffsetString;
 		lf.
-	self outputData: aString.
+	self outputData: aString withUnixLineEndings.
 	branch
 		ifNotNil: [ self
 				nextPutAll: 'from refs/heads/';

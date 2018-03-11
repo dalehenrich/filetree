@@ -7,19 +7,14 @@ writeRepositoryProperties
 		fileOutSingleFile: self subDirectoryString , '.filetree'
 		in: self
 		with: (STON toJsonStringPretty: self repositoryProperties).
-	self
-		gitCommand: #('fast-import')
-		in: self gitTopDirectory
-		withInput: string contents.
+	self gitCommand: #('fast-import') withInput: string contents.
 	self
 		gitCommand:
 			{'reset'.
 			'HEAD'.
-			(self subDirectoryString , '.filetree')}
-		in: self gitTopDirectory.
+			(self subDirectoryString , '.filetree')}.
 	self
 		gitCommand:
 			{'checkout'.
 			'HEAD'.
-			(self subDirectoryString , '.filetree')}
-		in: self gitTopDirectory
+			(self subDirectoryString , '.filetree')} i

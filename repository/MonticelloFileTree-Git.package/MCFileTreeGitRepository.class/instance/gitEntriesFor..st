@@ -9,8 +9,7 @@ gitEntriesFor: aPathAsString
 	^ GitFileTreeObjectEntry
 		fromAll:
 			([ self
-				gitCommand: (Array with: 'ls-tree' with: 'HEAD:' , aPathAsString)
-				in: self gitTopDirectory ]
+				gitCommand: (Array with: 'ls-tree' with: 'HEAD:' , aPathAsString) ]
 				on: MCFileTreeGitError
 				do: [ :ex | 
 					(ex messageText includesAll: 'HEAD:')

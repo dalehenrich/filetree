@@ -15,7 +15,5 @@ gitVersionsForDefinition: aMCDefinition in: aPackageName
 				ifFalse: [ 'instance/' ])
 		, (MCGitFileTreeWriter baseFileNameForSelector: aMCDefinition selector)
 		, '.st'.
-	^ (self
-		gitCommand: #('log' '--format=%H' '--') , {methodFile}
-		in: self gitTopDirectory) substrings
-		collect: [ :e | ByteArray readHexFrom: e ]
+	^ (self gitCommand: #('log' '--format=%H' '--') , {methodFile})
+		substrings collect: [ :e | ByteArray readHexFrom: e ]

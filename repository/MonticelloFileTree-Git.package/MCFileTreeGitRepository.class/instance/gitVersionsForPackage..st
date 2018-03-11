@@ -12,5 +12,4 @@ gitVersionsForPackage: aDirectoryEntry
 					'--reverse'.
 					'--format=|%H|%an|%ai|%p|%s'.
 					'--'.
-					(self subDirectoryString, aDirectoryEntry)}
-				in: self gitTopDirectory)
+					(self subDirectoryString , aDirectoryEntry)})
