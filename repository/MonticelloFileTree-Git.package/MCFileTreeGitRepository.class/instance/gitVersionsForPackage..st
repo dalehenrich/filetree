@@ -10,6 +10,6 @@ gitVersionsForPackage: aDirectoryEntry
 					'--log-size'.
 					'--parents'.
 					'--reverse'.
-					'--format=|%H|%an|%ai|%p|%s'.
+					'--format=|%H|%an|%ai|%p|%B'.
 					'--'.
 					(self subDirectoryString , aDirectoryEntry)})

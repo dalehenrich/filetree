@@ -20,7 +20,7 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 						at: (ByteArray readHexFrom: (parent copyFrom: 1 to: 7)) asInteger ])
 				asOrderedCollection.
 			message := (commitIDs next: logSize + position - commitIDs position)
-				convertFromSystemString.
+				convertFromSystemString withSqueakLineEndings.
 			newPackageEntry := GitFileTreePackageEntry new
 				packageDirectory: packageDirectoryName;
 				commitID: commitID;
