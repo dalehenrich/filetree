@@ -2,4 +2,11 @@ accessing
 subDirectoryString
 	"relative path of the repository inside the git repository."
 
-	^ self subDirectoryString: self directory
+	^ subDirectoryString
+		ifNil: [ subDirectoryString := String
+				streamContents: [ :s | 
+					(directory asAbsolute relativeTo: self gitTopDirectory) segments
+						do: [ :e | 
+							s
+								nextPutAll: e;
+								nextPut: $/ ] ] ]

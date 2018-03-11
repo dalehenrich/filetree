@@ -5,7 +5,7 @@ repositoryProperties
 	repositoryProperties
 		ifNil: [ | entries |
 			repositoryProperties := Dictionary new.
-			entries := self gitEntriesForPath: directory.
+			entries := self gitEntriesFor: self subDirectoryString.
 			(entries detect: [ :entry | entry name = '.filetree' ] ifNone: [  ])
 				ifNil: [ repositoryProperties := self defaultRepositoryProperties.
 					self writeRepositoryProperties ]

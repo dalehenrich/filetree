@@ -11,7 +11,7 @@ fiStoreVersions: anArrayOfVersion
 	string := MCGitFileTreeWriter fileOutAll: anArrayOfVersion on: self.
 	self
 		gitCommand: #('fast-import')
-		in: directory
+		in: self gitTopDirectory
 		withInput: string contents.
 	self
 		gitCommand:
@@ -23,8 +23,10 @@ fiStoreVersions: anArrayOfVersion
 	self
 		gitCommand:
 			#('checkout' 'HEAD')
-				, (anArrayOfVersion collect: [ :v | v package name , '.package/' ])
-		in: directory.
+				,
+					(anArrayOfVersion
+						collect: [ :v | self subDirectoryString , v package name , '.package/' ])
+		in: self gitTopDirectory.
 	self gitCommand: #('clean' '-f') in: directory.
 	anArrayOfVersion
 		do: [ :each | 

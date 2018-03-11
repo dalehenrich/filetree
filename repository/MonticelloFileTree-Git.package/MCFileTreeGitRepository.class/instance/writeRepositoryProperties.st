@@ -11,5 +11,15 @@ writeRepositoryProperties
 		gitCommand: #('fast-import')
 		in: self gitTopDirectory
 		withInput: string contents.
-	self gitCommand: {'reset' . 'HEAD' . '.filetree'} in: directory.
-	self gitCommand: {'checkout' . 'HEAD' . '.filetree'} in: directory
+	self
+		gitCommand:
+			{'reset'.
+			'HEAD'.
+			(self subDirectoryString , '.filetree')}
+		in: self gitTopDirectory.
+	self
+		gitCommand:
+			{'checkout'.
+			'HEAD'.
+			(self subDirectoryString , '.filetree')}
+		in: self gitTopDirectory

@@ -16,7 +16,7 @@ loadAllFileNames
 
 	| allNames entries |
 	allNames := OrderedCollection new.
-	entries := (self gitEntriesForPath: directory)
+	entries := (self gitEntriesFor: self subDirectoryString)
 		select:
 			[ :entry | entry isDirectory and: [ self canReadFileNamed: entry name ] ].
 	'loading packages versions from git'
