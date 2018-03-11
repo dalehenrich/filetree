@@ -1,14 +1,11 @@
 {
-	"category" : "Issue72-Glâsässe",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "MCFileTreeIssue72TestClass",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "Issue72-Glâsässe",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MCFileTreeIssue72TestClass",
+	"type" : "normal"
+}
