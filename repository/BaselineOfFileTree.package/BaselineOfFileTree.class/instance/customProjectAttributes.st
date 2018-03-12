@@ -1,16 +1,16 @@
 accessing
 customProjectAttributes
 	Smalltalk os isMacOS
-		ifTrue: [ (Smalltalk at: #PipeableOSProcess ifAbsent: [  ])
-				ifNil: [ (Smalltalk at: #OSSUnixSubprocess ifAbsent: [  ])
-						ifNil: [ ^ #(#MacOSSubprocess) ]
-						ifNotNil: [ ^ #(#MacOS) ] ]
-				ifNotNil: [ ^ #(#MacOS) ] ].
+		ifTrue: [ (Smalltalk hasClassNamed: #PipeableOSProcess)
+				ifFalse: [ (Smalltalk hasClassNamed: #OSSUnixSubprocess)
+						ifFalse: [ ^ #(#MacOSProcess) ]
+						ifTrue: [ ^ #(#MacOS) ] ]
+				ifTrue: [ ^ #(#MacOS) ] ].
 	Smalltalk os isUnix
-		ifTrue: [ ^ (Smalltalk at: #PipeableOSProcess ifAbsent: [  ])
-				ifNil: [ (Smalltalk at: #OSSUnixSubprocess ifAbsent: [  ])
-						ifNil: [ ^ #(#UnixOSSubprocess) ]
-						ifNotNil: [ ^ #(#Unix) ] ]
-				ifNotNil: [ ^ #(#Unix) ] ].
+		ifTrue: [ (Smalltalk hasClassNamed: #PipeableOSProcess)
+				ifFalse: [ (Smalltalk hasClassNamed: #OSSUnixSubprocess)
+						ifFalse: [ ^ #(#UnixOSProcess) ]
+						ifTrue: [ ^ #(#Unix) ] ]
+				ifTrue: [ ^ #(#Unix) ] ].
 	Smalltalk os isWindows
 		ifTrue: [ ^ #(#Windows) ]

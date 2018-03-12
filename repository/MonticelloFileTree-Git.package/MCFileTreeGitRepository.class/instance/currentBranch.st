@@ -5,10 +5,11 @@ currentBranch
 	| branches indexOfStar current |
 	branches := self gitBranchs.
 	indexOfStar := branches indexOf: '*'.
+	indexOfStar = 0
+		ifTrue: [ ^ nil ].
 	current := branches at: indexOfStar + 1.
 	(current first = $( and: [ current last ~= $) ])
-		ifTrue: [ 
-			(branches allButFirst: indexOfStar + 1)
+		ifTrue: [ (branches allButFirst: indexOfStar + 1)
 				do: [ :each | 
 					current := current , ' ' , each.
 					each last = $)

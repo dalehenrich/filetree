@@ -10,7 +10,8 @@ testWriteNRead
 		load.
 	#('CCC')
 		do: [ :pn | 
-			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
+			versionInfo := (MCWorkingCopy allManagers
+				detect: [ :wc | wc packageName = pn ]) ancestors first.
 			version := repo versionWithInfo: versionInfo.
 			self getWriteTestRepository storeVersion: version ].
 	Gofer new
@@ -18,8 +19,7 @@ testWriteNRead
 		unload.
 	#('CCC') do: [ :pn | self deny: (self hasPackage: pn) ].
 	self
-		shouldnt: [ 
-			Gofer new
+		shouldnt: [ Gofer new
 				disablePackageCache;
 				repository: self getWriteTestRepository;
 				package: packageName;
@@ -28,5 +28,6 @@ testWriteNRead
 	#('CCC')
 		do: [ :pn | 
 			self assert: (self hasPackage: pn).
-			versionInfo := (MCWorkingCopy allManagers detect: [ :wc | wc packageName = pn ]) ancestors first.
-			self assert: versionInfo message = (String with: Character lf) ]
+			versionInfo := (MCWorkingCopy allManagers
+				detect: [ :wc | wc packageName = pn ]) ancestors first.
+			self assert: versionInfo message = '' ]

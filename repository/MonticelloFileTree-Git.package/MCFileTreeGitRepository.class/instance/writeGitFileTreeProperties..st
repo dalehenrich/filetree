@@ -1,17 +1,17 @@
 i/o
 writeGitFileTreeProperties: aPackageDirectory
-	"Write git file tree properties with a package."
+	"Write git file tree properties with a package. Only needed when in metadata mode."
 
 	self fileUtils
 		writeStreamFor: self class gitPerPackageProperties
-		in: (self fileUtils directoryFromPath: 'monticello.meta' relativeTo: aPackageDirectory)
+		in:
+			(self fileUtils
+				directoryFromPath: 'monticello.meta'
+				relativeTo: aPackageDirectory)
 		do: [ :fileStream | 
-			fileStream lineEndConvention: #lf.
-			fileStream nextPutAll: '{'.
-			fileStream
-				nextPut: $";
-				nextPutAll: 'SingleCommitForDependencies';
-				nextPutAll: '" : "';
-				nextPutAll: 'true';
-				nextPut: $".
-			fileStream nextPutAll: ' }' ]
+			STON
+				put:
+					(Dictionary new
+						at: 'SingleCommitForDependencies' put: 'true';
+						yourself)
+				asJsonOnStreamPretty: fileStream ]

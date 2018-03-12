@@ -1,0 +1,36 @@
+{
+	"instance" : {
+		"nextPutAll:" : "ThierryGoubier 3/1/2018 23:24",
+		"writeMethodDefinition:in:" : "ThierryGoubier 2/28/2018 13:25",
+		"stream" : "ThierryGoubier 3/1/2018 23:21",
+		"outputFileModify:with:" : "ThierryGoubier 3/1/2018 23:28",
+		"propertyFileExtension" : "ThierryGoubier 3/1/2018 09:36",
+		"writeDependencies:in:" : "ThierryGoubier 2/28/2018 21:06",
+		"buildClassDefinition:" : "ThierryGoubier 2/28/2018 14:28",
+		"writeTraitDefinitions:in:" : "ThierryGoubier 2/27/2018 11:53",
+		"writePackageGitPropertiesIn:" : "ThierryGoubier 2/28/2018 14:03",
+		"lf" : "ThierryGoubier 3/1/2018 23:25",
+		"writeClassDefinition:in:" : "ThierryGoubier 2/28/2018 14:28",
+		"outputFileDelete:" : "ThierryGoubier 3/1/2018 23:28",
+		"outputData:" : "ThierryGoubier 3/1/2018 23:29",
+		"writeClassDefinitions:in:" : "ThierryGoubier 2/27/2018 11:54",
+		"repository:" : "ThierryGoubier 2/26/2018 11:35",
+		"writeMethodDefinitions:in:" : "ThierryGoubier 2/27/2018 11:57",
+		"outputCommit:email:time:message:" : "ThierryGoubier 3/11/2018 19:26",
+		"baseFileNameForSelector:" : "ThierryGoubier 3/3/2018 18:16",
+		"writeInitializers:in:" : "ThierryGoubier 2/28/2018 14:31",
+		"writeExtensionClassDefinitions:in:" : "ThierryGoubier 2/28/2018 18:21",
+		"writeOrganization:in:" : "ThierryGoubier 2/28/2018 14:46",
+		"writeSnapshot:in:" : "ThierryGoubier 3/1/2018 22:57",
+		"space" : "ThierryGoubier 3/1/2018 23:25",
+		"repository" : "ThierryGoubier 2/26/2018 11:35",
+		"writeExtensionMethodDefinitions:in:" : "ThierryGoubier 2/27/2018 14:35",
+		"buildMethodSource:" : "ThierryGoubier 2/28/2018 09:09"
+	},
+	"class" : {
+		"fileOutSingleFile:in:with:" : "ThierryGoubier 3/3/2018 11:21",
+		"baseFileNameForSelector:" : "ThierryGoubier 3/3/2018 18:16",
+		"fileOutAll:on:" : "ThierryGoubier 3/2/2018 19:02",
+		"specials" : "ThierryGoubier 3/3/2018 18:15"
+	}
+}

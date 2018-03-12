@@ -1,13 +1,16 @@
 {
-	"class" : {
-		"token:" : "ThierryGoubier 3/3/2015 22:49:19",
-		"wantsChangeSetLogging" : "ThierryGoubier 3/3/2015 22:49:19" },
 	"instance" : {
-		"=" : "ThierryGoubier 3/3/2015 22:49:19",
-		"asString" : "ThierryGoubier 3/3/2015 22:49:19",
-		"description" : "ThierryGoubier 3/3/2015 22:49:19",
-		"hash" : "ThierryGoubier 3/3/2015 22:49:19",
-		"printString" : "ThierryGoubier 3/3/2015 22:49:19",
-		"summary" : "ThierryGoubier 3/3/2015 22:49:19",
-		"token" : "ThierryGoubier 3/3/2015 22:49:19",
-		"token:" : "ThierryGoubier 3/3/2015 22:49:19" } }
+		"description" : "ThierryGoubier 1/6/2016 08:18:39",
+		"asString" : "ThierryGoubier 1/6/2016 08:18:39",
+		"token" : "ThierryGoubier 1/6/2016 08:18:39",
+		"=" : "ThierryGoubier 1/6/2016 08:18:39",
+		"token:" : "ThierryGoubier 1/6/2016 08:18:39",
+		"hash" : "ThierryGoubier 1/6/2016 08:18:39",
+		"summary" : "ThierryGoubier 1/6/2016 08:18:39",
+		"printString" : "ThierryGoubier 1/6/2016 08:18:39"
+	},
+	"class" : {
+		"token:" : "ThierryGoubier 1/6/2016 08:18:39",
+		"wantsChangeSetLogging" : "ThierryGoubier 1/6/2016 08:18:39"
+	}
+}

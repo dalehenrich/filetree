@@ -5,6 +5,8 @@ basicStoreVersions: versions
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
 	| packageDirectoryString output deps gitCommand outString s live liveInfo |
+	self hasMetadata
+		ifFalse: [ ^ self fiStoreVersions: versions ].
 	versions
 		do: [ :aVersion | 
 			aVersion info message isString

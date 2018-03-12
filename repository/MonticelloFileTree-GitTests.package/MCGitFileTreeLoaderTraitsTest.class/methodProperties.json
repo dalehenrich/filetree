@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testLoad" : "ThierryGoubier 4/10/2016 13:01:52",
-		"traitDefinitions" : "ThierryGoubier 4/10/2016 13:01:52" } }
+		"tearDownPackagesList" : "ThierryGoubier 3/2/2018 19:24:09",
+		"testLoad" : "ThierryGoubier 3/2/2018 19:24:09",
+		"traitDefinitions" : "ThierryGoubier 3/2/2018 19:24:09"
+	},
+	"class" : { }
+}

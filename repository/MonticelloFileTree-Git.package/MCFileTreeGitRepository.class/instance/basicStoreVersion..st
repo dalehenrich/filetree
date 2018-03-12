@@ -5,6 +5,8 @@ basicStoreVersion: aVersion
 	"Recover the last commit id and update the version info to have a correctly synchronized in image id (apart from the version number?)"
 
 	| packageDirectoryString output deps gitCommand outString s |
+	self hasMetadata
+		ifFalse: [ ^ self fiStoreVersion: aVersion ].
 	aVersion info message isString
 		ifFalse: [ MCFileTreeGitError new
 				signal: 'version message is not a string: ' , aVersion info name ].

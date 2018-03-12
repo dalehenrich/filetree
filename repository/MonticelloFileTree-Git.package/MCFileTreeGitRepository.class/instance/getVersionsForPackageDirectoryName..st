@@ -19,8 +19,10 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 					entryVersionIndex
 						at: (ByteArray readHexFrom: (parent copyFrom: 1 to: 7)) asInteger ])
 				asOrderedCollection.
-			message := (commitIDs next: logSize + position - commitIDs position)
+			message := (commitIDs
+				next: logSize + position - commitIDs position - 1)
 				convertFromSystemString.
+			commitIDs next.
 			newPackageEntry := GitFileTreePackageEntry new
 				packageDirectory: packageDirectoryName;
 				commitID: commitID;

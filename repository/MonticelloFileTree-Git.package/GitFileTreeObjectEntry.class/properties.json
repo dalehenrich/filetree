@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "Object",
+	"category" : "MonticelloFileTree-Git",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mode",
+		"type",
+		"object",
+		"file"
+	],
+	"name" : "GitFileTreeObjectEntry",
+	"type" : "normal"
+}

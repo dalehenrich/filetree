@@ -1,7 +1,8 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tearDownPackagesList" : "ThierryGoubier 4/10/2016 13:01:52",
-		"testWriteNRead" : "ThierryGoubier 4/10/2016 13:01:52",
-		"writeTestRepositoryName" : "ThierryGoubier 4/10/2016 13:01:52" } }
+		"tearDownPackagesList" : "ThierryGoubier 3/2/2018 19:24:09",
+		"writeTestRepositoryName" : "ThierryGoubier 3/2/2018 19:24:09",
+		"testWriteNRead" : "ThierryGoubier 3/2/2018 19:24:09"
+	},
+	"class" : { }
+}

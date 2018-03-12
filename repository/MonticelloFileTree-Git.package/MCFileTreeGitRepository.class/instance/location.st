@@ -1,3 +1,3 @@
 descriptions
 location
-	^ self class description , directory fullName
+	^ self class description , self subDirectoryString
