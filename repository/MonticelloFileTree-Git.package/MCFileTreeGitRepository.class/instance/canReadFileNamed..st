@@ -5,6 +5,7 @@ canReadFileNamed: aString
 	extension := filename
 		copyFrom: (filename lastIndexOf: $.)
 		to: filename size.
+	extension ifEmpty: [ ^ false ].
 	^ (extension ~= '.package'
 		and: [ (self gitEntriesFor: filename)
 				in: [ :es | 
