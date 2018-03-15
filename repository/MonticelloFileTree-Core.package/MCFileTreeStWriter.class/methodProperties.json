@@ -1,8 +1,9 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"visitClassDefinition:" : "dkh 2/29/2012 14:52",
-		"visitClassTraitDefinition:" : "topa 7/22/2013 13:36",
-		"visitMethodDefinition:" : "dkh 2/29/2012 14:55",
-		"visitTraitDefinition:" : "topa 7/22/2013 01:12" } }
+		"visitTraitDefinition:" : "",
+		"visitMethodDefinition:" : "",
+		"visitClassDefinition:" : "",
+		"visitClassTraitDefinition:" : ""
+	},
+	"class" : { }
+}

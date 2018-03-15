@@ -1,24 +1,27 @@
 {
-	"class" : {
-		"extension" : "dkh 4/4/2012 14:19",
-		"monticelloMetaDirName" : "dkh 4/4/2012 17:44" },
 	"instance" : {
-		"addClassAndMethodDefinitionsFromDirectory:" : "topa 7/22/2013 01:41",
-		"addClassAndMethodDefinitionsFromEntry:" : "OffrayLuna 5/27/2016 09:54",
-		"addClassDefinitionFrom:comment:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"addExtensionClassAndMethodDefinitionsFromEntry:" : "OffrayLuna 5/27/2016 09:55",
-		"addMethodDefinitionsForClass:methodProperties:in:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"addMethodDefinitionsForClass:methodProperties:in:extensionMethod:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"addTraitAndMethodDefinitionsFromEntry:" : "OffrayLuna 5/27/2016 09:56",
-		"addTraitDefinitionFrom:comment:" : "topa 7/22/2013 15:15",
-		"basicVersion" : "dkh 6/27/2012 20:19",
-		"isMethodPropertyFile:" : "dkh 6/16/2013 12:47:20",
-		"isPropertyFile:" : "dkh 6/16/2013 12:47:20",
-		"loadDefinitions" : "dkh 5/23/2013 21:05",
-		"loadPackage" : "dkh 6/27/2012 20:21",
-		"loadVersionInfo" : "08/08/2013 15:01",
-		"methodSelectorFor:" : "ChristopheDemarey 5/31/2013 23:28",
-		"packageNameFromPackageDirectory" : "dkh 8/10/2012 14:55",
-		"validateClassCategory:for:" : "DEMAREYChristophe 7/10/2015 18:06:15",
-		"validateExtensionMethodCategory:for:selector:" : "ChristopheDemarey 8/7/2015 15:31",
-		"verifyCategory:matches:" : "DEMAREYChristophe 7/10/2015 18:06:15" } }
+		"addExtensionClassAndMethodDefinitionsFromEntry:" : "",
+		"addMethodDefinitionsForClass:methodProperties:in:extensionMethod:" : "",
+		"verifyCategory:matches:" : "",
+		"isPropertyFile:" : "",
+		"loadVersionInfo" : "",
+		"addMethodDefinitionsForClass:methodProperties:in:" : "",
+		"addTraitAndMethodDefinitionsFromEntry:" : "",
+		"basicVersion" : "",
+		"addTraitDefinitionFrom:comment:" : "",
+		"loadDefinitions" : "",
+		"validateExtensionMethodCategory:for:selector:" : "",
+		"addClassDefinitionFrom:comment:" : "",
+		"addClassAndMethodDefinitionsFromEntry:" : "",
+		"packageNameFromPackageDirectory" : "",
+		"methodSelectorFor:" : "",
+		"validateClassCategory:for:" : "",
+		"addClassAndMethodDefinitionsFromDirectory:" : "",
+		"loadPackage" : "",
+		"isMethodPropertyFile:" : ""
+	},
+	"class" : {
+		"extension" : "",
+		"monticelloMetaDirName" : ""
+	}
+}
