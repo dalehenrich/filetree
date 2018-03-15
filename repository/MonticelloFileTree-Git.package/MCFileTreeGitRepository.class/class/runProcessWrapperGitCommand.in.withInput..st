@@ -15,26 +15,20 @@ runProcessWrapperGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArr
 		at: #ProcessWrapper
 		ifAbsent: [ self error: 'Please load ProcessWrapper' ])
 		ifNotNil: [ :pW | 
-			| command file |
-			(file := FileReference
-				newTempFilePrefix: 'GitCommand'
-				suffix: '.txt')
-				writeStreamDo: [ :s | 
-					s binary.
-					s nextPutAll: aByteArray ].
+			| command |
 			command := pW new
 				useStdout;
 				useStderr;
 				startWithCommand:
 					self gitCommand , ' -C "'
 						, (MCFileTreeFileUtils current directoryPathString: aDirectory)
-						, '" ' , aCommandString , ' <"'
-						, (MCFileTreeFileUtils current directoryPathString: file) , '"';
+						, '" ' , aCommandString;
 				yourself.
+			command nextPutAll: aByteArray.
+			command closeStdin.
 			command waitForExit.
 			self assert: command isRunning not.
 			r := command upToEnd.
-			file ensureDelete.
 			command exitCode > 0
 				ifTrue: [ | errorString |
 					errorString := command errorUpToEnd.

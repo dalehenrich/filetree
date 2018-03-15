@@ -2,9 +2,12 @@ testing
 canReadFileNamed: aString
 	| filename extension |
 	filename := self subDirectoryString , aString.
-	extension := filename
-		copyFrom: (filename lastIndexOf: $.)
-		to: filename size.
+	(filename lastIndexOf: $.)
+		in: [ :i | 
+			i > 0
+				ifFalse: [ ^ false ]
+				ifTrue: [ extension := filename copyFrom: i to: filename size ] ].
+	extension ifEmpty: [ ^ false ].
 	^ (extension ~= '.package'
 		and: [ (self gitEntriesFor: filename)
 				in: [ :es | 
