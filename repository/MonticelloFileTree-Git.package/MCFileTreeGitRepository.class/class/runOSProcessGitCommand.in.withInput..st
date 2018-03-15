@@ -5,23 +5,20 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
 	| classOfExternalPipe classOfPipeableOSProcess c r d in out err file |
 	classOfExternalPipe := Smalltalk at: #ExternalPipe.
 	classOfPipeableOSProcess := Smalltalk at: #PipeableOSProcess.
-	(file := FileReference newTempFilePrefix: 'GitCommand' suffix: '.txt')
-		writeStreamDo: [ :s | 
-			s binary.
-			s nextPutAll: aByteArray ].
-	in := FileStream readOnlyFileNamed: file pathString.
+	in := classOfExternalPipe nonBlockingPipe.
 	out := classOfExternalPipe nonBlockingPipe.
 	err := classOfExternalPipe nonBlockingPipe.
 	[ c := classOfPipeableOSProcess externalProxyClass
 		programName: self gitCommand
 		arguments: anArrayOfStrings
 		initialEnvironment: nil.
-	c initialStdIn: in.
+	c initialStdIn: in reader.
 	c initialStdOut: out writer.
 	c initialStdErr: err writer.
 	c pwd: (MCFileTreeFileUtils current directoryPathString: aDirectory).
 	c := c initialize value.
 	d := nil.
+	in nextPutAll: aByteArray.
 	in close.
 	r := out upToEnd.
 	[ c update: #runState.
@@ -37,6 +34,5 @@ runOSProcessGitCommand: anArrayOfStrings in: aDirectory withInput: aByteArray
 			r := '' ] ]
 		ensure: [ in close.
 			out close.
-			err close.
-			file ensureDelete ].
+			err close ].
 	^ r
