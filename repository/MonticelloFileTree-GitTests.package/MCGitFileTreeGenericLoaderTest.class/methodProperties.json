@@ -1,15 +1,16 @@
 {
 	"instance" : {
-		"tearDown" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getTopDateAndTimeFor:in:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getTopTimestampFor:in:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getTopAuthorNameFor:in:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getTopCommitFor:in:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getTestRepository:" : "ThierryGoubier 3/2/2018 19:24:09",
-		"getWriteTestRepository" : "ThierryGoubier 3/2/2018 19:24:09",
-		"writeTestRepositoryName" : "ThierryGoubier 3/2/2018 19:24:09",
-		"setUp" : "ThierryGoubier 3/2/2018 19:24:09"
+		"tearDown" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getTopDateAndTimeFor:in:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getTopTimestampFor:in:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getTopAuthorNameFor:in:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getTopCommitFor:in:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getWriteTestRepositoryWithAuthor:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getTestRepository:" : "ThierryGoubier 3/11/2018 23:52:33",
+		"getWriteTestRepository" : "ThierryGoubier 3/11/2018 23:52:33",
+		"writeTestRepositoryName" : "ThierryGoubier 3/11/2018 23:52:33",
+		"defaultTimeLimit" : "ThierryGoubier 3/15/2018 20:28",
+		"setUp" : "ThierryGoubier 3/11/2018 23:52:33"
 	},
 	"class" : { }
 }
