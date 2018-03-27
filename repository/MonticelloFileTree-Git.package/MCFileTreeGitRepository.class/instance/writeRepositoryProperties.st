@@ -6,7 +6,9 @@ writeRepositoryProperties
 	string := MCGitFileTreeWriter
 		fileOutSingleFile: self subDirectoryString , '.filetree'
 		in: self
-		with: (STON toJsonStringPretty: self repositoryProperties).
+		with:
+			(STON toJsonStringPretty: self repositoryProperties)
+				withUnixLineEndings.
 	self gitCommand: #('fast-import') withInput: string contents.
 	self
 		gitCommand:
