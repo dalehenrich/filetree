@@ -19,14 +19,14 @@ writeSnapshot: aSnapshot in: aPackagePath
 	job progress: 0.2.
 	methodDefinitions := orderedDefinitions
 		select: [ :e | 
-			(e == MCMethodDefinition)
+			(e class == MCMethodDefinition)
 				and: [ classAndTraitNames includes: e className ] ].
 	extensionMethodDefinitions := orderedDefinitions
 		select: [ :e | 
-			(e == MCMethodDefinition)
+			(e class == MCMethodDefinition)
 				and: [ (classAndTraitNames includes: e className) not ] ].
 	organization := orderedDefinitions
-		select: [ :e | e == MCOrganizationDefinition ].
+		select: [ :e | e class == MCOrganizationDefinition ].
 	extensionClasses := (extensionMethodDefinitions
 		collect: [ :e | e className ]) asSet.
 	job progress: 0.3.
