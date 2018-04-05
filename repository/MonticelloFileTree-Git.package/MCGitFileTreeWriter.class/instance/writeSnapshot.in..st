@@ -9,24 +9,24 @@ writeSnapshot: aSnapshot in: aPackagePath
 		sortItems: aSnapshot definitions.
 	job progress: 0.1.
 	classDefinitions := orderedDefinitions
-		select: [ :e | e isKindOf: MCClassDefinition ].
+		select: [ :e | e class == MCClassDefinition ].
 	traitDefinitions := orderedDefinitions
 		select: [ :e | 
-			(e isKindOf: MCTraitDefinition)
-				or: [ e isKindOf: MCClassTraitDefinition ] ].
+			(e class == MCTraitDefinition)
+				or: [ e class == MCClassTraitDefinition ] ].
 	classAndTraitNames := (classDefinitions , traitDefinitions
 		collect: [ :e | e className ]) asSet.
 	job progress: 0.2.
 	methodDefinitions := orderedDefinitions
 		select: [ :e | 
-			(e isKindOf: MCMethodDefinition)
+			(e == MCMethodDefinition)
 				and: [ classAndTraitNames includes: e className ] ].
 	extensionMethodDefinitions := orderedDefinitions
 		select: [ :e | 
-			(e isKindOf: MCMethodDefinition)
+			(e == MCMethodDefinition)
 				and: [ (classAndTraitNames includes: e className) not ] ].
 	organization := orderedDefinitions
-		select: [ :e | e isKindOf: MCOrganizationDefinition ].
+		select: [ :e | e == MCOrganizationDefinition ].
 	extensionClasses := (extensionMethodDefinitions
 		collect: [ :e | e className ]) asSet.
 	job progress: 0.3.
