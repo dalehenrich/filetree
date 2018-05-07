@@ -12,7 +12,7 @@ getVersionsForPackageDirectoryName: packageDirectoryName
 			logSize := (commitIDs upTo: $|) trimBoth asInteger.
 			position := commitIDs position.
 			commitID := (commitIDs upTo: $|) trimBoth.
-			author := (commitIDs upTo: $|) onlyLetters.
+			author := (commitIDs upTo: $|) convertFromSystemString onlyLetters.
 			dateAndTime := DateAndTime fromString: (commitIDs upTo: $|).
 			parents := ((commitIDs upTo: $|) trimBoth substrings
 				collect: [ :parent | 
