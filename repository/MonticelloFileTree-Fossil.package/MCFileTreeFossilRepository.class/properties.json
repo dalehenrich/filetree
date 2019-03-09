@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "MCFileTreeGitRepository",
+	"category" : "MonticelloFileTree-Fossil",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"FossilCommand"
+	],
+	"instvars" : [
+		"fossilFile"
+	],
+	"name" : "MCFileTreeFossilRepository",
+	"type" : "normal"
+}

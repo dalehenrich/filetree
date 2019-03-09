@@ -1,0 +1,3 @@
+accessing
+gitCommand
+	^ self fossilCommand
