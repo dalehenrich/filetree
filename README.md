@@ -82,7 +82,7 @@ Here are some guidelines on contributing to the project:
 
 ## Travis CI Status
 
-**GemStone/S (2.4.x, 3.0.x, 3.1.0.x)** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=gemstone2.4)](http://travis-ci.org/dalehenrich/filetree) 
+**GemStone/S (2.4.x, 3.0.x, 3.1.0.x, 3.2.x, 3.3.x, 3.4.x, 3.5.x)** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=gemstone2.4)](http://travis-ci.org/dalehenrich/filetree) 
 
 **pharo1.1 & pharo1.2** : [![Build Status](https://travis-ci.org/dalehenrich/filetree.png?branch=pharo1.1)](http://travis-ci.org/dalehenrich/filetree) 
 
