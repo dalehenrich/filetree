@@ -14,6 +14,10 @@ smalltalk:
    - GemStone-3.4.5
    - GemStone-3.5.2
 
+matrix:
+   allow_failures:
+     - smalltalk: GemStone-2.4.8 #not sure it is worth the effort to clean up 2.4.x problems
+
 cache:
   directories:
     - $SMALLTALK_CI_CACHE
