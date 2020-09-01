@@ -5,4 +5,7 @@ withMonticelloMetadata
    - method properties files
   "
 
-  ^ (self repositoryProperties at: 'Metadata' ifAbsent: [ ^ true ]) = 'true'
+  ^ (self repositoryProperties
+    at: 'Metadata'
+    ifAbsent: [ ^ (self repositoryProperties at: 'noMethodMetaData' ifAbsent: [ false ]) not ])
+    = 'true'
