@@ -1,3 +1,3 @@
 utilities
 methodSelectorFor: source
-    ^ ChangeList parseSelector: source
+  ^ RBParser parseMethodPattern: source
