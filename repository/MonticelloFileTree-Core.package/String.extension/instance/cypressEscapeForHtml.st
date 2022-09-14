@@ -1,3 +1,4 @@
 *monticellofiletree-core
-cypressEscape
+cypressEscapeForHtml
+
     ^ self encodeForHTTP

@@ -2,6 +2,7 @@
 	"class" : {
 		 },
 	"instance" : {
-		"cypressEscape" : "dkh 4/6/2012 15:56:14",
+		"cypressEscapeForHtml" : "ct 9/14/2022 10:07",
+		"cypressEscapeForJson" : "ct 9/14/2022 10:41",
 		"cypressUnescape" : "dkh 4/6/2012 15:56:14",
-		"writeCypressJsonOn:forHtml:indent:" : "dkh 4/6/2012 15:56:14" } }
+		"writeCypressJsonOn:forHtml:indent:" : "ct 9/14/2022 09:27" } }

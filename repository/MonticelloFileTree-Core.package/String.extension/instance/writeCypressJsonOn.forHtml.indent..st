@@ -6,6 +6,6 @@ writeCypressJsonOn: aStream forHtml: forHtml indent: startIndent
         nextPutAll: '"';
         nextPutAll:
                 (forHtml
-                        ifTrue: [ self cypressEscape ]
-                        ifFalse: [ self ]);
+                        ifTrue: [ self cypressEscapeForHtml ]
+                        ifFalse: [ self cypressEscapeForJson ]);
         nextPutAll: '"'

@@ -1,9 +1,11 @@
 {
 	"class" : {
+		"initializeStringSpecials" : "ct 9/14/2022 10:42",
 		"new" : "dkh 2/16/2012 14:39:25",
 		"on:" : "dkh 2/16/2012 14:39:25",
 		"parse:" : "dkh 2/16/2012 14:39:25",
-		"parseStream:" : "dkh 2/16/2012 14:39:25" },
+		"parseStream:" : "dkh 2/16/2012 14:39:25",
+		"stringSpecials" : "ct 9/14/2022 10:41" },
 	"instance" : {
 		"addProperty:to:" : "dkh 2/16/2012 14:39:25",
 		"addValue:to:" : "dkh 2/16/2012 14:39:25",
