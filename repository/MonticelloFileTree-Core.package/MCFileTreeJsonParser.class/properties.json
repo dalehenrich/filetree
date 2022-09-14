@@ -3,7 +3,7 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		 ],
+		"StringSpecials" ],
 	"commentStamp" : "",
 	"instvars" : [
 		"stream" ],
