@@ -1,10 +1,9 @@
 RwSimpleProjectLoadComponentV2 {
   #name : 'Core',
-  #condition : 'common',
+  #condition : 'gemstone',
   #packageNames : [
     'MonticelloFileTree-Core',
     'MonticelloFileTree-FileDirectory-Utilities'
   ],
-  #packageNames : [ ],
   #comment : 'FileTree component'
 }
