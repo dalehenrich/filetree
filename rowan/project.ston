@@ -1,0 +1,10 @@
+RwProjectSpecificationV3 {
+  #specName : 'project',
+  #projectSpecPath : 'FileTree',
+  #componentsPath : 'rowan/components',
+  #packagesPath : 'repository',
+  #projectsPath : 'rowan/projects',
+  #specsPath : 'rowan/specs',
+  #packageFormat : 'FileTree',
+  #comment : 'Rowan V3.0 project specification???'
+}

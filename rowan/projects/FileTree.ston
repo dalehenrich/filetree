@@ -1,0 +1,22 @@
+RwLoadSpecificationV2 {
+  #specName : 'FileTree',
+  #projectName : 'FileTree',
+  #projectAlias : 'FileTree',
+  #gitUrl : 'git@github.com:dalehenrich/filetree.git',
+  #relativeRepositoryRoot : 'repository',
+  #revision : 'kurtkilpela.rowan-gemstone2.4',
+  #projectSpecFile : 'project.ston',
+  #componentNames : [
+    'Core'
+  ],
+  #customConditionalAttributes : [ ],
+  #groupNames : [ ],
+  #platformProperties : {
+    'gemstone' : {
+      'SystemUser' : {
+        #defaultSymbolDictName : 'UserGlobals'
+      }
+    }
+  },
+  #comment : 'FileTree Load Specification'
+}
