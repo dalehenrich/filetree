@@ -1,4 +1,4 @@
-RwLoadSpecificationV2 {
+RwLoadSpecificationV3 {
   #specName : 'FileTree',
   #projectName : 'FileTree',
   #projectAlias : 'FileTree',

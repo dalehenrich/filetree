@@ -1,4 +1,4 @@
-RwProjectSpecificationV2 {
+RwProjectSpecificationV3 {
   #specName : 'project',
   #projectSpecPath : 'rowan',
   #componentsPath : 'rowan/components',
@@ -6,5 +6,5 @@ RwProjectSpecificationV2 {
   #projectsPath : 'rowan/projects',
   #specsPath : 'rowan/specs',
   #packageFormat : 'FileTree',
-  #comment : 'Rowan V3.0 project specification???'
+  #comment : 'FileTree Project'
 }
