@@ -5,7 +5,7 @@ RwLoadSpecificationV2 {
   #gitUrl : 'git@github.com:dalehenrich/filetree.git',
   #relativeRepositoryRoot : 'repository',
   #revision : 'kurtkilpela.rowan-gemstone2.4',
-  #projectSpecFile : 'project.ston',
+  #projectSpecFile : 'rowan/project.ston',
   #componentNames : [
     'Core'
   ],
